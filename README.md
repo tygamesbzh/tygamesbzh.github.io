@@ -1,2 +1,3 @@
-# tygamesbzh.github.io
-Ty Games public website
+# TyGAMES
+
+[https://ty.games](https://ty.games)
