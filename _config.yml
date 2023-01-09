@@ -1,0 +1,49 @@
+# Site settings
+title: TyGAMES
+email: hello@ty.games
+url: https://ty.games
+description: "Breizh indie games studio and publisher"
+keywords: "games, indie"
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: FFFFFF
+  primary-rgb: "128,179,255"
+  primary-text: 01050E
+  secondary: 01050E
+  secondary-dark: 0094FF
+  secondary-text: FFFFFF
+
+# Footer settings
+footer:
+  copyright: TyGAMES
+  location: 100% Breizh
+  social: Get on board
+  credits: Since
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/tygamesbzh
+  - title: facebook
+    url:
+  - title: github
+    url: http://github.com/tygamesbzh
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+#for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: ""

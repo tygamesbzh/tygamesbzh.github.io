@@ -1,0 +1,54 @@
+<!-- Footer -->
+<footer class="text-center">
+  <div class="footer-above">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-4">
+          <h3>100% Breizh</h3>
+          <p>
+            3A rue de Paris <br/>
+            35510 Cesson-Sévigné <br/>
+            France 
+          </p>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>Get on board</h3>
+          <ul class="list-inline">
+            {% for network in site.social %}
+            <li>
+              <a href="{{ network.url }}" class="btn-social btn-outline"><i
+                  class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>Legal</h3>
+          <p>
+            Created on 28th Novemeber 2022 <br />
+            SIRET: 92171424200010 <br />
+            921 714 242 R.C.S. Rennes
+
+
+          </p>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <div class="footer-below">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+  <a class="btn btn-primary" href="#page-top">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+</div>
