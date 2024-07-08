@@ -510,3 +510,18 @@ footer .footer-below {
     width: 250px;
     height: 250px;
   }
+  
+.nogueules-small {
+    text-align: center;
+    -webkit-mask-image: url(img/mask.png);
+    mask-image: url(img/mask.png);
+    width: 125px;
+    height: 125px;
+    mask-size: 125px;
+}
+
+.nogueules-small img {
+    width: 125px;
+    height: 125px;
+  }
+  
