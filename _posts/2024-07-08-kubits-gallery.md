@@ -1,6 +1,6 @@
 ---
 layout: default
-modal-id: 8
+modal-id: 6
 date: 2024-06-01
 img: kubitsgallery.jpg
 alt: image-alt
