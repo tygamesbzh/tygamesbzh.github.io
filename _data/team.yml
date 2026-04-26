@@ -1,0 +1,14 @@
+- name: Vincent Beaüzée
+  role: Co-fondateur
+  bio: Game designer et entrepreneur culturel, impliqué dans l'écosystème du jeu vidéo breton depuis ses débuts.
+  img: vincent.jpg
+
+- name: Laurent [Nom]
+  role: Co-fondateur
+  bio: ""
+  img: laurent.jpg
+
+- name: Yannick [Nom]
+  role: Membre
+  bio: ""
+  img: yannick.png

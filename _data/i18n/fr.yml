@@ -1,0 +1,31 @@
+urls:
+  home: /
+  games: /jeux/
+  cooperative: /cooperative/
+  contact: /contact/
+  submit: /contact/#soumettre
+  join: /contact/#rejoindre
+
+nav:
+  home: Accueil
+  games: Catalogue
+  cooperative: La Coopérative
+  contact: Contact
+  submit_game: Soumettre un jeu
+  join: Rejoindre
+  menu_open: Ouvrir le menu
+  lang_switch_label: "EN"
+  lang_switch_url: /en/
+
+footer:
+  tagline: "Coopérative de jeu vidéo<br>basée en Bretagne"
+  nav_heading: Navigation
+  platforms_heading: Nos jeux sur
+  legal_heading: Légal
+  legal_notice: Mentions légales
+  privacy: Confidentialité
+  founded: "Fondée le 28 novembre 2022"
+
+game:
+  back: Retour au catalogue
+  image_coming: Image à venir

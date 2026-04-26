@@ -1,3 +1,187 @@
 ---
 layout: default
+title: Accueil
+lang: fr
+lang_alternate: /en/
 ---
+
+<!-- Hero -->
+<section class="min-h-[90vh] flex items-center py-24 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/3 right-1/4 w-[700px] h-[700px] rounded-full bg-accent/8 blur-[150px]"></div>
+  </div>
+
+  <div class="section-container relative z-10 grid md:grid-cols-2 gap-16 items-center w-full">
+    <div>
+      <p class="text-xs font-semibold text-accent uppercase tracking-widest mb-6 flex items-center gap-3">
+        <span class="block w-7 h-px bg-accent"></span>
+        Coopérative de jeu vidéo · Bretagne
+      </p>
+      <h1 class="font-heading font-extrabold leading-tight mb-6 text-offwhite" style="font-size: clamp(2.8rem, 6vw, 5rem)">
+        Des jeux indépendants,<br><em class="not-italic text-accent-light">faits ensemble.</em>
+      </h1>
+      <p class="text-lg text-muted/70 leading-relaxed mb-10 max-w-md">
+        TyGAMES est un éditeur de jeux vidéo sous forme de coopérative, basé en Bretagne. On développe, on publie, on partage — autrement.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="{{ '/jeux/' | relative_url }}" class="btn-primary">Voir nos jeux</a>
+        <a href="{{ '/cooperative/' | relative_url }}" class="btn-outline">La coopérative →</a>
+      </div>
+    </div>
+
+    <div class="hidden md:flex aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
+      <span class="text-muted/20 text-sm text-center leading-relaxed">image du catalogue<br>à placer ici</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats bar -->
+<div class="border-y border-white/10 py-7 bg-[#07070b]">
+  <div class="section-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div class="stat">
+      <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | size }}<span class="text-accent-light">+</span></div>
+      <div class="text-xs text-muted/50 tracking-wider">Jeux publiés</div>
+    </div>
+    <div class="stat">
+      <div class="font-heading font-extrabold text-4xl text-accent-light mb-1">100%</div>
+      <div class="text-xs text-muted/50 tracking-wider">Breton</div>
+    </div>
+    <div class="stat">
+      <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">3</div>
+      <div class="text-xs text-muted/50 tracking-wider">Plateformes</div>
+    </div>
+    <div class="stat">
+      <div class="font-heading font-extrabold text-4xl text-accent-light mb-1">∞</div>
+      <div class="text-xs text-muted/50 tracking-wider">Coopération</div>
+    </div>
+  </div>
+</div>
+
+<!-- Catalogue preview -->
+<section class="section-padding bg-[#0a0a0a]" id="catalogue">
+  <div class="section-container">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <p class="text-xs font-semibold text-accent-light uppercase tracking-widest mb-3">Le catalogue</p>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl">Nos <em class="not-italic text-accent-light">Jeux</em></h2>
+      </div>
+      <a href="{{ '/jeux/' | relative_url }}" class="btn-outline text-sm py-2 hidden sm:inline-block">Voir tout →</a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
+      {% assign sorted_games = site.games | sort: "date" | reverse %}
+      {% for game in sorted_games limit:5 %}
+        <a href="{{ game.url | relative_url }}" class="group block">
+          <div class="aspect-[3/4] bg-white/5 rounded-lg overflow-hidden mb-2">
+            {% if game.img %}
+              <img src="{{ '/assets/img/games/' | append: game.img | relative_url }}" alt="{{ game.game }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            {% endif %}
+          </div>
+          <p class="text-xs font-semibold text-offwhite group-hover:text-accent transition-colors leading-snug">{{ game.game }}</p>
+          {% if game.platforms %}
+            <p class="text-xs text-muted/40 mt-0.5">{{ game.platforms }}</p>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+
+    <a href="{{ '/jeux/' | relative_url }}" class="btn-outline text-sm sm:hidden inline-block">Voir tout le catalogue →</a>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="section-padding bg-offwhite" id="newsletter">
+  <div class="section-container grid md:grid-cols-2 gap-20 items-center">
+    <div>
+      <p class="text-xs font-semibold text-accent uppercase tracking-widest mb-4">Restez dans la boucle</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl text-ink mb-4">
+        La newsletter <em class="not-italic text-accent">TyGAMES</em>
+      </h2>
+      <p class="text-ink/60 leading-relaxed mb-3">Sorties de jeux, coulisses de la coopérative, offres aux sociétaires. Une fois par mois, pas plus.</p>
+      <p class="text-ink/40 text-sm">Hébergée sur Substack · désabonnement en un clic.</p>
+      <div class="flex flex-wrap gap-2 mt-5">
+        {% assign nl_tags = "Nouveaux jeux,Vie de la coop,Offres membres,Coulisses" | split: "," %}
+        {% for tag in nl_tags %}
+          <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-accent/10 text-accent">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="bg-white border border-muted/30 rounded-xl p-9">
+      <h3 class="font-heading font-bold text-xl text-ink mb-2">S'abonner à la newsletter</h3>
+      <p class="text-ink/50 text-sm mb-6">Entrez votre email pour recevoir les actualités TyGAMES directement dans votre boîte.</p>
+      <form class="flex flex-col sm:flex-row gap-3" id="nl-home-form">
+        <input type="email" placeholder="vous@exemple.fr" required class="flex-1 px-4 py-3 border border-muted/40 rounded text-ink placeholder-ink/30 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors">
+        <button type="submit" class="btn-primary shrink-0 whitespace-nowrap">S'abonner</button>
+      </form>
+      <p class="text-xs text-ink/30 mt-4">En vous abonnant, vous acceptez la <a href="{{ '/contact/' | relative_url }}" class="text-accent hover:underline">politique de confidentialité</a>. Propulsé par Substack.</p>
+      <p class="hidden text-accent font-semibold text-sm mt-3" id="nl-home-success">✓ Inscription confirmée !</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA split -->
+<div class="grid md:grid-cols-2">
+  <div class="bg-accent p-16 md:p-20 flex flex-col gap-5">
+    <p class="text-xs font-semibold text-white/50 uppercase tracking-widest">Développeurs</p>
+    <h3 class="font-heading font-bold text-3xl text-white">Vous développez un jeu&nbsp;?</h3>
+    <p class="text-white/70 leading-relaxed max-w-sm">Soumettez votre projet à la coopérative. On étudie chaque dossier avec attention et on vous accompagne dans la publication.</p>
+    <a href="{{ '/contact/#soumettre' | relative_url }}" class="btn-outline inline-block w-fit" style="border-color: rgba(255,255,255,0.35)">Soumettre votre jeu →</a>
+  </div>
+  <div class="bg-ink p-16 md:p-20 flex flex-col gap-5 border-t md:border-t-0 border-white/10">
+    <p class="text-xs font-semibold text-orange uppercase tracking-widest">La coopérative</p>
+    <h3 class="font-heading font-bold text-3xl text-offwhite">Rejoignez l'aventure</h3>
+    <p class="text-muted/60 leading-relaxed max-w-sm">TyGAMES fonctionne en coopérative. Chaque membre compte. Découvrez comment nous fonctionnons et comment devenir sociétaire.</p>
+    <a href="{{ '/cooperative/#rejoindre' | relative_url }}" class="btn-outline inline-block w-fit">Nous rejoindre →</a>
+  </div>
+</div>
+
+<!-- About / Team -->
+<section class="section-padding bg-offwhite">
+  <div class="section-container grid md:grid-cols-2 gap-20 items-center">
+    <div>
+      <p class="text-xs font-semibold text-accent uppercase tracking-widest mb-4">Qui sommes-nous</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl text-ink mb-6">
+        Une coopérative <span class="text-accent">différente</span>
+      </h2>
+      <p class="text-ink/60 leading-relaxed mb-4">TyGAMES est un éditeur de jeux vidéo indépendant créé en Bretagne. Nous fonctionnons sous forme de coopérative : chaque membre est co-décideur, chaque projet est partagé.</p>
+      <p class="text-ink/60 leading-relaxed mb-8">Notre mission : soutenir les développeurs bretons et indépendants en leur offrant structure, ressources et visibilité — sans sacrifier leur liberté créative.</p>
+      <a href="{{ '/cooperative/' | relative_url }}" class="btn-primary">Découvrir la coopérative</a>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      {% for member in site.data.team %}
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+          {% if member.img %}
+            <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}" class="w-16 h-16 rounded-full object-cover mx-auto mb-4">
+          {% else %}
+            <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-4 font-heading font-extrabold text-white text-lg">
+              {{ member.name | slice: 0 }}
+            </div>
+          {% endif %}
+          <div class="font-heading font-bold text-ink text-sm">{{ member.name }}</div>
+          <div class="text-ink/40 text-xs mt-1">{{ member.role }}</div>
+        </div>
+      {% endfor %}
+
+      <div class="col-span-2 bg-white rounded-xl p-5 flex items-center gap-4 shadow-sm">
+        <div class="w-11 h-11 rounded-full bg-accent flex items-center justify-center font-heading font-bold text-white text-xl shrink-0">+</div>
+        <div>
+          <div class="font-heading font-bold text-ink text-sm">Vous&nbsp;?</div>
+          <div class="text-ink/40 text-xs mt-0.5">La coopérative est ouverte</div>
+        </div>
+        <a href="{{ '/cooperative/#rejoindre' | relative_url }}" class="ml-auto text-accent font-semibold text-sm hover:text-accent-dark transition-colors whitespace-nowrap">Rejoindre →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('nl-home-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    btn.textContent = 'Abonné ✓';
+    btn.disabled = true;
+    document.getElementById('nl-home-success').classList.remove('hidden');
+  });
+</script>

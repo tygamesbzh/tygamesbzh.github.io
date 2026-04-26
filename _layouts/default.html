@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
-{% include head.html %}
-
-<body id="page-top" class="index">
+<html lang="{{ page.lang | default: site.lang | default: 'fr' }}">
+<head>
+  {% include head.html %}
+</head>
+<body class="bg-ink text-offwhite font-body">
   {% include nav.html %}
-  {% include header.html %}
-  {% include portfolio_grid.html %}
-  {% include about.html %}
-  {% include contact.html %}
-
+  <main>
+    {{ content }}
+  </main>
   {% include footer.html %}
-  {% include modals.html %}
-  {% include js.html %}
-</body>
 
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    }
+  </script>
+</body>
 </html>

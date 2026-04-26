@@ -1,0 +1,31 @@
+urls:
+  home: /en/
+  games: /en/games/
+  cooperative: /en/cooperative/
+  contact: /en/contact/
+  submit: /en/contact/#submit
+  join: /en/contact/#join
+
+nav:
+  home: Home
+  games: Games
+  cooperative: The Cooperative
+  contact: Contact
+  submit_game: Submit a game
+  join: Join
+  menu_open: Open menu
+  lang_switch_label: "FR"
+  lang_switch_url: /
+
+footer:
+  tagline: "Video game cooperative<br>based in Brittany"
+  nav_heading: Navigation
+  platforms_heading: Our games on
+  legal_heading: Legal
+  legal_notice: Legal notice
+  privacy: Privacy policy
+  founded: "Founded November 28, 2022"
+
+game:
+  back: Back to catalogue
+  image_coming: Image coming soon

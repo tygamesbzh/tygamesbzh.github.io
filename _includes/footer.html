@@ -1,51 +1,46 @@
-<!-- Footer -->
-<footer class="text-center">
-  <div class="footer-above">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-4">
-          <h3>100% Breizh</h3>
-          <p>
-            Based in Rennes <br/>
-            France 
-          </p>
-        </div>
-        <div class="footer-col col-md-4">
-          <h3>Get on board</h3>
-          <ul class="list-inline">
-            {% for network in site.social %}
-            <li>
-              <a href="{{ network.url }}" class="btn-social btn-outline"><i
-                  class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="footer-col col-md-4">
-          <h3>Legal</h3>
-          <p>
-            Created on November 28th, 2022 <br />
-            SIRET: 92171424200010 <br />
-            921 714 242 R.C.S. Rennes
-          </p>
-        </div> 
+{% assign t = site.data.i18n[page.lang | default: 'fr'] %}
+
+<footer class="bg-[#07070b] border-t border-white/10">
+  <div class="section-container py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      <div class="col-span-2 md:col-span-1">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="TyGAMES" class="h-7 w-auto mb-3">
+        <p class="text-sm text-muted/60 leading-relaxed">{{ t.footer.tagline }}</p>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-semibold text-xs uppercase tracking-widest text-muted/40 mb-4">{{ t.footer.nav_heading }}</h4>
+        <ul class="space-y-2">
+          <li><a href="{{ t.urls.home | relative_url }}" class="text-sm text-muted/60 hover:text-offwhite transition-colors">{{ t.nav.home }}</a></li>
+          <li><a href="{{ t.urls.games | relative_url }}" class="text-sm text-muted/60 hover:text-offwhite transition-colors">{{ t.nav.games }}</a></li>
+          <li><a href="{{ t.urls.cooperative | relative_url }}" class="text-sm text-muted/60 hover:text-offwhite transition-colors">{{ t.nav.cooperative }}</a></li>
+          <li><a href="{{ t.urls.contact | relative_url }}" class="text-sm text-muted/60 hover:text-offwhite transition-colors">{{ t.nav.contact }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-semibold text-xs uppercase tracking-widest text-muted/40 mb-4">{{ t.footer.platforms_heading }}</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-sm text-muted/60 hover:text-offwhite transition-colors">Steam</a></li>
+          <li><a href="#" class="text-sm text-muted/60 hover:text-offwhite transition-colors">App Store</a></li>
+          <li><a href="#" class="text-sm text-muted/60 hover:text-offwhite transition-colors">Google Play</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-semibold text-xs uppercase tracking-widest text-muted/40 mb-4">{{ t.footer.legal_heading }}</h4>
+        <ul class="space-y-2">
+          <li><span class="text-sm text-muted/40">SIRET 931 717 242</span></li>
+          <li><span class="text-sm text-muted/40">R.C.S. Rennes</span></li>
+          <li><a href="{{ t.urls.contact | relative_url }}" class="text-sm text-muted/60 hover:text-offwhite transition-colors">{{ t.footer.legal_notice }}</a></li>
+          <li><a href="{{ t.urls.contact | relative_url }}" class="text-sm text-muted/60 hover:text-offwhite transition-colors">{{ t.footer.privacy }}</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-  <div class="footer-below">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }} - <a href="/privacy">Privacy Policy</a>
-        </div>
-      </div>
+
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-muted/40">© {{ 'now' | date: "%Y" }} TyGAMES SCIC — Rennes, Bretagne</p>
+      <p class="text-sm text-muted/40">{{ t.footer.founded }}</p>
     </div>
   </div>
 </footer>
-
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll visible-xs visible-sm">
-  <a class="btn btn-primary" href="#page-top">
-    <i class="fa fa-chevron-up"></i>
-  </a>
-</div>

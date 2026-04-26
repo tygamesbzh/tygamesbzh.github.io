@@ -1,0 +1,71 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang | default: 'fr'] %}
+
+<article class="section-padding">
+  <div class="section-container">
+    <a href="{{ t.urls.games | relative_url }}" class="inline-flex items-center gap-2 text-sm text-muted/60 hover:text-accent transition-colors mb-10">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      {{ t.game.back }}
+    </a>
+
+    <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
+      <div class="aspect-video bg-white/5 rounded-xl border border-white/10 overflow-hidden flex items-center justify-center">
+        {% if page.img %}
+          <img src="{{ '/assets/img/games/' | append: page.img | relative_url }}" alt="{{ page.game }}" class="w-full h-full object-cover">
+        {% else %}
+          <span class="text-muted/20 text-sm">{{ t.game.image_coming }}</span>
+        {% endif %}
+      </div>
+
+      <div>
+        {% if page.platforms %}
+          <div class="flex flex-wrap gap-2 mb-4">
+            {% assign platform_list = page.platforms | split: "/" %}
+            {% for platform in platform_list %}
+              <span class="text-xs bg-white/10 text-muted/60 px-3 py-1 rounded-full">{{ platform | strip }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <h1 class="font-heading font-extrabold text-4xl md:text-5xl mb-3">{{ page.game }}</h1>
+
+        {% if page.project-date %}
+          <p class="text-muted/40 text-sm mb-5">{{ page.project-date }}</p>
+        {% endif %}
+
+        {% if page.description %}
+          <p class="text-lg text-muted/70 leading-relaxed mb-8">{{ page.description }}</p>
+        {% endif %}
+
+        {% if page.store_links %}
+          <div class="flex flex-wrap gap-3">
+            {% if page.store_links.steam %}
+              <a href="{{ page.store_links.steam }}" target="_blank" rel="noopener" class="btn-outline text-sm py-2 px-4">Steam</a>
+            {% endif %}
+            {% if page.store_links.ios %}
+              <a href="{{ page.store_links.ios }}" target="_blank" rel="noopener" class="btn-outline text-sm py-2 px-4">App Store</a>
+            {% endif %}
+            {% if page.store_links.android %}
+              <a href="{{ page.store_links.android }}" target="_blank" rel="noopener" class="btn-outline text-sm py-2 px-4">Google Play</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if content != "" %}
+      <div class="max-w-2xl text-muted/80 leading-relaxed space-y-4
+                  [&_h2]:font-heading [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:text-offwhite [&_h2]:mt-10 [&_h2]:mb-4
+                  [&_h3]:font-heading [&_h3]:font-semibold [&_h3]:text-xl [&_h3]:text-offwhite [&_h3]:mt-8 [&_h3]:mb-3
+                  [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1
+                  [&_strong]:text-offwhite [&_em]:italic
+                  [&_a]:text-accent [&_a:hover]:text-accent-light">
+        {{ content }}
+      </div>
+    {% endif %}
+  </div>
+</article>
