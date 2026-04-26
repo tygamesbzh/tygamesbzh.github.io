@@ -21,7 +21,6 @@ module.exports = {
           light: '#a855c8',
           dark: '#6d2f87',
         },
-        orange: '#e07020',
       },
       maxWidth: {
         site: '1200px',

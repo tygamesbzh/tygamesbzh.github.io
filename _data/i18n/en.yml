@@ -2,6 +2,7 @@ urls:
   home: /en/
   games: /en/games/
   cooperative: /en/cooperative/
+  publishing: /publishing/
   contact: /en/contact/
   submit: /en/contact/#submit
   join: /en/contact/#join
@@ -10,15 +11,16 @@ nav:
   home: Home
   games: Games
   cooperative: The Cooperative
+  publishing: Édition/Distribution
   contact: Contact
   submit_game: Submit a game
   join: Join
   menu_open: Open menu
-  lang_switch_label: "FR"
+  lang_switch_label: "🇫🇷 FR"
   lang_switch_url: /
 
 footer:
-  tagline: "Video game cooperative<br>based in Brittany"
+  tagline: "Cooperative french video games publisher"
   nav_heading: Navigation
   platforms_heading: Our games on
   legal_heading: Legal
@@ -28,4 +30,3 @@ footer:
 
 game:
   back: Back to catalogue
-  image_coming: Image coming soon

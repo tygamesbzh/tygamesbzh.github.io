@@ -1,14 +1,10 @@
-- name: Vincent Beaüzée
-  role: Co-fondateur
-  bio: Game designer et entrepreneur culturel, impliqué dans l'écosystème du jeu vidéo breton depuis ses débuts.
+
+- name: Vincent Beauzée
+  role: Président
+  bio: TODO BIO
   img: vincent.jpg
 
-- name: Laurent [Nom]
-  role: Co-fondateur
-  bio: ""
-  img: laurent.jpg
-
-- name: Yannick [Nom]
-  role: Membre
-  bio: ""
-  img: yannick.png
+- name: Damien Mayance
+  role: Directeur Général
+  bio: Indie Gamedev breton depuis 2014, avec 7 jeux à son actif sur 6 plateformes différentes
+  img: damien.png

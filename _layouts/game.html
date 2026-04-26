@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-{% assign t = site.data.i18n[page.lang | default: 'fr'] %}
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[lang] %}
 
 <article class="section-padding">
   <div class="section-container">
@@ -26,7 +27,7 @@ layout: default
           <div class="flex flex-wrap gap-2 mb-4">
             {% assign platform_list = page.platforms | split: "/" %}
             {% for platform in platform_list %}
-              <span class="text-xs bg-white/10 text-muted/60 px-3 py-1 rounded-full">{{ platform | strip }}</span>
+              <span class="platform-badge">{{ platform | strip }}</span>
             {% endfor %}
           </div>
         {% endif %}
@@ -58,12 +59,7 @@ layout: default
     </div>
 
     {% if content != "" %}
-      <div class="max-w-2xl text-muted/80 leading-relaxed space-y-4
-                  [&_h2]:font-heading [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:text-offwhite [&_h2]:mt-10 [&_h2]:mb-4
-                  [&_h3]:font-heading [&_h3]:font-semibold [&_h3]:text-xl [&_h3]:text-offwhite [&_h3]:mt-8 [&_h3]:mb-3
-                  [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1
-                  [&_strong]:text-offwhite [&_em]:italic
-                  [&_a]:text-accent [&_a:hover]:text-accent-light">
+      <div class="game-prose">
         {{ content }}
       </div>
     {% endif %}

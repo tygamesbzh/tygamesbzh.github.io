@@ -1,4 +1,6 @@
-{% assign t = site.data.i18n[page.lang | default: 'fr'] %}
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign switcher_url = page.lang_alternate | default: t.nav.lang_switch_url %}
 
 <footer class="bg-[#07070b] border-t border-white/10">
   <div class="section-container py-16">

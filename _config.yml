@@ -1,17 +1,25 @@
 title: TyGAMES
-tagline: "Coopérative de jeu vidéo basée en Bretagne"
-description: "On développe, on publie, on partage — autrement"
+tagline: "Coopérative bretonne d'édition et distribution de jeux vidéo"
+description: "Un autre modèle d'édition est possible : coopératif, transparent, résilient. Rejoignez-nous !"
+image: /assets/img/og.png
+logo: /assets/img/logo_white.png
 baseurl: ""
-url: "https://tygames.coop"
+url: "https://ty.games"
 lang: fr
-
-email: contact@tygames.coop
+email: hello@ty.games
 location: Rennes, Bretagne
+
+social:
+  bluesky: https://bsky.app/profile/ty.games
+  mastodon: 
+  instagram: 
+  youtube: 
+  discord: https://discord.gg/tygames
 
 collections:
   games:
     output: true
-    permalink: /jeux/:name/
+    permalink: /games/:name/
 
 defaults:
   - scope:
@@ -40,4 +48,3 @@ exclude:
   - vendor/
   - .github/
   - README.md
-  - design_handoff_tygames/

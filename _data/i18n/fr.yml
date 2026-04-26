@@ -1,6 +1,7 @@
 urls:
   home: /
-  games: /jeux/
+  games: /games/
+  publishing: /publishing/
   cooperative: /cooperative/
   contact: /contact/
   submit: /contact/#soumettre
@@ -9,16 +10,17 @@ urls:
 nav:
   home: Accueil
   games: Catalogue
+  publishing: Édition/Distribution
   cooperative: La Coopérative
   contact: Contact
   submit_game: Soumettre un jeu
-  join: Rejoindre
+  join: Nous Rejoindre
   menu_open: Ouvrir le menu
-  lang_switch_label: "EN"
+  lang_switch_label: "🇬🇧 EN"
   lang_switch_url: /en/
 
 footer:
-  tagline: "Coopérative de jeu vidéo<br>basée en Bretagne"
+  tagline: "Coopérative d'édition et de distribution de jeux vidéo"
   nav_heading: Navigation
   platforms_heading: Nos jeux sur
   legal_heading: Légal
@@ -28,4 +30,3 @@ footer:
 
 game:
   back: Retour au catalogue
-  image_coming: Image à venir

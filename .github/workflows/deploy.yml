@@ -1,4 +1,4 @@
-name: Deploy Jekyll + Tailwind to GitHub Pages
+name: Deploy Jekyll with tailwind.css to GitHub Pages
 
 on:
   push:
