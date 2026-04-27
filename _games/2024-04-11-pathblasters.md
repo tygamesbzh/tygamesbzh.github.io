@@ -1,9 +1,8 @@
-﻿---
+---
 layout: game
-modal-id: 7
 date: 2024-04-11
 img: pathblasters.jpg
-alt: image-alt
+alt: PathBlasters
 project-date: 2024
 game: PathBlasters
 platforms: PC

@@ -1,9 +1,8 @@
-﻿---
+---
 layout: game
-modal-id: 8
 date: 2024-06-01
 img: kubitsgallery.jpg
-alt: image-alt
+alt: Kubits Gallery
 project-date: 2024
 game: Kubits Gallery
 platforms: Nintendo Switch

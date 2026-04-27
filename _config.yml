@@ -11,10 +11,20 @@ location: Rennes, Bretagne
 
 social:
   bluesky: https://bsky.app/profile/ty.games
-  mastodon: 
-  instagram: 
-  youtube: 
+  mastodon:
+  instagram:
+  youtube:
   discord: https://discord.gg/tygames
+
+stores:
+  steam: https://store.steampowered.com/publisher/tygames
+  gog: https://www.gog.com/fr/games?publishers=tygames
+  epic: 
+  app_store: https://apps.apple.com/fr/developer/tygames/id1663858681
+  google_play: https://play.google.com/store/apps/dev?id=5075684495718628174
+  nintendo: 
+  playstation: https://store.playstation.com/en-us/concept/10013114
+  xbox: 
 
 collections:
   games:

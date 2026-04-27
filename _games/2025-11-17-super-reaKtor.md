@@ -1,6 +1,5 @@
 ---
 layout: game
-modal-id: 10
 date: 2025-11-21
 img: superreaktor.jpg
 alt: Super reaKtor

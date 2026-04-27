@@ -6,6 +6,8 @@ urls:
   contact: /contact/
   submit: /contact/#soumettre
   join: /contact/#rejoindre
+  legal: /legal
+  privacy: /privacy
 
 nav:
   home: Accueil

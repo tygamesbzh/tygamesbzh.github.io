@@ -1,9 +1,8 @@
 ---
 layout: game
-modal-id: 8
 date: 2024-11-01
 img: cloudyvalley.jpg
-alt: image-alt
+alt: Cloudy Valley
 project-date: 2024
 game: Cloudy Valley
 platforms: PC

@@ -67,18 +67,28 @@ lang_alternate: /en/
       <div>
         <h2 class="font-heading font-bold text-4xl md:text-5xl">Découvrez nos <em class="not-italic text-accent-light">Jeux</em>        </h2>
       </div>
-      <a href="{{ '/jeux/' | relative_url }}" class="btn-outline text-sm py-2 hidden sm:inline-block">Voir tout →</a>
+      <a href="{{ '/games/' | relative_url }}" class="btn-outline text-sm py-2 hidden sm:inline-block">Voir tout →</a>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-2 mb-10">
+      {% if site.stores.steam %}<a href="{{ site.stores.steam }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="steam" %}Steam</a>{% endif %}
+      {% if site.stores.gog %}<a href="{{ site.stores.gog }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="gog" %}GOG</a>{% endif %}
+      {% if site.stores.epic %}<a href="{{ site.stores.epic }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="epic" %}Epic</a>{% endif %}
+      {% if site.stores.app_store %}<a href="{{ site.stores.app_store }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="app_store" %}App Store</a>{% endif %}
+      {% if site.stores.google_play %}<a href="{{ site.stores.google_play }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="google_play" %}Google Play</a>{% endif %}
+      {% if site.stores.nintendo %}<a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="nintendo" %}Nintendo eShop</a>{% endif %}
+      {% if site.stores.playstation %}<a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="playstation" %}PlayStation</a>{% endif %}
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
       {% assign sorted_games = site.games | sort: "date" | reverse %}
       {% for game in sorted_games limit:6 %}
       <a href="{{ game.url | relative_url }}" class="group block">
-        <div class="aspect-video bg-white/5 rounded-lg overflow-hidden mb-2">
+        <div class="bg-white/5 rounded-lg overflow-hidden mb-2">
           {% assign game_img = game.wide_img | default: game.img %}
           {% if game_img %}
           <img src="{{ '/assets/img/games/' | append: game_img | relative_url }}" alt="{{ game.game }}"
-            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            class="w-full transition-transform duration-300 group-hover:scale-105">
           {% endif %}
         </div>
         <div class="flex items-baseline justify-between gap-2 mt-2">
@@ -87,8 +97,7 @@ lang_alternate: /en/
           <p class="text-xs text-ink/40 shrink-0">{{ game.project-date }}</p>
           {% endif %}
         </div>
-        {% if game.platforms %}
-        <p class="text-xs text-ink/40 mt-0.5">{{ game.platforms }}</p>
+        {% if game.store_links %}
         {% endif %}
       </a>
       {% endfor %}

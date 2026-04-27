@@ -60,6 +60,13 @@
     @apply bg-offwhite
   }
 
+  .btn-store {
+    @apply inline-flex items-center justify-center gap-1.5 w-36 py-2 bg-ink rounded-full border text-offwhite text-xs font-semibold transition-all duration-200;
+  }
+  .btn-store:hover {
+    @apply border-accent scale-105;
+  }
+
   /* Section eyebrow — add color class (text-accent, text-accent-light…) alongside */
   .section-eyebrow {
     @apply text-xs font-semibold uppercase tracking-widest;

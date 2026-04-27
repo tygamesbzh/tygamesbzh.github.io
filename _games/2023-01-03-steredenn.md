@@ -1,9 +1,8 @@
-﻿---
+---
 layout: game
-modal-id: 1
 date: 2023-01-09
 img: steredenn.png
-alt: image-alt
+alt: Steredenn - Binary Stars
 project-date: 2015-2018
 game: Steredenn - Binary Stars
 platforms: PC/Nintendo Switch/iOS
