@@ -17,9 +17,10 @@
     @apply inline-block bg-ink text-offwhite border border-white/30 hover:border-accent px-6 py-3 rounded font-medium transition-colors duration-200;
   }
 
-  .btn-orange {
-    @apply inline-block bg-orange hover:opacity-90 text-white px-6 py-3 rounded font-medium transition-opacity duration-200;
+  .btn-social {
+    @apply flex items-center justify-center w-12 h-12 rounded-full bg-ink/5 text-ink/90 hover:bg-accent hover:text-white transition-colors;
   }
+
 
   .card {
     @apply bg-white/5 border border-white/10 rounded-xl p-6;
@@ -77,40 +78,36 @@
     @apply text-sm text-muted hover:text-offwhite transition-colors;
   }
 
-  .btn-social {
-    @apply flex items-center justify-center w-12 h-12 rounded-full bg-ink/5 text-ink/90 hover:bg-accent hover:text-white transition-colors;
-  }
-
   /* Game detail page */
   .platform-badge {
     @apply text-xs bg-white/10 text-muted/60 px-3 py-1 rounded-full;
   }
 
-  .game-prose {
-    @apply max-w-2xl text-muted/80 leading-relaxed space-y-4;
+  .game-text {
+    @apply max-w-2xl text-ink leading-relaxed space-y-4;
   }
 
-  .game-prose h2 {
+  .game-text h2 {
     @apply font-bold text-2xl text-offwhite mt-10 mb-4;
   }
 
-  .game-prose h3 {
+  .game-text h3 {
     @apply font-semibold text-xl text-offwhite mt-8 mb-3;
   }
 
-  .game-prose ul {
+  .game-text ul {
     @apply list-disc pl-5 space-y-1;
   }
 
-  .game-prose strong {
+  .game-text strong {
     @apply text-offwhite;
   }
 
-  .game-prose a {
+  .game-text a {
     @apply text-accent;
   }
 
-  .game-prose a:hover {
+  .game-text a:hover {
     @apply text-accent-light;
   }
 }

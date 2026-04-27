@@ -6,40 +6,48 @@ lang: fr
 lang_alternate: /en/games/
 ---
 
-<section class="section-padding pt-32">
+<section class="section-padding pt-32 bg-offwhite">
   <div class="section-container">
-    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-4">Catalogue</h1>
-    <p class="text-xl text-muted/70 mb-16 max-w-2xl">Tous nos jeux, disponibles sur PC, iOS et Android.</p>
+    <h1 class="font-heading font-extrabold text-5xl md:text-6xl text-ink mb-4">Catalogue</h1>
+    <p class="text-xl text-ink/50 mb-16 max-w-2xl">Tous les jeux distribués et publiés par <span class="text-accent">TyGAMES</span></p>
 
     {% if site.games.size > 0 %}
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {% assign sorted_games = site.games | sort: "date" | reverse %}
         {% for game in sorted_games %}
-          <a href="{{ game.url | relative_url }}" class="card group hover:border-accent/50 transition-colors flex flex-col">
-            <div class="aspect-video bg-white/5 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
-              {% if game.img %}
-                <img src="{{ '/assets/img/games/' | append: game.img | relative_url }}" alt="{{ game.game }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-              {% else %}
-                <span class="text-muted/20 text-xs">Image à venir</span>
+          <a href="{{ game.url | relative_url }}" class="group bg-white rounded-xl border border-ink/10 overflow-hidden hover:border-accent/40 hover:shadow-lg transition-all duration-200 flex flex-col">
+            {% if game.img %}
+              <div class="bg-ink/5 overflow-hidden">
+                <img src="{{ '/assets/img/games/' | append: game.img | relative_url }}" alt="{{ game.game }}" class="w-full group-hover:scale-105 transition-transform duration-300">
+              </div>
+            {% else %}
+              <div class="aspect-video bg-ink/5 flex items-center justify-center">
+                <span class="text-ink/20 text-xs">Image à venir</span>
+              </div>
+            {% endif %}
+
+            <div class="p-5 flex flex-col flex-1">
+              {% if game.platforms %}
+                <p class="text-xs text-ink/40 mb-2">{{ game.platforms }}</p>
+              {% endif %}
+
+              <h2 class="font-heading font-bold text-lg text-ink group-hover:text-accent transition-colors mb-1">{{ game.game }}</h2>
+
+              {% if game.project-date %}
+                <p class="text-xs text-ink/40 mb-2">{{ game.project-date }}</p>
+              {% endif %}
+
+              {% if game.description %}
+                <p class="text-sm text-ink/60 leading-relaxed line-clamp-3 mt-auto pt-3">{{ game.description }}</p>
               {% endif %}
             </div>
-
-            {% if game.platforms %}
-              <p class="text-xs text-muted/40 mb-2">{{ game.platforms }}</p>
-            {% endif %}
-
-            <h2 class="font-heading font-bold text-xl mb-1 group-hover:text-accent transition-colors flex-1">{{ game.game }}</h2>
-
-            {% if game.description %}
-              <p class="text-sm text-muted/60 mt-2 line-clamp-2">{{ game.description }}</p>
-            {% endif %}
           </a>
         {% endfor %}
       </div>
     {% else %}
-      <div class="text-center py-24 border border-dashed border-white/10 rounded-2xl">
-        <p class="text-muted/40 text-lg mb-6">Le catalogue arrive bientôt.</p>
-        <a href="{{ '/contact/#newsletter' | relative_url }}" class="btn-outline">Être notifié des sorties</a>
+      <div class="text-center py-24 border border-dashed border-ink/10 rounded-2xl">
+        <p class="text-ink/40 text-lg mb-6">Le catalogue arrive bientôt.</p>
+        <a href="{{ '/contact/#newsletter' | relative_url }}" class="btn-primary">Être notifié des sorties</a>
       </div>
     {% endif %}
   </div>

@@ -73,6 +73,7 @@ lang_alternate: /en/
     <div class="flex flex-wrap justify-center gap-2 mb-10">
       {% if site.stores.steam %}<a href="{{ site.stores.steam }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="steam" %}Steam</a>{% endif %}
       {% if site.stores.gog %}<a href="{{ site.stores.gog }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="gog" %}GOG</a>{% endif %}
+      {% if site.stores.humble %}<a href="{{ site.stores.humble }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="humble" %}Humble</a>{% endif %}
       {% if site.stores.epic %}<a href="{{ site.stores.epic }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="epic" %}Epic</a>{% endif %}
       {% if site.stores.app_store %}<a href="{{ site.stores.app_store }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="app_store" %}App Store</a>{% endif %}
       {% if site.stores.google_play %}<a href="{{ site.stores.google_play }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="google_play" %}Google Play</a>{% endif %}
@@ -108,24 +109,7 @@ lang_alternate: /en/
   </div>
 </section>
 
-<!-- CTA split -->
-<div class="grid md:grid-cols-2">
-  <div class="bg-accent p-16 md:p-20 flex flex-col gap-5">
-    <p class="section-eyebrow text-offwhite">Développeurs, studios, créateur.ice.s</p>
-    <h3 class="font-heading font-bold text-3xl text-white">Vous développez un jeu&nbsp;?</h3>
-    <p class="text-white/70 leading-relaxed max-w-s">Soumettez votre projet à la coopérative. Nous étudions chaque dossier
-      avec attention.</p>
-    <a href="{{ '/pitch' | relative_url }}" class="btn-outline inline-block w-fit"
-      style="border-color: rgba(255,255,255,0.35)">Soumettre mon jeu →</a>
-  </div>
-  <div class="bg-ink p-16 md:p-20 flex flex-col gap-5 border-t md:border-t-0 border-white/10">
-    <p class="section-eyebrow text-offwhite">La coopérative</p>
-    <h3 class="font-heading font-bold text-3xl text-offwhite">Rejoignez nous !</h3>
-    <p class="text-muted/60 leading-relaxed max-w-s">TyGAMES fonctionne en coopérative. Professionnels, créateurs, joueurs : chaque membre compte.<br />1 personne = 1 voix.<br />Découvrez
-      comment nous fonctionnons et comment devenir sociétaire.</p>
-    <a href="{{ '/cooperative/#rejoindre' | relative_url }}" class="btn-outline inline-block w-fit">Nous rejoindre →</a>
-  </div>
-</div>
+{% include cta-split.html %}
 
 <!-- Newsletter -->
 <section class="section-padding bg-offwhite" id="newsletter">

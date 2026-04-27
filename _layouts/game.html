@@ -4,9 +4,9 @@ layout: default
 {% assign lang = page.lang | default: 'fr' %}
 {% assign t = site.data.i18n[lang] %}
 
-<article class="section-padding">
+<article class="section-padding bg-offwhite">
   <div class="section-container">
-    <a href="{{ t.urls.games | relative_url }}" class="inline-flex items-center gap-2 text-sm text-muted/60 hover:text-accent transition-colors mb-10">
+    <a href="{{ t.urls.games | relative_url }}" class="inline-flex items-center gap-2 text-sm text-ink/60 hover:text-accent transition-colors mb-10">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
       </svg>
@@ -14,80 +14,60 @@ layout: default
     </a>
 
     <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
-      <div class="aspect-video bg-white/5 rounded-xl border border-white/10 overflow-hidden flex items-center justify-center">
-        {% if page.img %}
-          <img src="{{ '/assets/img/games/' | append: page.img | relative_url }}" alt="{{ page.game }}" class="w-full h-full object-cover">
-        {% else %}
-          <span class="text-muted/20 text-sm">{{ t.game.image_coming }}</span>
-        {% endif %}
+      <div class="bg-white/5 rounded-xl border border-white/10 overflow-hidden">
+        <img src="{{ '/assets/img/games/' | append: page.img | relative_url }}" alt="{{ page.game }}" class="w-full">
       </div>
 
       <div>
-        {% if page.platforms %}
-          <div class="flex flex-wrap gap-2 mb-4">
-            {% assign platform_list = page.platforms | split: "/" %}
-            {% for platform in platform_list %}
-              <span class="platform-badge">{{ platform | strip }}</span>
+
+        <h1 class="font-heading font-extrabold text-4xl md:text-5xl mb-3">{{ page.game }}</h1>
+
+        {% if page.developer %}
+          <p class="text-accent text-lg font-bold mb-1">{{ page.developer }}</p>
+        {% endif %}
+
+        {% if page.release_date %}
+          <p class="text-ink/80 text-sm mb-5">{{ page.release_date }}</p>
+        {% elsif page.project-date %}
+          <p class="text-ink/80 text-sm mb-5">{{ page.project-date }}</p>
+        {% endif %}
+
+        {% if page.genre %}
+          <div class="flex flex-wrap gap-2 mb-5">
+            {% assign genre_list = page.genre | split: "/" %}
+            {% for g in genre_list %}
+              <span class="text-xs px-2 py-1 rounded border border-ink/15 text-ink/80">{{ g | strip }}</span>
             {% endfor %}
           </div>
         {% endif %}
 
-        <h1 class="font-heading font-extrabold text-4xl md:text-5xl mb-3">{{ page.game }}</h1>
-
-        {% if page.project-date %}
-          <p class="text-muted/40 text-sm mb-5">{{ page.project-date }}</p>
-        {% endif %}
-
         {% if page.description %}
-          <p class="text-lg text-muted/70 leading-relaxed mb-8">{{ page.description }}</p>
+          <p class="text-lg text-ink/80 leading-relaxed mb-8">{{ page.description }}</p>
         {% endif %}
 
         {% if page.store_links %}
-          <div class="flex flex-wrap gap-3">
-            {% if page.store_links.steam %}
-              <a href="{{ page.store_links.steam }}" target="_blank" rel="noopener" class="btn-outline text-sm py-2 px-4">Steam</a>
-            {% endif %}
-            {% if page.store_links.ios %}
-              <a href="{{ page.store_links.ios }}" target="_blank" rel="noopener" class="btn-outline text-sm py-2 px-4">App Store</a>
-            {% endif %}
-            {% if page.store_links.android %}
-              <a href="{{ page.store_links.android }}" target="_blank" rel="noopener" class="btn-outline text-sm py-2 px-4">Google Play</a>
-            {% endif %}
-
-            
-        <!-- <div class="flex flex-wrap gap-1.5 mt-2" onclick="event.preventDefault()">
-          {% if game.store_links.steam %}
-          <a href="{{ game.store_links.steam }}" target="_blank" rel="noopener" class="btn-store">Steam</a>
-          {% endif %}
-          {% if game.store_links.gog %}
-          <a href="{{ game.store_links.gog }}" target="_blank" rel="noopener" class="btn-store">GOG</a>
-          {% endif %}
-          {% if game.store_links.epic %}
-          <a href="{{ game.store_links.epic }}" target="_blank" rel="noopener" class="btn-store">Epic</a>
-          {% endif %}
-          {% if game.store_links.ios %}
-          <a href="{{ game.store_links.ios }}" target="_blank" rel="noopener" class="btn-store">App Store</a>
-          {% endif %}
-          {% if game.store_links.android %}
-          <a href="{{ game.store_links.android }}" target="_blank" rel="noopener" class="btn-store">Google Play</a>
-          {% endif %}
-          {% if game.store_links.nintendo %}
-          <a href="{{ game.store_links.nintendo }}" target="_blank" rel="noopener" class="btn-store">Nintendo eShop</a>
-          {% endif %}
-          {% if game.store_links.playstation %}
-          <a href="{{ game.store_links.playstation }}" target="_blank" rel="noopener" class="btn-store">PlayStation Store</a>
-          {% endif %}
-          {% if game.store_links.xbox %}
-          <a href="{{ game.store_links.xbox }}" target="_blank" rel="noopener" class="btn-store">Xbox</a>
-          {% endif %}
-        </div> -->
+          <div class="flex flex-wrap gap-2 mb-4">
+            {% if page.store_links.steam %}<a href="{{ page.store_links.steam }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="steam" %}Steam</a>{% endif %}
+            {% if page.store_links.gog %}<a href="{{ page.store_links.gog }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="gog" %}GOG</a>{% endif %}
+            {% if page.store_links.epic %}<a href="{{ page.store_links.epic }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="epic" %}Epic</a>{% endif %}
+            {% if page.store_links.humble %}<a href="{{ page.store_links.humble }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="humble" %}Humble</a>{% endif %}
+            {% if page.store_links.nintendo %}<a href="{{ page.store_links.nintendo }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="nintendo" %}Nintendo eShop</a>{% endif %}
+            {% if page.store_links.playstation %}<a href="{{ page.store_links.playstation }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="playstation" %}PlayStation</a>{% endif %}
+            {% if page.store_links.xbox %}<a href="{{ page.store_links.xbox }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="xbox" %}Xbox</a>{% endif %}
+            {% if page.store_links.ios %}<a href="{{ page.store_links.ios }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="app_store" %}App Store</a>{% endif %}
+            {% if page.store_links.android %}<a href="{{ page.store_links.android }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="google_play" %}Google Play</a>{% endif %}
           </div>
         {% endif %}
+        <div>
+          {% if page.presskit %}
+            <a href="{{ page.presskit }}" target="_blank" rel="noopener" class="btn-primary text-sm py-2 px-4">Press Kit</a>
+          {% endif %}
+        </div>
       </div>
     </div>
 
     {% if content != "" %}
-      <div class="game-prose">
+      <div class="game-text">
         {{ content }}
       </div>
     {% endif %}

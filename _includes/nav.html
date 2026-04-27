@@ -2,8 +2,9 @@
 {% assign t = site.data.i18n[lang] %}
 {% assign switcher_url = page.lang_alternate | default: t.nav.lang_switch_url %}
 
-<header class="fixed top-0 left-0 right-0 z-50 h-[80px] bg-ink backdrop-blur-md border-b border-white/10">
-  <nav class="section-container h-full flex items-center justify-between">
+<header class="fixed top-0 left-0 right-0 z-50 h-[100px] bg-offwhite">
+  <img src="{{ '/assets/img/header_test.png' | relative_url }}" alt="" class="absolute inset-0 w-full h-full object-fill pointer-events-none select-none" aria-hidden="true">
+  <nav class="relative z-10 section-container h-full flex items-center justify-between">
     <a href="{{ t.urls.home | relative_url }}" class="flex items-center">
       <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-[64px] w-auto">
     </a>
@@ -44,4 +45,4 @@
   </div>
 </header>
 
-<div class="h-[80px]"></div>
+<div class="h-[100px]"></div>

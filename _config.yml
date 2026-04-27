@@ -20,6 +20,7 @@ stores:
   steam: https://store.steampowered.com/publisher/tygames
   gog: https://www.gog.com/fr/games?publishers=tygames
   epic: 
+  humble: https://www.humblebundle.com/store/search?publisher=TyGAMES
   app_store: https://apps.apple.com/fr/developer/tygames/id1663858681
   google_play: https://play.google.com/store/apps/dev?id=5075684495718628174
   nintendo: 
@@ -29,7 +30,7 @@ stores:
 collections:
   games:
     output: true
-    permalink: /games/:name/
+    permalink: /games/:slug/
 
 defaults:
   - scope:
