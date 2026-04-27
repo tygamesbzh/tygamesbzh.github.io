@@ -8,58 +8,12 @@ lang_alternate: /en/contact/
 
 <section class="section-padding pt-32 bg-offwhite">
   <div class="section-container">
-    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-4 text-ink">Contact</h1>
-    <p class="text-ink/60 text-lg">Coopérative bretonne d'édition et distribution de jeux vidéo — Rennes.</p>
-  </div>
-</section>
-
-<section class="section-padding bg-ink text-offwhite">
-  <div class="section-container">
-    <div class="max-w-2xl mb-12">
-      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">L'équipe</h2>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {% for member in site.data.team %}
-      <div class="card flex items-start gap-5">
-        {% if member.img %}
-        <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}"
-          class="w-14 h-14 rounded-full object-cover shrink-0">
-        {% else %}
-        <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0 font-heading font-extrabold text-white text-xl">
-          {{ member.name | slice: 0 }}
-        </div>
-        {% endif %}
-        <div>
-          <div class="font-heading font-bold text-offwhite">{{ member.name }}</div>
-          <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member.role }}</div>
-          {% if member.bio and member.bio != "TODO BIO" %}
-          <p class="text-muted/60 text-sm leading-relaxed">{{ member.bio }}</p>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <div class="mt-8 flex flex-wrap gap-4 text-sm text-muted/50">
-      <span>📍 Rennes, Bretagne</span>
-      <span>·</span>
-      <span>SIRET 931 717 242 R.C.S. Rennes</span>
-    </div>
-  </div>
-</section>
-
-<!-- Contact channels -->
-<section class="section-padding bg-offwhite">
-  <div class="section-container">
-    <div class="max-w-2xl mb-12">
-      <h2 class="font-heading font-bold text-4xl md:text-5xl mb-5 text-ink">Nous contacter</h2>
-    </div>
-
+    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-4 text-ink">Nous contacter</h1>
     <div class="grid md:grid-cols-3 gap-6 mb-14">
       <!-- Général / Presse -->
       <div class="card bg-ink/[0.04] border-ink/10 flex flex-col">
         <h3 class="editor-card-title text-ink">Questions générales &amp; presse</h3>
-        <p class="editor-card-bodytext-ink  mb-6">Partenariats, demandes presse, questions sur la coopérative, ou tout autre sujet.</p>
+        <p class="editor-card-body text-ink mb-6">Partenariats, demandes presse, questions sur la coopérative, ou tout autre sujet.</p>
         <a href="mailto:{{ site.email }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
           {{ site.email }} →
         </a>
@@ -86,10 +40,59 @@ lang_alternate: /en/contact/
       </div>
     </div>
 
-    <!-- Légal -->
-    <div class="border-t border-ink/10 pt-10 flex flex-wrap gap-6 text-sm text-ink/40">
-      <a href="{{ '/legal' | relative_url }}" class="hover:text-ink transition-colors">Mentions légales</a>
-      <a href="{{ '/privacy' | relative_url }}" class="hover:text-ink transition-colors">Politique de confidentialité</a>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-container">
+    <div class="max-w-2xl mb-12">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">L'équipe</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for member in site.data.team %}
+      <div class="card bg-ink/[0.04] border-ink/10 flex items-start gap-5">
+        {% if member.img %}
+        <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}"
+          class="w-14 h-14 rounded-full object-cover shrink-0">
+        {% else %}
+        <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0 font-heading font-extrabold text-ink text-xl">
+          {{ member.name | slice: 0 }}
+        </div>
+        {% endif %}
+        <div>
+          <div class="font-heading font-bold text-ink">{{ member.name }}</div>
+          <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member.role }}</div>
+          {% if member.bio and member.bio != "TODO BIO" %}
+          <p class="text-ink/80 text-sm leading-relaxed">{{ member.bio }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<section class="section-padding">
+  <div class="section-container">
+    <div class="max-w-2xl mb-12">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">Informations</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6 items-start">
+      <div class="card bg-ink/[0.04] border-ink/10">
+        <div class="flex flex-col gap-1 text-sm text-ink/80">
+          <span class="text-accent">TyGAMES SAS</span>
+          <span>3A, Rue de Paris</span>
+          <span>35510 Cesson-Sévigné</span>
+          <span>FRANCE</span>
+          <span>SIRET 931 717 242 R.C.S. Rennes</span>
+          <span>TVA FR16921714242</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 text-sm text-ink/40">
+        <a href="{{ '/legal' | relative_url }}" class="hover:text-ink transition-colors">Mentions légales</a>
+        <a href="{{ '/privacy' | relative_url }}" class="hover:text-ink transition-colors">Politique de confidentialité</a>
+      </div>
     </div>
   </div>
 </section>
