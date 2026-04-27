@@ -22,6 +22,9 @@ module.exports = {
           dark: '#6d2f87',
         },
       },
+      fontFamily: {
+        heading: ['system-ui', 'ui-sans-serif', 'sans-serif'],
+      },
       maxWidth: {
         site: '1200px',
       },

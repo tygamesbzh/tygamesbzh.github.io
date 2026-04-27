@@ -1,322 +1,95 @@
 ---
-layout: default
+layout: page-nocta
 title: Contact
-description: "Une question, un projet ? Contactez TyGAMES."
+description: "Une question, un projet, de la presse ? Contactez TyGAMES."
 lang: fr
 lang_alternate: /en/contact/
 ---
 
-<!-- Header -->
-<section class="section-padding pt-32">
-  <div class="section-container text-center max-w-2xl mx-auto">
-    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-6">Contact</h1>
-    <p class="text-xl text-muted/70">Une question, un projet, une envie de rejoindre l'aventure ? On vous répond.</p>
+<section class="section-padding pt-32 bg-offwhite">
+  <div class="section-container">
+    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-4 text-ink">Contact</h1>
+    <p class="text-ink/60 text-lg">Coopérative bretonne d'édition et distribution de jeux vidéo — Rennes.</p>
   </div>
 </section>
 
-<!-- Sticky section tabs -->
-<div class="sticky top-[68px] z-40 bg-ink/95 backdrop-blur-md border-b border-white/10">
+<section class="section-padding bg-ink text-offwhite">
   <div class="section-container">
-    <nav class="flex overflow-x-auto -mx-6 px-6 gap-1 py-3" id="contact-tabs">
-      <a href="#general"     class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">Contact général</a>
-      <a href="#newsletter"  class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">Newsletter</a>
-      <a href="#soumettre"   class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">Soumettre un jeu</a>
-      <a href="#rejoindre"   class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">Rejoindre</a>
-    </nav>
-  </div>
-</div>
-
-
-<!-- About / Team -->
-<section class="section-padding bg-offwhite">
-  <div class="section-container grid md:grid-cols-2 gap-20 items-center">
-    <div>
-      <p class="section-eyebrow text-accent mb-4">Qui sommes-nous</p>
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-ink mb-6">
-        Une coopérative <span class="text-accent">différente</span>
-      </h2>
-      <p class="text-ink/60 leading-relaxed mb-4">TyGAMES est un éditeur de jeux vidéo indépendant créé en Bretagne.
-        Nous fonctionnons sous forme de coopérative : chaque membre est co-décideur, chaque projet est partagé.</p>
-      <p class="text-ink/60 leading-relaxed mb-8">Notre mission : soutenir les développeurs bretons et indépendants en
-        leur offrant structure, ressources et visibilité — sans sacrifier leur liberté créative.</p>
-      <a href="{{ '/cooperative/' | relative_url }}" class="btn-primary">Découvrir la coopérative</a>
+    <div class="max-w-2xl mb-12">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">L'équipe</h2>
     </div>
-
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for member in site.data.team %}
-      <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+      <div class="card flex items-start gap-5">
         {% if member.img %}
         <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}"
-          class="w-16 h-16 rounded-full object-cover mx-auto mb-4">
+          class="w-14 h-14 rounded-full object-cover shrink-0">
         {% else %}
-        <div
-          class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-4 font-heading font-extrabold text-white text-lg">
+        <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0 font-heading font-extrabold text-white text-xl">
           {{ member.name | slice: 0 }}
         </div>
         {% endif %}
-        <div class="font-heading font-bold text-ink text-sm">{{ member.name }}</div>
-        <div class="text-ink/40 text-xs mt-1">{{ member.role }}</div>
+        <div>
+          <div class="font-heading font-bold text-offwhite">{{ member.name }}</div>
+          <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member.role }}</div>
+          {% if member.bio and member.bio != "TODO BIO" %}
+          <p class="text-muted/60 text-sm leading-relaxed">{{ member.bio }}</p>
+          {% endif %}
+        </div>
       </div>
       {% endfor %}
+    </div>
 
-      <div class="col-span-2 bg-white rounded-xl p-5 flex items-center gap-4 shadow-sm">
-        <div
-          class="w-11 h-11 rounded-full bg-accent flex items-center justify-center font-heading font-bold text-white text-xl shrink-0">
-          +</div>
-        <div>
-          <div class="font-heading font-bold text-ink text-sm">Vous&nbsp;?</div>
-          <div class="text-ink/40 text-xs mt-0.5">La coopérative est ouverte</div>
-        </div>
-        <a href="{{ '/cooperative/#rejoindre' | relative_url }}"
-          class="ml-auto text-accent font-semibold text-sm hover:text-accent-dark transition-colors whitespace-nowrap">Rejoindre
-          →</a>
-      </div>
+    <div class="mt-8 flex flex-wrap gap-4 text-sm text-muted/50">
+      <span>📍 Rennes, Bretagne</span>
+      <span>·</span>
+      <span>SIRET 931 717 242 R.C.S. Rennes</span>
     </div>
   </div>
 </section>
 
-<div class="section-container py-16">
-  <div class="grid lg:grid-cols-3 gap-12">
-
-    <!-- Forms -->
-    <div class="lg:col-span-2 space-y-20">
-
-      <!-- Contact général -->
-      <section id="general">
-        <h2 class="font-heading font-bold text-3xl mb-2">Contact général</h2>
-        <p class="text-muted/60 mb-8">Pour toute question ou demande d'information.</p>
-        <form class="space-y-5" data-form="general">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="g-prenom">Prénom</label>
-              <input type="text" id="g-prenom" name="prenom" required class="form-input" placeholder="Marie">
-            </div>
-            <div>
-              <label class="form-label" for="g-nom">Nom</label>
-              <input type="text" id="g-nom" name="nom" required class="form-input" placeholder="Dupont">
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="g-email">Email</label>
-            <input type="email" id="g-email" name="email" required class="form-input" placeholder="marie@exemple.fr">
-          </div>
-          <div>
-            <label class="form-label" for="g-sujet">Sujet</label>
-            <select id="g-sujet" name="sujet" class="form-input">
-              <option value="">— Choisir un sujet —</option>
-              <option value="question">Question générale</option>
-              <option value="partenariat">Partenariat</option>
-              <option value="presse">Presse / médias</option>
-              <option value="autre">Autre</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label" for="g-message">Message</label>
-            <textarea id="g-message" name="message" rows="5" required class="form-input resize-none" placeholder="Votre message..."></textarea>
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="g-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="g-rgpd" class="text-sm text-muted/60">J'accepte que mes données soient utilisées pour répondre à ma demande. <a href="#" class="text-accent hover:underline">Politique de confidentialité</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">Envoyer le message</button>
-          <p class="hidden text-green-400 text-sm" data-success>Message envoyé. Nous vous répondons sous 48h.</p>
-        </form>
-      </section>
-
-      <!-- Newsletter -->
-      <section id="newsletter">
-        <h2 class="font-heading font-bold text-3xl mb-2">S'abonner à la newsletter</h2>
-        <p class="text-muted/60 mb-8">Nouvelles sorties, coulisses de la coop, événements — sans spam.</p>
-        <form class="space-y-5" data-form="newsletter">
-          <div>
-            <label class="form-label" for="nl-prenom">Prénom</label>
-            <input type="text" id="nl-prenom" name="prenom" required class="form-input" placeholder="Marie">
-          </div>
-          <div>
-            <label class="form-label" for="nl-email">Email</label>
-            <input type="email" id="nl-email" name="email" required class="form-input" placeholder="marie@exemple.fr">
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="nl-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="nl-rgpd" class="text-sm text-muted/60">J'accepte de recevoir la newsletter et que mon email soit transmis à Substack. <a href="#" class="text-accent hover:underline">Politique de confidentialité</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">S'abonner</button>
-          <p class="hidden text-green-400 text-sm" data-success>Bienvenue ! Vérifiez vos emails pour confirmer l'abonnement.</p>
-        </form>
-      </section>
-
-      <!-- Soumettre un jeu -->
-      <section id="soumettre">
-        <h2 class="font-heading font-bold text-3xl mb-2">Soumettre un jeu</h2>
-        <p class="text-muted/60 mb-8">Vous développez un jeu indépendant ? Partagez votre projet avec nous.</p>
-        <form class="space-y-5" data-form="soumettre">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="jeu-prenom">Prénom</label>
-              <input type="text" id="jeu-prenom" name="prenom" required class="form-input" placeholder="Jean">
-            </div>
-            <div>
-              <label class="form-label" for="jeu-nom">Nom</label>
-              <input type="text" id="jeu-nom" name="nom" required class="form-input" placeholder="Martin">
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="jeu-email">Email</label>
-            <input type="email" id="jeu-email" name="email" required class="form-input" placeholder="jean@studio.fr">
-          </div>
-          <div>
-            <label class="form-label" for="jeu-studio">Studio / Nom du projet</label>
-            <input type="text" id="jeu-studio" name="studio" class="form-input" placeholder="Studio Pixel">
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="jeu-plateforme">Plateforme cible</label>
-              <select id="jeu-plateforme" name="plateforme" class="form-input">
-                <option value="">— Choisir —</option>
-                <option value="pc">PC (Steam)</option>
-                <option value="ios">iOS</option>
-                <option value="android">Android</option>
-                <option value="multi">Multi-plateforme</option>
-              </select>
-            </div>
-            <div>
-              <label class="form-label" for="jeu-stade">Stade de développement</label>
-              <select id="jeu-stade" name="stade" class="form-input">
-                <option value="">— Choisir —</option>
-                <option value="concept">Concept / idée</option>
-                <option value="prototype">Prototype</option>
-                <option value="alpha">Alpha</option>
-                <option value="beta">Beta</option>
-                <option value="termine">Terminé</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="jeu-description">Description du jeu</label>
-            <textarea id="jeu-description" name="description" rows="5" required class="form-input resize-none" placeholder="Décrivez votre jeu, ses mécaniques, son univers..."></textarea>
-          </div>
-          <div>
-            <label class="form-label" for="jeu-demo">Lien démo / presskit <span class="text-muted/40 font-normal">(optionnel)</span></label>
-            <input type="url" id="jeu-demo" name="demo" class="form-input" placeholder="https://...">
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="jeu-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="jeu-rgpd" class="text-sm text-muted/60">J'accepte que mes données soient utilisées pour traiter ma soumission. <a href="#" class="text-accent hover:underline">Politique de confidentialité</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">Soumettre le projet</button>
-          <p class="hidden text-green-400 text-sm" data-success>Projet reçu ! Nous l'examinerons et vous recontacterons dans les 2 semaines.</p>
-        </form>
-      </section>
-
-      <!-- Rejoindre -->
-      <section id="rejoindre">
-        <h2 class="font-heading font-bold text-3xl mb-2">Rejoindre la coopérative</h2>
-        <p class="text-muted/60 mb-8">Devenez sociétaire de TyGAMES et participez à la gouvernance de la coop.</p>
-        <form class="space-y-5" data-form="rejoindre">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="join-prenom">Prénom</label>
-              <input type="text" id="join-prenom" name="prenom" required class="form-input" placeholder="Sophie">
-            </div>
-            <div>
-              <label class="form-label" for="join-nom">Nom</label>
-              <input type="text" id="join-nom" name="nom" required class="form-input" placeholder="Bernard">
-            </div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="join-email">Email</label>
-              <input type="email" id="join-email" name="email" required class="form-input" placeholder="sophie@exemple.fr">
-            </div>
-            <div>
-              <label class="form-label" for="join-tel">Téléphone <span class="text-muted/40 font-normal">(optionnel)</span></label>
-              <input type="tel" id="join-tel" name="tel" class="form-input" placeholder="+33 6 00 00 00 00">
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="join-parts">Nombre de parts souhaitées</label>
-            <select id="join-parts" name="parts" required class="form-input">
-              <option value="">— Choisir —</option>
-              <option value="1">1 part — 100€ (Soutien)</option>
-              <option value="2">2 parts — 200€</option>
-              <option value="5">5 parts — 500€ (Actif)</option>
-              <option value="10">10 parts+ — 1000€+ (Fondateur)</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label" for="join-motivation">Motivation <span class="text-muted/40 font-normal">(optionnel)</span></label>
-            <textarea id="join-motivation" name="motivation" rows="4" class="form-input resize-none" placeholder="Pourquoi souhaitez-vous rejoindre TyGAMES ?"></textarea>
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="join-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="join-rgpd" class="text-sm text-muted/60">J'accepte que mes données soient utilisées pour traiter ma demande d'adhésion. <a href="#" class="text-accent hover:underline">Politique de confidentialité</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">Envoyer ma demande</button>
-          <p class="hidden text-green-400 text-sm" data-success>Demande reçue ! Nous vous enverrons le dossier d'adhésion par email.</p>
-        </form>
-      </section>
-
+<!-- Contact channels -->
+<section class="section-padding bg-offwhite">
+  <div class="section-container">
+    <div class="max-w-2xl mb-12">
+      <h2 class="font-heading font-bold text-4xl md:text-5xl mb-5 text-ink">Nous contacter</h2>
     </div>
 
-    <!-- Sidebar -->
-    <aside>
-      <div class="card sticky top-32">
-        <h3 class="font-heading font-bold text-lg mb-6">Nous contacter directement</h3>
-        <div class="space-y-5">
-          <div>
-            <p class="text-xs text-muted/40 uppercase tracking-wider mb-1">Email</p>
-            <a href="mailto:{{ site.email }}" class="text-accent hover:text-accent-light transition-colors text-sm">{{ site.email }}</a>
-          </div>
-          <div>
-            <p class="text-xs text-muted/40 uppercase tracking-wider mb-1">Localisation</p>
-            <p class="text-sm text-muted/70">Rennes, Bretagne, France</p>
-          </div>
-          <div>
-            <p class="text-xs text-muted/40 uppercase tracking-wider mb-1">SIRET</p>
-            <p class="text-sm text-muted/70">931 717 242 R.C.S. Rennes</p>
-          </div>
-          <hr class="border-white/10">
-          <a href="#" class="flex items-center gap-3 text-sm text-muted/60 hover:text-offwhite transition-colors">
-            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.111 18.1.13 18.112a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-            </svg>
-            Rejoindre notre Discord
-          </a>
-        </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-14">
+      <!-- Général / Presse -->
+      <div class="card bg-ink/[0.04] border-ink/10 flex flex-col">
+        <h3 class="editor-card-title text-ink">Questions générales &amp; presse</h3>
+        <p class="editor-card-bodytext-ink  mb-6">Partenariats, demandes presse, questions sur la coopérative, ou tout autre sujet.</p>
+        <a href="mailto:{{ site.email }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          {{ site.email }} →
+        </a>
       </div>
-    </aside>
 
+      <!-- Pitcher un jeu -->
+      <div class="card bg-ink/[0.04] border-ink/10 flex flex-col">
+        <h3 class="editor-card-title text-ink">Soumettre un jeu</h3>
+        <p class="editor-card-body text-ink mb-6">Vous développez un jeu indépendant ? Lisez notre offre de distribution et d'édition, puis soumettez votre projet.</p>
+        <a href="{{ '/pitch' | relative_url }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          Voir la page dédiée →
+        </a>
+      </div>
+
+      <!-- Discord -->
+      <div class="card bg-ink/[0.04] border-ink/10 flex flex-col">
+        <h3 class="editor-card-title text-ink">Communauté</h3>
+        <p class="editor-card-body text-ink mb-6">Rejoignez notre Discord pour échanger avec l'équipe et la communauté TyGAMES.</p>
+        {% if site.social.discord %}
+        <a href="{{ site.social.discord }}" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          Rejoindre le Discord →
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Légal -->
+    <div class="border-t border-ink/10 pt-10 flex flex-wrap gap-6 text-sm text-ink/40">
+      <a href="{{ '/legal' | relative_url }}" class="hover:text-ink transition-colors">Mentions légales</a>
+      <a href="{{ '/privacy' | relative_url }}" class="hover:text-ink transition-colors">Politique de confidentialité</a>
+    </div>
   </div>
-</div>
-
-<script>
-  // Tab scroll-spy
-  const tabs = document.querySelectorAll('.contact-tab');
-  const sections = document.querySelectorAll('#general, #newsletter, #soumettre, #rejoindre');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        tabs.forEach(tab => {
-          const isActive = tab.getAttribute('href') === '#' + entry.target.id;
-          tab.classList.toggle('bg-accent/20', isActive);
-          tab.classList.toggle('text-accent', isActive);
-          tab.classList.toggle('text-muted/60', !isActive);
-        });
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-
-  // Form handlers — wire these to Formspree, Netlify Forms, etc.
-  document.querySelectorAll('form[data-form]').forEach(form => {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = 'Envoyé ✓';
-      form.querySelector('[data-success]').classList.remove('hidden');
-    });
-  });
-</script>
+</section>

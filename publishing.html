@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Distribution & Édition
 description: "Distribution et édition de jeux vidéo indépendants par TyGAMES SCIC"
 lang: fr
@@ -7,26 +7,37 @@ lang_alternate: /en/publishing/
 ---
 
 <!-- Hero -->
-<section class="section-padding pt-32 relative overflow-hidden">
+<section class="section-padding pt-32 relative overflow-hidden bg-offwhite">
   <div class="absolute inset-0 pointer-events-none">
     <div class="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-accent/8 blur-[120px]"></div>
   </div>
   <div class="section-container relative z-10 text-center max-w-3xl mx-auto">
-    <p class="section-eyebrow text-accent mb-6">Ce que nous faisons</p>
+    <p class="section-eyebrow text-accent mb-6">On fait quoi chez TyGAMES?</p>
     <h1 class="font-heading font-extrabold leading-tight mb-6" style="font-size: clamp(2.8rem, 6vw, 5rem)">
       Distribution<br><em class="not-italic text-accent">&amp; Édition</em>
     </h1>
-    <p class="text-xl text-muted/70 leading-relaxed">
-      TyGAMES accompagne les studios et créateur.ice.s dans la publication de leurs jeux — de la mise en vente sur les plateformes jusqu'à l'accompagnement éditorial complet.
+    <p class="text-xl text-ink/70 leading-relaxed">
+      TyGAMES accompagne les studios et créateur.ice.s dans la publication de leurs jeux sur toutes les plateformes.
     </p>
   </div>
 </section>
 
+<!-- Section nav -->
+<div class="sticky top-[100px] z-40 backdrop-blur border-b bg-offwhite">
+  <div class="section-container">
+    <nav class="flex justify-center gap-2 py-2">
+      <a href="#distribution" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">Distribution</a>
+      <a href="#edition" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">Édition</a>
+      <a href="#portage" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">Portage</a>
+      <a href="#erp" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">ERP</a>
+    </nav>
+  </div>
+</div>
+
 <!-- Distribution -->
-<section class="section-padding bg-white/[0.02] border-y border-white/10">
+<section id="distribution" class="section-padding bg-ink text-offwhite">
   <div class="section-container">
     <div class="max-w-2xl mb-12">
-      <p class="section-eyebrow text-accent mb-4">Notre cœur de métier</p>
       <h2 class="font-heading font-bold text-4xl md:text-5xl mb-5">Distributeur de jeux vidéo</h2>
       <p class="text-muted/70 leading-relaxed">
         Nous prenons en charge la partie administrative et commerciale pour que les studios se concentrent sur la création.
@@ -35,27 +46,30 @@ lang_alternate: /en/publishing/
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="card">
-        <div class="font-heading font-extrabold text-5xl text-accent/20 mb-4">01</div>
-        <h3 class="font-heading font-bold text-xl mb-3">Accès aux plateformes</h3>
-        <p class="text-muted/60 text-sm leading-relaxed">Mise en vente sur les principales plateformes de vente en ligne de jeux vidéo.</p>
+        <div class="distrib-card-number">01</div>
+        <h3 class="distrib-card-title">Accès aux plateformes</h3>
+        <p class="distrib-card-body">Mise en vente sur les principales plateformes de vente en ligne de jeux vidéo.</p>
+        <br />
+        <p class="distrib-card-body italic">Steam, Epic, Humble, GOG, Apple Store, Play Store, Nintendo eShop, Xbox, PlayStation Store, etc.</p>
       </div>
 
       <div class="card">
-        <div class="font-heading font-extrabold text-5xl text-accent/20 mb-4">02</div>
-        <h3 class="font-heading font-bold text-xl mb-3">Simplification administrative</h3>
-        <ul class="text-muted/60 text-sm leading-relaxed space-y-1.5 mt-1">
+        <div class="distrib-card-number">02</div>
+        <h3 class="distrib-card-title">Simplification administrative</h3>
+        <ul class="distrib-card-body space-y-1.5 mt-1">
           <li>Enregistrement fiscal auprès des stores</li>
-          <li>Agrégation devises étrangères → paiement en €</li>
-          <li>Calcul et paiement des royalties entre ayants droits</li>
+          <li>Agrégation devises étrangères</li>
+          <li>Paiements en €</li>
+          <li>Calcul et paiement des revshares entre ayants droits</li>
           <li>Gestion des remboursements et paliers évolutifs</li>
           <li>Déclaration URSSAF droits d'auteur (précomptés ou non)</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="font-heading font-extrabold text-5xl text-accent/20 mb-4">03</div>
-        <h3 class="font-heading font-bold text-xl mb-3">Force du catalogue</h3>
-        <ul class="text-muted/60 text-sm leading-relaxed space-y-1.5 mt-1">
+        <div class="distrib-card-number">03</div>
+        <h3 class="distrib-card-title">Force du catalogue</h3>
+        <ul class="distrib-card-body space-y-1.5 mt-1">
           <li>Contacts privilégiés au sein des stores</li>
           <li>Mises en avant sur les plateformes</li>
           <li>Deals ponctuels (boîte, bundle, game pass…)</li>
@@ -63,21 +77,24 @@ lang_alternate: /en/publishing/
       </div>
 
       <div class="card">
-        <div class="font-heading font-extrabold text-5xl text-accent/20 mb-4">04</div>
-        <h3 class="font-heading font-bold text-xl mb-3">Nouvelles opportunités</h3>
-        <ul class="text-muted/60 text-sm leading-relaxed space-y-1.5 mt-1">
-          <li>Présence mutualisée sur les salons</li>
-          <li>Distribution vers la Chine</li>
-          <li>Nouvelles plateformes (Genba, nuuvem…)</li>
+        <div class="distrib-card-number">04</div>
+        <h3 class="distrib-card-title">Revshare minimal</h3>
+        <ul class="distrib-card-body space-y-1.5 mt-1">
+          <li>Nous prenons le minimum</li>
+          <li>10% Steam / PC</li>
+          <li>10% mobile</li>
+          <li>20% consoles</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="font-heading font-extrabold text-5xl text-accent/20 mb-4">05</div>
-        <h3 class="font-heading font-bold text-xl mb-3">Annuaire de partenaires</h3>
-        <ul class="text-muted/60 text-sm leading-relaxed space-y-1.5 mt-1">
-          <li>Expert.e.s marketing</li>
-          <li>Mentorats créatif, technique, gestion de projets</li>
+        <div class="distrib-card-number">05</div>
+        <h3 class="distrib-card-title">Nouvelles opportunités</h3>
+        <ul class="distrib-card-body space-y-1.5 mt-1">
+          <li>Présence mutualisée sur les salons</li>
+          <li>Distribution vers la Chine</li>
+          <li>Accès aux nouvelles plateformes (Genba, nuuvem…)</li>
+          <li>Annuaires de partenaires</li>
         </ul>
       </div>
     </div>
@@ -85,202 +102,133 @@ lang_alternate: /en/publishing/
 </section>
 
 <!-- Edition -->
-<section class="section-padding">
+<section id="edition" class="section-padding bg-offwhite">
   <div class="section-container">
-    <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+
+    <div class="max-w-2xl mb-14">
+      <h2 class="font-heading font-bold text-4xl md:text-5xl mb-5 text-ink">Éditeur</h2>
+      <p class="text-ink/70 leading-relaxed mb-4">
+        Nous finançons modestement des services, des créations et des portages. Prenez connaissance de notre offre, puis <a href="/pitch/" class="text-accent hover:text-accent-light underline underline-offset-2">soumettez votre projet</a>.
+      </p>
+      <p class="text-ink/50 text-sm leading-relaxed">
+        Les candidatures sont étudiées par le Conseil Coopératif et la gérance, une fois par trimestre.
+      </p>
+    </div>
+
+    <div class="text-center mb-14">
+      <p class="section-eyebrow text-accent mb-4 text-lg">Enveloppe par jeu</p>
+      <p class="font-heading font-extrabold text-ink leading-none text-xl">15 000 €</p>
+      <p class="text-ink/50 text-sm mt-4 max-w-sm mx-auto">Nos budgets sont encore modestes  ils ne couvrent pas une production complète, mais ils couvrent l'essentiel d'une sortie réussie.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-16">
+      <div class="card bg-ink/[0.04] border-ink/10">
+        <h3 class="editor-card-title text-ink">Avec cette enveloppe et slon vos besoins :</h3>
+        <ul class="space-y-2.5 text-sm text-ink/70">
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">✓</span>Localisation (traduction) en fonction du nombre de mots</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">✓</span>QA : obligatoire sur toute sortie</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">✓</span>Key art</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">✓</span>Trailer</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">✓</span>Publicité (Reddit, Meta)</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">✓</span>Événements promotionnels (GMIF, Pégases, The Mix…)</li>
+        </ul>
+      </div>
+
+      <div class="card bg-ink/[0.04] border-ink/10">
+        <h3 class="editor-card-title text-ink">En contrepartie</h3>
+        <ul class="space-y-2.5 text-sm text-ink/70">
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">→</span>Votre projet est suivi par un sociétaire mentor</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">→</span>Les dépenses s'inscrivent sur une ardoise de dettes</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">→</span>Ces dettes sont remboursées en priorité<span class="text-ink/40">(80% TyGAMES, 20% dev)</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">→</span>Une fois la dette remboursée, le revshare bascule en faveur du dev <span class="text-ink/40">(30% TyGAMES, 70% dev)</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-accent shrink-0 mt-0.5">→</span>Le contrat ne peut pas être rompu avant remboursement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portages -->
+<section id="portage" class="section-padding bg-ink text-offwhite">
+  <div class="section-container">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <p class="section-eyebrow text-accent mb-4">Au-delà de la distribution</p>
-        <h2 class="font-heading font-bold text-4xl md:text-5xl mb-6">TyGAMES éditeur</h2>
-        <p class="text-muted/70 leading-relaxed mb-5">
-          En tant qu'éditeur, TyGAMES intervient <strong class="text-offwhite font-semibold">avant</strong> la sortie du jeu pour financer et accompagner le studio. La sortie est un moment critique — l'investissement est plus important à tous les niveaux.
+        <p class="section-eyebrow text-accent mb-4">Expertise technique</p>
+        <h3 class="font-heading font-bold text-3xl md:text-4xl mb-5">Portages consoles</h3>
+        <p class="text-muted/70 leading-relaxed mb-4">
+          Nous réalisons des portages en interne, grâce à une forte expertise technique et plusieurs expériences sur chaque console.
         </p>
-        <p class="text-muted/70 leading-relaxed">
-          L'éditeur prend un risque financier pour soutenir le jeu et développe une ligne éditoriale cohérente.
+        <p class="text-muted/70 leading-relaxed mb-6">
+          Nous possédons des devkits et testkits. Vous pouvez récupérer le code source à la fin du portage.
         </p>
-      </div>
-
-      <div class="space-y-3">
-        <div class="card flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
-            </svg>
-          </div>
-          <span class="text-muted/80 text-sm">Marketing &amp; communication</span>
-        </div>
-        <div class="card flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-            </svg>
-          </div>
-          <span class="text-muted/80 text-sm">Localisation (traductions)</span>
-        </div>
-        <div class="card flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-          </div>
-          <span class="text-muted/80 text-sm">Financement du studio</span>
-        </div>
-        <div class="card flex items-center gap-4">
-          <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <span class="text-muted/80 text-sm">Portages consoles &amp; mobile</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="platform-badge">Nintendo Switch</span>
+          <span class="platform-badge">PlayStation 5</span>
+          <span class="platform-badge">Xbox Series</span>
+          <span class="platform-badge">Optimisation</span>
         </div>
       </div>
-    </div>
-
-    <!-- Nos atouts -->
-    <h2 class="font-heading font-bold text-3xl md:text-4xl mb-10 text-center">Nos atouts</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="card">
-        <div class="text-3xl mb-4">🏆</div>
-        <h3 class="font-heading font-bold text-xl mb-3">L'expérience</h3>
-        <p class="text-muted/60 text-sm leading-relaxed">Plus de 8 releases à notre actif (Damien et Vincent). Des succès, des échecs, et surtout du recul. Nous avons des conseils à partager et un réseau de connaissances solide pour toutes les situations.</p>
-      </div>
-      <div class="card">
-        <div class="text-3xl mb-4">📚</div>
-        <h3 class="font-heading font-bold text-xl mb-3">Accès aux ressources</h3>
-        <p class="text-muted/60 text-sm leading-relaxed">Beaucoup d'exemples de configuration de pages store — marketing et techniques — construits au fil des années. Une base de références concrètes pour optimiser chaque release.</p>
-      </div>
-      <div class="card">
-        <div class="text-3xl mb-4">👥</div>
-        <h3 class="font-heading font-bold text-xl mb-3">La communauté</h3>
-        <p class="text-muted/60 text-sm leading-relaxed">La coopérative forme une communauté — devs, studios, sociétaires, et peut-être des streamers et créateur.ice.s de contenu. Un relai fort pour les sorties sur les réseaux sociaux et Steam.</p>
-      </div>
-      <div class="card">
-        <div class="text-3xl mb-4">🛠️</div>
-        <h3 class="font-heading font-bold text-xl mb-3">Le mentorat</h3>
-        <ul class="text-muted/60 text-sm leading-relaxed space-y-1.5 mt-1">
-          <li>Debug et optimisation (profiling)</li>
-          <li>Soutien dans les moments difficiles, aide à la priorisation</li>
-          <li>Organisation pour la sortie</li>
-          <li>Portage sur console et mobile</li>
-        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Offre TyGAMES -->
-<section class="section-padding bg-white/[0.02] border-y border-white/10">
-  <div class="section-container">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      <h2 class="font-heading font-bold text-4xl md:text-5xl mb-4">Offre TyGAMES</h2>
-      <p class="text-muted/60 leading-relaxed">En fonction de la trésorerie annuelle, nous allouons un budget à l'édition. Nous visons une enveloppe de <strong class="text-offwhite">15 000 €</strong> par jeu, tout compris.</p>
-    </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="card">
-        <h3 class="font-heading font-bold text-xl mb-5">Ce que couvre l'enveloppe</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-3">
-            <span class="text-accent mt-0.5 shrink-0">✓</span>
-            <span class="text-muted/70"><strong class="text-offwhite">Localisation</strong> — en fonction du nombre de mots</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent mt-0.5 shrink-0">✓</span>
-            <span class="text-muted/70"><strong class="text-offwhite">QA</strong> — minimum 4-5 jours pour toutes les releases</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent mt-0.5 shrink-0">✓</span>
-            <span class="text-muted/70"><strong class="text-offwhite">Marketing</strong> — trailer + publicité Reddit</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent mt-0.5 shrink-0">✓</span>
-            <span class="text-muted/70"><strong class="text-offwhite">MG</strong> — Minimum Garanti versé à la signature</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-muted/30 mt-0.5 shrink-0">○</span>
-            <span class="text-muted/50">Optionnel : key art / capsule store</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-muted/30 mt-0.5 shrink-0">○</span>
-            <span class="text-muted/50">Optionnel : salons (GMIF, Pégases, The Mix…)</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="space-y-4">
-        <div class="card">
-          <h3 class="font-heading font-bold text-lg mb-2">Sélection des projets</h3>
-          <p class="text-muted/60 text-sm leading-relaxed">Les candidatures sont étudiées par le Conseil Coopératif et la gérance, une fois par trimestre. Les sociétaires ont voix sur la ligne éditoriale.</p>
-        </div>
-        <div class="card">
-          <h3 class="font-heading font-bold text-lg mb-2">Suivi de projet</h3>
-          <p class="text-muted/60 text-sm leading-relaxed">Un responsable de suivi (producing) est nommé pour chaque projet — jalons, dates limites, canal de communication ouvert H24. Créer un jeu est difficile : nous en sommes conscients.</p>
-        </div>
-        <div class="card">
-          <h3 class="font-heading font-bold text-lg mb-2">Transparence &amp; Recoupe</h3>
-          <p class="text-muted/60 text-sm leading-relaxed">Toutes les dépenses sont listées sur l'ERP, accessibles au dev à tout moment. La dette (dépenses + MG) est remboursée en priorité — le studio touche toujours un pourcentage dès la première vente.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ERPirate -->
-<section class="section-padding">
+<!-- ERP -->
+<section id="erp" class="section-padding bg-offwhite text-ink">
   <div class="section-container">
     <div class="max-w-2xl mb-12">
       <p class="section-eyebrow text-accent mb-4">Nos outils</p>
       <h2 class="font-heading font-bold text-4xl md:text-5xl mb-5">ERPirate</h2>
-      <p class="text-muted/70 leading-relaxed">Le logiciel interne de TyGAMES, conçu pour centraliser et automatiser toute la gestion de la distribution et des royalties.</p>
+      <p class="leading-relaxed">Le logiciel interne de TyGAMES, conçu pour centraliser et automatiser toute la gestion de la distribution et des royalties.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-16 items-start">
+    <div class="grid md:grid-cols-2 gap-16 items-start text-ink/70">
       <ul class="space-y-4">
         <li class="flex items-start gap-3">
           <span class="text-accent mt-0.5 shrink-0">✓</span>
-          <span class="text-muted/70 text-sm leading-relaxed">Gestion des données studios (nom, adresse, IBAN…)</span>
+          <span class="text-sm leading-relaxed">Gestion des données studios (nom, adresse, IBAN…)</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-accent mt-0.5 shrink-0">✓</span>
-          <span class="text-muted/70 text-sm leading-relaxed">Unification des données de ventes de tous les stores en un seul format</span>
+          <span class="text-sm leading-relaxed">Unification des données de ventes de tous les stores en un seul format</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-accent mt-0.5 shrink-0">✓</span>
-          <span class="text-muted/70 text-sm leading-relaxed">Accès des studios à leurs données de ventes via une interface web dédiée</span>
+          <span class="text-sm leading-relaxed">Accès des studios à leurs données de ventes via une interface web dédiée</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-accent mt-0.5 shrink-0">✓</span>
-          <span class="text-muted/70 text-sm leading-relaxed">Génération de rapports PDF / appels à factures à la demande</span>
+          <span class="text-sm leading-relaxed">Génération de rapports PDF / appels à factures à la demande</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-accent mt-0.5 shrink-0">✓</span>
-          <span class="text-muted/70 text-sm leading-relaxed">Calcul automatisé des royalties et répartition entre ayants droits</span>
+          <span class="text-sm leading-relaxed">Calcul automatisé des royalties et répartition entre ayants droits</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-accent mt-0.5 shrink-0">✓</span>
-          <span class="text-muted/70 text-sm leading-relaxed">Suivi de la recoupe et gestion des dettes contractualisées</span>
+          <span class="text-sm leading-relaxed">Suivi de la recoupe et gestion des dettes contractualisées</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="text-accent mt-0.5 shrink-0">✓</span>
-          <span class="text-muted/70 text-sm leading-relaxed">Régulations correctives</span>
+          <span class="text-sm leading-relaxed">Régulations correctives</span>
         </li>
       </ul>
 
       <div class="grid grid-cols-2 gap-3">
-        <div class="rounded-xl overflow-hidden bg-white/5 border border-white/10">
+        <a href="{{ '/assets/img/erp/erp1.png' | relative_url }}" target="_blank" rel="noopener" class="rounded-xl overflow-hidden bg-white/5 border border-white/10 hover:border-accent transition-colors">
           <img src="{{ '/assets/img/erp/erp1.png' | relative_url }}" alt="ERPirate — capture 1" class="w-full">
-        </div>
-        <div class="rounded-xl overflow-hidden bg-white/5 border border-white/10">
+        </a>
+        <a href="{{ '/assets/img/erp/erp2.png' | relative_url }}" target="_blank" rel="noopener" class="rounded-xl overflow-hidden bg-white/5 border border-white/10 hover:border-accent transition-colors">
           <img src="{{ '/assets/img/erp/erp2.png' | relative_url }}" alt="ERPirate — capture 2" class="w-full">
-        </div>
-        <div class="rounded-xl overflow-hidden bg-white/5 border border-white/10">
+        </a>
+        <a href="{{ '/assets/img/erp/erp3.png' | relative_url }}" target="_blank" rel="noopener" class="rounded-xl overflow-hidden bg-white/5 border border-white/10 hover:border-accent transition-colors">
           <img src="{{ '/assets/img/erp/erp3.png' | relative_url }}" alt="ERPirate — capture 3" class="w-full">
-        </div>
-        <div class="rounded-xl overflow-hidden bg-white/5 border border-white/10">
+        </a>
+        <a href="{{ '/assets/img/erp/erp4.png' | relative_url }}" target="_blank" rel="noopener" class="rounded-xl overflow-hidden bg-white/5 border border-white/10 hover:border-accent transition-colors">
           <img src="{{ '/assets/img/erp/erp4.png' | relative_url }}" alt="ERPirate — capture 4" class="w-full">
-        </div>
+        </a>
       </div>
     </div>
   </div>
 </section>
-
-{% include cta-split.html %}

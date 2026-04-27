@@ -4,8 +4,8 @@ urls:
   publishing: /publishing/
   cooperative: /cooperative/
   contact: /contact/
-  submit: /contact/#soumettre
-  join: /contact/#rejoindre
+  submit: /pitch
+  join: /invest
   legal: /legal
   privacy: /privacy
 
