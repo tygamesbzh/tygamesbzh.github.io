@@ -6,12 +6,12 @@ lang: fr
 lang_alternate: /en/contact/
 ---
 
-<section class="section-padding pt-32 bg-offwhite">
+<section class="page-hero bg-offwhite">
   <div class="section-container">
-    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-4 text-ink">Nous contacter</h1>
+    <h1 class="page-title text-ink mb-4">Nous contacter</h1>
     <div class="grid md:grid-cols-3 gap-6 mb-14">
       <!-- Général / Presse -->
-      <div class="card bg-ink/[0.04] border-ink/10 flex flex-col">
+      <div class="card card-light flex flex-col">
         <h3 class="editor-card-title text-ink">Questions générales &amp; presse</h3>
         <p class="editor-card-body text-ink mb-6">Partenariats, demandes presse, questions sur la coopérative, ou tout autre sujet.</p>
         <a href="mailto:{{ site.email }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
@@ -20,7 +20,7 @@ lang_alternate: /en/contact/
       </div>
 
       <!-- Pitcher un jeu -->
-      <div class="card bg-ink/[0.04] border-ink/10 flex flex-col">
+      <div class="card card-light flex flex-col">
         <h3 class="editor-card-title text-ink">Soumettre un jeu</h3>
         <p class="editor-card-body text-ink mb-6">Vous développez un jeu indépendant ? Lisez notre offre de distribution et d'édition, puis soumettez votre projet.</p>
         <a href="{{ '/pitch' | relative_url }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
@@ -29,7 +29,7 @@ lang_alternate: /en/contact/
       </div>
 
       <!-- Discord -->
-      <div class="card bg-ink/[0.04] border-ink/10 flex flex-col">
+      <div class="card card-light flex flex-col">
         <h3 class="editor-card-title text-ink">Communauté</h3>
         <p class="editor-card-body text-ink mb-6">Rejoignez notre Discord pour échanger avec l'équipe et la communauté TyGAMES.</p>
         {% if site.social.discord %}
@@ -45,12 +45,12 @@ lang_alternate: /en/contact/
 
 <section class="section-padding">
   <div class="section-container">
-    <div class="max-w-2xl mb-12">
+    <div class="section-intro">
       <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">L'équipe</h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {% for member in site.data.team %}
-      <div class="card bg-ink/[0.04] border-ink/10 flex items-start gap-5">
+      <div class="card card-light flex items-start gap-5">
         {% if member.img %}
         <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}"
           class="w-14 h-14 rounded-full object-cover shrink-0">
@@ -75,11 +75,11 @@ lang_alternate: /en/contact/
 
 <section class="section-padding">
   <div class="section-container">
-    <div class="max-w-2xl mb-12">
+    <div class="section-intro">
       <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">Informations</h2>
     </div>
     <div class="grid sm:grid-cols-2 gap-6 items-start">
-      <div class="card bg-ink/[0.04] border-ink/10">
+      <div class="card card-light">
         <div class="flex flex-col gap-1 text-sm text-ink/80">
           <span class="text-accent">TyGAMES SAS</span>
           <span>3A, Rue de Paris</span>

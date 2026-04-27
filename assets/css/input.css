@@ -3,64 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 }
 
 @layer components {
+  /* Buttons */
   .btn-primary {
     @apply inline-block bg-accent hover:bg-accent-light text-white px-6 py-3 rounded font-medium transition-colors duration-200;
   }
-
   .btn-outline {
     @apply inline-block bg-ink text-offwhite border border-white/30 hover:border-accent px-6 py-3 rounded font-medium transition-colors duration-200;
   }
-
   .btn-social {
     @apply flex items-center justify-center w-12 h-12 rounded-full bg-ink/5 text-ink/90 hover:bg-accent hover:text-white transition-colors;
   }
-
-
-  .card {
-    @apply bg-white/5 border border-white/10 rounded-xl p-6;
-  }
-
-  .section-container {
-    @apply max-w-site mx-auto px-10 md:px-16;
-  }
-
-  .section-padding {
-    @apply py-10 md:py-12;
-  }
-
-  .form-input {
-    @apply w-full bg-white/5 border border-white/20 rounded px-4 py-3 text-offwhite placeholder-muted/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors;
-  }
-
-  .form-label {
-    @apply block text-sm font-medium text-muted mb-2;
-  }
-
-  /* Hero */
-  .hero-section {
-    @apply bg-offwhite min-h-[90vh] flex items-center py-24 relative overflow-hidden;
-  }
-
-  /* Stats strip */
-  .stats-section {
-    @apply bg-ink
-  }
-
-  .stat-label {
-    @apply text-xs text-muted/50 tracking-wider;
-  }
-
-  /* Catalog strip */
-  .catalog-section {
-    @apply bg-offwhite
-  }
-
   .btn-store {
     @apply inline-flex items-center justify-center gap-1.5 w-36 py-2 bg-ink rounded-full border text-offwhite text-xs font-semibold transition-all duration-200;
   }
@@ -68,77 +24,75 @@
     @apply border-accent scale-105;
   }
 
-  /* Section eyebrow  add color class (text-accent, text-accent-light…) alongside */
+  /* Layout */
+  .section-container {
+    @apply max-w-site mx-auto px-10 md:px-16;
+  }
+  .section-padding {
+    @apply py-10 md:py-12;
+  }
+  /* Interior page hero — adds nav clearance (pt-32) on top of section-padding */
+  .page-hero {
+    @apply section-padding pt-32;
+  }
+  .section-intro {
+    @apply max-w-2xl mb-12;
+  }
+
+  /* Typography scale */
+  .page-title {
+    @apply font-heading font-extrabold text-5xl md:text-6xl leading-tight;
+  }
+  .section-title {
+    @apply font-heading font-bold text-4xl md:text-5xl;
+  }
+  /* Pair with a color class: text-accent, text-muted, etc. */
   .section-eyebrow {
     @apply text-xs font-semibold uppercase tracking-widest;
   }
 
-  /* Navigation link */
+  /* Cards */
+  .card {
+    @apply bg-white/5 border border-white/10 rounded-xl p-6;
+  }
+  /* Override for .card on light (offwhite) backgrounds */
+  .card-light {
+    @apply bg-ink/[0.04] border-ink/10;
+  }
+
+  /* Navigation */
   .nav-link {
     @apply text-sm text-muted hover:text-offwhite transition-colors;
   }
-
-  /* Éditeur cards */
-
-  .editor-card-icon {
-    @apply text-3xl mb-4;
+  .footer-link {
+    @apply text-sm text-muted/60 hover:text-offwhite transition-colors;
   }
 
-  .editor-card-title {
-    @apply font-heading font-bold text-xl mb-3;
+  /* Forms */
+  .form-input {
+    @apply w-full bg-white/5 border border-white/20 rounded px-4 py-3 text-offwhite placeholder-muted/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors;
+  }
+  .form-label {
+    @apply block text-sm font-medium text-muted mb-2;
   }
 
-  .editor-card-title-sm {
-    @apply font-heading font-bold text-lg mb-2;
+  /* Checklists */
+  .checklist-item {
+    @apply flex items-start gap-2;
+  }
+  .checklist-check {
+    @apply text-accent mt-0.5 shrink-0;
   }
 
-  .editor-card-body {
-    @apply text-muted/60 text-sm leading-relaxed;
-  }
+  /* Feature cards */
+  .editor-card-title { @apply font-heading font-bold text-xl mb-3; }
+  .editor-card-body { @apply text-muted/60 text-sm leading-relaxed; }
+  .distrib-card-number { @apply font-heading font-extrabold text-5xl text-accent/80 mb-4; }
+  .distrib-card-body { @apply text-offwhite/70 text-sm leading-relaxed; }
 
-  /* Distribution cards */
-  .distrib-card-number {
-    @apply font-heading font-extrabold text-5xl text-accent/80 mb-4;
-  }
-
-  .distrib-card-title {
-    @apply font-heading font-bold text-xl mb-3;
-  }
-
-  .distrib-card-body {
-    @apply text-offwhite/70 text-sm leading-relaxed;
-  }
-
-  /* Game detail page */
+  /* Platform badge */
   .platform-badge {
     @apply text-xs bg-white/10 text-muted/60 px-3 py-1 rounded-full;
   }
 
-  .game-text {
-    @apply max-w-2xl text-ink leading-relaxed space-y-4;
-  }
-
-  .game-text h2 {
-    @apply font-bold text-2xl text-offwhite mt-10 mb-4;
-  }
-
-  .game-text h3 {
-    @apply font-semibold text-xl text-offwhite mt-8 mb-3;
-  }
-
-  .game-text ul {
-    @apply list-disc pl-5 space-y-1;
-  }
-
-  .game-text strong {
-    @apply text-offwhite;
-  }
-
-  .game-text a {
-    @apply text-accent;
-  }
-
-  .game-text a:hover {
-    @apply text-accent-light;
-  }
 }

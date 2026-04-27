@@ -6,7 +6,7 @@ lang_alternate: /en/
 ---
 
 <!-- Hero -->
-<section class="hero-section">
+<section class="bg-offwhite min-h-[90vh] flex items-center py-24 relative overflow-hidden">
   <div class="section-container grid md:grid-cols-2 gap-16 items-center w-full">
     <div>
       <p class="section-eyebrow text-accent mb-6 flex items-center gap-3">
@@ -33,39 +33,39 @@ lang_alternate: /en/
 </section>
 
 <!-- Stats bar -->
-<section class="stats-section">
+<section class="bg-ink">
   <div class="border-y border-white/10 py-7">
     <div class="section-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
       <div>
         <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | size }}<span
             class="text-accent-light">+</span></div>
-        <div class="stat-label">Jeux publiés</div>
+        <div class="text-xs text-muted/50 tracking-wider">Jeux publiés</div>
       </div>
       <div>
         <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">10<span class="text-accent-light">+</span>
         </div>
-        <div class="stat-label">Équipes et studios</div>
+        <div class="text-xs text-muted/50 tracking-wider">Équipes et studios</div>
       </div>
       <div>
         <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">7<span class="text-accent-light">+</span>
         </div>
-        <div class="stat-label">Plateformes</div>
+        <div class="text-xs text-muted/50 tracking-wider">Plateformes</div>
       </div>
       <div>
         <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">100<span class="text-accent-light">%</span>
         </div>
-        <div class="stat-label">Beurre salé</div>
+        <div class="text-xs text-muted/50 tracking-wider">Beurre salé</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Catalogue preview -->
-<section class="catalog-section section-padding">
+<section class="bg-offwhite section-padding">
   <div class="section-container">
     <div class="flex items-end justify-between mb-10">
       <div>
-        <h2 class="font-heading font-bold text-4xl md:text-5xl">Découvrez nos <em class="not-italic text-accent-light">Jeux</em>        </h2>
+        <h2 class="section-title">Découvrez nos <em class="not-italic text-accent-light">Jeux</em></h2>
       </div>
       <a href="{{ '/games/' | relative_url }}" class="btn-outline text-sm py-2 hidden sm:inline-block">Voir tout →</a>
     </div>
