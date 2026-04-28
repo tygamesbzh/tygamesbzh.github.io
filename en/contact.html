@@ -1,272 +1,99 @@
 ---
-layout: default
+layout: page-nocta
 title: Contact
-description: "A question, a project? Contact TyGAMES."
+description: "A question, a project, press? Contact TyGAMES."
 lang: en
 lang_alternate: /contact/
 permalink: /en/contact/
 ---
 
-<!-- Header -->
-<section class="section-padding pt-32">
-  <div class="section-container text-center max-w-2xl mx-auto">
-    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-6">Contact</h1>
-    <p class="text-xl text-muted/70">A question, a project, or want to join the adventure? We'll get back to you.</p>
+<section class="page-hero bg-offwhite">
+  <div class="section-container">
+    <h1 class="page-title text-ink mb-4">Contact us</h1>
+    <div class="grid md:grid-cols-3 gap-6 mb-14">
+      <!-- General / Press -->
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">General questions &amp; press</h3>
+        <p class="distrib-card-body text-ink mb-6">Partnerships, press inquiries, questions about the cooperative, or anything else.</p>
+        <a href="mailto:{{ site.email }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          {{ site.email }} →
+        </a>
+      </div>
+
+      <!-- Pitch a game -->
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">Submit a game</h3>
+        <p class="distrib-card-body text-ink mb-6">Developing an independent game? Read our distribution and publishing offer, then submit your project.</p>
+        <a href="{{ '/en/pitch' | relative_url }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          See the dedicated page →
+        </a>
+      </div>
+
+      <!-- Discord -->
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">Community</h3>
+        <p class="distrib-card-body text-ink mb-6">Join our Discord to chat with the team and the TyGAMES community.</p>
+        {% if site.social.discord %}
+        <a href="{{ site.social.discord }}" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          Join the Discord →
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- Sticky section tabs -->
-<div class="sticky top-[68px] z-40 bg-ink/95 backdrop-blur-md border-b border-white/10">
+<section class="section-padding">
   <div class="section-container">
-    <nav class="flex overflow-x-auto -mx-6 px-6 gap-1 py-3" id="contact-tabs">
-      <a href="#general"    class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">General contact</a>
-      <a href="#newsletter" class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">Newsletter</a>
-      <a href="#submit"     class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">Submit a game</a>
-      <a href="#join"       class="contact-tab flex-shrink-0 text-sm px-4 py-2 rounded text-muted/60 hover:text-offwhite transition-colors">Join</a>
-    </nav>
-  </div>
-</div>
-
-<div class="section-container py-16">
-  <div class="grid lg:grid-cols-3 gap-12">
-
-    <!-- Forms -->
-    <div class="lg:col-span-2 space-y-20">
-
-      <!-- General contact -->
-      <section id="general">
-        <h2 class="font-heading font-bold text-3xl mb-2">General contact</h2>
-        <p class="text-muted/60 mb-8">For any question or information request.</p>
-        <form class="space-y-5" data-form="general">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="g-prenom">First name</label>
-              <input type="text" id="g-prenom" name="prenom" required class="form-input" placeholder="Marie">
-            </div>
-            <div>
-              <label class="form-label" for="g-nom">Last name</label>
-              <input type="text" id="g-nom" name="nom" required class="form-input" placeholder="Dupont">
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="g-email">Email</label>
-            <input type="email" id="g-email" name="email" required class="form-input" placeholder="marie@example.com">
-          </div>
-          <div>
-            <label class="form-label" for="g-sujet">Subject</label>
-            <select id="g-sujet" name="sujet" class="form-input">
-              <option value=""> Choose a subject </option>
-              <option value="question">General question</option>
-              <option value="partenariat">Partnership</option>
-              <option value="presse">Press / media</option>
-              <option value="autre">Other</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label" for="g-message">Message</label>
-            <textarea id="g-message" name="message" rows="5" required class="form-input resize-none" placeholder="Your message..."></textarea>
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="g-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="g-rgpd" class="text-sm text-muted/60">I agree that my data will be used to respond to my request. <a href="#" class="text-accent hover:underline">Privacy policy</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">Send message</button>
-          <p class="hidden text-green-400 text-sm" data-success>Message sent. We'll reply within 48 hours.</p>
-        </form>
-      </section>
-
-      <!-- Newsletter -->
-      <section id="newsletter">
-        <h2 class="font-heading font-bold text-3xl mb-2">Subscribe to the newsletter</h2>
-        <p class="text-muted/60 mb-8">New releases, co-op behind-the-scenes, events  no spam.</p>
-        <form class="space-y-5" data-form="newsletter">
-          <div>
-            <label class="form-label" for="nl-prenom">First name</label>
-            <input type="text" id="nl-prenom" name="prenom" required class="form-input" placeholder="Marie">
-          </div>
-          <div>
-            <label class="form-label" for="nl-email">Email</label>
-            <input type="email" id="nl-email" name="email" required class="form-input" placeholder="marie@example.com">
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="nl-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="nl-rgpd" class="text-sm text-muted/60">I agree to receive the newsletter and for my email to be shared with Substack. <a href="#" class="text-accent hover:underline">Privacy policy</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">Subscribe</button>
-          <p class="hidden text-green-400 text-sm" data-success>Welcome! Check your email to confirm your subscription.</p>
-        </form>
-      </section>
-
-      <!-- Submit a game -->
-      <section id="submit">
-        <h2 class="font-heading font-bold text-3xl mb-2">Submit a game</h2>
-        <p class="text-muted/60 mb-8">Developing an independent game? Share your project with us.</p>
-        <form class="space-y-5" data-form="submit">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="jeu-prenom">First name</label>
-              <input type="text" id="jeu-prenom" name="prenom" required class="form-input" placeholder="Jean">
-            </div>
-            <div>
-              <label class="form-label" for="jeu-nom">Last name</label>
-              <input type="text" id="jeu-nom" name="nom" required class="form-input" placeholder="Martin">
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="jeu-email">Email</label>
-            <input type="email" id="jeu-email" name="email" required class="form-input" placeholder="jean@studio.com">
-          </div>
-          <div>
-            <label class="form-label" for="jeu-studio">Studio / Project name</label>
-            <input type="text" id="jeu-studio" name="studio" class="form-input" placeholder="Pixel Studio">
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="jeu-plateforme">Target platform</label>
-              <select id="jeu-plateforme" name="plateforme" class="form-input">
-                <option value=""> Choose </option>
-                <option value="pc">PC (Steam)</option>
-                <option value="ios">iOS</option>
-                <option value="android">Android</option>
-                <option value="multi">Multi-platform</option>
-              </select>
-            </div>
-            <div>
-              <label class="form-label" for="jeu-stade">Development stage</label>
-              <select id="jeu-stade" name="stade" class="form-input">
-                <option value=""> Choose </option>
-                <option value="concept">Concept / idea</option>
-                <option value="prototype">Prototype</option>
-                <option value="alpha">Alpha</option>
-                <option value="beta">Beta</option>
-                <option value="termine">Finished</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="jeu-description">Game description</label>
-            <textarea id="jeu-description" name="description" rows="5" required class="form-input resize-none" placeholder="Describe your game, its mechanics, its universe..."></textarea>
-          </div>
-          <div>
-            <label class="form-label" for="jeu-demo">Demo / presskit link <span class="text-muted/40 font-normal">(optional)</span></label>
-            <input type="url" id="jeu-demo" name="demo" class="form-input" placeholder="https://...">
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="jeu-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="jeu-rgpd" class="text-sm text-muted/60">I agree that my data will be used to process my submission. <a href="#" class="text-accent hover:underline">Privacy policy</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">Submit project</button>
-          <p class="hidden text-green-400 text-sm" data-success>Project received! We'll review it and get back to you within 2 weeks.</p>
-        </form>
-      </section>
-
-      <!-- Join -->
-      <section id="join">
-        <h2 class="font-heading font-bold text-3xl mb-2">Join the cooperative</h2>
-        <p class="text-muted/60 mb-8">Become a TyGAMES member and take part in the cooperative's governance.</p>
-        <form class="space-y-5" data-form="join">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="join-prenom">First name</label>
-              <input type="text" id="join-prenom" name="prenom" required class="form-input" placeholder="Sophie">
-            </div>
-            <div>
-              <label class="form-label" for="join-nom">Last name</label>
-              <input type="text" id="join-nom" name="nom" required class="form-input" placeholder="Bernard">
-            </div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="form-label" for="join-email">Email</label>
-              <input type="email" id="join-email" name="email" required class="form-input" placeholder="sophie@example.com">
-            </div>
-            <div>
-              <label class="form-label" for="join-tel">Phone <span class="text-muted/40 font-normal">(optional)</span></label>
-              <input type="tel" id="join-tel" name="tel" class="form-input" placeholder="+33 6 00 00 00 00">
-            </div>
-          </div>
-          <div>
-            <label class="form-label" for="join-parts">Number of shares requested</label>
-            <select id="join-parts" name="parts" required class="form-input">
-              <option value=""> Choose </option>
-              <option value="1">1 share  €100 (Supporting)</option>
-              <option value="2">2 shares  €200</option>
-              <option value="5">5 shares  €500 (Active)</option>
-              <option value="10">10 shares+  €1000+ (Founding)</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label" for="join-motivation">Motivation <span class="text-muted/40 font-normal">(optional)</span></label>
-            <textarea id="join-motivation" name="motivation" rows="4" class="form-input resize-none" placeholder="Why do you want to join TyGAMES?"></textarea>
-          </div>
-          <div class="flex items-start gap-3">
-            <input type="checkbox" id="join-rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-accent">
-            <label for="join-rgpd" class="text-sm text-muted/60">I agree that my data will be used to process my membership request. <a href="#" class="text-accent hover:underline">Privacy policy</a>.</label>
-          </div>
-          <button type="submit" class="btn-primary">Send my request</button>
-          <p class="hidden text-green-400 text-sm" data-success>Request received! We'll send you the membership pack by email.</p>
-        </form>
-      </section>
-
+    <div class="section-intro">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">The team</h2>
     </div>
-
-    <!-- Sidebar -->
-    <aside>
-      <div class="card sticky top-32">
-        <h3 class="font-heading font-bold text-lg mb-6">Contact us directly</h3>
-        <div class="space-y-5">
-          <div>
-            <p class="text-xs text-muted/40 uppercase tracking-wider mb-1">Email</p>
-            <a href="mailto:{{ site.email }}" class="text-accent hover:text-accent-light transition-colors text-sm">{{ site.email }}</a>
-          </div>
-          <div>
-            <p class="text-xs text-muted/40 uppercase tracking-wider mb-1">Location</p>
-            <p class="text-sm text-muted/70">Rennes, Brittany, France</p>
-          </div>
-          <div>
-            <p class="text-xs text-muted/40 uppercase tracking-wider mb-1">SIRET</p>
-            <p class="text-sm text-muted/70">931 717 242 R.C.S. Rennes</p>
-          </div>
-          <hr class="border-white/10">
-          <a href="#" class="flex items-center gap-3 text-sm text-muted/60 hover:text-offwhite transition-colors">
-            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.111 18.1.13 18.112a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-            </svg>
-            Join our Discord
-          </a>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for member in site.data.team %}
+      <div class="card card-light flex items-start gap-5">
+        {% if member.img %}
+        <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}"
+          class="w-14 h-14 rounded-full object-cover shrink-0">
+        {% else %}
+        <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0 font-heading font-extrabold text-ink text-xl">
+          {{ member.name | slice: 0 }}
+        </div>
+        {% endif %}
+        <div>
+          <div class="font-heading font-bold text-ink">{{ member.name }}</div>
+          <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member.role }}</div>
+          {% if member.bio and member.bio != "TODO BIO" %}
+          <p class="text-ink/80 text-sm leading-relaxed">{{ member.bio }}</p>
+          {% endif %}
         </div>
       </div>
-    </aside>
-
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
 
-<script>
-  const tabs = document.querySelectorAll('.contact-tab');
-  const sections = document.querySelectorAll('#general, #newsletter, #submit, #join');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        tabs.forEach(tab => {
-          const isActive = tab.getAttribute('href') === '#' + entry.target.id;
-          tab.classList.toggle('bg-accent/20', isActive);
-          tab.classList.toggle('text-accent', isActive);
-          tab.classList.toggle('text-muted/60', !isActive);
-        });
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-
-  document.querySelectorAll('form[data-form]').forEach(form => {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = 'Sent ✓';
-      form.querySelector('[data-success]').classList.remove('hidden');
-    });
-  });
-</script>
+<section class="section-padding">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">Information</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6 items-start">
+      <div class="card card-light">
+        <div class="flex flex-col gap-1 text-sm text-ink/80">
+          <span class="text-accent">TyGAMES SAS</span>
+          <span>3A, Rue de Paris</span>
+          <span>35510 Cesson-Sévigné</span>
+          <span>FRANCE</span>
+          <span>SIRET 931 717 242 R.C.S. Rennes</span>
+          <span>VAT FR16921714242</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 text-sm text-ink/40">
+        <a href="{{ '/legal' | relative_url }}" class="hover:text-ink transition-colors">Legal notice</a>
+        <a href="{{ '/privacy' | relative_url }}" class="hover:text-ink transition-colors">Privacy policy</a>
+      </div>
+    </div>
+  </div>
+</section>

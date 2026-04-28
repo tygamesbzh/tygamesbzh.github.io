@@ -1,29 +1,26 @@
 ---
-layout: default
+layout: page
 title: Home
-description: "We develop, publish, and share  differently"
 lang: en
 lang_alternate: /
 permalink: /en/
 ---
 
 <!-- Hero -->
-<section class="min-h-[90vh] flex items-center py-24 relative overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/3 right-1/4 w-[700px] h-[700px] rounded-full bg-accent/8 blur-[150px]"></div>
-  </div>
-
-  <div class="section-container relative z-10 grid md:grid-cols-2 gap-16 items-center w-full">
+<section class="bg-offwhite min-h-[90vh] flex items-center py-24 relative overflow-hidden">
+  <div class="section-container grid md:grid-cols-2 gap-16 items-center w-full">
     <div>
-      <p class="text-xs font-semibold text-accent uppercase tracking-widest mb-6 flex items-center gap-3">
+      {% assign t = site.data.i18n[page.lang] %}
+      <p class="section-eyebrow text-accent mb-6 flex items-center gap-3">
         <span class="block w-7 h-px bg-accent"></span>
-        Video game cooperative · Brittany
+        {{ t.tagline }}
       </p>
-      <h1 class="font-heading font-extrabold leading-tight mb-6 text-offwhite" style="font-size: clamp(2.8rem, 6vw, 5rem)">
-        Independent games,<br><em class="not-italic text-accent-light">made together.</em>
+      <h1 class="font-heading font-extrabold leading-tight mb-6 text-ink" style="font-size: clamp(2.8rem, 6vw, 5rem)">
+        Independent games <br><em class="not-italic text-accent-light">together</em>
       </h1>
-      <p class="text-lg text-muted/70 leading-relaxed mb-10 max-w-md">
-        TyGAMES is a cooperative video game publisher based in Brittany. We develop, publish, and share  differently.
+      <p class="text-lg text-ink leading-relaxed mb-10 max-w-md">
+        <span class="text-accent">TyGAMES</span> is a video game publisher and distributor structured as a cooperative
+        (SCIC), based in Brittany. We make games, we publish them, we help each other and we share.
       </p>
       <div class="flex flex-wrap gap-4">
         <a href="{{ '/en/games/' | relative_url }}" class="btn-primary">See our games</a>
@@ -31,145 +28,89 @@ permalink: /en/
       </div>
     </div>
 
-    <div class="hidden md:flex aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
-      <span class="text-muted/20 text-sm text-center leading-relaxed">game catalogue<br>image here</span>
+    <div class="hidden mt-12 md:flex aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
+      <img src="{{ '/assets/img/presentation.png' | relative_url }}" alt="Catalogue">
     </div>
   </div>
 </section>
 
 <!-- Stats bar -->
-<div class="border-y border-white/10 py-7 bg-[#07070b]">
-  <div class="section-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-    <div>
-      <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | size }}<span class="text-accent-light">+</span></div>
-      <div class="text-xs text-muted/50 tracking-wider">Games published</div>
-    </div>
-    <div>
-      <div class="font-heading font-extrabold text-4xl text-accent-light mb-1">100%</div>
-      <div class="text-xs text-muted/50 tracking-wider">Breton</div>
-    </div>
-    <div>
-      <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">3</div>
-      <div class="text-xs text-muted/50 tracking-wider">Platforms</div>
-    </div>
-    <div>
-      <div class="font-heading font-extrabold text-4xl text-accent-light mb-1">∞</div>
-      <div class="text-xs text-muted/50 tracking-wider">Cooperation</div>
+<section class="bg-ink">
+  <div class="border-y border-white/10 py-7">
+    <div class="section-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | where_exp: "g", "g.disabled != true" | size }}<span
+            class="text-accent-light">+</span></div>
+        <div class="text-xs text-muted/50 tracking-wider">Games published</div>
+      </div>
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">10<span class="text-accent-light">+</span>
+        </div>
+        <div class="text-xs text-muted/50 tracking-wider">Teams and studios</div>
+      </div>
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">7<span class="text-accent-light">+</span>
+        </div>
+        <div class="text-xs text-muted/50 tracking-wider">Platforms</div>
+      </div>
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">100<span class="text-accent-light">%</span>
+        </div>
+        <div class="text-xs text-muted/50 tracking-wider">Salted butter</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Catalogue preview -->
-<section class="section-padding bg-[#0a0a0a]" id="games">
+<section class="bg-offwhite section-padding">
   <div class="section-container">
     <div class="flex items-end justify-between mb-10">
       <div>
-        <p class="text-xs font-semibold text-accent-light uppercase tracking-widest mb-3">Our catalogue</p>
-        <h2 class="font-heading font-bold text-4xl md:text-5xl">Our <em class="not-italic text-accent-light">Games</em></h2>
+        <h2 class="section-title">Discover our latest <em class="not-italic text-accent-light">Games</em></h2>
       </div>
       <a href="{{ '/en/games/' | relative_url }}" class="btn-outline text-sm py-2 hidden sm:inline-block">See all →</a>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
-      {% assign sorted_games = site.games | sort: "date" | reverse %}
-      {% for game in sorted_games limit:5 %}
-        <a href="{{ game.url | relative_url }}" class="group block">
-          <div class="aspect-[3/4] bg-white/5 rounded-lg overflow-hidden mb-2">
-            {% if game.img %}
-              <img src="{{ '/assets/img/games/' | append: game.img | relative_url }}" alt="{{ game.game }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            {% endif %}
-          </div>
-          <p class="text-xs font-semibold text-offwhite group-hover:text-accent transition-colors leading-snug">{{ game.game }}</p>
-          {% if game.platforms %}
-            <p class="text-xs text-muted/40 mt-0.5">{{ game.platforms }}</p>
+    <div class="flex flex-wrap justify-center gap-2 mb-10">
+      {% if site.stores.steam %}<a href="{{ site.stores.steam }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="steam" %}Steam</a>{% endif %}
+      {% if site.stores.nintendo %}<a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="nintendo" %}Nintendo eShop</a>{% endif %}
+      {% if site.stores.playstation %}<a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="playstation" %}PlayStation</a>{% endif %}
+      {% if site.stores.xbox %}<a href="{{ site.stores.xbox }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="xbox" %}Xbox</a>{% endif %}
+      {% if site.stores.gog %}<a href="{{ site.stores.gog }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="gog" %}GOG</a>{% endif %}
+      {% if site.stores.humble %}<a href="{{ site.stores.humble }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="humble" %}Humble</a>{% endif %}
+      {% if site.stores.epic %}<a href="{{ site.stores.epic }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="epic" %}Epic</a>{% endif %}
+      {% if site.stores.app_store %}<a href="{{ site.stores.app_store }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="app_store" %}App Store</a>{% endif %}
+      {% if site.stores.google_play %}<a href="{{ site.stores.google_play }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="google_play" %}Google Play</a>{% endif %}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      {% assign visible_games = site.games | where_exp: "g", "g.disabled != true" %}
+      {% assign sorted_games = visible_games | sort: "date" | reverse %}
+      {% for game in sorted_games limit:6 %}
+      <a href="{{ game.url | relative_url }}" class="group block">
+        <div class="bg-white/5 rounded-lg overflow-hidden mb-2">
+          {% assign game_img = game.wide_img | default: game.img %}
+          {% if game_img %}
+          <img src="{{ '/assets/img/games/' | append: game_img | relative_url }}" alt="{{ game.game }}"
+            class="w-full transition-transform duration-300 group-hover:scale-105">
           {% endif %}
-        </a>
+        </div>
+        <div class="flex items-baseline justify-between gap-2 mt-2">
+          <p class="text-xs font-semibold text-ink transition-colors leading-snug group-hover:text-accent">{{ game.game }}</p>
+          {% if game.project-date %}
+          <p class="text-xs text-ink/40 shrink-0">{{ game.project-date }}</p>
+          {% endif %}
+        </div>
+        {% if game.store_links %}
+        {% endif %}
+      </a>
       {% endfor %}
     </div>
 
-    <a href="{{ '/en/games/' | relative_url }}" class="btn-outline text-sm sm:hidden inline-block">See all games →</a>
+    <a href="{{ '/en/games/' | relative_url }}" class="btn-outline text-sm sm:hidden inline-block">See full catalogue
+      →</a>
   </div>
 </section>
 
-<!-- Newsletter -->
-<section class="section-padding bg-offwhite" id="newsletter">
-  <div class="section-container">
-    <div class="max-w-xl mx-auto text-center">
-      <p class="text-xs font-semibold text-accent uppercase tracking-widest mb-4">Stay in the loop</p>
-      <h2 class="font-heading font-bold text-3xl md:text-4xl text-ink mb-4">The TyGAMES <em class="not-italic text-accent">newsletter</em></h2>
-      <p class="text-ink/60 mb-8">New releases, behind-the-scenes of the cooperative, and member offers. Once a month, no more.</p>
-      <form class="flex flex-col sm:flex-row gap-3" id="nl-home-form">
-        <input type="email" placeholder="you@example.com" required class="flex-1 px-4 py-3 border border-muted/40 rounded text-ink placeholder-ink/30 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors">
-        <button type="submit" class="btn-primary shrink-0 whitespace-nowrap">Subscribe</button>
-      </form>
-      <p class="text-xs text-ink/30 mt-4">Your email will never be shared. Unsubscribe in one click.</p>
-      <p class="hidden text-accent font-semibold text-sm mt-3" id="nl-home-success">✓ You're subscribed!</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA split -->
-<div class="grid md:grid-cols-2">
-  <div class="bg-accent p-16 md:p-20 flex flex-col gap-5">
-    <p class="text-xs font-semibold text-white/50 uppercase tracking-widest">Developers</p>
-    <h3 class="font-heading font-bold text-3xl text-white">Developing a game?</h3>
-    <p class="text-white/70 leading-relaxed max-w-sm">Submit your project to the cooperative. We review every submission carefully and support you through publication.</p>
-    <a href="{{ '/en/contact/#submit' | relative_url }}" class="btn-outline inline-block w-fit" style="border-color: rgba(255,255,255,0.35)">Submit your game →</a>
-  </div>
-  <div class="bg-ink p-16 md:p-20 flex flex-col gap-5 border-t md:border-t-0 border-white/10">
-    <p class="text-xs font-semibold text-orange uppercase tracking-widest">The cooperative</p>
-    <h3 class="font-heading font-bold text-3xl text-offwhite">Join the adventure</h3>
-    <p class="text-muted/60 leading-relaxed max-w-sm">TyGAMES operates as a cooperative. Every member counts. Find out how we work and how to become a member.</p>
-    <a href="{{ '/en/cooperative/#join' | relative_url }}" class="btn-outline inline-block w-fit">Join us →</a>
-  </div>
-</div>
-
-<!-- Team -->
-<section class="section-padding bg-offwhite">
-  <div class="section-container grid md:grid-cols-2 gap-20 items-center">
-    <div>
-      <p class="text-xs font-semibold text-accent uppercase tracking-widest mb-4">Who we are</p>
-      <h2 class="font-heading font-bold text-4xl md:text-5xl text-ink mb-6">
-        A <span class="text-accent">different</span> cooperative
-      </h2>
-      <p class="text-ink/60 leading-relaxed mb-4">TyGAMES is an independent video game publisher created in Brittany. We operate as a cooperative: every member is a co-decision-maker, every project is shared.</p>
-      <p class="text-ink/60 leading-relaxed mb-8">Our mission: support Breton and independent developers by giving them structure, resources, and visibility  without sacrificing their creative freedom.</p>
-      <a href="{{ '/en/cooperative/' | relative_url }}" class="btn-primary">Discover the cooperative</a>
-    </div>
-
-    <div class="grid grid-cols-2 gap-4">
-      {% for member in site.data.team %}
-        <div class="bg-white rounded-xl p-6 text-center shadow-sm">
-          {% if member.img %}
-            <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}" class="w-16 h-16 rounded-full object-cover mx-auto mb-4">
-          {% else %}
-            <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-4 font-heading font-extrabold text-white text-lg">
-              {{ member.name | slice: 0 }}
-            </div>
-          {% endif %}
-          <div class="font-heading font-bold text-ink text-sm">{{ member.name }}</div>
-          <div class="text-ink/40 text-xs mt-1">{{ member.role }}</div>
-        </div>
-      {% endfor %}
-
-      <div class="col-span-2 bg-white rounded-xl p-5 flex items-center gap-4 shadow-sm">
-        <div class="w-11 h-11 rounded-full bg-accent flex items-center justify-center font-heading font-bold text-white text-xl shrink-0">+</div>
-        <div>
-          <div class="font-heading font-bold text-ink text-sm">You?</div>
-          <div class="text-ink/40 text-xs mt-0.5">The cooperative is open</div>
-        </div>
-        <a href="{{ '/en/cooperative/#join' | relative_url }}" class="ml-auto text-accent font-semibold text-sm hover:text-accent-dark transition-colors whitespace-nowrap">Join →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  document.getElementById('nl-home-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button');
-    btn.textContent = 'Subscribed ✓';
-    btn.disabled = true;
-    document.getElementById('nl-home-success').classList.remove('hidden');
-  });
 </script>

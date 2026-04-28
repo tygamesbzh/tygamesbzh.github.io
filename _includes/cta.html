@@ -1,21 +1,20 @@
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[lang] %}
+
 <!-- CTA -->
 <div class="grid md:grid-cols-2">
   <div class="bg-accent p-16 md:p-20 flex flex-col gap-5 items-end text-right">
-    <p class="section-eyebrow text-offwhite">Développeurs, studios, créateur.ice.s</p>
-    <h3 class="font-heading font-bold text-3xl text-white">Vous développez un jeu&nbsp;?</h3>
+    <p class="section-eyebrow text-offwhite">{{ t.cta.devs_eyebrow }}</p>
+    <h3 class="font-heading font-bold text-3xl text-white">{{ t.cta.devs_heading }}</h3>
 
-    <p class="text-white/70 leading-relaxed max-w-s">Soumettez votre projet à la coopérative.
-      <br />Nous étudions chaque dossier avec attention.
-    </p>
-    <a href="{{ '/pitch' | relative_url }}" class="btn-outline inline-block w-fit mt-auto" style="border-color: rgba(255,255,255,0.35)">Soumettre mon jeu →</a>
+    <p class="text-white/70 leading-relaxed max-w-s">{{ t.cta.devs_body }}</p>
+    <a href="{{ t.urls.submit | relative_url }}" class="btn-outline inline-block w-fit mt-auto" style="border-color: rgba(255,255,255,0.35)">{{ t.cta.devs_button }}</a>
   </div>
   <div class="bg-ink p-16 md:p-20 flex flex-col gap-5 items-start text-left border-t md:border-t-0 border-white/10">
-    <p class="section-eyebrow text-offwhite">La coopérative</p>
-    <h3 class="font-heading font-bold text-3xl text-offwhite">Rejoignez nous&nbsp;!</h3>
-    <p class="text-muted/60 leading-relaxed max-w-s">
-      Professionnels, créateurs, joueurs : chaque membre compte.
-      <br />Découvrez comment nous fonctionnons et comment devenir sociétaire.</p>
-    <a href="{{ '/cooperative/#rejoindre' | relative_url }}" class="btn-primary inline-block w-fit mt-auto">Nous rejoindre →</a>
+    <p class="section-eyebrow text-offwhite">{{ t.cta.coop_eyebrow }}</p>
+    <h3 class="font-heading font-bold text-3xl text-offwhite">{{ t.cta.coop_heading }}</h3>
+    <p class="text-muted/60 leading-relaxed max-w-s">{{ t.cta.coop_body }}</p>
+    <a href="{{ t.urls.cooperative | relative_url }}" class="btn-primary inline-block w-fit mt-auto">{{ t.cta.coop_button }}</a>
   </div>
 </div>
 
@@ -23,22 +22,22 @@
 <!-- Newsletter -->
 <section class="section-padding bg-offwhite" id="newsletter">
   <div class="section-container">
-    <h2 class="section-title text-ink mb-4">Suivez notre actualité</h2>
+    <h2 class="section-title text-ink mb-4">{{ t.newsletter.heading }}</h2>
         <div class="flex flex-wrap gap-2 mb-4">
-          {% assign nl_tags = "Nouveaux jeux,Vie de la coop,Offres membres,Actualités" | split: "," %}
+          {% assign nl_tags = t.newsletter.tags | split: "," %}
           {% for tag in nl_tags %}
             <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-accent/10 text-accent">{{ tag }}</span>
           {% endfor %}
         </div>
     <div class="grid md:grid-cols-2 gap-8 md:gap-20 items-start">
       <div>
-        <h3 class="font-heading font-bold text-2xl md:text-2xl text-ink mb-4">La <span class="text-accent">Newsletter</span></h3>
-        <p class="text-ink/60 leading-relaxed mb-3">Sorties de jeux, vie de la coopérative, offres aux sociétaires. Une fois par mois, en moyenne.</p>
+        <h3 class="font-heading font-bold text-2xl md:text-2xl text-ink mb-4">{{ t.newsletter.block_title_pre }}<span class="text-accent">{{ t.newsletter.block_title_em }}</span></h3>
+        <p class="text-ink/60 leading-relaxed mb-3">{{ t.newsletter.block_body }}</p>
         <iframe src="https://tygames.substack.com/embed" width="100%" height="150" style="background: #f5f5f0; max-width: 480px;" frameborder="0" scrolling="no"></iframe>
       </div>
 
       <div>
-      <h3 class="font-heading font-bold text-2xl md:text-2xl text-ink mb-4">Les <span class="text-accent">Réseaux</span></h3>
+      <h3 class="font-heading font-bold text-2xl md:text-2xl text-ink mb-4">{{ t.newsletter.networks_pre }}<span class="text-accent">{{ t.newsletter.networks_em }}</span></h3>
       <div class="flex flex-wrap gap-3 mt-4 mb-6">
         {% if site.social.substack %}
         <a href="{{ site.social.substack }}" target="_blank" rel="noopener" aria-label="Substack" class="btn-social">

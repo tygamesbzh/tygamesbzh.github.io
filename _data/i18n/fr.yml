@@ -1,3 +1,5 @@
+tagline: "Coopérative d'édition et distribution de jeux vidéo"
+
 urls:
   home: /
   games: /games/
@@ -32,3 +34,22 @@ footer:
 
 game:
   back: Retour au catalogue
+
+cta:
+  devs_eyebrow: "Développeurs, studios, créateur.ice.s"
+  devs_heading: "Vous développez un jeu&nbsp;?"
+  devs_body: "Soumettez votre projet à la coopérative.<br />Nous étudions chaque dossier avec attention."
+  devs_button: "Soumettre mon jeu →"
+  coop_eyebrow: "La coopérative"
+  coop_heading: "Rejoignez nous&nbsp;!"
+  coop_body: "Professionnels, créateurs, joueurs : chaque membre compte.<br />Découvrez comment nous fonctionnons et comment devenir sociétaire."
+  coop_button: "Nous rejoindre →"
+
+newsletter:
+  heading: "Suivez notre actualité"
+  tags: "Nouveaux jeux,Vie de la coop,Offres membres,Actualités"
+  block_title_pre: "La "
+  block_title_em: "Newsletter"
+  block_body: "Sorties de jeux, vie de la coopérative, offres aux sociétaires. Une fois par mois, en moyenne."
+  networks_pre: "Les "
+  networks_em: "Réseaux"
