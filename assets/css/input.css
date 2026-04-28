@@ -4,6 +4,9 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
+  body {
+    @apply bg-offwhite;
+  }
 }
 
 @layer components {

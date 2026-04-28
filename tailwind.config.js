@@ -17,9 +17,9 @@ module.exports = {
         offwhite: '#f5f5f0',
         muted: '#c8c5ba',
         accent: {
-          DEFAULT: '#8B42A8',
-          light: '#a855c8',
-          dark: '#6d2f87',
+          DEFAULT: '#C85B15',
+          light: '#EC8B0E',
+          dark: '#C85B15',
         },
       },
       fontFamily: {

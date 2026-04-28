@@ -5,3 +5,4 @@ node_modules/
 assets/css/output.css
 vendor/
 .bundle/
+.DS_Store
