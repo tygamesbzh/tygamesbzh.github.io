@@ -784,7 +784,7 @@ body {
 
 .nav-link:hover {
   --tw-text-opacity: 1;
-  color: rgb(245 245 240 / var(--tw-text-opacity, 1));
+  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
 .footer-link {
@@ -798,7 +798,7 @@ body {
 
 .footer-link:hover {
   --tw-text-opacity: 1;
-  color: rgb(245 245 240 / var(--tw-text-opacity, 1));
+  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
 /* Forms */
@@ -1409,6 +1409,10 @@ ul.distrib-card-body {
 
 .bg-white\/5 {
   background-color: rgb(255 255 255 / 0.05);
+}
+
+.bg-accent\/80 {
+  background-color: rgb(236 139 14 / 0.8);
 }
 
 .bg-cover {

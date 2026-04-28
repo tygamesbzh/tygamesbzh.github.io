@@ -65,10 +65,10 @@
 
   /* Navigation */
   .nav-link {
-    @apply text-sm text-muted hover:text-offwhite transition-colors;
+    @apply text-sm text-muted hover:text-accent transition-colors;
   }
   .footer-link {
-    @apply text-sm text-muted/60 hover:text-offwhite transition-colors;
+    @apply text-sm text-muted/60 hover:text-accent transition-colors;
   }
 
   /* Forms */
