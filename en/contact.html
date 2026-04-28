@@ -1,0 +1,95 @@
+---
+layout: page-nocta
+title: Contact
+description: "A question, a project, press? Contact TyGAMES."
+lang: en
+lang_alternate: /contact/
+permalink: /en/contact/
+---
+
+<section class="page-hero bg-offwhite">
+  <div class="section-container">
+    <h1 class="page-title text-ink mb-4">Contact us</h1>
+    <div class="grid md:grid-cols-3 gap-6 mb-14">
+      <!-- General / Press -->
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">General questions &amp; press</h3>
+        <p class="distrib-card-body text-ink mb-6">Partnerships, press inquiries, questions about the cooperative, or anything else.</p>
+        <a href="mailto:{{ site.email }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          {{ site.email }} →
+        </a>
+      </div>
+
+      <!-- Pitch a game -->
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">Submit a game</h3>
+        <p class="distrib-card-body text-ink mb-6">Developing an independent game? Read our distribution and publishing offer, then submit your project.</p>
+        <a href="{{ '/en/pitch' | relative_url }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          See the dedicated page →
+        </a>
+      </div>
+
+      <!-- Discord -->
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">Community</h3>
+        <p class="distrib-card-body text-ink mb-6">Join our Discord to chat with the team and the TyGAMES community.</p>
+        {% if site.social.discord %}
+        <a href="{{ site.social.discord }}" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          Join the Discord →
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">The team</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6">
+      {% for member in site.data.team %}
+      <div class="card card-light flex items-start gap-5">
+        {% if member.img %}
+        <img src="{{ '/assets/img/' | append: member.img | relative_url }}" alt="{{ member.name }}"
+          class="w-14 h-14 rounded-full object-cover shrink-0">
+        {% else %}
+        <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0 font-heading font-extrabold text-ink text-xl">
+          {{ member.name | slice: 0 }}
+        </div>
+        {% endif %}
+        <div>
+          <div class="font-heading font-bold text-ink">{{ member.name }}</div>
+          <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member.role }}</div>
+          {% if member.bio %}
+          <p class="text-ink/80 text-sm leading-relaxed">{{ member.bio }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<section class="section-padding">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">Information</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6 items-start">
+      <div class="card card-light">
+        <div class="flex flex-col gap-1 text-sm text-ink/80">
+          <span class="text-accent">TyGAMES SAS</span>
+          <span>3A, Rue de Paris</span>
+          <span>35510 Cesson-Sévigné</span>
+          <span>FRANCE</span>
+          <span>SIRET 931 717 242 R.C.S. Rennes</span>
+          <span>VAT FR16921714242</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

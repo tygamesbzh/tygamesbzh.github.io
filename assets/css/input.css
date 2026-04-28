@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-offwhite;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-block bg-accent hover:bg-accent-light text-white px-6 py-3 rounded font-medium transition-colors duration-200;
+  }
+  .btn-outline {
+    @apply inline-block bg-ink text-offwhite border border-white/30 hover:border-accent px-6 py-3 rounded font-medium transition-colors duration-200;
+  }
+  .btn-social {
+    @apply flex items-center justify-center w-16 h-16 rounded-full bg-ink/5 text-ink/90 hover:bg-accent hover:text-white transition-colors;
+  }
+  .btn-store {
+    @apply inline-flex items-center justify-center gap-1.5 w-36 py-2 bg-ink rounded-full border text-offwhite text-xs font-semibold transition-all duration-200;
+  }
+  .btn-store:hover {
+    @apply border-accent scale-105;
+  }
+
+  /* Layout */
+  .section-container {
+    @apply max-w-site mx-auto px-10 md:px-16;
+  }
+  .section-padding {
+    @apply py-10 md:py-12;
+  }
+  /* Interior page hero — adds nav clearance (pt-32) on top of section-padding */
+  .page-hero {
+    @apply section-padding pt-32;
+  }
+  .section-intro {
+    @apply mb-12;
+  }
+
+  /* Typography scale */
+  .page-title {
+    @apply font-heading font-extrabold text-5xl md:text-6xl leading-tight;
+  }
+  .section-title {
+    @apply font-heading font-bold text-4xl md:text-5xl;
+  }
+  /* Pair with a color class: text-accent, text-muted, etc. */
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white/5 border border-white/10 rounded-xl p-6;
+  }
+  /* Override for .card on light (offwhite) backgrounds */
+  .card-light {
+    @apply bg-ink/[0.04] border-ink/10;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-sm text-muted hover:text-offwhite transition-colors;
+  }
+  .footer-link {
+    @apply text-sm text-muted/60 hover:text-offwhite transition-colors;
+  }
+
+  /* Forms */
+  .form-input {
+    @apply w-full bg-white/5 border border-white/20 rounded px-4 py-3 text-offwhite placeholder-muted/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors;
+  }
+  .form-label {
+    @apply block text-sm font-medium text-muted mb-2;
+  }
+
+  /* Checklists */
+  .checklist-item {
+    @apply flex items-start gap-2;
+  }
+  .checklist-check {
+    @apply text-accent mt-0.5 shrink-0;
+  }
+
+  /* Feature cards */
+  .distrib-card-title { @apply font-heading font-bold text-xl mb-3 text-accent; }
+  .distrib-card-number { @apply font-heading font-extrabold text-5xl text-accent/80 mb-4; }
+  .distrib-card-body { @apply text-offwhite/70 text-sm leading-relaxed; }
+  ul.distrib-card-body { @apply list-disc list-outside pl-5; }
+
+  /* Platform badge */
+  .platform-badge {
+    @apply text-xs bg-white/10 text-muted/60 px-3 py-1 rounded-full;
+  }
+
+}

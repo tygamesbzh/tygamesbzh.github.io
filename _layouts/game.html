@@ -1,0 +1,106 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[lang] %}
+
+<article class="section-padding bg-offwhite">
+  <div class="section-container">
+    <a href="{{ t.urls.games | relative_url }}" class="inline-flex items-center gap-2 text-sm text-ink/60 hover:text-accent transition-colors mb-10">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      {{ t.game.back }}
+    </a>
+
+    <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
+      <div class="bg-white/5 rounded-xl border border-white/10 overflow-hidden">
+        <img src="{{ '/assets/img/games/' | append: page.img | relative_url }}" alt="{{ page.game }}" class="w-full">
+      </div>
+
+      <div>
+
+        <h1 class="font-heading font-extrabold text-4xl md:text-5xl mb-3">{{ page.game }}</h1>
+
+        {% if page.developer %}
+          <p class="text-accent text-lg font-bold mb-1">{{ page.developer }}</p>
+        {% endif %}
+
+        {% if page.release_date %}
+          <p class="text-ink/80 text-sm mb-5">{{ page.release_date }}</p>
+        {% elsif page.project-date %}
+          <p class="text-ink/80 text-sm mb-5">{{ page.project-date }}</p>
+        {% endif %}
+
+        {% if page.genre %}
+          <div class="flex flex-wrap gap-2 mb-5">
+            {% assign genre_list = page.genre | split: "/" %}
+            {% for g in genre_list %}
+              <span class="text-xs px-2 py-1 rounded border border-ink/15 text-ink/80">{{ g | strip }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if page.description %}
+          <p class="text-lg text-ink/80 leading-relaxed mb-8">{{ page.description }}</p>
+        {% endif %}
+
+        {% if page.store_links %}
+          <div class="flex flex-wrap gap-2 mb-4">
+            {% if page.store_links.steam %}<a href="{{ page.store_links.steam }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="steam" %}Steam</a>{% endif %}
+            {% if page.store_links.gog %}<a href="{{ page.store_links.gog }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="gog" %}GOG</a>{% endif %}
+            {% if page.store_links.epic %}<a href="{{ page.store_links.epic }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="epic" %}Epic</a>{% endif %}
+            {% if page.store_links.humble %}<a href="{{ page.store_links.humble }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="humble" %}Humble</a>{% endif %}
+            {% if page.store_links.nintendo %}<a href="{{ page.store_links.nintendo }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="nintendo" %}Nintendo eShop</a>{% endif %}
+            {% if page.store_links.playstation %}<a href="{{ page.store_links.playstation }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="playstation" %}PlayStation</a>{% endif %}
+            {% if page.store_links.xbox %}<a href="{{ page.store_links.xbox }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="xbox" %}Xbox</a>{% endif %}
+            {% if page.store_links.ios %}<a href="{{ page.store_links.ios }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="app_store" %}App Store</a>{% endif %}
+            {% if page.store_links.android %}<a href="{{ page.store_links.android }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="google_play" %}Google Play</a>{% endif %}
+          </div>
+        {% endif %}
+        <div>
+          {% if page.presskit %}
+            <a href="{{ page.presskit }}" target="_blank" rel="noopener" class="btn-primary text-sm py-2 px-4">Press Kit</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if page.youtube or page.screenshots %}
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        {% if page.youtube %}
+          <div class="aspect-video rounded-xl overflow-hidden border border-white/10 bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ page.youtube }}" title="{{ page.game }} trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        {% endif %}
+        {% if page.screenshots %}
+          <div class="grid grid-cols-2 gap-2">
+            {% for ss in page.screenshots %}
+              <a href="{{ '/assets/img/games/' | append: ss | relative_url }}" target="_blank" rel="noopener" class="block aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-accent transition-colors">
+                <img src="{{ '/assets/img/games/' | append: ss | relative_url }}" alt="{{ page.game }} screenshot {{ forloop.index }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if content != "" %}
+      <div class="game-text">
+        {{ content }}
+      </div>
+    {% endif %}
+  </div>
+</article>
+
+<style>
+.game-text { max-width: 42rem; color: #0d0d12; line-height: 1.625; }
+.game-text > * + * { margin-top: 1rem; }
+.game-text h2 { font-weight: 700; font-size: 1.5rem; color: #f5f5f0; margin-top: 2.5rem; margin-bottom: 1rem; }
+.game-text h3 { font-weight: 600; font-size: 1.25rem; color: #f5f5f0; margin-top: 2rem; margin-bottom: 0.75rem; }
+.game-text ul { list-style: disc; padding-left: 1.25rem; }
+.game-text ul > * + * { margin-top: 0.25rem; }
+.game-text strong { color: #f5f5f0; }
+.game-text a { color: #8B42A8; }
+.game-text a:hover { color: #a855c8; }
+</style>

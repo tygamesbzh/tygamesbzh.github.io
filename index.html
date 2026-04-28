@@ -1,0 +1,115 @@
+---
+layout: page
+title: Accueil
+lang: fr
+lang_alternate: /en/
+---
+
+<!-- Hero -->
+<section class="bg-offwhite min-h-[90vh] flex items-center py-24 relative overflow-hidden">
+  <div class="section-container grid md:grid-cols-2 gap-16 items-center w-full">
+    <div>
+      {% assign t = site.data.i18n[page.lang] %}
+      <p class="section-eyebrow text-accent mb-6 flex items-center gap-3">
+        <span class="block w-7 h-px bg-accent"></span>
+        {{ t.tagline }}
+      </p>
+      <h1 class="font-heading font-extrabold leading-tight mb-6 text-ink" style="font-size: clamp(2.8rem, 6vw, 5rem)">
+        Des jeux indépendants <br><em class="not-italic text-accent-light">et ensemble</em>
+      </h1>
+      <p class="text-lg text-ink leading-relaxed mb-10 max-w-md">
+        <span class="text-accent">TyGAMES</span> est un éditeur et distributeur de jeux vidéo sous forme de coopérative
+        (SCIC), basé en Bretagne. On crée des jeux, on les publie, on s'entraide et on partage.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="{{ '/jeux/' | relative_url }}" class="btn-primary">Voir nos jeux</a>
+        <a href="{{ '/cooperative/' | relative_url }}" class="btn-outline">La coopérative →</a>
+      </div>
+    </div>
+
+    <div class="hidden mt-12 md:flex aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
+      <img src="{{ '/assets/img/presentation.png' | relative_url }}" alt="TyGAMES">
+    </div>
+  </div>
+</section>
+
+<!-- Stats bar -->
+<section class="bg-ink">
+  <div class="border-y border-white/10 py-10">
+    <div class="section-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | where_exp: "g", "g.disabled != true" | size }}<span
+            class="text-accent-light">+</span></div>
+        <div class="text-md text-offwhite/80 tracking-wider">Jeux publiés</div>
+      </div>
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">10<span class="text-accent-light">+</span>
+        </div>
+        <div class="text-md text-offwhite/80 tracking-wider">Équipes et studios</div>
+      </div>
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">7<span class="text-accent-light">+</span>
+        </div>
+        <div class="text-md text-offwhite/80 tracking-wider">Plateformes</div>
+      </div>
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">100<span class="text-accent-light">%</span>
+        </div>
+        <div class="text-md text-offwhite/80 tracking-wider">Beurre salé</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Catalogue preview -->
+<section class="bg-offwhite section-padding">
+  <div class="section-container">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <h2 class="section-title">Découvrez nos derniers <em class="not-italic text-accent-light">Jeux</em></h2>
+      </div>
+      <a href="{{ '/games/' | relative_url }}" class="btn-outline text-sm py-2 hidden sm:inline-block">Voir tout →</a>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-2 mb-10">
+      {% if site.stores.steam %}<a href="{{ site.stores.steam }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="steam" %}Steam</a>{% endif %}
+      {% if site.stores.nintendo %}<a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="nintendo" %}Nintendo eShop</a>{% endif %}
+      {% if site.stores.playstation %}<a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="playstation" %}PlayStation</a>{% endif %}
+      {% if site.stores.xbox %}<a href="{{ site.stores.xbox }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="xbox" %}Xbox</a>{% endif %}
+      {% if site.stores.gog %}<a href="{{ site.stores.gog }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="gog" %}GOG</a>{% endif %}
+      {% if site.stores.humble %}<a href="{{ site.stores.humble }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="humble" %}Humble</a>{% endif %}
+      {% if site.stores.epic %}<a href="{{ site.stores.epic }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="epic" %}Epic</a>{% endif %}
+      {% if site.stores.app_store %}<a href="{{ site.stores.app_store }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="app_store" %}App Store</a>{% endif %}
+      {% if site.stores.google_play %}<a href="{{ site.stores.google_play }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="google_play" %}Google Play</a>{% endif %}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      {% assign visible_games = site.games | where_exp: "g", "g.disabled != true" %}
+      {% assign sorted_games = visible_games | sort: "date" | reverse %}
+      {% for game in sorted_games limit:6 %}
+      <a href="{{ game.url | relative_url }}" class="group block">
+        <div class="bg-white/5 rounded-lg overflow-hidden mb-2">
+          {% assign game_img = game.wide_img | default: game.img %}
+          {% if game_img %}
+          <img src="{{ '/assets/img/games/' | append: game_img | relative_url }}" alt="{{ game.game }}"
+            class="w-full transition-transform duration-300 group-hover:scale-105">
+          {% endif %}
+        </div>
+        <div class="flex items-baseline justify-between gap-2 mt-2">
+          <p class="text-xs font-semibold text-ink transition-colors leading-snug group-hover:text-accent">{{ game.game }}</p>
+          {% if game.project-date %}
+          <p class="text-xs text-ink/40 shrink-0">{{ game.project-date }}</p>
+          {% endif %}
+        </div>
+        {% if game.store_links %}
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+
+    <a href="{{ '/games/' | relative_url }}" class="btn-outline text-sm sm:hidden inline-block">Voir tout le catalogue
+      →</a>
+  </div>
+</section>
+
+</script>

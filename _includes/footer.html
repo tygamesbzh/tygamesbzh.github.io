@@ -1,0 +1,72 @@
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign switcher_url = page.lang_alternate | default: t.nav.lang_switch_url %}
+
+<footer class="bg-[#07070b] border-t border-white/10">
+  <div class="section-container py-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      <div class="col-span-2 md:col-span-1 mt-10">
+        <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-32 w-auto mb-3">
+      </div>
+
+      <div>
+        <h4 class="font-heading font-semibold text-xs uppercase tracking-widest text-muted/40 mb-4">{{ t.footer.nav_heading }}</h4>
+        <ul class="space-y-2">
+          <li><a href="{{ t.urls.home | relative_url }}" class="footer-link">{{ t.nav.home }}</a></li>
+          <li><a href="{{ t.urls.games | relative_url }}" class="footer-link">{{ t.nav.games }}</a></li>
+          <li><a href="{{ t.urls.publishing | relative_url }}" class="footer-link">{{ t.nav.publishing }}</a></li>
+          <li><a href="{{ t.urls.cooperative | relative_url }}" class="footer-link">{{ t.nav.cooperative }}</a></li>
+          <li><a href="{{ t.urls.contact | relative_url }}" class="footer-link">{{ t.nav.contact }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-semibold text-xs uppercase tracking-widest text-muted/40 mb-4">{{ t.footer.platforms_heading }}</h4>
+        <ul class="space-y-2">
+          {% if site.stores.steam %}
+          <li><a href="{{ site.stores.steam }}" target="_blank" rel="noopener" class="footer-link">Steam</a></li>
+          {% endif %}
+          {% if site.stores.nintendo %}
+          <li><a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="footer-link">Nintendo eShop</a></li>
+          {% endif %}
+          {% if site.stores.playstation %}
+          <li><a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="footer-link">PlayStation</a></li>
+          {% endif %}
+          {% if site.stores.xbox %}
+          <li><a href="{{ site.stores.xbox }}" target="_blank" rel="noopener" class="footer-link">Xbox</a></li>
+          {% endif %}
+          {% if site.stores.gog %}
+          <li><a href="{{ site.stores.gog }}" target="_blank" rel="noopener" class="footer-link">GOG</a></li>
+          {% endif %}
+          {% if site.stores.humble %}
+          <li><a href="{{ site.stores.humble }}" target="_blank" rel="noopener" class="footer-link">Humble</a></li>
+          {% endif %}
+          {% if site.stores.epic %}
+          <li><a href="{{ site.stores.epic }}" target="_blank" rel="noopener" class="footer-link">Epic</a></li>
+          {% endif %}
+          {% if site.stores.app_store %}
+          <li><a href="{{ site.stores.app_store }}" target="_blank" rel="noopener" class="footer-link">App Store</a></li>
+          {% endif %}
+          {% if site.stores.google_play %}
+          <li><a href="{{ site.stores.google_play }}" target="_blank" rel="noopener" class="footer-link">Google Play</a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading font-semibold text-xs uppercase tracking-widest text-muted/40 mb-4">{{ t.footer.legal_heading }}</h4>
+        <ul class="space-y-2">
+          <li><span class="text-sm text-muted/40">SIRET 931 717 242</span></li>
+          <li><span class="text-sm text-muted/40">R.C.S. Rennes</span></li>
+          <li><a href="{{ t.urls.legal | relative_url }}" class="footer-link">{{ t.footer.legal_notice }}</a></li>
+          <li><a href="{{ t.urls.privacy | relative_url }}" class="footer-link">{{ t.footer.privacy }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-muted/40">© {{ 'now' | date: "%Y" }} TyGAMES SCIC  Rennes, France</p>
+      <p class="text-sm text-muted/40">{{ t.footer.founded }}</p>
+    </div>
+  </div>
+</footer>

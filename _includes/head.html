@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.tagline }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+
+<link rel="stylesheet" href="{{ '/assets/css/output.css' | relative_url }}">
+<link rel="shortcut icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
+
+{% if page.lang_alternate %}
+  {% if page.lang == 'en' %}{% assign other_lang = 'fr' %}{% else %}{% assign other_lang = 'en' %}{% endif %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="{{ other_lang }}" href="{{ site.url }}{{ page.lang_alternate }}">
+{% endif %}
+
+{% seo %}

@@ -1,0 +1,47 @@
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign switcher_url = page.lang_alternate | default: t.nav.lang_switch_url %}
+
+<header class="fixed top-0 left-0 right-0 z-50 h-[100px] bg-ink">
+  <nav class="relative z-10 section-container h-full flex items-center justify-between">
+    <a href="{{ t.urls.home | relative_url }}" class="flex items-center">
+      <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-[64px] w-auto">
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8">
+      <li><a href="{{ t.urls.home | relative_url }}" class="nav-link">{{ t.nav.home }}</a></li>
+      <li><a href="{{ t.urls.games | relative_url }}" class="nav-link">{{ t.nav.games }}</a></li>
+      <li><a href="{{ t.urls.publishing | relative_url }}" class="nav-link">{{ t.nav.publishing }}</a></li>
+      <li><a href="{{ t.urls.cooperative | relative_url }}" class="nav-link">{{ t.nav.cooperative }}</a></li>
+      <li><a href="{{ t.urls.contact | relative_url }}" class="nav-link">{{ t.nav.contact }}</a></li>
+    </ul>
+
+    <div class="hidden md:flex items-center gap-3">
+      <a href="{{ t.urls.submit | relative_url }}" class="btn-outline text-sm py-2 px-4">{{ t.nav.submit_game }}</a>
+      <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm py-2 px-4">{{ t.nav.join }}</a>
+      <a href="{{ switcher_url | relative_url }}" class="text-sm text-offwhite hover:text-accent border border-white/20 rounded px-2.5 py-1.5 transition-colors" aria-label="Switch language">{{ t.nav.lang_switch_label }}</a>
+    </div>
+
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-muted hover:text-offwhite" aria-label="{{ t.nav.menu_open }}">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-ink border-b border-white/10">
+    <div class="section-container py-4 flex flex-col gap-3">
+      <a href="{{ t.urls.home | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.home }}</a>
+      <a href="{{ t.urls.games | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.games }}</a>
+      <a href="{{ t.urls.publishing | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.publishing }}</a>
+      <a href="{{ t.urls.cooperative | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.cooperative }}</a>
+      <a href="{{ t.urls.contact | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.contact }}</a>
+      <hr class="border-white/10 my-1">
+      <a href="{{ t.urls.submit | relative_url }}" class="btn-outline text-sm text-center">{{ t.nav.submit_game }}</a>
+      <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm text-center">{{ t.nav.join }}</a>
+      <a href="{{ switcher_url | relative_url }}" class="text-sm text-center text-offwhite/80 hover:text-offwhite">{{ t.nav.lang_switch_label }}</a>
+    </div>
+  </div>
+</header>
+
+<div class="h-[100px]"></div>

@@ -1,8 +1,8 @@
-.DS_Store
-
-_site
-.sass-cache
-.jekyll-cache
+_site/
+.jekyll-cache/
 .jekyll-metadata
-
-Gemfile.lock
+node_modules/
+assets/css/output.css
+vendor/
+.bundle/
+.DS_Store

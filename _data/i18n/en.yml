@@ -1,0 +1,54 @@
+tagline: "Cooperative video game publisher and distributor"
+
+urls:
+  home: /en/
+  games: /en/games/
+  publishing: /en/publishing/
+  cooperative: /en/cooperative/
+  contact: /en/contact/
+  submit: /en/pitch
+  join: /en/invest
+  legal: /legal
+  privacy: /privacy
+
+nav:
+  home: Home
+  games: Nos jeux
+  publishing: Publishing/Distribution
+  cooperative: The Cooperative
+  contact: Contact
+  submit_game: Submit a game
+  join: Join us
+  menu_open: Open menu
+  lang_switch_label: "🇫🇷 FR"
+  lang_switch_url: /
+
+footer:
+  nav_heading: Navigation
+  platforms_heading: Our games on
+  legal_heading: Legal
+  legal_notice: Legal notice
+  privacy: Privacy
+  founded: "Founded November 28, 2022"
+
+game:
+  back: Back to catalogue
+
+cta:
+  devs_eyebrow: "Developers, studios, creators"
+  devs_heading: "Developing a game?"
+  devs_body: "Submit your project to the cooperative.<br />We review every submission carefully."
+  devs_button: "Submit my game →"
+  coop_eyebrow: "The cooperative"
+  coop_heading: "Join us!"
+  coop_body: "Professionals, creators, players: every member counts.<br />Find out how we work and how to become a member."
+  coop_button: "Join us →"
+
+newsletter:
+  heading: "Follow our news"
+  tags: "New games,Co-op life,Member offers,News"
+  block_title_pre: "The "
+  block_title_em: "Newsletter"
+  block_body: "New releases, co-op behind-the-scenes, member offers. Once a month, on average."
+  networks_pre: "Our "
+  networks_em: "Socials"
