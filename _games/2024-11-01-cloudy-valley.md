@@ -1,7 +1,14 @@
 ---
 layout: game
+disabled: false
 date: 2024-11-01
-img: cloudyvalley.jpg
+img: cloudyvalley/main.jpg
+youtube: jzuns7pK-wI
+screenshots:
+  - cloudyvalley/ss1.jpg
+  - cloudyvalley/ss2.jpg
+  - cloudyvalley/ss3.jpg
+  - cloudyvalley/ss4.jpg
 alt: Cloudy Valley
 project-date: 2024
 game: Cloudy Valley

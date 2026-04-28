@@ -1,7 +1,14 @@
 ---
 layout: game
+disabled: false
 date: 2024-06-01
-img: kubitsgallery.jpg
+img: kubitsgallery/main.jpg
+youtube: M_lBL8Zhx8U
+screenshots:
+  - kubitsgallery/ss1.jpg
+  - kubitsgallery/ss2.jpg
+  - kubitsgallery/ss3.jpg
+  - kubitsgallery/ss4.jpg
 alt: Kubits Gallery
 project-date: 2024
 game: Kubits Gallery

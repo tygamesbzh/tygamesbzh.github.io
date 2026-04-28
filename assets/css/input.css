@@ -39,7 +39,7 @@
     @apply section-padding pt-32;
   }
   .section-intro {
-    @apply max-w-2xl mb-12;
+    @apply mb-12;
   }
 
   /* Typography scale */
@@ -88,10 +88,10 @@
   }
 
   /* Feature cards */
-  .editor-card-title { @apply font-heading font-bold text-xl mb-3; }
-  .editor-card-body { @apply text-muted/60 text-sm leading-relaxed; }
+  .distrib-card-title { @apply font-heading font-bold text-xl mb-3 text-accent; }
   .distrib-card-number { @apply font-heading font-extrabold text-5xl text-accent/80 mb-4; }
   .distrib-card-body { @apply text-offwhite/70 text-sm leading-relaxed; }
+  ul.distrib-card-body { @apply list-disc list-outside pl-5; }
 
   /* Platform badge */
   .platform-badge {

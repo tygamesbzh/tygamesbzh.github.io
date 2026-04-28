@@ -12,7 +12,8 @@ lang_alternate: /en/games/
     <p class="text-xl text-ink/50 mb-16 max-w-2xl">Tous les jeux distribués et publiés par <span class="text-accent">TyGAMES</span></p>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {% assign sorted_games = site.games | sort: "date" | reverse %}
+      {% assign visible_games = site.games | where_exp: "g", "g.disabled != true" %}
+      {% assign sorted_games = visible_games | sort: "date" | reverse %}
       {% for game in sorted_games %}
         <a href="{{ game.url | relative_url }}" class="group bg-white rounded-xl border border-ink/10 overflow-hidden hover:border-accent/40 hover:shadow-lg transition-all duration-200 flex flex-col">
           {% if game.img %}

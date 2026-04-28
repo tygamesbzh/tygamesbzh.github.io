@@ -6,8 +6,10 @@ lang: fr
 lang_alternate: /en/pitch/
 ---
 
-<section class="min-h-screen flex items-center bg-offwhite">
-  <div class="section-container max-w-2xl">
+<section class="min-h-screen flex items-center bg-offwhite relative overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center grayscale" style="background-image: url('{{ '/assets/img/pitch-bg.jpg' | relative_url }}');"></div>
+  <div class="absolute inset-0 bg-offwhite/80"></div>
+  <div class="section-container max-w-2xl relative z-10">
     <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-8 text-ink">Pitcher un jeu</h1>
 
     <p class="text-ink/70 leading-relaxed mb-4">

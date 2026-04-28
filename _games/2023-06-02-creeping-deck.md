@@ -1,7 +1,9 @@
 ---
 layout: game
+disabled: true
 date: 2023-05-09
-img: creepingdeck.jpg
+img: creepingdeck/main.jpg
+youtube: pnqdn7bBHOU
 alt: Creeping Deck
 project-date: 2023
 game: Creeping Deck

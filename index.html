@@ -26,7 +26,7 @@ lang_alternate: /en/
       </div>
     </div>
 
-    <div class="hidden md:flex aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
+    <div class="hidden mt-12 md:flex aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
       <img src="assets/img/presentation.png" alt="Catalogue">
     </div>
   </div>
@@ -37,7 +37,7 @@ lang_alternate: /en/
   <div class="border-y border-white/10 py-7">
     <div class="section-container grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
       <div>
-        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | size }}<span
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | where_exp: "g", "g.disabled != true" | size }}<span
             class="text-accent-light">+</span></div>
         <div class="text-xs text-muted/50 tracking-wider">Jeux publiés</div>
       </div>
@@ -65,24 +65,26 @@ lang_alternate: /en/
   <div class="section-container">
     <div class="flex items-end justify-between mb-10">
       <div>
-        <h2 class="section-title">Découvrez nos <em class="not-italic text-accent-light">Jeux</em></h2>
+        <h2 class="section-title">Découvrez nos derniers <em class="not-italic text-accent-light">Jeux</em></h2>
       </div>
       <a href="{{ '/games/' | relative_url }}" class="btn-outline text-sm py-2 hidden sm:inline-block">Voir tout →</a>
     </div>
     
     <div class="flex flex-wrap justify-center gap-2 mb-10">
       {% if site.stores.steam %}<a href="{{ site.stores.steam }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="steam" %}Steam</a>{% endif %}
+      {% if site.stores.nintendo %}<a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="nintendo" %}Nintendo eShop</a>{% endif %}
+      {% if site.stores.playstation %}<a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="playstation" %}PlayStation</a>{% endif %}
+      {% if site.stores.xbox %}<a href="{{ site.stores.xbox }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="xbox" %}Xbox</a>{% endif %}
       {% if site.stores.gog %}<a href="{{ site.stores.gog }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="gog" %}GOG</a>{% endif %}
       {% if site.stores.humble %}<a href="{{ site.stores.humble }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="humble" %}Humble</a>{% endif %}
       {% if site.stores.epic %}<a href="{{ site.stores.epic }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="epic" %}Epic</a>{% endif %}
       {% if site.stores.app_store %}<a href="{{ site.stores.app_store }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="app_store" %}App Store</a>{% endif %}
       {% if site.stores.google_play %}<a href="{{ site.stores.google_play }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="google_play" %}Google Play</a>{% endif %}
-      {% if site.stores.nintendo %}<a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="nintendo" %}Nintendo eShop</a>{% endif %}
-      {% if site.stores.playstation %}<a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="btn-store">{% include store-icon.html store="playstation" %}PlayStation</a>{% endif %}
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-      {% assign sorted_games = site.games | sort: "date" | reverse %}
+      {% assign visible_games = site.games | where_exp: "g", "g.disabled != true" %}
+      {% assign sorted_games = visible_games | sort: "date" | reverse %}
       {% for game in sorted_games limit:6 %}
       <a href="{{ game.url | relative_url }}" class="group block">
         <div class="bg-white/5 rounded-lg overflow-hidden mb-2">

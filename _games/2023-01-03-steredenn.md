@@ -1,7 +1,14 @@
 ---
 layout: game
+disabled: false
 date: 2023-01-09
-img: steredenn.png
+img: steredenn/main.png
+youtube: iBG9yqcXB-4
+screenshots:
+  - steredenn/ss1.jpg
+  - steredenn/ss2.jpg
+  - steredenn/ss3.jpg
+  - steredenn/ss4.jpg
 alt: Steredenn - Binary Stars
 project-date: 2015-2018
 game: Steredenn - Binary Stars

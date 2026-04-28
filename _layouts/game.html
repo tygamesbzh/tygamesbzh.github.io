@@ -66,6 +66,25 @@ layout: default
       </div>
     </div>
 
+    {% if page.youtube or page.screenshots %}
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        {% if page.youtube %}
+          <div class="aspect-video rounded-xl overflow-hidden border border-white/10 bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ page.youtube }}" title="{{ page.game }} trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        {% endif %}
+        {% if page.screenshots %}
+          <div class="grid grid-cols-2 gap-2">
+            {% for ss in page.screenshots %}
+              <a href="{{ '/assets/img/games/' | append: ss | relative_url }}" target="_blank" rel="noopener" class="block aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-accent transition-colors">
+                <img src="{{ '/assets/img/games/' | append: ss | relative_url }}" alt="{{ page.game }} screenshot {{ forloop.index }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
     {% if content != "" %}
       <div class="game-text">
         {{ content }}

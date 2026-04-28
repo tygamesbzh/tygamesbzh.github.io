@@ -1,5 +1,5 @@
 title: TyGAMES
-tagline: "Coopérative bretonne d'édition et distribution de jeux vidéo"
+tagline: "Coopérative d'édition et distribution de jeux vidéo"
 description: "Un autre modèle d'édition est possible : coopératif, transparent, résilient. Rejoignez-nous !"
 image: /assets/img/og.png
 logo: /assets/img/logo_white.png
@@ -14,7 +14,8 @@ social:
   mastodon:
   instagram:
   youtube:
-  discord: https://discord.gg/tygames
+  discord: https://discord.gg/RqzHAtpbXZ
+  substack: https://tygames.substack.com
 
 stores:
   steam: https://store.steampowered.com/publisher/tygames
@@ -23,7 +24,7 @@ stores:
   humble: https://www.humblebundle.com/store/search?publisher=TyGAMES
   app_store: https://apps.apple.com/fr/developer/tygames/id1663858681
   google_play: https://play.google.com/store/apps/dev?id=5075684495718628174
-  nintendo: 
+  nintendo: https://eshop-prices.com/games?publisher=TyGAMES
   playstation: https://store.playstation.com/en-us/concept/10013114
   xbox: 
 

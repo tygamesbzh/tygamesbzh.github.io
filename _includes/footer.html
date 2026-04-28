@@ -3,7 +3,7 @@
 {% assign switcher_url = page.lang_alternate | default: t.nav.lang_switch_url %}
 
 <footer class="bg-[#07070b] border-t border-white/10">
-  <div class="section-container py-16">
+  <div class="section-container py-6">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
       <div class="col-span-2 md:col-span-1">
         <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="TyGAMES" class="h-7 w-auto mb-3">
@@ -63,7 +63,7 @@
     </div>
 
     <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-muted/40">© {{ 'now' | date: "%Y" }} TyGAMES SCIC  Rennes, Bretagne</p>
+      <p class="text-sm text-muted/40">© {{ 'now' | date: "%Y" }} TyGAMES SCIC  Rennes, France</p>
       <p class="text-sm text-muted/40">{{ t.footer.founded }}</p>
     </div>
   </div>

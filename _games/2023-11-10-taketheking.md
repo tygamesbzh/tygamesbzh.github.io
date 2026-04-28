@@ -1,7 +1,14 @@
 ---
 layout: game
+disabled: false
 date: 2023-11-10
-img: taketheking.jpg
+img: taketheking/main.jpg
+youtube: H0fiLv8oO9c
+screenshots:
+  - taketheking/ss1.jpg
+  - taketheking/ss2.jpg
+  - taketheking/ss3.jpg
+  - taketheking/ss4.jpg
 alt: Take The King
 project-date: 2023
 game: Take The King!

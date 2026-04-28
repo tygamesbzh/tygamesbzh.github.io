@@ -1,7 +1,14 @@
 ---
 layout: game
+disabled: false
 date: 2025-11-21
-img: superreaktor.jpg
+img: superreaktor/main.jpg
+youtube: UDo2C_QKf_o
+screenshots:
+  - superreaktor/ss1.jpg
+  - superreaktor/ss2.jpg
+  - superreaktor/ss3.jpg
+  - superreaktor/ss4.jpg
 alt: Super reaKtor
 project-date: 2025
 game: Super reaKtor

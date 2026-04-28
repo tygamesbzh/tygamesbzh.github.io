@@ -46,16 +46,16 @@ lang_alternate: /en/publishing/
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="card">
-        <div class="distrib-card-number">01</div>
-        <h3 class="editor-card-title">Accès aux plateformes</h3>
-        <p class="distrib-card-body">Mise en vente sur les principales plateformes de vente en ligne de jeux vidéo.</p>
+        <h3 class="distrib-card-title">Accès aux plateformes</h3>
+        <ul class="distrib-card-body space-y-1.5 mt-1">
+          <li>Mise en vente sur les principales plateformes de vente en ligne de jeux vidéo.</li>
+        </ul>
         <br />
         <p class="distrib-card-body italic">Steam, Epic, Humble, GOG, Apple Store, Play Store, Nintendo eShop, Xbox, PlayStation Store, etc.</p>
       </div>
 
       <div class="card">
-        <div class="distrib-card-number">02</div>
-        <h3 class="editor-card-title">Simplification administrative</h3>
+        <h3 class="distrib-card-title">Simplification administrative</h3>
         <ul class="distrib-card-body space-y-1.5 mt-1">
           <li>Enregistrement fiscal auprès des stores</li>
           <li>Agrégation devises étrangères</li>
@@ -67,8 +67,7 @@ lang_alternate: /en/publishing/
       </div>
 
       <div class="card">
-        <div class="distrib-card-number">03</div>
-        <h3 class="editor-card-title">Force du catalogue</h3>
+        <h3 class="distrib-card-title">Force du catalogue</h3>
         <ul class="distrib-card-body space-y-1.5 mt-1">
           <li>Contacts privilégiés au sein des stores</li>
           <li>Mises en avant sur les plateformes</li>
@@ -77,24 +76,30 @@ lang_alternate: /en/publishing/
       </div>
 
       <div class="card">
-        <div class="distrib-card-number">04</div>
-        <h3 class="editor-card-title">Revshare minimal</h3>
+        <h3 class="distrib-card-title">Revshare minimal</h3>
         <ul class="distrib-card-body space-y-1.5 mt-1">
           <li>Nous prenons le minimum</li>
           <li>10% Steam / PC</li>
-          <li>10% mobile</li>
-          <li>20% consoles</li>
+          <li>20% mobile</li>
+          <li>30% consoles</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="distrib-card-number">05</div>
-        <h3 class="editor-card-title">Nouvelles opportunités</h3>
+        <h3 class="distrib-card-title">Nouvelles opportunités</h3>
         <ul class="distrib-card-body space-y-1.5 mt-1">
           <li>Présence mutualisée sur les salons</li>
           <li>Distribution vers la Chine</li>
           <li>Accès aux nouvelles plateformes (Genba, nuuvem…)</li>
-          <li>Annuaires de partenaires</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="distrib-card-title">Communauté</h3>
+        <ul class="distrib-card-body space-y-1.5 mt-1">
+          <li>Rejoindre un Discord</li>
+          <li>Annuaire de freelances talentueux</li>
+          <li>Wiki de connaissances</li>
         </ul>
       </div>
     </div>
@@ -123,7 +128,7 @@ lang_alternate: /en/publishing/
 
     <div class="grid md:grid-cols-2 gap-6 mb-16">
       <div class="card card-light">
-        <h3 class="editor-card-title text-ink">Avec cette enveloppe et selon vos besoins :</h3>
+        <h3 class="distrib-card-title text-ink">Avec cette enveloppe et selon vos besoins :</h3>
         <ul class="space-y-2 text-sm text-ink/70">
           <li class="checklist-item"><span class="checklist-check">✓</span>Localisation (traduction) en fonction du nombre de mots</li>
           <li class="checklist-item"><span class="checklist-check">✓</span>QA : obligatoire sur toute sortie</li>
@@ -135,7 +140,7 @@ lang_alternate: /en/publishing/
       </div>
 
       <div class="card card-light">
-        <h3 class="editor-card-title text-ink">En contrepartie</h3>
+        <h3 class="distrib-card-title text-ink">En contrepartie</h3>
         <ul class="space-y-2 text-sm text-ink/70">
           <li class="checklist-item"><span class="checklist-check">→</span>Votre projet est suivi par un sociétaire mentor</li>
           <li class="checklist-item"><span class="checklist-check">→</span>Les dépenses s'inscrivent sur une ardoise de dettes</li>
@@ -167,6 +172,10 @@ lang_alternate: /en/publishing/
           <span class="platform-badge">Optimisation</span>
         </div>
       </div>
+      <div class="flex justify-center items-center gap-10 text-offwhite/70 [&_svg]:w-16 [&_svg]:h-16 md:[&_svg]:w-20 md:[&_svg]:h-20">
+        {% include store-icon.html store="nintendo" %}
+        {% include store-icon.html store="playstation" %}
+        {% include store-icon.html store="xbox" %}
       </div>
     </div>
   </div>

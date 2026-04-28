@@ -1,7 +1,14 @@
 ---
 layout: game
+disabled: false
 date: 2024-04-11
-img: pathblasters.jpg
+img: pathblasters/main.jpg
+youtube: mGuDmiSNxNE
+screenshots:
+  - pathblasters/ss1.jpg
+  - pathblasters/ss2.jpg
+  - pathblasters/ss3.jpg
+  - pathblasters/ss4.jpg
 alt: PathBlasters
 project-date: 2024
 game: PathBlasters
