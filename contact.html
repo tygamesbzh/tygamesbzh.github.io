@@ -48,7 +48,7 @@ lang_alternate: /en/contact/
     <div class="section-intro">
       <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">L'équipe</h2>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid sm:grid-cols-2 gap-6">
       {% for member in site.data.team %}
       <div class="card card-light flex items-start gap-5">
         {% if member.img %}
@@ -62,7 +62,7 @@ lang_alternate: /en/contact/
         <div>
           <div class="font-heading font-bold text-ink">{{ member.name }}</div>
           <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member.role }}</div>
-          {% if member.bio and member.bio != "TODO BIO" %}
+          {% if member.bio %}
           <p class="text-ink/80 text-sm leading-relaxed">{{ member.bio }}</p>
           {% endif %}
         </div>
@@ -88,10 +88,6 @@ lang_alternate: /en/contact/
           <span>SIRET 931 717 242 R.C.S. Rennes</span>
           <span>TVA FR16921714242</span>
         </div>
-      </div>
-      <div class="flex flex-col gap-3 text-sm text-ink/40">
-        <a href="{{ '/legal' | relative_url }}" class="hover:text-ink transition-colors">Mentions légales</a>
-        <a href="{{ '/privacy' | relative_url }}" class="hover:text-ink transition-colors">Politique de confidentialité</a>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@ urls:
 
 nav:
   home: Home
-  games: Catalogue
+  games: Nos jeux
   publishing: Publishing/Distribution
   cooperative: The Cooperative
   contact: Contact
@@ -24,7 +24,6 @@ nav:
   lang_switch_url: /
 
 footer:
-  tagline: "Cooperative video game publisher and distributor"
   nav_heading: Navigation
   platforms_heading: Our games on
   legal_heading: Legal

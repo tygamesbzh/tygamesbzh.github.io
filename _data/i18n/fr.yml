@@ -13,7 +13,7 @@ urls:
 
 nav:
   home: Accueil
-  games: Catalogue
+  games: Nos jeux
   publishing: Édition/Distribution
   cooperative: La Coopérative
   contact: Contact
@@ -24,12 +24,11 @@ nav:
   lang_switch_url: /en/
 
 footer:
-  tagline: "Coopérative d'édition et de distribution de jeux vidéo"
   nav_heading: Navigation
   platforms_heading: Nos jeux sur
   legal_heading: Légal
   legal_notice: Mentions légales
-  privacy: Confidentialité
+  privacy: Politique de Confidentialité
   founded: "Fondée le 28 novembre 2022"
 
 game:

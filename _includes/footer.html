@@ -5,9 +5,8 @@
 <footer class="bg-[#07070b] border-t border-white/10">
   <div class="section-container py-6">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-      <div class="col-span-2 md:col-span-1">
-        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="TyGAMES" class="h-7 w-auto mb-3">
-        <p class="text-sm text-muted/60 leading-relaxed">{{ t.footer.tagline }}</p>
+      <div class="col-span-2 md:col-span-1 mt-10">
+        <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-32 w-auto mb-3">
       </div>
 
       <div>
@@ -27,6 +26,15 @@
           {% if site.stores.steam %}
           <li><a href="{{ site.stores.steam }}" target="_blank" rel="noopener" class="footer-link">Steam</a></li>
           {% endif %}
+          {% if site.stores.nintendo %}
+          <li><a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="footer-link">Nintendo eShop</a></li>
+          {% endif %}
+          {% if site.stores.playstation %}
+          <li><a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="footer-link">PlayStation</a></li>
+          {% endif %}
+          {% if site.stores.xbox %}
+          <li><a href="{{ site.stores.xbox }}" target="_blank" rel="noopener" class="footer-link">Xbox</a></li>
+          {% endif %}
           {% if site.stores.gog %}
           <li><a href="{{ site.stores.gog }}" target="_blank" rel="noopener" class="footer-link">GOG</a></li>
           {% endif %}
@@ -41,12 +49,6 @@
           {% endif %}
           {% if site.stores.google_play %}
           <li><a href="{{ site.stores.google_play }}" target="_blank" rel="noopener" class="footer-link">Google Play</a></li>
-          {% endif %}
-          {% if site.stores.nintendo %}
-          <li><a href="{{ site.stores.nintendo }}" target="_blank" rel="noopener" class="footer-link">Nintendo eShop</a></li>
-          {% endif %}
-          {% if site.stores.playstation %}
-          <li><a href="{{ site.stores.playstation }}" target="_blank" rel="noopener" class="footer-link">Nintendo eShop</a></li>
           {% endif %}
         </ul>
       </div>
