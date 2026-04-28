@@ -1725,6 +1725,14 @@ ul.distrib-card-body {
   color: rgb(255 255 255 / 0.7);
 }
 
+.text-white\/50 {
+  color: rgb(255 255 255 / 0.5);
+}
+
+.text-muted\/80 {
+  color: rgb(200 197 186 / 0.8);
+}
+
 .underline {
   text-decoration-line: underline;
 }
