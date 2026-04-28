@@ -569,7 +569,7 @@ body {
   display: inline-block;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(200 91 21 / var(--tw-bg-opacity, 1));
+  background-color: rgb(236 139 14 / var(--tw-bg-opacity, 1));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
@@ -584,7 +584,7 @@ body {
 
 .btn-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(236 139 14 / var(--tw-bg-opacity, 1));
+  background-color: rgb(237 107 14 / var(--tw-bg-opacity, 1));
 }
 
 .btn-outline {
@@ -607,8 +607,8 @@ body {
 }
 
 .btn-outline:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(200 91 21 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 91 21 / var(--tw-bg-opacity, 1));
 }
 
 .btn-social {
@@ -627,7 +627,7 @@ body {
 
 .btn-social:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(200 91 21 / var(--tw-bg-opacity, 1));
+  background-color: rgb(236 139 14 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -658,8 +658,8 @@ body {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-border-opacity: 1;
-  border-color: rgb(200 91 21 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 91 21 / var(--tw-bg-opacity, 1));
 }
 
 /* Layout */
@@ -815,7 +815,7 @@ body {
   margin-top: 0.125rem;
   flex-shrink: 0;
   --tw-text-opacity: 1;
-  color: rgb(200 91 21 / var(--tw-text-opacity, 1));
+  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
 /* Feature cards */
@@ -827,7 +827,7 @@ body {
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(200 91 21 / var(--tw-text-opacity, 1));
+  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
 .distrib-card-body {
@@ -1372,11 +1372,11 @@ ul.distrib-card-body {
 
 .bg-accent {
   --tw-bg-opacity: 1;
-  background-color: rgb(200 91 21 / var(--tw-bg-opacity, 1));
+  background-color: rgb(236 139 14 / var(--tw-bg-opacity, 1));
 }
 
 .bg-accent\/10 {
-  background-color: rgb(200 91 21 / 0.1);
+  background-color: rgb(236 139 14 / 0.1);
 }
 
 .bg-black {
@@ -1641,12 +1641,12 @@ ul.distrib-card-body {
 
 .text-accent {
   --tw-text-opacity: 1;
-  color: rgb(200 91 21 / var(--tw-text-opacity, 1));
+  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
 .text-accent-light {
   --tw-text-opacity: 1;
-  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
+  color: rgb(237 107 14 / var(--tw-text-opacity, 1));
 }
 
 .text-ink {
@@ -1784,11 +1784,11 @@ ul.distrib-card-body {
 
 .hover\:border-accent:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(200 91 21 / var(--tw-border-opacity, 1));
+  border-color: rgb(236 139 14 / var(--tw-border-opacity, 1));
 }
 
 .hover\:border-accent\/40:hover {
-  border-color: rgb(200 91 21 / 0.4);
+  border-color: rgb(236 139 14 / 0.4);
 }
 
 .hover\:bg-ink\/70:hover {
@@ -1797,12 +1797,12 @@ ul.distrib-card-body {
 
 .hover\:text-accent:hover {
   --tw-text-opacity: 1;
-  color: rgb(200 91 21 / var(--tw-text-opacity, 1));
+  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-accent-light:hover {
   --tw-text-opacity: 1;
-  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
+  color: rgb(237 107 14 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-offwhite:hover {
@@ -1824,7 +1824,7 @@ ul.distrib-card-body {
 
 .group:hover .group-hover\:text-accent {
   --tw-text-opacity: 1;
-  color: rgb(200 91 21 / var(--tw-text-opacity, 1));
+  color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 640px) {

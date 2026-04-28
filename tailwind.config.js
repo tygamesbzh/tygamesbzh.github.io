@@ -17,8 +17,8 @@ module.exports = {
         offwhite: '#f5f5f0',
         muted: '#c8c5ba',
         accent: {
-          DEFAULT: '#C85B15',
-          light: '#EC8B0E',
+          DEFAULT: '#EC8B0E',
+          light: '#ED6B0E',
           dark: '#C85B15',
         },
       },

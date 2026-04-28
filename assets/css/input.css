@@ -15,7 +15,7 @@
     @apply inline-block bg-accent hover:bg-accent-light text-white px-6 py-3 rounded font-medium transition-colors duration-200;
   }
   .btn-outline {
-    @apply inline-block bg-ink text-offwhite border border-white/30 hover:border-accent px-6 py-3 rounded font-medium transition-colors duration-200;
+    @apply inline-block bg-ink text-offwhite border border-white/30 hover:bg-accent-dark px-6 py-3 rounded font-medium transition-colors duration-200;
   }
   .btn-social {
     @apply flex items-center justify-center w-16 h-16 rounded-full bg-ink/5 text-ink/90 hover:bg-accent hover:text-white transition-colors;
@@ -24,7 +24,7 @@
     @apply inline-flex items-center justify-center gap-1.5 w-36 py-2 bg-ink rounded-full border text-offwhite text-xs font-semibold transition-all duration-200;
   }
   .btn-store:hover {
-    @apply border-accent scale-105;
+    @apply bg-accent-dark scale-105;
   }
 
   /* Layout */
