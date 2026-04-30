@@ -1102,6 +1102,22 @@ ul.distrib-card-body {
   height: 1px;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
 .min-h-\[90vh\] {
   min-height: 90vh;
 }
@@ -1153,6 +1169,22 @@ ul.distrib-card-body {
 
 .w-full {
   width: 100%;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-20 {
+  width: 5rem;
 }
 
 .min-w-0 {
@@ -1411,10 +1443,6 @@ ul.distrib-card-body {
   background-color: rgb(255 255 255 / 0.05);
 }
 
-.bg-accent\/80 {
-  background-color: rgb(236 139 14 / 0.8);
-}
-
 .bg-cover {
   background-size: cover;
 }
@@ -1533,6 +1561,10 @@ ul.distrib-card-body {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .text-left {
@@ -1714,23 +1746,6 @@ ul.distrib-card-body {
 
 .text-offwhite\/80 {
   color: rgb(245 245 240 / 0.8);
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-white\/70 {
-  color: rgb(255 255 255 / 0.7);
-}
-
-.text-white\/50 {
-  color: rgb(255 255 255 / 0.5);
-}
-
-.text-muted\/80 {
-  color: rgb(200 197 186 / 0.8);
 }
 
 .underline {

@@ -20,6 +20,14 @@ permalink: /en/cooperative/
     <p class="text-muted/60 text-lg leading-relaxed mb-10">
       We're drafting the bylaws and other details. See you soon!
     </p>
+    <div class="flex items-center justify-center gap-3 mb-4">
+      {% if site.social.substack %}
+      <a href="{{ site.social.substack }}" target="_blank" rel="noopener" aria-label="Substack" class="flex items-center justify-center w-20 h-20 rounded-full text-offwhite hover:text-accent border border-white/20 transition-colors">{% include social-icon.html social="substack" class="w-8 h-8" %}</a>
+      {% endif %}
+      {% if site.social.discord %}
+      <a href="{{ site.social.discord }}" target="_blank" rel="noopener" aria-label="Discord" class="flex items-center justify-center w-20 h-20 rounded-full text-offwhite hover:text-accent border border-white/20 transition-colors">{% include social-icon.html social="discord" class="w-8 h-8" %}</a>
+      {% endif %}
+    </div>
     <a href="{{ '/en/' | relative_url }}" class="btn-outline">← Back</a>
   </div>
 </section>
