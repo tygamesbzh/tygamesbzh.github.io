@@ -54,6 +54,13 @@
     @apply text-xs font-semibold uppercase tracking-widest;
   }
 
+  /* PDF embed */
+  .pdf-viewer {
+    @apply w-full border border-ink/10 rounded bg-white;
+    height: calc(100vh - 120px);
+    min-height: 800px;
+  }
+
   /* Cards */
   .card {
     @apply bg-white/5 border border-white/10 rounded-xl p-6;
