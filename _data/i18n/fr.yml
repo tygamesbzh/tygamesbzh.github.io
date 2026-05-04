@@ -4,7 +4,10 @@ urls:
   home: /
   games: /games/
   publishing: /publishing/
-  cooperative: /cooperative/
+  cooperative: /cooperative/fonctionnement/
+  cooperative_fonctionnement: /cooperative/fonctionnement/
+  cooperative_valeurs: /cooperative/valeurs/
+  cooperative_statuts: /cooperative/statuts/
   contact: /contact/
   submit: /pitch
   join: /invest
@@ -16,6 +19,9 @@ nav:
   games: Nos jeux
   publishing: Édition/Distribution
   cooperative: La Coopérative
+  cooperative_fonctionnement: Fonctionnement
+  cooperative_valeurs: Nos valeurs
+  cooperative_statuts: Statuts
   contact: Contact
   submit_game: Soumettre un jeu
   join: Nous Rejoindre
