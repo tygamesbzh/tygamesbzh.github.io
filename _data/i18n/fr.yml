@@ -6,6 +6,7 @@ urls:
   publishing: /publishing/
   cooperative: /cooperative/fonctionnement/
   cooperative_fonctionnement: /cooperative/fonctionnement/
+  cooperative_equipe: /cooperative/equipe/
   cooperative_valeurs: /cooperative/valeurs/
   cooperative_statuts: /cooperative/statuts/
   contact: /contact/
@@ -20,6 +21,7 @@ nav:
   publishing: Édition/Distribution
   cooperative: La Coopérative
   cooperative_fonctionnement: Fonctionnement
+  cooperative_equipe: L'équipe
   cooperative_valeurs: Nos valeurs
   cooperative_statuts: Statuts
   contact: Contact
@@ -39,6 +41,11 @@ footer:
 
 game:
   back: Retour au catalogue
+
+team_categories:
+  direction: La direction
+  partenaires: Partenaires
+  conseil: Conseil Coopératif
 
 cta:
   devs_eyebrow: "Développeurs, studios, créateur.ice.s"

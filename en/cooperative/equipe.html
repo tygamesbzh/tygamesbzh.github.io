@@ -1,0 +1,48 @@
+---
+layout: page
+title: The team
+description: "The TyGAMES cooperative team."
+lang: en
+lang_alternate: /cooperative/equipe/
+permalink: /en/cooperative/equipe/
+---
+
+{% assign t = site.data.i18n[page.lang] %}
+
+<section class="page-hero bg-offwhite">
+  <div class="section-container">
+    <h1 class="page-title text-ink mb-4">The team</h1>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-container">
+    {% assign grouped = site.data.team | group_by: "category" %}
+    {% for group in grouped %}
+    <div class="mb-12 last:mb-0">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">{{ t.team_categories[group.name] | default: group.name }}</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        {% for member in group.items %}
+        <div class="card card-light flex items-start gap-5">
+          {% if member.img %}
+          <img src="{{ '/assets/img/team/' | append: member.img | relative_url }}" alt="{{ member.name }}"
+            class="w-14 h-14 rounded-full object-cover shrink-0">
+          {% else %}
+          <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0 font-heading font-extrabold text-ink text-xl">
+            {{ member.name | slice: 0 }}
+          </div>
+          {% endif %}
+          <div>
+            <div class="font-heading font-bold text-ink">{{ member.name }}</div>
+            <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member.role }}</div>
+            {% if member.bio %}
+            <p class="text-ink/80 text-sm leading-relaxed">{{ member.bio }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1827,6 +1827,10 @@ ul.distrib-card-body {
   transition-duration: 300ms;
 }
 
+.last\:mb-0:last-child {
+  margin-bottom: 0px;
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
