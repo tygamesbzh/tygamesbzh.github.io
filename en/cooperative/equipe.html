@@ -38,6 +38,16 @@ permalink: /en/cooperative/equipe/
             {% if member.bio %}
             <p class="text-ink/80 text-sm leading-relaxed">{{ member.bio }}</p>
             {% endif %}
+            {% if member.linkedin.size > 0 or member.site.size > 0 %}
+            <div class="flex items-center gap-2 mt-3">
+              {% if member.linkedin.size > 0 %}
+              <a href="{{ member.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center justify-center w-9 h-9 rounded-full text-ink/60 hover:text-accent border border-ink/15 transition-colors">{% include social-icon.html social="linkedin" class="w-4 h-4" %}</a>
+              {% endif %}
+              {% if member.site.size > 0 %}
+              <a href="{{ member.site }}" target="_blank" rel="noopener" aria-label="Website" class="flex items-center justify-center w-9 h-9 rounded-full text-ink/60 hover:text-accent border border-ink/15 transition-colors">{% include social-icon.html social="website" class="w-4 h-4" %}</a>
+              {% endif %}
+            </div>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
