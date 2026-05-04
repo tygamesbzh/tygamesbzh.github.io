@@ -1,10 +1,17 @@
-
 - name: Vincent Beauzée
+  category: direction
   role: Président
   bio: Indie gamedev depuis 2014.<br />Pharaoh, DeathTower, Shotgun King (et d'autres)<br />Ingénieur Web depuis 2011 (SFR, Roullier, Cerfrance...)
   img: vincent.jpg
 
 - name: Damien Mayance
+  category: direction
   role: Directeur Général
   bio: Indie Gamedev depuis 2014<br />Steredenn, Flipon, CTHULOOT, Cosmo Cargo<br />Gameplay/tools/UI/web programmer
   img: damien.png
+
+- name: Marine Desjardins
+  category: partenaires
+  role: Juriste en droit de l'ESS
+  bio: Juriste spécialisée Economie Sociale et Solidaire / droit du sport.<br />Cabinet FITECO Rennes.
+  img: marine.jpg

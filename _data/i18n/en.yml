@@ -6,6 +6,7 @@ urls:
   publishing: /en/publishing/
   cooperative: /en/cooperative/fonctionnement/
   cooperative_fonctionnement: /en/cooperative/fonctionnement/
+  cooperative_equipe: /en/cooperative/equipe/
   cooperative_valeurs: /en/cooperative/valeurs/
   cooperative_statuts: /en/cooperative/statuts/
   contact: /en/contact/
@@ -20,6 +21,7 @@ nav:
   publishing: Publishing/Distribution
   cooperative: The Cooperative
   cooperative_fonctionnement: How it works
+  cooperative_equipe: The team
   cooperative_valeurs: Our values
   cooperative_statuts: Bylaws
   contact: Contact
@@ -39,6 +41,11 @@ footer:
 
 game:
   back: Back to catalogue
+
+team_categories:
+  direction: Management
+  partenaires: Partners
+  conseil: Conseil Coopératif board members
 
 cta:
   devs_eyebrow: "Developers, studios, creators"
