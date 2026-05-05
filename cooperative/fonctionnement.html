@@ -7,27 +7,101 @@ lang_alternate: /en/cooperative/fonctionnement/
 permalink: /cooperative/fonctionnement/
 ---
 
-<section class="py-52 flex flex-col items-center justify-center text-center relative overflow-hidden bg-ink px-6">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-accent/8 blur-[150px]"></div>
-  </div>
+// Ajouter sous menu comme dans publishing.html pour chaque partie
 
-  <div class="relative z-10 max-w-xl">
-    <p class="section-eyebrow text-accent mb-8">Fonctionnement</p>
-    <h1 class="font-heading font-extrabold leading-tight text-offwhite mb-6" style="font-size: clamp(2.5rem, 6vw, 4.5rem)">
-      Ça arrive<br><em class="not-italic text-accent">bientôt !</em>
-    </h1>
-    <p class="text-muted/60 text-lg leading-relaxed mb-10">
-      On rédige les statuts et les différentes informations. A très vite !
-    </p>
-    <div class="flex items-center justify-center gap-3 mb-4">
-      {% if site.social.substack %}
-      <a href="{{ site.social.substack }}" target="_blank" rel="noopener" aria-label="Substack" class="flex items-center justify-center w-20 h-20 rounded-full text-offwhite hover:text-accent border border-white/20 transition-colors">{% include social-icon.html social="substack" class="w-8 h-8" %}</a>
-      {% endif %}
-      {% if site.social.discord %}
-      <a href="{{ site.social.discord }}" target="_blank" rel="noopener" aria-label="Discord" class="flex items-center justify-center w-20 h-20 rounded-full text-offwhite hover:text-accent border border-white/20 transition-colors">{% include social-icon.html social="discord" class="w-8 h-8" %}</a>
-      {% endif %}
-    </div>
-    <a href="{{ '/' | relative_url }}" class="btn-outline">← Retour</a>
-  </div>
-</section>
+# Organisation
+
+La coopérative est organisée en 3 parties :
+
+1. L'exécutif
+
+Elle est composée d'un Président, de Directeur et directrices Général.e.s et des salariés
+Elle gère la société au jour le jour, suit les projets de jeux en développement, gère les sorties, les soldes, les interactions avec les prestataires (portages, QA, localisation), etc.
+
+// TODO Remplacer ensuite les "présidence, direction générale et salariés" par l'exécutif
+
+2. La Conseil Coopératif
+
+Il est composé 3 à 9 membres indépendant de la Gouvernance issu des différents collèges.
+Il possède un droit de veto sur la plupart des décisions de la partie Opérationnelle : refuser des opérations, des projets, des investissements.
+Il est en contact privilégié avec la direction pour décider de la stratégie et des actions
+
+3. L'Assemblée Générale
+
+Elle est composée de tous les sociétaires.
+Une fois par an minimum, elle se réunit pour faire le bilan de la société et discuter des projets à venir.
+Elle décide de l'affectation du résultat.
+Elle désigne et révoque la Présidence et des Directeurs Généraux.
+Les sociétaires sont aussi tenus informés des projets et des nouveaux jeux, quequel ils ont accès.
+
+# Responsabilités
+
+## Signature des contrats de distribution et d'édition
+
+La présidence, direction générale et salariés filtrent les projets en amont. Puis elle les soumet au Conseil Coopératif selon 2 cas :
+
+1. Signer du back-catalogue (jeux déjà sortis ou demandant un investissement minime <1000 €) peut être décidé par majorité de la présidence, direction générale et salariés. Le conseil coopératif en est **informé** et peut exprimer un **veto**. 
+2. Signer un jeu en édition (avec investissement important (jusqu’à 15-20k€) est décidé par accord entre l'exécutif ET Conseil Coopératif. Le décision est prise par vote à la majorité au 2/3 du quorum.
+
+N’importe quel sociétaire peut proposer un projet (ou portage) de jeu à l'exécutif. Celui ci sera étudié en priorité en fonction des règles précisés ci-dessus.
+
+L'exécutif peut aussi décider de signer de nouveaux contrats avec de nouvelles plateformes de distribution, en en informant le Conseil Coopératif.
+
+## Décision des budgets
+
+### Pour un jeu
+
+L’Assemblée Générale décide des enveloppes maximales/minimale par jeu et par postes de dépense (marketing, portages, prod, localisation, QA, etc.). Elles sont reconduites automatiquement, sauf si le sujet est porté à l’ordre du jour de l’AG.
+
+### Pour les salons / évènements marketing
+
+L’Assemblée Générale définit une enveloppe maximale de dépense annuelles pour couvrir tous les évènements marketing, salons, qui concerne tout ou parties du catalogue. Toute dépense spécifique à un seul jeu, doit être déduites de l’enveloppe prévu pour ledit jeu.
+
+Enveloppe reconduite automatiquement, sauf si le sujet à l’ordre du jour de l’AG.
+
+La présidence, direction générale et les salariés decide ensemble de l’usage réel de cette enveloppe. Le Conseil Coopératif est informé et peut donner un véto sur une dépense.
+
+### Coût de fonctionnement
+
+*Achat de matériel, PC, licence logicielles, kit de développement.* 
+
+Ces dépenses sont décidés par la présidence, la direction générale et les salariés. 
+Pour les dépense supérieures à 5000 €, le Conseil Coopératif doit être informé et peut émettre un veto
+
+# Souscrire des parts
+
+Souscrire au capital vous coûtera *au minimum 100 €*. 
+
+Vous pouvez mettre plus, c'est d'ailleurs un pré-requis si vous souhaitez rejoindre certains collèges.
+
+La soucription se passe ici : <lien vers invest.html></lien>
+
+# Collèges de vote
+
+Le sociétariat est organisé en **collèges** de votes. Un collège par catégorie de sociétaire.
+Dans notre SCIC : *1 personne = 1 voix* avec une pondération par collège.
+*Détenir beaucoup de capital ne permet pas de détenir beaucoup de pouvoir dans la coopérative.*
+Nos collèges sont pensés pour favoriser les votes des gens qui s'impliquent dans la coopérative, soit par leur travail, soit par leur apport en jeux.
+
+// TODO CSV à formater en tableau
+
+Nom du collège,% des votes,Catégorie de sociétaire,Condition,Estim nombre pers,Nom piraterie,Ordre,Parts min,Persona
+"Studios, développeurs et auteurs",30%,"Les bénéficiaires des services de TyGAMES. ",Avoir au moins un jeu distribué par la structure sur un domaine,20,"Timoniers
+(barre, direction)",2,5,"Studios de 2-3 personnes (ou +), groupe d’auteurs, auteur.ice solo"
+Garants de la vision / Gestionnaires,30%,"Les associés, gestionnaires, salariés et autre personne qui travaillent et s’impliquent pour l’activité de la société, et garantissent la vision du projet.
+Inclus le président et la directeur général de la structure.",Un engagement de travail à effectuer mensuellement (N jours à fournir sur un domaine par ex),5,"Capitainerie
+(par extension, le conseil stratégique = quartier-maître = contre-pouvoir)",1,10,"Personnes prêtes à s’impliquer fortement dans le projet. Ayant une expérience professionnelle de l’industrie du JV. 
+La variété des compétences est un plus (Evitons d’avoir que des patrons de studios, pensons aussi aux profils administratifs, marketing, etc.)"
+"Associations, partenaires, bénévoles et collectivités",10%,"Structure ayant un intérêt indirect à voir TyGAMES se développer : développement économique de la ville/région, formation de juniors/alternants/stagiaires, accès aux informations sur les projets, fournisseurs services utiles, etc.","Association, domaine de l’éducation/connexe au jeu vidéo, domaine non géré par TyGAMES mais qui lui serait bénéfique (ex : production de boîtes de jeux).",8,"Vigies
+(vision, surveillance)",5,5,"Clusters, partenaires et syndicats, écoles.
+Sociétés gravitant autour du jeu vidéo.
+Investisseurs professionnels."
+Communauté,15%,"Sociétaires intéressés par le projet, sans statut particulier ou sans volonté de s’impliquer plus que quelques votes et donner un peu d’argent.
+
+Peuvent avoir accès aux jeux, soutenir la démarche, participer aux votes sur les prochains jeux, soutenir l’industrie et ses petits créateur.ices.",Aucune ! Seuil minimal de parts,50,Mousses,3,1,"Joueur.euses, créateur.ice.s de contenu, professionels de l’industrie ou toutes personnes intéressés par les jeux vidéo et leurs univers."
+Mentors et volontaires,15%,"Sociétaires désirant s’impliquer et s’engager dans le mentorat et le suivi des projets édités.
+Ou qui participent au développement de l’ERP ou d’outil.
+Ou qui mettent en place des solutions et des groupes de travail avec les autres sociétaires
+→ Sont potentiellement rémunérés (facturation) par la société",Accepter et respecter ses engagements sur une période minimale,10,"Gabiers
+(voiles)",4,5,"Des personnes motivées avec un temps disponible limité. 
+Souhaitant s’impliquer sur certains projets précis."
