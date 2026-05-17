@@ -9,6 +9,7 @@ urls:
   cooperative_equipe: /cooperative/equipe/
   cooperative_valeurs: /cooperative/valeurs/
   cooperative_statuts: /cooperative/statuts/
+  cooperative_reglement: /cooperative/reglement/
   contact: /contact/
   submit: /pitch
   join: /invest
@@ -24,6 +25,7 @@ nav:
   cooperative_equipe: L'équipe
   cooperative_valeurs: Nos valeurs
   cooperative_statuts: Statuts
+  cooperative_reglement: Réglement Intérieur
   contact: Contact
   submit_game: Soumettre un jeu
   join: Nous Rejoindre

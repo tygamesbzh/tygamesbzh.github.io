@@ -28,30 +28,39 @@
   }
 
   /* Layout */
+  .section-hero {
+    @apply section-padding pt-16 bg-offwhite;
+  }
   .section-container {
     @apply max-w-site mx-auto px-10 md:px-16;
+  }
+  .section-title-container {
+    @apply max-w-site mx-auto px-10 md:px-16 relative z-10 text-center mx-auto;
+  }
+  .section-title {
+  @apply font-heading font-extrabold leading-tight mb-6 text-[clamp(2.8rem,6vw,5rem)];
+}
+  .section-subtitle {
+    @apply max-w-site mx-auto text-xl text-ink/70 leading-relaxed max-w-3xl ;
   }
   .section-padding {
     @apply py-10 md:py-12;
   }
-  /* Interior page hero — adds nav clearance (pt-32) on top of section-padding */
-  .page-hero {
-    @apply section-padding pt-32;
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest;
   }
   .section-intro {
     @apply mb-12;
   }
 
+  /* Interior page hero — adds nav clearance (pt-32) on top of section-padding */
+  .page-hero {
+    @apply section-padding pt-32;
+  }
+
   /* Typography scale */
   .page-title {
     @apply font-heading font-extrabold text-5xl md:text-6xl leading-tight;
-  }
-  .section-title {
-    @apply font-heading font-bold text-4xl md:text-5xl;
-  }
-  /* Pair with a color class: text-accent, text-muted, etc. */
-  .section-eyebrow {
-    @apply text-xs font-semibold uppercase tracking-widest;
   }
 
   /* PDF embed */
