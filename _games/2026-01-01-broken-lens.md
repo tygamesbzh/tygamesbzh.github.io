@@ -15,7 +15,7 @@ game: Broken Lens
 platforms: PC
 developer: Team RUN, Flying Oak
 release_date: July 22, 2024
-genre: hidden object, casual
+genre: hidden object
 description: Broken Lens is a cozy game where you will discover the story of a little robot with a sight problem. Explore manifold cute environments at your own pace and investigate to understand what happened to them.Will you be able to uncover all the secrets? 🔍 
 presskit: 
 store_links:
