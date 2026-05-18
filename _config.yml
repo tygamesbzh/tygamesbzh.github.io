@@ -1,4 +1,5 @@
 title: TyGAMES
+legal_name: "TyGAMES SCIC SAS"
 tagline: "Coopérative d'édition et distribution de jeux vidéo"
 description: "Un autre modèle d'édition est possible : coopératif, transparent, résilient. Rejoignez-nous !"
 image: /assets/img/og.png
@@ -8,6 +9,11 @@ url: "https://ty.games"
 lang: fr
 email: hello@ty.games
 location: Rennes, Bretagne
+address:
+  street: "3A, Rue de Paris"
+  postal_code: "35510"
+  city: "Cesson-Sévigné"
+  country: "France"
 
 social:
   bluesky: https://bsky.app/profile/ty.games

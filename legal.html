@@ -7,7 +7,6 @@ lang: fr
 
 <section class="page-hero bg-ink">
   <div class="section-container">
-    <p class="section-eyebrow text-accent mb-4">Transparence</p>
     <h1 class="page-title text-offwhite mb-4">Mentions légales</h1>
     <p class="text-muted/60 text-lg max-w-xl">Informations légales relatives à TyGAMES et à ce site web.</p>
   </div>
@@ -20,9 +19,9 @@ lang: fr
       <div class="card bg-white border-ink/10">
         <h2 class="font-heading font-bold text-lg text-ink mb-4">Éditeur du site</h2>
         <ul class="space-y-2 text-sm text-ink/70">
-          <li><span class="font-semibold text-ink">Raison sociale</span><br>TyGAMES SCIC</li>
+          <li><span class="font-semibold text-ink">Raison sociale</span><br>{{ site.legal_name }}</li>
           <li><span class="font-semibold text-ink">SIRET</span><br>931 717 242  R.C.S. Rennes</li>
-          <li><span class="font-semibold text-ink">Siège social</span><br>3A rue de Paris, 35500 Cesson-Sévigné</li>
+          <li><span class="font-semibold text-ink">Siège social</span><br>{{ site.address.street }}, {{ site.address.postal_code }} {{ site.address.city }}</li>
           <li><span class="font-semibold text-ink">Directeur de la publication</span><br>Vincent Beauzée</li>
         </ul>
       </div>
@@ -48,7 +47,7 @@ lang: fr
 
         <div>
           <h3 class="font-heading font-semibold text-ink mb-2">Quelles données possédez-vous sur vos joueurs ?</h3>
-          <p class="text-ink/60 leading-relaxed text-sm">Si vous êtes abonné à notre newsletter, nous connaissons votre adresse e-mail et éventuellement votre prénom. Si vous avez utilisé notre système de feedback in-game, nous ne collectons que votre retour textuel  aucune autre donnée, et les retours sont anonymes sauf si vous indiquez votre e-mail.</p>
+          <p class="text-ink/60 leading-relaxed text-sm">Si vous êtes abonné à notre newsletter, nous connaissons votre adresse e-mail et éventuellement votre prénom.</p>
           <p class="text-ink/60 leading-relaxed text-sm mt-2">Certains jeux collectent des données anonymes sur les bugs et plantages (logs techniques uniquement, sans adresse IP ni identifiant personnel).</p>
         </div>
 

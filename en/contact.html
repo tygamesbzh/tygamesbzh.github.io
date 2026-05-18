@@ -52,10 +52,10 @@ permalink: /en/contact/
     <div class="grid sm:grid-cols-2 gap-6 items-start">
       <div class="card card-light">
         <div class="flex flex-col gap-1 text-sm text-ink/80">
-          <span class="text-accent">TyGAMES SAS</span>
-          <span>3A, Rue de Paris</span>
-          <span>35510 Cesson-Sévigné</span>
-          <span>FRANCE</span>
+          <span class="text-accent">{{ site.legal_name }}</span>
+          <span>{{ site.address.street }}</span>
+          <span>{{ site.address.postal_code }} {{ site.address.city }}</span>
+          <span>{{ site.address.country | upcase }}</span>
           <span>SIRET 931 717 242 R.C.S. Rennes</span>
           <span>VAT FR16921714242</span>
         </div>
