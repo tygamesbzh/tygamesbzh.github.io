@@ -3,26 +3,34 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-offwhite;
   }
 }
 
 @layer components {
+
   /* Buttons */
   .btn-primary {
     @apply inline-block bg-accent hover:bg-accent-light text-white px-6 py-3 rounded font-medium transition-colors duration-200;
   }
+
   .btn-outline {
     @apply inline-block bg-ink text-offwhite border border-white/30 hover:bg-accent-dark px-6 py-3 rounded font-medium transition-colors duration-200;
   }
+
   .btn-social {
     @apply flex items-center justify-center w-16 h-16 rounded-full bg-ink/5 text-ink/90 hover:bg-accent hover:text-white transition-colors;
   }
+
   .btn-store {
     @apply inline-flex items-center justify-center gap-1.5 w-36 py-2 bg-ink rounded-full border text-offwhite text-xs font-semibold transition-all duration-200;
   }
+
   .btn-store:hover {
     @apply bg-accent-dark scale-105;
   }
@@ -31,24 +39,31 @@
   .section-hero {
     @apply section-padding pt-16 bg-offwhite;
   }
+
   .section-container {
     @apply max-w-site mx-auto px-10 md:px-16;
   }
+
   .section-title-container {
     @apply max-w-site mx-auto px-10 md:px-16 relative z-10 text-center mx-auto;
   }
+
   .section-title {
-  @apply font-heading font-extrabold leading-tight mb-6 text-[clamp(2.8rem,6vw,5rem)];
-}
-  .section-subtitle {
-    @apply max-w-site mx-auto text-xl text-ink/70 leading-relaxed max-w-3xl ;
+    @apply font-heading font-extrabold leading-tight mb-6 text-[clamp(2.8rem,6vw,5rem)];
   }
+
+  .section-subtitle {
+    @apply max-w-site mx-auto text-xl text-ink/70 leading-relaxed max-w-3xl;
+  }
+
   .section-padding {
     @apply py-10 md:py-12;
   }
+
   .section-eyebrow {
     @apply text-xs font-semibold uppercase tracking-widest;
   }
+
   .section-intro {
     @apply mb-12;
   }
@@ -74,6 +89,7 @@
   .card {
     @apply bg-white/5 border border-white/10 rounded-xl p-6;
   }
+
   /* Override for .card on light (offwhite) backgrounds */
   .card-light {
     @apply bg-ink/[0.04] border-ink/10;
@@ -83,6 +99,7 @@
   .nav-link {
     @apply text-sm text-muted hover:text-accent transition-colors;
   }
+
   .footer-link {
     @apply text-sm text-muted/60 hover:text-accent transition-colors;
   }
@@ -91,9 +108,11 @@
   .section-nav {
     @apply sticky top-[100px] z-40 backdrop-blur mb-12 bg-offwhite;
   }
+
   .section-nav-list {
     @apply flex justify-center gap-2 py-2 flex-wrap;
   }
+
   .section-nav-link {
     @apply px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap;
   }
@@ -102,6 +121,7 @@
   .form-input {
     @apply w-full bg-white/5 border border-white/20 rounded px-4 py-3 text-offwhite placeholder-muted/50 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors;
   }
+
   .form-label {
     @apply block text-sm font-medium text-muted mb-2;
   }
@@ -110,15 +130,27 @@
   .checklist-item {
     @apply flex items-start gap-2;
   }
+
   .checklist-check {
     @apply text-accent mt-0.5 shrink-0;
   }
 
   /* Feature cards */
-  .distrib-card-title { @apply font-heading font-bold text-xl mb-3 text-accent; }
-  .distrib-card-number { @apply font-heading font-extrabold text-5xl text-accent/80 mb-4; }
-  .distrib-card-body { @apply text-offwhite/70 text-sm leading-relaxed; }
-  ul.distrib-card-body { @apply list-disc list-outside pl-5; }
+  .distrib-card-title {
+    @apply font-heading font-bold text-xl mb-3 text-accent;
+  }
+
+  .distrib-card-number {
+    @apply font-heading font-extrabold text-5xl text-accent/80 mb-4;
+  }
+
+  .distrib-card-body {
+    @apply text-offwhite/70 text-sm leading-relaxed;
+  }
+
+  ul.distrib-card-body {
+    @apply list-disc list-outside pl-5;
+  }
 
   /* Platform badge */
   .platform-badge {

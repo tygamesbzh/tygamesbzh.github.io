@@ -46,6 +46,9 @@
         {% if site.social.bluesky %}
         <a href="{{ site.social.bluesky }}" target="_blank" rel="noopener" aria-label="Bluesky" class="btn-social">{% include social-icon.html social="bluesky" %}</a>
         {% endif %}
+        {% if site.social.x %}
+        <a href="{{ site.social.x }}" target="_blank" rel="noopener" aria-label="X" class="btn-social">{% include social-icon.html social="x" %}</a>
+        {% endif %}
         {% if site.social.mastodon %}
         <a href="{{ site.social.mastodon }}" target="_blank" rel="noopener me" aria-label="Mastodon" class="btn-social">{% include social-icon.html social="mastodon" %}</a>
         {% endif %}
