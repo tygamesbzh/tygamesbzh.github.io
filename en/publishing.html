@@ -8,12 +8,9 @@ permalink: /en/publishing/
 ---
 
 <!-- Hero -->
-<section class="section-padding pt-16 bg-offwhite">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-accent/8 blur-[120px]"></div>
-  </div>
-  <div class="section-title">
-    <h1 class="">
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
       Distribution<br><em class="not-italic text-accent">&amp; Publishing</em>
     </h1>
     <p class="section-subtitle">
@@ -23,13 +20,13 @@ permalink: /en/publishing/
 </section>
 
 <!-- Section nav -->
-<div class="sticky top-[100px] z-40 backdrop-blur mb-12 bg-offwhite">
+<div class="section-nav">
   <div class="section-container">
-    <nav class="flex justify-center gap-2 py-2">
-      <a href="#distribution" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">Distribution</a>
-      <a href="#publishing" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">Publishing</a>
-      <a href="#porting" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">Porting</a>
-      <a href="#erp" class="px-5 py-2 rounded-lg text-sm font-semibold bg-ink text-offwhite hover:bg-ink/70 transition-colors whitespace-nowrap">ERP</a>
+    <nav class="section-nav-list">
+      <a href="#distribution" class="section-nav-link">Distribution</a>
+      <a href="#publishing" class="section-nav-link">Publishing</a>
+      <a href="#porting" class="section-nav-link">Porting</a>
+      <a href="#erp" class="section-nav-link">ERP</a>
     </nav>
   </div>
 </div>
@@ -78,7 +75,7 @@ permalink: /en/publishing/
       <div class="card">
         <h3 class="distrib-card-title">Minimal revshare</h3>
         <ul class="distrib-card-body space-y-1.5 mt-1">
-          <li>We take the minimum</li>
+          <li>We take the minimum and it's the same for everyone</li>
           <li>10% Steam / PC</li>
           <li>20% mobile</li>
           <li>30% consoles</li>
@@ -113,7 +110,7 @@ permalink: /en/publishing/
     <div class="section-intro mb-14">
       <h2 class="section-title text-ink mb-5">Publisher</h2>
       <p class="text-ink/70 leading-relaxed mb-4">
-        We modestly fund services, original creations, and ports. Read our offer, then <a href="/en/pitch/" class="text-accent hover:text-accent-light underline underline-offset-2">submit your project</a>.
+        We modestly fund services, original creations, and ports. Read our offer, then <a href="{{ '/en/pitch/' | relative_url }}" class="text-accent hover:text-accent-light underline underline-offset-2">submit your project</a>.
       </p>
       <p class="text-ink/70 leading-relaxed mb-4">
         Applications are reviewed by the Cooperative Council and management, once per quarter.
@@ -130,7 +127,7 @@ permalink: /en/publishing/
       <div class="card card-light">
         <h3 class="distrib-card-title text-ink">With this budget, depending on your needs:</h3>
         <ul class="space-y-2 text-sm text-ink/70">
-          <li class="checklist-item"><span class="checklist-check">✓</span>Localization (translation) based on word count</li>
+          <li class="checklist-item"><span class="checklist-check">✓</span>Localisation (translation) based on word count</li>
           <li class="checklist-item"><span class="checklist-check">✓</span>QA: required on every release</li>
           <li class="checklist-item"><span class="checklist-check">✓</span>Key art</li>
           <li class="checklist-item"><span class="checklist-check">✓</span>Trailer</li>
@@ -144,8 +141,10 @@ permalink: /en/publishing/
         <ul class="space-y-2 text-sm text-ink/70">
           <li class="checklist-item"><span class="checklist-check">→</span>Your project is followed by a member-mentor</li>
           <li class="checklist-item"><span class="checklist-check">→</span>Expenses are tracked on a debt slate</li>
-          <li class="checklist-item"><span class="checklist-check">→</span>This debt is repaid first <span class="text-ink/40">(80% TyGAMES, 20% dev)</span></li>
-          <li class="checklist-item"><span class="checklist-check">→</span>Once the debt is cleared, the revshare flips in favor of the dev <span class="text-ink/40">(30% TyGAMES, 70% dev)</span></li>
+          <li class="checklist-item"><span class="checklist-check">→</span>This debt is repaid first</li>
+          <span class="ml-4 text-ink/40">(80% TyGAMES, 20% dev)</span>
+          <li class="checklist-item"><span class="checklist-check">→</span>Once the debt is cleared, the revshare flips in favour of the dev</li>
+          <span class="ml-4 text-ink/40">(30% TyGAMES, 70% dev)</span>
           <li class="checklist-item"><span class="checklist-check">→</span>The contract cannot be terminated before repayment</li>
         </ul>
       </div>
@@ -160,7 +159,7 @@ permalink: /en/publishing/
       <div>
         <h3 class="font-heading font-bold text-3xl md:text-4xl mb-5">Console ports</h3>
         <p class="text-muted/70 leading-relaxed mb-4">
-          We do ports in-house, with strong technical expertise and prior experience on each console.
+          We do Unity and Godot ports in-house, with strong technical expertise and prior experience on each console.
         </p>
         <p class="text-muted/70 leading-relaxed mb-6">
           We own devkits and testkits. You can retrieve the source code at the end of the port.
@@ -169,7 +168,6 @@ permalink: /en/publishing/
           <span class="platform-badge">Nintendo Switch</span>
           <span class="platform-badge">PlayStation 5</span>
           <span class="platform-badge">Xbox Series</span>
-          <span class="platform-badge">Optimization</span>
         </div>
       </div>
       <div class="flex justify-center items-center gap-10 text-offwhite/70 [&_svg]:w-16 [&_svg]:h-16 md:[&_svg]:w-20 md:[&_svg]:h-20">
@@ -187,7 +185,7 @@ permalink: /en/publishing/
   <div class="section-container">
     <div class="section-intro">
       <h2 class="section-title mb-5">ERP</h2>
-      <p class="leading-relaxed">TyGAMES' in-house software, built to centralize and automate distribution and royalties management.</p>
+      <p class="leading-relaxed">TyGAMES' in-house software, built to centralise and automate distribution and royalties management.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-16 items-start text-ink/70">
@@ -214,7 +212,7 @@ permalink: /en/publishing/
         </li>
         <li class="checklist-item">
           <span class="checklist-check">✓</span>
-          <span class="text-sm leading-relaxed">Recoupment tracking and contractualized debt management</span>
+          <span class="text-sm leading-relaxed">Recoupment tracking and contractualised debt management</span>
         </li>
         <li class="checklist-item">
           <span class="checklist-check">✓</span>
