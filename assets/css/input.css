@@ -68,7 +68,6 @@
     @apply mb-12;
   }
 
-  /* Interior page hero — adds nav clearance (pt-32) on top of section-padding */
   .page-hero {
     @apply section-padding pt-32;
   }

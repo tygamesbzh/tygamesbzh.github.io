@@ -758,8 +758,6 @@ body {
   margin-bottom: 3rem;
 }
 
-/* Interior page hero — adds nav clearance (pt-32) on top of section-padding */
-
 .page-hero {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -1211,6 +1209,10 @@ ul.distrib-card-body {
   margin-top: auto;
 }
 
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -1600,6 +1602,16 @@ ul.distrib-card-body {
   border-radius: 0.75rem;
 }
 
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-l-none {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1625,12 +1637,21 @@ ul.distrib-card-body {
   border-color: rgb(13 13 18 / 0.15);
 }
 
+.border-ink\/20 {
+  border-color: rgb(13 13 18 / 0.2);
+}
+
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1);
 }
 
 .border-white\/20 {
   border-color: rgb(255 255 255 / 0.2);
+}
+
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#07070b\] {
@@ -1770,6 +1791,11 @@ ul.distrib-card-body {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-4 {
@@ -2019,12 +2045,29 @@ ul.distrib-card-body {
   color: rgb(245 245 240 / 0.8);
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
+}
+
+.text-ink\/30 {
+  color: rgb(13 13 18 / 0.3);
+}
+
 .underline {
   text-decoration-line: underline;
 }
 
 .underline-offset-2 {
   text-underline-offset: 2px;
+}
+
+.placeholder-ink\/40::-moz-placeholder {
+  color: rgb(13 13 18 / 0.4);
+}
+
+.placeholder-ink\/40::placeholder {
+  color: rgb(13 13 18 / 0.4);
 }
 
 .opacity-0 {
@@ -2044,6 +2087,11 @@ ul.distrib-card-body {
 
 .blur-\[150px\] {
   --tw-blur: blur(150px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.blur {
+  --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -2138,6 +2186,27 @@ ul.distrib-card-body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.focus\:border-accent:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(236 139 14 / var(--tw-border-opacity, 1));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-1:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-accent:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(236 139 14 / var(--tw-ring-opacity, 1));
+}
+
 .group:hover .group-hover\:visible {
   visibility: visible;
 }
@@ -2173,6 +2242,10 @@ ul.distrib-card-body {
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 }
 

@@ -31,7 +31,79 @@
       <div>
         <h3 class="font-heading font-bold text-2xl md:text-2xl text-ink mb-4">{{ t.newsletter.block_title_pre }}<span class="text-accent">{{ t.newsletter.block_title_em }}</span></h3>
         <p class="text-ink/60 leading-relaxed mb-3">{{ t.newsletter.block_body }}</p>
-        <iframe src="https://tygames.substack.com/embed" width="100%" height="150" style="background: #f5f5f0; max-width: 480px;" frameborder="0" scrolling="no"></iframe>
+        <form id="nl-form" class="flex mt-2 max-w-xl" novalidate>
+          <input
+            id="nl-email"
+            type="email"
+            required
+            placeholder="{{ t.newsletter.email_placeholder }}"
+            class="flex-1 bg-white border border-ink/20 rounded-l px-4 py-3 text-ink placeholder-ink/40 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
+            aria-label="{{ t.newsletter.email_placeholder }}"
+          />
+          <button type="submit" id="nl-btn" class="btn-primary shrink-0 rounded-l-none">{{ t.newsletter.submit_label }}</button>
+        </form>
+        <p class="text-xs text-ink/50 mt-4">{{ t.newsletter.hosted_by }}</p>
+        <p id="nl-msg" class="text-sm mt-2 hidden" aria-live="polite"></p>
+        <noscript>
+          <a href="https://tygames.substack.com/subscribe" target="_blank" rel="noopener" class="btn-primary inline-block mt-2">{{ t.newsletter.submit_label }}</a>
+        </noscript>
+        <script>
+        (function () {
+          var form = document.getElementById('nl-form');
+          if (!form) return;
+          var btn  = document.getElementById('nl-btn');
+          var msg  = document.getElementById('nl-msg');
+          var input = document.getElementById('nl-email');
+          var originalLabel = btn.textContent.trim();
+          input.addEventListener('blur', function () {
+            if (input.value && !input.validity.valid) {
+              input.classList.add('border-red-400');
+            } else {
+              input.classList.remove('border-red-400');
+            }
+          });
+          input.addEventListener('input', function () {
+            if (input.validity.valid) input.classList.remove('border-red-400');
+          });
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var email = input.value.trim();
+            if (!email || !input.validity.valid) {
+              input.classList.add('border-red-400');
+              input.focus();
+              return;
+            }
+            btn.disabled = true;
+            btn.style.pointerEvents = 'none';
+            btn.textContent = '…';
+            msg.className = 'text-sm mt-2 hidden';
+            console.log('[newsletter] subscribing:', email);
+            fetch('https://substackapi.com/api/subscribe', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: email, domain: 'tygames.substack.com' }),
+            })
+            .then(function (r) {
+              if (!r.ok) throw new Error(r.status);
+              console.log('[newsletter] success');
+              msg.textContent = '{{ t.newsletter.success }}';
+              msg.className = 'text-sm mt-2 text-accent';
+              form.reset();
+            })
+            .catch(function (err) {
+              console.error('[newsletter] failed:', err);
+              msg.textContent = '{{ t.newsletter.error }}';
+              msg.className = 'text-sm mt-2 text-red-600';
+            })
+            .finally(function () {
+              btn.disabled = false;
+              btn.textContent = originalLabel;
+              btn.style.pointerEvents = '';
+              setTimeout(function () { msg.className = 'text-sm mt-2 hidden'; }, 5000);
+            });
+          });
+        })();
+        </script>
       </div>
 
       <div>
