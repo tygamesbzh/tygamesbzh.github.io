@@ -95,6 +95,10 @@
     @apply bg-ink/[0.04] border-ink/10;
   }
 
+  .card-number {
+    @apply font-heading font-extrabold text-5xl text-accent/80 mb-4;
+  }
+
   /* Navigation */
   .nav-link {
     @apply text-sm text-muted hover:text-accent transition-colors;
@@ -135,13 +139,43 @@
     @apply text-accent mt-0.5 shrink-0;
   }
 
+  /* Organisation / Fonctionnement */
+  .org-card {
+    @apply card card-light flex flex-col gap-4 border-l-4 border-l-accent;
+  }
+
+  .org-card-header {
+    @apply flex flex-row items-center gap-5;
+  }
+
+  .org-card-heading {
+    @apply flex-1;
+  }
+
+  .org-card-content {
+    @apply text-ink/70 leading-relaxed;
+  }
+
+  /* Valeurs */
+  .valeurs-card {
+    @apply card card-light flex flex-col gap-4 border-l-4 border-l-accent;
+  }
+
+  .valeurs-card-header {
+    @apply flex flex-row items-center gap-5;
+  }
+
+  .valeurs-card-heading {
+    @apply mb-4;
+  }
+
+  .valeurs-card-content {
+    @apply text-ink/70 leading-relaxed;
+  }
+
   /* Feature cards */
   .distrib-card-title {
     @apply font-heading font-bold text-xl mb-3 text-accent;
-  }
-
-  .distrib-card-number {
-    @apply font-heading font-extrabold text-5xl text-accent/80 mb-4;
   }
 
   .distrib-card-body {

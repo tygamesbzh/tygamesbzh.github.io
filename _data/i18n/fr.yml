@@ -45,17 +45,17 @@ game:
   back: Retour au catalogue
 
 team_categories:
-  direction: La direction
+  direction: L'éxecutif
   partenaires: Partenaires
   conseil: Conseil Coopératif
 
 cta:
   devs_eyebrow: "Développeurs, studios, créateur.ice.s"
-  devs_heading: "Vous développez un jeu&nbsp;?"
+  devs_heading: "Vous développez un jeu ?"
   devs_body: "Soumettez votre projet à la coopérative.<br />Nous étudions chaque dossier avec attention."
   devs_button: "Soumettre mon jeu →"
   coop_eyebrow: "La coopérative"
-  coop_heading: "Rejoignez nous&nbsp;!"
+  coop_heading: "Rejoignez nous !"
   coop_body: "Professionnels, créateurs, joueurs : chaque membre compte.<br />Découvrez comment nous fonctionnons et comment devenir sociétaire."
   coop_button: "Nous rejoindre →"
 
