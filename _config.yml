@@ -8,6 +8,7 @@ baseurl: ""
 url: "https://ty.games"
 lang: fr
 email: hello@ty.games
+invest_url: "#"
 location: Rennes, Bretagne
 address:
   street: "3A, Rue de Paris"

@@ -40,6 +40,7 @@ footer:
   legal_notice: Mentions légales
   privacy: Politique de Confidentialité
   founded: "Fondée le 28 novembre 2022"
+  source_code: "Fait avec <3 avec Jekyll"
 
 game:
   back: Retour au catalogue

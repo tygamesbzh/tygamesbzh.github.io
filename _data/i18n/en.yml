@@ -40,6 +40,7 @@ footer:
   legal_notice: Legal notice
   privacy: Privacy
   founded: "Founded November 28, 2022"
+  source_code: "Made with <3 with Jekyll"
 
 game:
   back: Back to catalogue
