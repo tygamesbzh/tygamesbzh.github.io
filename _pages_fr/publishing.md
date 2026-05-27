@@ -1,11 +1,11 @@
 ---
 layout: publishing
 title: "Distribution & Édition"
-description: "Distribution et édition de jeux vidéo indépendants par TyGAMES SCIC"
+description: "Modalités de distribution et d'édition de jeux vidéo indépendants par la coopérative TyGAMES"
 lang_alternate: /en/publishing/
 hero_h1_pre: Distribution
 hero_h1_em: "& Édition"
-hero_subtitle: "TyGAMES accompagne les studios et créateur.ice.s dans la publication de leurs jeux sur toutes les plateformes."
+hero_subtitle: "TyGAMES accompagne les studios et créateur·ice·s dans la publication de leurs jeux sur toutes les plateformes."
 section_nav:
   - { id: distribution, label: Distribution }
   - { id: edition,      label: Édition }
@@ -51,7 +51,7 @@ distribution:
 publishing:
   section_id: edition
   heading: "Éditeur"
-  intro_pre: "Nous finançons modestement des services, des créations et des portages. Prenez connaissance de notre offre, puis"
+  intro_pre: "Nous finançons modestement des services, des créations et des portages. Nous ne finançons pas, pour l'instant, la production. Prenez connaissance de notre offre, puis"
   intro_link: "soumettez votre projet"
   intro_post: "."
   intro_secondary: "Les candidatures sont étudiées par le Conseil Coopératif et la gérance, une fois par trimestre."
@@ -80,7 +80,8 @@ porting:
   heading: "Portages consoles"
   paragraphs:
     - "Nous réalisons des portages Unity et Godot en interne, grâce à une forte expertise technique et plusieurs expériences sur chaque console."
-    - "Nous possédons des devkits et testkits. Vous pouvez récupérer le code source à la fin du portage."
+    - "Nous possédons des devkits et testkits."
+    - "Vous pouvez récupérer le code source à la fin du portage."
   badges:
     - "Nintendo Switch"
     - "PlayStation 5"
@@ -88,7 +89,7 @@ porting:
 erp:
   heading: "ERP"
   intro: "Le logiciel interne de TyGAMES, conçu pour centraliser et automatiser toute la gestion de la distribution et des royalties."
-  screenshot_alt: "ERPirate — capture"
+  screenshot_alt: "ERPirate - capture"
   items:
     - "Gestion des données studios (nom, adresse, IBAN…)"
     - "Unification des données de ventes de tous les stores en un seul format"

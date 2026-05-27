@@ -58,10 +58,10 @@ TyGAMES conserve vos données personnelles uniquement le temps nécessaire aux f
 
 TyGAMES s'engage à ne pas divulguer vos données personnelles à des tiers sans votre consentement préalable, sauf dans les cas suivants :
 
-- **Prestataires de services** — des sous-traitants peuvent traiter vos données pour fournir certains services (paiement, livraison de produits) dans le strict cadre contractuel défini par TyGAMES.
-- **Obligations légales** — lorsque la loi, une procédure judiciaire ou une autorité gouvernementale l'exige.
-- **Sécurité** — si la divulgation est nécessaire pour protéger les droits, la propriété ou la sécurité de TyGAMES, de ses utilisateurs ou du public.
-- **Cession d'activité** — en cas de fusion, acquisition ou vente d'actifs, vos données peuvent être transférées avec notification préalable en cas de changement majeur de nos pratiques.
+- **Prestataires de services** - des sous-traitants peuvent traiter vos données pour fournir certains services (paiement, livraison de produits) dans le strict cadre contractuel défini par TyGAMES.
+- **Obligations légales** - lorsque la loi, une procédure judiciaire ou une autorité gouvernementale l'exige.
+- **Sécurité** - si la divulgation est nécessaire pour protéger les droits, la propriété ou la sécurité de TyGAMES, de ses utilisateurs ou du public.
+- **Cession d'activité** - en cas de fusion, acquisition ou vente d'actifs, vos données peuvent être transférées avec notification préalable en cas de changement majeur de nos pratiques.
 
 ## 5. Protection des mineurs {#mineurs}
 
@@ -79,14 +79,14 @@ Nos jeux peuvent utiliser des technologies similaires pour améliorer l'expérie
 
 En vertu de la loi Informatique et Libertés et du RGPD, vous disposez des droits suivants concernant vos données personnelles :
 
-- **Droit d'accès** — obtenir une copie de vos données
-- **Droit de rectification** — corriger des données inexactes
-- **Droit à l'effacement** — demander la suppression de vos données
-- **Droit d'opposition** — vous opposer à certains traitements
+- **Droit d'accès** - obtenir une copie de vos données
+- **Droit de rectification** - corriger des données inexactes
+- **Droit à l'effacement** - demander la suppression de vos données
+- **Droit d'opposition** - vous opposer à certains traitements
 
 Pour exercer ces droits, contactez-nous à [hello@ty.games](mailto:hello@ty.games) ou par courrier : TyGAMES, {{ site.address.street }}, {{ site.address.postal_code }} {{ site.address.city }}, {{ site.address.country }}.
 
-En cas de litige, vous pouvez adresser une réclamation à la **CNIL** — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.
+En cas de litige, vous pouvez adresser une réclamation à la **CNIL** - 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.
 
 ## Conditions générales d'utilisation {#cgu}
 

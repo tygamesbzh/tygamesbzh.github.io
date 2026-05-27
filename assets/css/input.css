@@ -60,6 +60,10 @@
     @apply py-10 md:py-12;
   }
 
+  .section-padding-small {
+    @apply pt-10 pb-10;
+  }
+
   .section-eyebrow {
     @apply text-xs font-semibold uppercase tracking-widest;
   }

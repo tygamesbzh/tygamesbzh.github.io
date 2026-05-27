@@ -5,7 +5,7 @@ description: Rejoindre la coopérative
 lang_alternate: /en/invest/
 hero_h1_pre: "Rejoindre la"
 hero_h1_em: "coopérative"
-hero_subtitle: "Investir et acheter des parts sociales"
+hero_subtitle: "Investissez et achetez des parts sociales. Prenez part aux décisions de la coopérative et soutenez une initiative unique dans le jeu vidéo français."
 prerequisites:
   heading: "Pré-requis"
   intro: "Avant de rejoindre le sociétariat, assurez-vous d'avoir lu et compris les documents ci-dessous."
@@ -24,16 +24,16 @@ prerequisites:
       link_url_key: cooperative_reglement
 reminders:
   heading: "Rappels importants"
-  intro: "Investir dans une coopérative n'est pas un placement financier classique."
+  intro: "Investir dans une coopérative n'est pas un placement financier classique"
   cards:
     - heading: "N'investissez que ce que vous pouvez perdre"
-      body: "Comme tout investissement, votre capital est exposé à un risque de perte partielle ou totale."
+      body: "Votre capital est exposé à un risque de perte partielle ou totale."
     - heading: "Capital bloqué"
-      body: "L'argent investi sera bloqué pendant la durée de votre sociétariat et n'est pas disponible à court terme."
+      body: "L'argent investi sera bloqué pendant plsieurs années et n'est donc pas disponible à court terme."
     - heading: "Pas de profits sur les parts"
-      body: "Une coopérative ne génère pas de profits sur les parts sociales. Vous récupérerez la même somme investie en quittant le sociétariat."
+      body: "La coopérative ne génèrera pas de profits sur les parts sociales. Vous récupérerez la même somme investie en quittant le sociétariat."
 subscribe:
-  heading: "Je suis prêt.e !"
+  heading: "Je suis prêt·e !"
   intro: "Génial ! Nous sommes en train de finaliser la procédure de souscription, restez informés pour ne pas rater l'ouverture !"
   cta_label: "Bientôt disponible !"
 ---

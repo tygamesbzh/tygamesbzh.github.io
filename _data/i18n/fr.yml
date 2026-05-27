@@ -44,13 +44,13 @@ game:
   back: Retour au catalogue
 
 cta:
-  devs_eyebrow: "Développeurs, studios, créateur.ice.s"
+  devs_eyebrow: "Développeurs, studios, créateur·ice·s"
   devs_heading: "Vous développez un jeu ?"
   devs_body: "Soumettez votre projet à la coopérative.<br />Nous étudions chaque dossier avec attention."
   devs_button: "Soumettre mon jeu →"
   coop_eyebrow: "La coopérative"
   coop_heading: "Rejoignez nous !"
-  coop_body: "Professionnels, créateurs, joueurs : chaque membre compte.<br />Découvrez comment nous fonctionnons et comment devenir sociétaire."
+  coop_body: "Professionnels, créateur·ice·s, joueurs et joueuses :<br />chaque membre compte.<br />Découvrez comment nous fonctionnons et comment devenir sociétaire."
   coop_button: "Nous rejoindre →"
 
 newsletter:
@@ -58,7 +58,7 @@ newsletter:
   tags: "Nouveaux jeux,Vie de la coop,Offres membres,Actualités"
   block_title_pre: "La "
   block_title_em: "Newsletter"
-  block_body: "Sorties de jeux, vie de la coopérative, offres aux sociétaires. Une fois par mois, en moyenne."
+  block_body: "Recevez une fois par mois en moyenne notre actu : sorties de jeux, vie de la coopérative, offres aux sociétaires, etc."
   hosted_by: "Hébergée par Substack"
   email_placeholder: "votre@email.com"
   submit_label: "S'abonner"

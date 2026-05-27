@@ -34,7 +34,7 @@ reminders:
       body: "A cooperative does not generate profits on social shares. You will recover the same amount invested when leaving the membership."
 subscribe:
   heading: "I'm ready!"
-  intro: "Great! We're finalising the subscription process — stay tuned so you don't miss the launch!"
+  intro: "Great! We're finalising the subscription process - stay tuned so you don't miss the launch!"
   note: "Note: the subscription process is currently only available in French. Feel free to <a href=\"/en/contact/\" class=\"underline hover:text-accent\">contact us</a> if you have any questions."
   cta_label: "Coming soon!"
 ---

@@ -21,7 +21,7 @@ layout: page
     {% assign grouped = site.data.team | group_by: "category" %}
     {% for group in grouped %}
     <div class="mb-12 last:mb-0">
-      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">{{ page.team_categories[group.name] | default: group.name }}</h2>
+      <h2 class="font-heading font-bold text-2xl md:text-2xl mb-6">{{ page.team_categories[group.name] | default: group.name }}</h2>
       <div class="grid sm:grid-cols-2 gap-6">
         {% for member in group.items %}
         <div class="card card-light flex items-start gap-5">

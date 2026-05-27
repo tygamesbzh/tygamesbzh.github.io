@@ -19,7 +19,7 @@ organisation:
       heading: "L'exécutif"
       eyebrow: "Au quotidien"
       intro_paragraphs:
-        - "Composé du Président et des Directeur(ice)s Général(e)s désignés par les sociétaires et des salarié(e)s."
+        - "Composé du Président et des Directeur·ice·s Général·e·s désignés par les sociétaires et des salarié·e·s."
         - "Ils gèrent la société et son activité au jour le jour :"
       bullets:
         - "Suivi des projets en développement"
@@ -39,7 +39,7 @@ organisation:
         - "Est missionné ponctuellement sur des actions"
     - number: "03"
       heading: "Les Sociétaires"
-      eyebrow: "Investisseurs, partenaires et soutiens"
+      eyebrow: "Investisseur·se·s, partenaires et soutiens"
       intro_paragraphs:
         - "L'ensemble des personnes ayant souscrit à des parts sociales, ayant donc investi de l'argent dans TyGAMES."
         - "Les sociétaires ont le pouvoir et le devoir de :"
@@ -52,8 +52,9 @@ organisation:
 colleges:
   heading: "Collèges de vote"
   intro_paragraphs:
-    - "Le sociétariat est organisé en <strong>collèges</strong>, un par catégorie de sociétaire. Dans notre SCIC : <strong>1 personne = 1 voix</strong>, avec une pondération par collège."
-    - "Détenir beaucoup de capital ne donne pas plus de pouvoir. Nos collèges sont pensés pour favoriser celles et ceux qui s'impliquent par <strong>leur travail</strong> et/ou par <strong>leurs jeux</strong>."
+    - "Le sociétariat est organisé en <strong>collèges</strong>, un par catégorie de sociétaire."
+    - "Dans notre SCIC : <strong>1 personne = 1 voix</strong>, avec une pondération par collège. Détenir beaucoup de capital ne donne pas plus de pouvoir. "
+    - "Nos collèges sont pensés pour favoriser celles et ceux qui s'impliquent par <strong>leur travail</strong> et/ou par <strong>leurs jeux</strong>."
   headers:
     college: Collège
     votes: Votes
@@ -79,7 +80,7 @@ colleges:
     - name: Communauté
       votes: "15 %"
       min_shares: "1"
-      profile: "Joueur.euses, créateur.ice.s de contenu, professionnel.le.s ou toute personne intéressée par les jeux vidéo."
+      profile: "Joueur.euses, créateur·ice·s de contenu, professionnel.le.s ou toute personne intéressée par les jeux vidéo."
       condition: "-"
     - name: "Mentors & volontaires"
       votes: "15 %"

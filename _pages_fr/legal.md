@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Mentions Légales
-description: "Informations légales TyGAMES SCIC — éditeur de jeux vidéo coopératif basé en Bretagne."
+description: "Informations légales TyGAMES SCIC - éditeur de jeux vidéo coopératif basé en Bretagne."
 permalink: /legal/
 hero_h1: Mentions légales
 hero_subtitle: "Informations légales relatives à TyGAMES et à ce site web."
