@@ -1,0 +1,149 @@
+---
+layout: page
+---
+
+{% assign t = site.data.i18n[page.lang] %}
+
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
+      {{ page.hero_h1_pre }}<br><em class="not-italic text-accent">{{ page.hero_h1_em }}</em>
+    </h1>
+    <p class="section-subtitle">
+      {{ page.hero_subtitle }}
+    </p>
+  </div>
+</section>
+
+<div class="section-nav">
+  <div class="section-container">
+    <nav class="section-nav-list">
+      {% for entry in page.section_nav %}
+      <a href="#{{ entry.id }}" class="section-nav-link">{{ entry.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+
+<section id="distribution" class="section-padding bg-ink text-offwhite">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="section-title mb-5">{{ page.distribution.heading }}</h2>
+      <p class="text-muted/70 leading-relaxed">
+        {{ page.distribution.intro }}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for card in page.distribution.cards %}
+      <div class="card">
+        <h3 class="distrib-card-title">{{ card.heading }}</h3>
+        <ul class="distrib-card-body space-y-1.5 mt-1">
+          {% for bullet in card.bullets %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+        {% if card.footer %}
+        <br />
+        <p class="distrib-card-body italic">{{ card.footer }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="{{ page.publishing.section_id }}" class="section-padding bg-offwhite">
+  <div class="section-container">
+
+    <div class="section-intro mb-14">
+      <h2 class="section-title text-ink mb-5">{{ page.publishing.heading }}</h2>
+      <p class="text-ink/70 leading-relaxed mb-4">
+        {{ page.publishing.intro_pre }} <a href="{{ t.urls.submit | relative_url }}" class="text-accent hover:text-accent-light underline underline-offset-2">{{ page.publishing.intro_link }}</a>{{ page.publishing.intro_post }}
+      </p>
+      <p class="text-ink/70 leading-relaxed mb-4">
+        {{ page.publishing.intro_secondary }}
+      </p>
+    </div>
+
+    <div class="text-center mb-14">
+      <p class="section-eyebrow text-accent mb-4 text-lg">{{ page.publishing.budget_eyebrow }}</p>
+      <p class="font-heading font-extrabold text-ink leading-none text-xl">{{ page.publishing.budget_amount }}</p>
+      <p class="text-ink/50 text-sm mt-4 max-w-sm mx-auto">{{ page.publishing.budget_note }}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-16">
+      <div class="card card-light">
+        <h3 class="distrib-card-title text-ink">{{ page.publishing.offer.heading }}</h3>
+        <ul class="space-y-2 text-sm text-ink/70">
+          {% for item in page.publishing.offer.items %}
+          <li class="checklist-item"><span class="checklist-check">✓</span>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card card-light">
+        <h3 class="distrib-card-title text-ink">{{ page.publishing.return.heading }}</h3>
+        <ul class="space-y-2 text-sm text-ink/70">
+          {% for item in page.publishing.return.items %}
+          <li class="checklist-item"><span class="checklist-check">→</span>{{ item.text }}</li>
+          {% if item.aside %}<span class="ml-4 text-ink/40">{{ item.aside }}</span>{% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="{{ page.porting.section_id }}" class="section-padding bg-ink text-offwhite">
+  <div class="section-container">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="font-heading font-bold text-3xl md:text-4xl mb-5">{{ page.porting.heading }}</h3>
+        {% for paragraph in page.porting.paragraphs %}
+        <p class="text-muted/70 leading-relaxed{% if forloop.last %} mb-6{% else %} mb-4{% endif %}">
+          {{ paragraph }}
+        </p>
+        {% endfor %}
+        <div class="flex flex-wrap gap-2">
+          {% for badge in page.porting.badges %}
+          <span class="platform-badge">{{ badge }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-10 text-offwhite/70 [&_svg]:w-16 [&_svg]:h-16 md:[&_svg]:w-20 md:[&_svg]:h-20">
+        {% include store-icon.html store="nintendo" %}
+        {% include store-icon.html store="playstation" %}
+        {% include store-icon.html store="xbox" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="erp" class="section-padding bg-offwhite text-ink">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="section-title mb-5">{{ page.erp.heading }}</h2>
+      <p class="leading-relaxed">{{ page.erp.intro }}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-16 items-start text-ink/70">
+      <ul class="space-y-4">
+        {% for item in page.erp.items %}
+        <li class="checklist-item">
+          <span class="checklist-check">✓</span>
+          <span class="text-sm leading-relaxed">{{ item }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="grid grid-cols-2 gap-3">
+        {% for n in (1..4) %}
+        <a href="{{ '/assets/img/erp/erp' | append: n | append: '.png' | relative_url }}" target="_blank" rel="noopener" class="rounded-xl overflow-hidden bg-white/5 border border-white/10 hover:border-accent transition-colors">
+          <img src="{{ '/assets/img/erp/erp' | append: n | append: '.png' | relative_url }}" alt="{{ page.erp.screenshot_alt }} {{ n }}" class="w-full">
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

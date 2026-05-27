@@ -1,0 +1,139 @@
+---
+layout: page-nocta
+---
+
+{% assign t = site.data.i18n[page.lang] %}
+
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
+      <em class="not-italic text-accent">{{ page.hero_h1_em }}</em> {{ page.hero_h1_post }}
+    </h1>
+    <p class="section-subtitle">
+      {{ page.hero_subtitle }}
+    </p>
+  </div>
+</section>
+
+<div class="section-nav">
+  <div class="section-container">
+    <nav class="section-nav-list">
+      {% for entry in page.section_nav %}
+      <a href="#{{ entry.id }}" class="section-nav-link">{{ entry.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+
+<section id="organisation" class="section-padding bg-offwhite">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="section-title text-ink mb-5">{{ page.organisation.heading }}</h2>
+      <p class="text-ink/70 leading-relaxed">
+        {{ page.organisation.intro }}
+      </p>
+    </div>
+
+    <div class="mb-8">
+      <a href="{{ '/assets/img/fonctionnement.png' | relative_url }}">
+        <img src="{{ '/assets/img/fonctionnement.png' | relative_url }}" alt="{{ page.organisation.diagram_alt }}"
+          class="w-full group-hover:scale-105 transition-transform duration-300">
+      </a>
+    </div>
+
+    <div class="space-y-6 max-w-5xl mx-auto">
+      {% for card in page.organisation.cards %}
+      <div class="org-card">
+        <div class="org-card-header">
+          <span class="card-number block leading-none">{{ card.number }}</span>
+          <div class="org-card-heading">
+            <h3 class="font-heading font-bold text-2xl md:text-3xl text-ink">{{ card.heading }}</h3>
+            <p class="section-eyebrow text-accent mt-1">{{ card.eyebrow }}</p>
+          </div>
+        </div>
+        <div class="org-card-content">
+          {% for paragraph in card.intro_paragraphs %}
+          <p{% unless forloop.first %} class="mt-3"{% endunless %}>{{ paragraph }}</p>
+          {% endfor %}
+          {% if card.bullets %}
+          <ul class="list-disc list-outside pl-5 mt-2 space-y-1">
+            {% for bullet in card.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% for paragraph in card.outro_paragraphs %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="colleges" class="section-padding bg-offwhite">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="section-title text-ink mb-5">{{ page.colleges.heading }}</h2>
+      {% for paragraph in page.colleges.intro_paragraphs %}
+      <p class="text-ink/70 leading-relaxed{% unless forloop.last %} mb-3{% endunless %}">{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-ink/10 bg-ink/[0.04]">
+      <table class="w-full text-sm text-left text-ink/70">
+        <thead class="bg-ink text-offwhite">
+          <tr>
+            <th scope="col" class="px-5 py-4 font-heading font-bold">{{ page.colleges.headers.college }}</th>
+            <th scope="col" class="px-5 py-4 font-heading font-bold whitespace-nowrap">{{ page.colleges.headers.votes }}</th>
+            <th scope="col" class="px-5 py-4 font-heading font-bold whitespace-nowrap">{{ page.colleges.headers.min_shares }}</th>
+            <th scope="col" class="px-5 py-4 font-heading font-bold">{{ page.colleges.headers.profile }}</th>
+            <th scope="col" class="px-5 py-4 font-heading font-bold">{{ page.colleges.headers.condition }}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {% for row in page.colleges.rows %}
+          <tr>
+            <td class="px-5 py-4 align-top">
+              <div class="font-heading font-bold text-ink">{{ row.name }}</div>
+            </td>
+            <td class="px-5 py-4 align-top whitespace-nowrap font-bold text-accent">{{ row.votes }}</td>
+            <td class="px-5 py-4 align-top whitespace-nowrap">{{ row.min_shares }}</td>
+            <td class="px-5 py-4 align-top">{{ row.profile }}</td>
+            <td class="px-5 py-4 align-top">{{ row.condition }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="parts" class="py-24 md:py-32 bg-ink relative overflow-hidden">
+  <div class="section-container relative z-10">
+
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="section-title text-offwhite mb-5">{{ page.join.heading }}</h2>
+      <p class="text-muted/70 leading-relaxed text-lg">
+        {{ page.join.subtitle }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto mb-14">
+      <div class="card text-center py-8 flex flex-col items-center justify-center">
+        <p class="font-heading font-extrabold text-5xl text-accent mb-3">100&nbsp;€</p>
+        <p class="text-offwhite/60 text-sm">{{ page.join.share_label }}</p>
+      </div>
+      <div class="card text-center py-8 flex flex-col items-center justify-center">
+        <p class="font-heading font-extrabold text-3xl text-accent mb-3 leading-none">{{ page.join.vote_label_line_1 }}<br/>=<br/>{{ page.join.vote_label_line_2 }}</p>
+        <p class="text-offwhite/60 text-sm">{{ page.join.vote_caption }}</p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="{{ t.urls.join | relative_url }}" class="btn-primary px-10 py-4 text-base">{{ page.join.cta_label }}</a>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<section class="page-hero bg-ink">
+  <div class="section-container">
+    <h1 class="page-title text-offwhite mb-4">{{ page.hero_h1 }}</h1>
+    <p class="text-muted/60 text-lg max-w-xl">{{ page.hero_subtitle }}</p>
+  </div>
+</section>
+
+<section class="section-padding bg-offwhite">
+  <div class="section-container max-w-3xl">
+
+    <div class="grid sm:grid-cols-2 gap-6 mb-12">
+      <div class="card bg-white border-ink/10">
+        <h2 class="font-heading font-bold text-lg text-ink mb-4">{{ page.editor.heading }}</h2>
+        <ul class="space-y-2 text-sm text-ink/70">
+          <li><span class="font-semibold text-ink">{{ page.editor.legal_name_label }}</span><br>{{ site.legal_name }}</li>
+          <li><span class="font-semibold text-ink">{{ page.editor.siret_label }}</span><br>931 717 242 R.C.S. Rennes</li>
+          <li><span class="font-semibold text-ink">{{ page.editor.address_label }}</span><br>{{ site.address.street }}, {{ site.address.postal_code }} {{ site.address.city }}</li>
+          <li><span class="font-semibold text-ink">{{ page.editor.director_label }}</span><br>Vincent Beauzée</li>
+        </ul>
+      </div>
+
+      <div class="card bg-white border-ink/10">
+        <h2 class="font-heading font-bold text-lg text-ink mb-4">{{ page.hosting.heading }}</h2>
+        <ul class="space-y-2 text-sm text-ink/70">
+          <li><span class="font-semibold text-ink">{{ page.hosting.host_label }}</span><br>GitHub Pages — GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA</li>
+          <li><span class="font-semibold text-ink">{{ page.hosting.contact_label }}</span><br><a href="mailto:{{ site.email }}" class="text-accent hover:text-accent-light transition-colors">{{ site.email }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-ink/10 pt-10 mb-12">
+      <h2 class="font-heading font-bold text-2xl text-ink mb-6">{{ page.cookies.heading }}</h2>
+      {% for paragraph in page.cookies.paragraphs %}
+      <p class="text-ink/60 leading-relaxed mb-4">{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="border-t border-ink/10 pt-10">
+      <h2 class="font-heading font-bold text-2xl text-ink mb-8">{{ page.faq.heading }}</h2>
+      <div class="space-y-6">
+        {% for item in page.faq.items %}
+        <div>
+          <h3 class="font-heading font-semibold text-ink mb-2">{{ item.q }}</h3>
+          {% for paragraph in item.a %}
+          <p class="text-ink/60 leading-relaxed text-sm{% unless forloop.first %} mt-2{% endunless %}">{{ paragraph }}</p>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>

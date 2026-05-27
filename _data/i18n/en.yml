@@ -1,5 +1,3 @@
-tagline: "Cooperative video game publisher and distributor"
-
 urls:
   home: /en/
   games: /en/games/
@@ -24,8 +22,8 @@ nav:
   cooperative_fonctionnement: How it works
   cooperative_equipe: The team
   cooperative_valeurs: Our values
-  cooperative_statuts: Bylaws
-  cooperative_reglement: Rules
+  cooperative_statuts: Bylaws (PDF 🇫🇷)
+  cooperative_reglement: Rules (PDF 🇫🇷)
   contact: Contact
   submit_game: Submit a game
   join: Join us
@@ -44,11 +42,6 @@ footer:
 
 game:
   back: Back to catalogue
-
-team_categories:
-  direction: Management
-  partenaires: Partners
-  conseil: Conseil Coopératif board members
 
 cta:
   devs_eyebrow: "Developers, studios, creators"

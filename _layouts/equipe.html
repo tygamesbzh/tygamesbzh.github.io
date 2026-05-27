@@ -1,0 +1,60 @@
+---
+layout: page
+---
+
+{% assign role_key = 'role_' | append: page.lang %}
+{% assign bio_key = 'bio_' | append: page.lang %}
+
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
+      {{ page.hero_h1_pre }} <em class="not-italic text-accent">{{ page.hero_h1_em }}</em>
+    </h1>
+    <p class="section-subtitle">
+      {{ page.hero_subtitle }}
+    </p>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-container">
+    {% assign grouped = site.data.team | group_by: "category" %}
+    {% for group in grouped %}
+    <div class="mb-12 last:mb-0">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">{{ page.team_categories[group.name] | default: group.name }}</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        {% for member in group.items %}
+        <div class="card card-light flex items-start gap-5">
+          {% if member.img %}
+          <img src="{{ '/assets/img/team/' | append: member.img | relative_url }}" alt="{{ member.name }}"
+            class="w-14 h-14 rounded-full object-cover shrink-0">
+          {% else %}
+          <div class="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0 font-heading font-extrabold text-ink text-xl">
+            {{ member.name | slice: 0 }}
+          </div>
+          {% endif %}
+          <div>
+            <div class="font-heading font-bold text-ink">{{ member.name }}</div>
+            <div class="text-accent text-xs font-semibold uppercase tracking-wider mt-0.5 mb-2">{{ member[role_key] }}</div>
+            {% assign bio = member[bio_key] %}
+            {% if bio %}
+            <p class="text-ink/80 text-sm leading-relaxed">{{ bio }}</p>
+            {% endif %}
+            {% if member.linkedin.size > 0 or member.site.size > 0 %}
+            <div class="flex items-center gap-2 mt-3">
+              {% if member.linkedin.size > 0 %}
+              <a href="{{ member.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center justify-center w-9 h-9 rounded-full text-ink/60 hover:text-accent border border-ink/15 transition-colors">{% include social-icon.html social="linkedin" class="w-4 h-4" %}</a>
+              {% endif %}
+              {% if member.site.size > 0 %}
+              <a href="{{ member.site }}" target="_blank" rel="noopener" aria-label="Website" class="flex items-center justify-center w-9 h-9 rounded-full text-ink/60 hover:text-accent border border-ink/15 transition-colors">{% include social-icon.html social="website" class="w-4 h-4" %}</a>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

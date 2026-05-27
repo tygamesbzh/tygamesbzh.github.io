@@ -1,0 +1,25 @@
+---
+layout: page-nocta
+---
+
+{% assign t = site.data.i18n[page.lang] %}
+
+<section class="min-h-screen flex items-center bg-offwhite relative overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center grayscale" style="background-image: url('{{ '/assets/img/pitch-bg.jpg' | relative_url }}');"></div>
+  <div class="absolute inset-0 bg-offwhite/80"></div>
+  <div class="section-container max-w-2xl relative z-10">
+    <h1 class="font-heading font-extrabold text-5xl md:text-6xl mb-8 text-ink">{{ page.hero_h1 }}</h1>
+
+    <p class="text-ink/80 leading-relaxed mb-4">
+      {{ page.intro_pre }} <a href="{{ t.urls.publishing | relative_url }}" class="text-accent hover:text-accent-light underline underline-offset-2">{{ page.intro_link }}</a> {{ page.intro_post }}
+    </p>
+
+    <p class="text-ink/80 leading-relaxed mb-8">
+      {{ page.instructions }}
+    </p>
+
+    <a href="mailto:pitch@ty.games" class="font-heading font-bold text-2xl text-ink hover:text-accent transition-colors">
+      pitch@ty.games →
+    </a>
+  </div>
+</section>

@@ -1,22 +1,28 @@
 - name: Vincent Beauzée
   category: direction
-  role: Président
-  bio: Indie gamedev depuis 2014.<br />Pharaoh, DeathTower, Shotgun King (et d'autres)<br />Ingénieur Web depuis 2011 (SFR, Roullier, Cerfrance...)
+  role_fr: Président
+  role_en: President
+  bio_fr: "Indie gamedev depuis 2014.<br />Pharaoh, DeathTower, Shotgun King (et d'autres)<br />Ingénieur Web depuis 2011 (SFR, Roullier, Cerfrance...)"
+  bio_en: "Indie gamedev since 2014.<br />Pharaoh, DeathTower, Shotgun King (and others)<br />Web engineer since 2011 (SFR, Roullier, Cerfrance...)"
   img: vincent.jpg
   linkedin: https://www.linkedin.com/in/vincent-beauzee/
 
 - name: Damien Mayance
   category: direction
-  role: Directeur Général
-  bio: Indie Gamedev depuis 2014<br />Steredenn, Flipon, CTHULOOT, Cosmo Cargo<br />Gameplay/tools/UI/web programmer
+  role_fr: Directeur Général
+  role_en: Chief Executive Officer
+  bio_fr: "Indie Gamedev depuis 2014<br />Steredenn, Flipon, CTHULOOT, Cosmo Cargo<br />Gameplay/tools/UI/web programmer"
+  bio_en: "Indie gamedev since 2014<br />Steredenn, Flipon, CTHULOOT, Cosmo Cargo<br />Gameplay/tools/UI/web programmer"
   img: damien.png
   linkedin: https://www.linkedin.com/in/damienmayance/
   site: https://dmayance.com
 
 - name: Marine Desjardins
   category: partenaires
-  role: Juriste en droit de l'ESS
-  bio: Juriste spécialisée Economie Sociale et Solidaire / droit du sport.<br />Cabinet FITECO Rennes.
+  role_fr: Juriste en droit de l'ESS
+  role_en: Social-economy lawyer
+  bio_fr: "Juriste spécialisée Economie Sociale et Solidaire / droit du sport.<br />Cabinet FITECO Rennes."
+  bio_en: "Lawyer specialised in social and solidarity economy / sports law.<br />FITECO Rennes."
   img: marine.jpg
   linkedin: https://www.linkedin.com/in/marine-desjardins-1295b0b0/
   site: https://www.fiteco.com/

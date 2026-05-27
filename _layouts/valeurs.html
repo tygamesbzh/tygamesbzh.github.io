@@ -1,0 +1,49 @@
+---
+layout: page
+---
+
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
+      {{ page.hero_h1_pre }} <em class="not-italic text-accent">{{ page.hero_h1_em }}</em>
+    </h1>
+    <p class="section-subtitle">
+      {{ page.hero_subtitle }}
+    </p>
+  </div>
+</section>
+
+<div class="section-nav">
+  <div class="section-container">
+    <nav class="section-nav-list">
+      {% for entry in page.section_nav %}
+      <a href="#{{ entry.id }}" class="section-nav-link">{{ entry.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+
+<section class="section-padding bg-offwhite">
+  <div class="section-container">
+    <div class="space-y-6 max-w-5xl mx-auto">
+      {% for value in page.values %}
+      <div id="{{ value.id }}" class="valeurs-card">
+        <div class="valeurs-card-header">
+          <span class="card-number block leading-none">{{ value.number }}</span>
+          <div class="valeurs-card-heading">
+            <h2 class="font-heading font-bold text-2xl md:text-3xl text-ink">{{ value.heading }}</h2>
+          </div>
+        </div>
+        <div class="valeurs-card-content">
+          <p class="mb-3">{{ value.intro }}</p>
+          <ul class="list-disc list-outside pl-5 space-y-2">
+            {% for bullet in value.bullets %}
+            <li><strong class="text-ink">{{ bullet.title }}</strong><br />{{ bullet.body }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,5 +1,3 @@
-tagline: "Coopérative d'édition et distribution de jeux vidéo"
-
 urls:
   home: /
   games: /games/
@@ -24,8 +22,8 @@ nav:
   cooperative_fonctionnement: Fonctionnement
   cooperative_equipe: L'équipe
   cooperative_valeurs: Nos valeurs
-  cooperative_statuts: Statuts
-  cooperative_reglement: Réglement Intérieur
+  cooperative_statuts: Statuts (PDF)
+  cooperative_reglement: Réglement Intérieur (PDF)
   contact: Contact
   submit_game: Soumettre un jeu
   join: Nous Rejoindre
@@ -44,11 +42,6 @@ footer:
 
 game:
   back: Retour au catalogue
-
-team_categories:
-  direction: L'éxecutif
-  partenaires: Partenaires
-  conseil: Conseil Coopératif
 
 cta:
   devs_eyebrow: "Développeurs, studios, créateur.ice.s"

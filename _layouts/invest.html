@@ -1,0 +1,80 @@
+---
+layout: page-nocta
+---
+
+{% assign t = site.data.i18n[page.lang] %}
+
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
+      {{ page.hero_h1_pre }} <em class="not-italic text-accent">{{ page.hero_h1_em }}</em>
+    </h1>
+    <p class="section-subtitle">
+      {{ page.hero_subtitle }}
+    </p>
+  </div>
+</section>
+
+<section id="prerequis" class="section-padding bg-offwhite">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="section-title text-ink mb-5">{{ page.prerequisites.heading }}</h2>
+      <p class="text-ink/70 leading-relaxed">
+        {{ page.prerequisites.intro }}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {% for card in page.prerequisites.cards %}
+      <div class="card card-light flex flex-col gap-4 py-8 px-6">
+        <div>
+          <h3 class="font-heading font-bold text-xl text-ink mb-2">{{ card.heading }}</h3>
+          <p class="text-ink/70 text-sm leading-relaxed">{{ card.body }}</p>
+        </div>
+        <a href="{{ t.urls[card.link_url_key] | relative_url }}"
+          class="btn-outline text-sm py-2 px-4 self-start">{{ card.link_label }} →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="rappels" class="section-padding bg-ink text-offwhite">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="section-title mb-5">{{ page.reminders.heading }}</h2>
+      <p class="text-muted/70 leading-relaxed">
+        {{ page.reminders.intro }}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {% for card in page.reminders.cards %}
+      <div class="card py-8 px-6">
+        <h3 class="font-heading font-bold text-lg text-offwhite mb-3">{{ card.heading }}</h3>
+        <p class="text-muted/60 text-sm leading-relaxed">{{ card.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="souscrire" class="section-padding bg-offwhite">
+  <div class="section-container">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="section-title text-ink mb-5">{{ page.subscribe.heading }}</h2>
+      <p class="text-ink/70 leading-relaxed text-lg">
+        {{ page.subscribe.intro }}
+      </p>
+      {% if page.subscribe.note %}
+      <p class="text-ink/50 leading-relaxed text-sm mt-4">
+        {{ page.subscribe.note }}
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="text-center">
+      <a href="{{ site.invest_url }}" class="btn-primary px-10 py-4 text-base">{{ page.subscribe.cta_label }}</a>
+    </div>
+  </div>
+</section>

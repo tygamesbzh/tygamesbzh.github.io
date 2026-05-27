@@ -41,6 +41,12 @@ collections:
   games:
     output: true
     permalink: /games/:slug/
+  pages_fr:
+    output: true
+    permalink: /:path/
+  pages_en:
+    output: true
+    permalink: /en/:path/
 
 defaults:
   - scope:
@@ -52,6 +58,18 @@ defaults:
 
   - scope:
       path: "en"
+    values:
+      lang: en
+
+  - scope:
+      path: ""
+      type: pages_fr
+    values:
+      lang: fr
+
+  - scope:
+      path: ""
+      type: pages_en
     values:
       lang: en
 

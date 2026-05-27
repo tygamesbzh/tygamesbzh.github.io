@@ -1,0 +1,65 @@
+---
+layout: page-nocta
+---
+
+{% assign t = site.data.i18n[page.lang] %}
+
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
+      {{ page.hero_h1 }}
+    </h1>
+  </div>
+</section>
+
+<section class="page-hero bg-offwhite">
+  <div class="section-container">
+    <div class="grid md:grid-cols-3 gap-6 mb-14">
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">{{ page.card_general.title }}</h3>
+        <p class="distrib-card-body text-ink mb-6">{{ page.card_general.body }}</p>
+        <a href="mailto:{{ site.email }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          {{ site.email }} →
+        </a>
+      </div>
+
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">{{ page.card_submit.title }}</h3>
+        <p class="distrib-card-body text-ink mb-6">{{ page.card_submit.body }}</p>
+        <a href="{{ t.urls.submit | relative_url }}" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          {{ page.card_submit.link_label }} →
+        </a>
+      </div>
+
+      <div class="card card-light flex flex-col">
+        <h3 class="distrib-card-title text-ink">{{ page.card_discord.title }}</h3>
+        <p class="distrib-card-body text-ink mb-6">{{ page.card_discord.body }}</p>
+        {% if site.social.discord %}
+        <a href="{{ site.social.discord }}" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 font-semibold text-accent hover:text-accent-light transition-colors text-sm">
+          {{ page.card_discord.link_label }} →
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="section-container">
+    <div class="section-intro">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">{{ page.info_heading }}</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6 items-start">
+      <div class="card card-light">
+        <div class="flex flex-col gap-1 text-sm text-ink/80">
+          <span class="text-accent">{{ site.legal_name }}</span>
+          <span>{{ site.address.street }}</span>
+          <span>{{ site.address.postal_code }} {{ site.address.city }}</span>
+          <span>{{ site.address.country | upcase }}</span>
+          <span>SIRET 931 717 242 R.C.S. Rennes</span>
+          <span>{{ page.vat_label }} FR16921714242</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
