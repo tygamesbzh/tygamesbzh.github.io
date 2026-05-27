@@ -29,9 +29,9 @@ reminders:
     - heading: "Only invest what you can afford to lose"
       body: "Like any investment, your capital is exposed to the risk of partial or total loss."
     - heading: "Locked capital"
-      body: "The money invested will be locked for the duration of your membership and is not available in the short term."
+      body: "The money invested will be locked for several years."
     - heading: "No profit on shares"
-      body: "A cooperative does not generate profits on social shares. You will recover the same amount invested when leaving the membership."
+      body: "The cooperative does not generate profits on social shares. You will recover the same amount invested when leaving the membership."
 subscribe:
   heading: "I'm ready!"
   intro: "Great! We're finalising the subscription process - stay tuned so you don't miss the launch!"

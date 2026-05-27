@@ -1,11 +1,11 @@
 ---
 layout: publishing
 title: "Distribution & Publishing"
-description: "Distribution and publishing of independent video games by TyGAMES SCIC"
+description: "Distribution and publishing of independent video games by TyGAMES"
 lang_alternate: /publishing/
 hero_h1_pre: Distribution
 hero_h1_em: "& Publishing"
-hero_subtitle: "TyGAMES supports studios and creators in publishing their games on every platform."
+hero_subtitle: "TyGAMES helps studios and creators in publishing their games on every platform."
 section_nav:
   - { id: distribution, label: Distribution }
   - { id: publishing,   label: Publishing }
@@ -51,7 +51,7 @@ distribution:
 publishing:
   section_id: publishing
   heading: "Publisher"
-  intro_pre: "We modestly fund services, original creations, and ports. Read our offer, then"
+  intro_pre: "We modestly fund services, original creations, and ports. We cannot fund, for now, production. Read our offer, then"
   intro_link: "submit your project"
   intro_post: "."
   intro_secondary: "Applications are reviewed by the Cooperative Council and management, once per quarter."
