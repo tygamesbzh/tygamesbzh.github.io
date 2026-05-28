@@ -6,6 +6,7 @@ lang_alternate: /en/cooperative/fonctionnement/
 hero_h1_em: Fonctionnement
 hero_h1_post: "de la coopérative"
 hero_subtitle: "Notre organisation interne, la prise de décisions et le rôle des sociétaires."
+schema: "fonctionnement_fr.png"
 section_nav:
   - { id: organisation, label: Organisation }
   - { id: colleges,     label: Collèges }

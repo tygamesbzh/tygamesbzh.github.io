@@ -6,6 +6,7 @@ lang_alternate: /cooperative/fonctionnement/
 hero_h1_em: How
 hero_h1_post: "the cooperative works"
 hero_subtitle: "Our internal organisation, decision-making, and the role of members."
+schema: "fonctionnement_en.png"
 section_nav:
   - { id: organisation, label: Organisation }
   - { id: colleges,     label: Colleges }
