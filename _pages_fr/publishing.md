@@ -34,7 +34,7 @@ distribution:
         - "Deals ponctuels (boîte, bundle, game pass…)"
     - heading: "Revshare minimal"
       bullets:
-        - "Nous prenons le minimum et c'est le même pour tout le monde"
+        - "Sans investissement important, nous prenons le minimum et c'est le même pour tout le monde"
         - "10% Steam / PC"
         - "20% mobile"
         - "30% consoles"
@@ -51,7 +51,7 @@ distribution:
 publishing:
   section_id: edition
   heading: "Éditeur"
-  intro_pre: "Nous finançons modestement des services, des créations et des portages. Nous ne finançons pas, pour l'instant, la production. Prenez connaissance de notre offre, puis"
+  intro_pre: "L'édition est une offre incluant la distribution, ainsi que qu'un financement modeste. Principalement en services, créations et portages. Nous ne finançons pas, pour l'instant, la production. Prenez connaissance de notre offre, puis"
   intro_link: "soumettez votre projet"
   intro_post: "."
   intro_secondary: "Les candidatures sont étudiées par le Conseil Coopératif et la gérance, une fois par trimestre."

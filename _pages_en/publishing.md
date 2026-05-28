@@ -34,7 +34,7 @@ distribution:
         - "One-off deals (boxed, bundle, game pass…)"
     - heading: "Minimal revshare"
       bullets:
-        - "We take the minimum and it's the same for everyone"
+        - "Without invest, we take the minimum and it's the same for everyone"
         - "10% Steam / PC"
         - "20% mobile"
         - "30% consoles"
@@ -51,7 +51,7 @@ distribution:
 publishing:
   section_id: publishing
   heading: "Publisher"
-  intro_pre: "We modestly fund services, original creations, and ports. We cannot fund, for now, production. Read our offer, then"
+  intro_pre: "Publishing is a forward step, which include distribution and adding modestly fund services, original creations and ports. We cannot fund, for now, production. Read our offer, then"
   intro_link: "submit your project"
   intro_post: "."
   intro_secondary: "Applications are reviewed by the Cooperative Council and management, once per quarter."
