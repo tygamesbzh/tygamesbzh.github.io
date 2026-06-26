@@ -3,6 +3,8 @@ layout: invest
 title: Investir
 description: Rejoindre la coopérative
 lang_alternate: /en/invest/
+pdf_path: /assets/bulletin.pdf
+schema: invest_fr.png
 hero_h1_pre: "Rejoindre la"
 hero_h1_em: "coopérative"
 hero_subtitle: "Investissez et achetez des parts sociales. Prenez part aux décisions de la coopérative et soutenez une initiative unique dans le jeu vidéo français."
@@ -34,6 +36,10 @@ reminders:
       body: "La coopérative ne génèrera pas de profits sur les parts sociales. Vous récupérerez la même somme investie en quittant le sociétariat."
 subscribe:
   heading: "Je suis prêt·e !"
-  intro: "Génial ! Nous sommes en train de finaliser la procédure de souscription, restez informés pour ne pas rater l'ouverture !"
-  cta_label: "Bientôt disponible !"
+  intro: "Génial ! Comment faire :"
+  step1: "Téléchargez et complétez le bulletin de souscription anticipée de parts socials"
+  step2: "Envoyez-le nous à <b>cooperative@ty.games</b>"
+  step3: "On vous répondra rapidement !"
+  cta_label: "Télécharger le bulletin de souscription"
+  cta_send: "L'envoyer à cooperative@ty.games"
 ---

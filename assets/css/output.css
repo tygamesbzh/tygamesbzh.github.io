@@ -1382,6 +1382,10 @@ ul.distrib-card-body {
   list-style-position: outside;
 }
 
+.list-decimal {
+  list-style-type: decimal;
+}
+
 .list-disc {
   list-style-type: disc;
 }

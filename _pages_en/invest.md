@@ -3,6 +3,8 @@ layout: invest
 title: Join us
 description: Join the cooperative
 lang_alternate: /invest/
+pdf_path: /assets/bulletin.pdf
+schema: invest_en.png
 hero_h1_pre: "Join the"
 hero_h1_em: "cooperative"
 hero_subtitle: "Invest and purchase social shares"
@@ -34,7 +36,11 @@ reminders:
       body: "The cooperative does not generate profits on social shares. You will recover the same amount invested when leaving the membership."
 subscribe:
   heading: "I'm ready!"
-  intro: "Great! We're finalising the subscription process - stay tuned so you don't miss the launch!"
+  intro: "Great! We've opened the subscription process!"
   note: "Note: the subscription process is currently only available in French. Feel free to <a href=\"/en/contact/\" class=\"underline hover:text-accent\">contact us</a> if you have any questions."
-  cta_label: "Coming soon!"
+  step1: "Download, fill and sign the subscription document (french only)"
+  step2: "Send it to <b>cooperative@ty.games</b>"
+  step3: "We will contact you shortly!"
+  cta_label: "Download subscription document"
+  cta_send: "Send to cooperative@ty.games"
 ---

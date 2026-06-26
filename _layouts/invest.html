@@ -61,7 +61,7 @@ layout: page-nocta
 
 <section id="souscrire" class="section-padding-small bg-offwhite">
   <div class="section-container">
-    <div class="text-center max-w-2xl mx-auto mb-10">
+    <div class="text-center max-w-2xl mx-auto mb-2">
       <h2 class="page-title text-ink mb-5">{{ page.subscribe.heading }}</h2>
       <p class="text-ink/70 leading-relaxed text-lg">
         {{ page.subscribe.intro }}
@@ -72,9 +72,26 @@ layout: page-nocta
       </p>
       {% endif %}
     </div>
+    <div class="max-w-2xl mx-auto mb-6 text-lg">
+      <p>
+        <ul class="list-decimal">
+          <li>{{ page.subscribe.step1 }}</li>
+          <li>{{ page.subscribe.step2 }}</li>
+          <li>{{ page.subscribe.step3 }}</li>
+        </ul>
+      </p>
+      <a href="{{ '/assets/img/' | append: page.schema | relative_url }}">
+        <img src="{{ '/assets/img/' | append: page.schema | relative_url }}" alt="{{ page.organisation.diagram_alt }}"
+          class="w-full group-hover:scale-105 transition-transform duration-300">
+      </a>
+      <p class="text-center">
+        Merci ! <3
+      </p>
+    </div>
 
-    <div class="text-center">
-      <a href="{{ site.invest_url }}" class="btn-primary px-10 py-4 text-base">{{ page.subscribe.cta_label }}</a>
+    <div class="text-center mb-10">
+      <a href="{{ page.pdf_path | relative_url }}" target="_blank" class="btn-primary px-10 py-4 text-base">{{ page.subscribe.cta_label }}</a>
+      <a href="mailto:{{ site.email_coop }}" class="btn-outline px-10 py-4 text-base">{{ page.subscribe.cta_send }}</a>
     </div>
   </div>
 </section>
