@@ -111,9 +111,24 @@
     @apply text-sm text-muted/60 hover:text-accent transition-colors;
   }
 
+  /* Mobile nav dropdown — dvh avoids the iOS 100vh bug (menu cut off / no scroll) */
+  .mobile-menu {
+    @apply overflow-y-auto overscroll-contain;
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+  }
+
+  .mobile-nav-link {
+    @apply text-sm text-muted hover:text-offwhite py-1;
+  }
+
+  .mobile-nav-sublink {
+    @apply text-sm text-muted/70 hover:text-offwhite py-1 pl-4;
+  }
+
   /* Sticky in-page section nav (anchor pills) */
   .section-nav {
-    @apply sticky top-[100px] z-40 backdrop-blur mb-12 bg-offwhite;
+    @apply sticky top-[72px] md:top-[100px] z-40 backdrop-blur mb-12 bg-offwhite;
   }
 
   .section-nav-list {

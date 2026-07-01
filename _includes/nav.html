@@ -2,10 +2,10 @@
 {% assign t = site.data.i18n[lang] %}
 {% assign switcher_url = page.lang_alternate | default: t.nav.lang_switch_url %}
 
-<header class="fixed top-0 left-0 right-0 z-50 h-[100px] bg-ink">
+<header class="fixed top-0 left-0 right-0 z-50 h-[72px] md:h-[100px] bg-ink">
   <nav class="relative z-10 section-container h-full flex items-center justify-between">
     <a href="{{ t.urls.home | relative_url }}" class="flex items-center">
-      <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-[64px] w-auto">
+      <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-12 md:h-[64px] w-auto">
     </a>
 
     <ul class="hidden md:flex items-center gap-8">
@@ -43,24 +43,24 @@
     </button>
   </nav>
 
-  <div id="mobile-menu" class="hidden md:hidden bg-ink border-b border-white/10 max-h-[calc(100vh-100px)] overflow-y-auto">
-    <div class="section-container py-4 flex flex-col gap-3">
-      <a href="{{ switcher_url | relative_url }}" class="text-sm text-center text-offwhite/80 hover:text-offwhite">{{ t.nav.lang_switch_label }}</a>
-      <a href="{{ t.urls.home | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.home }}</a>
-      <a href="{{ t.urls.games | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.games }}</a>
-      <a href="{{ t.urls.publishing | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.publishing }}</a>
-      <a href="{{ t.urls.cooperative | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.cooperative }}</a>
-      <a href="{{ t.urls.cooperative_fonctionnement | relative_url }}" class="text-sm text-muted/70 hover:text-offwhite py-1 pl-4">{{ t.nav.cooperative_fonctionnement }}</a>
-      <a href="{{ t.urls.cooperative_valeurs | relative_url }}" class="text-sm text-muted/70 hover:text-offwhite py-1 pl-4">{{ t.nav.cooperative_valeurs }}</a>
-      <a href="{{ t.urls.cooperative_equipe | relative_url }}" class="text-sm text-muted/70 hover:text-offwhite py-1 pl-4">{{ t.nav.cooperative_equipe }}</a>
-      <a href="{{ t.urls.cooperative_statuts | relative_url }}" class="text-sm text-muted/70 hover:text-offwhite py-1 pl-4">{{ t.nav.cooperative_statuts }}</a>
-      <a href="{{ t.urls.cooperative_reglement | relative_url }}" class="text-sm text-muted/70 hover:text-offwhite py-1 pl-4">{{ t.nav.cooperative_reglement }}</a>
-      <a href="{{ t.urls.contact | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.contact }}</a>
-      <a href="{{ t.urls.submit | relative_url }}" class="text-sm text-muted hover:text-offwhite py-1">{{ t.nav.submit_game }}</a>
+  <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-ink border-b border-white/10">
+    <div class="section-container py-3 flex flex-col gap-1">
+      <a href="{{ switcher_url | relative_url }}" class="mobile-nav-link text-center text-offwhite/80">{{ t.nav.lang_switch_label }}</a>
+      <a href="{{ t.urls.home | relative_url }}" class="mobile-nav-link">{{ t.nav.home }}</a>
+      <a href="{{ t.urls.games | relative_url }}" class="mobile-nav-link">{{ t.nav.games }}</a>
+      <a href="{{ t.urls.publishing | relative_url }}" class="mobile-nav-link">{{ t.nav.publishing }}</a>
+      <a href="{{ t.urls.cooperative | relative_url }}" class="mobile-nav-link">{{ t.nav.cooperative }}</a>
+      <a href="{{ t.urls.cooperative_fonctionnement | relative_url }}" class="mobile-nav-sublink">{{ t.nav.cooperative_fonctionnement }}</a>
+      <a href="{{ t.urls.cooperative_valeurs | relative_url }}" class="mobile-nav-sublink">{{ t.nav.cooperative_valeurs }}</a>
+      <a href="{{ t.urls.cooperative_equipe | relative_url }}" class="mobile-nav-sublink">{{ t.nav.cooperative_equipe }}</a>
+      <a href="{{ t.urls.cooperative_statuts | relative_url }}" class="mobile-nav-sublink">{{ t.nav.cooperative_statuts }}</a>
+      <a href="{{ t.urls.cooperative_reglement | relative_url }}" class="mobile-nav-sublink">{{ t.nav.cooperative_reglement }}</a>
+      <a href="{{ t.urls.contact | relative_url }}" class="mobile-nav-link">{{ t.nav.contact }}</a>
+      <a href="{{ t.urls.submit | relative_url }}" class="mobile-nav-link">{{ t.nav.submit_game }}</a>
       <hr class="border-white/10 my-1">
-      <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm text-center">{{ t.nav.join }}</a>
+      <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm text-center py-2">{{ t.nav.join }}</a>
     </div>
   </div>
 </header>
 
-<div class="h-[100px]"></div>
+<div class="h-[72px] md:h-[100px]"></div>

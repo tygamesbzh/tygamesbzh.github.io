@@ -865,11 +865,48 @@ body {
   color: rgb(236 139 14 / var(--tw-text-opacity, 1));
 }
 
+/* Mobile nav dropdown — dvh avoids the iOS 100vh bug (menu cut off / no scroll) */
+
+.mobile-menu {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  max-height: calc(100vh - 72px);
+  max-height: calc(100dvh - 72px);
+}
+
+.mobile-nav-link {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(200 197 186 / var(--tw-text-opacity, 1));
+}
+
+.mobile-nav-link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 240 / var(--tw-text-opacity, 1));
+}
+
+.mobile-nav-sublink {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(200 197 186 / 0.7);
+}
+
+.mobile-nav-sublink:hover {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 240 / var(--tw-text-opacity, 1));
+}
+
 /* Sticky in-page section nav (anchor pills) */
 
 .section-nav {
   position: sticky;
-  top: 100px;
+  top: 72px;
   z-index: 40;
   margin-bottom: 3rem;
   --tw-bg-opacity: 1;
@@ -877,6 +914,12 @@ body {
   --tw-backdrop-blur: blur(8px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+@media (min-width: 768px) {
+  .section-nav {
+    top: 100px;
+  }
 }
 
 .section-nav-list {
@@ -1232,6 +1275,10 @@ ul.distrib-card-body {
   aspect-ratio: 16 / 9;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-14 {
   height: 3.5rem;
 }
@@ -1260,12 +1307,8 @@ ul.distrib-card-body {
   height: 2.25rem;
 }
 
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[64px\] {
-  height: 64px;
+.h-\[72px\] {
+  height: 72px;
 }
 
 .h-full {
@@ -1274,10 +1317,6 @@ ul.distrib-card-body {
 
 .h-px {
   height: 1px;
-}
-
-.max-h-\[calc\(100vh-100px\)\] {
-  max-height: calc(100vh - 100px);
 }
 
 .min-h-\[90vh\] {
@@ -1526,10 +1565,6 @@ ul.distrib-card-body {
   overflow-x: auto;
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -1771,10 +1806,6 @@ ul.distrib-card-body {
 
 .pb-16 {
   padding-bottom: 4rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .pl-5 {
@@ -2165,6 +2196,14 @@ ul.distrib-card-body {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-\[100px\] {
+    height: 100px;
+  }
+
+  .md\:h-\[64px\] {
+    height: 64px;
   }
 
   .md\:grid-cols-2 {
