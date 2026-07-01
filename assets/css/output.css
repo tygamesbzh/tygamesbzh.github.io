@@ -1276,6 +1276,10 @@ ul.distrib-card-body {
   height: 1px;
 }
 
+.max-h-\[calc\(100vh-100px\)\] {
+  max-height: calc(100vh - 100px);
+}
+
 .min-h-\[90vh\] {
   min-height: 90vh;
 }
@@ -1520,6 +1524,10 @@ ul.distrib-card-body {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .whitespace-nowrap {
