@@ -9,6 +9,7 @@ urls:
   cooperative_statuts: /en/cooperative/statuts/
   cooperative_reglement: /en/cooperative/reglement/
   contact: /en/contact/
+  faq: /en/faq/
   submit: /en/pitch
   join: /en/invest
   legal: /legal
@@ -25,6 +26,7 @@ nav:
   cooperative_statuts: Bylaws (PDF 🇫🇷)
   cooperative_reglement: Rules (PDF 🇫🇷)
   contact: Contact
+  faq: FAQ
   submit_game: Submit a game
   join: Join us
   menu_open: Open menu

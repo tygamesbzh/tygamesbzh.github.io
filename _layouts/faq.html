@@ -1,0 +1,50 @@
+---
+layout: page
+---
+
+<section class="section-hero">
+  <div class="section-title-container">
+    <h1 class="section-title">
+      {{ page.hero_h1_pre }} <em class="not-italic text-accent">{{ page.hero_h1_em }}</em>
+    </h1>
+    <p class="section-subtitle">
+      {{ page.hero_subtitle }}
+    </p>
+  </div>
+</section>
+
+<section class="section-padding bg-offwhite">
+  <div class="section-container">
+    <div class="space-y-3 max-w-3xl mx-auto">
+      {% for item in page.questions %}
+      <details id="{{ item.id }}" class="valeurs-card group !p-4 !gap-2 scroll-mt-[88px] md:scroll-mt-[116px]">
+        <summary class="flex items-center gap-3 cursor-pointer list-none">
+          <h2 class="flex-1 font-heading font-semibold text-sm md:text-base text-ink">{{ item.question }}</h2>
+          <a href="#{{ item.id }}" class="opacity-0 group-hover:opacity-100 focus:opacity-100 text-accent text-sm transition-opacity" aria-label="{{ item.question }}" onclick="event.stopPropagation()">#</a>
+          <svg class="w-4 h-4 shrink-0 text-accent transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </summary>
+        <div class="valeurs-card-content pt-3 text-sm">
+          <p>{{ item.answer }}</p>
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Open and scroll to the FAQ item referenced by the URL hash (direct links).
+  function openFaqFromHash() {
+    var id = window.location.hash.slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.tagName.toLowerCase() === 'details') {
+      el.open = true;
+      el.scrollIntoView();
+    }
+  }
+  window.addEventListener('hashchange', openFaqFromHash);
+  openFaqFromHash();
+</script>
