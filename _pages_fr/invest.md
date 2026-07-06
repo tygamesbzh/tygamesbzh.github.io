@@ -31,9 +31,9 @@ reminders:
     - heading: "N'investissez que ce que vous pouvez perdre"
       body: "Votre capital est exposé à un risque de perte partielle ou totale."
     - heading: "Capital bloqué"
-      body: "L'argent investi sera bloqué pendant plsieurs années et n'est donc pas disponible à court terme."
+      body: "L'argent investi sera potentiellement bloqué pendant plusieurs années et n'est donc pas disponible à court terme."
     - heading: "Pas de profits sur les parts"
-      body: "La coopérative ne génèrera pas de profits sur les parts sociales. Vous récupérerez la même somme investie en quittant le sociétariat."
+      body: "La coopérative empêche les plus-values sur les parts sociales. Vous récupérerez au mieux la même somme investie en quittant le sociétariat. En revanche, des dividendes sont possibles."
 subscribe:
   heading: "Je suis prêt·e !"
   intro: "Génial ! Comment faire :"
