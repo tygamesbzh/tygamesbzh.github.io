@@ -9,6 +9,7 @@ urls:
   cooperative_statuts: /cooperative/statuts/
   cooperative_reglement: /cooperative/reglement/
   contact: /contact/
+  faq: /faq/
   submit: /pitch
   join: /invest
   legal: /legal
@@ -25,6 +26,7 @@ nav:
   cooperative_statuts: Statuts (PDF)
   cooperative_reglement: Réglement Intérieur (PDF)
   contact: Contact
+  faq: FAQ
   submit_game: Soumettre un jeu
   join: Nous Rejoindre
   menu_open: Ouvrir le menu
