@@ -9,7 +9,7 @@ hero_subtitle: "Toutes les questions que vous nous avez posées sur la coopérat
 questions:
   - id: resident-etranger-parts
     question: "Je réside à l'étranger, est-ce que je peux souscrire à des parts sociales ?"
-    answer: "TODO - en cours de discussion avec notre juriste"
+    answer: "Oui aucun souci ! Par contre la fiscalité du pays de résidence n’est pas la même, donc il n’y aura probablement pas l’éligibilité à la réduction IR-PME. Et s'i 'il y a distribution des intérêts aux parts sociales, ce sera la fiscalité applicable dans son pays de résidence en fonction qui sera prise en compte."
   - id: conseil-cooperatif-taille
     question: "Combien de personnes min/max dans le conseil coopératif ?"
     answer: "3 personnes au minimum, 9 au maximum, avec une place réservée pour chaque collège. S'il n'y a pas assez de candidats, on complète avec plusieurs membres d'un même collège ou on refait une Assemblée Générale."
