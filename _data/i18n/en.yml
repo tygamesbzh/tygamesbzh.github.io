@@ -55,6 +55,15 @@ cta:
   coop_body: "Professionals, creators, players: every member counts.<br />Find out how we work and how to become a member."
   coop_button: "Join us →"
 
+subscription:
+  badge: "Early subscription is open!"
+  current_label: "Current"
+  goal_label: "Goal"
+  shares_unit: "social shares"
+  in_progress_label: "Currently being reached"
+  cta: "Invest"
+  cta_invest: "Subscribe"
+
 newsletter:
   heading: "Follow our news"
   tags: "New games,Co-op life,Member offers,News"

@@ -16,6 +16,13 @@ address:
   city: "Cesson-Sévigné"
   country: "France"
 
+# Temporary subscription goal tracker
+subscription:
+  enabled: true
+  goal: 500      
+  acquired: 60   
+  in_progress: 100
+
 social:
   bluesky: https://bsky.app/profile/ty.games
   x: https://x.com/tygamesbzh/

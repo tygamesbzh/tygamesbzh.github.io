@@ -55,6 +55,15 @@ cta:
   coop_body: "Professionnels, créateur·ice·s, joueurs et joueuses :<br />chaque membre compte.<br />Découvrez comment nous fonctionnons et comment devenir sociétaire."
   coop_button: "Nous rejoindre →"
 
+subscription:
+  badge: "Souscription anticipée ouverte !"
+  current_label: "Actuel"
+  goal_label: "Objectif"
+  shares_unit: "parts sociales"
+  in_progress_label: "En cours d'acquisition"
+  cta: "Investir"
+  cta_invest: "Souscrire"
+
 newsletter:
   heading: "Suivez notre actualité"
   tags: "Nouveaux jeux,Vie de la coop,Offres membres,Actualités"

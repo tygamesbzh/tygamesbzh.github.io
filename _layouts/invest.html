@@ -15,10 +15,12 @@ layout: page-nocta
   </div>
 </section>
 
+{% include subscription-tracker.html variant="invest" %}
+
 <section id="prerequis" class="section-padding-small bg-offwhite">
   <div class="section-container">
     <div class="section-intro">
-      <h2 class="page-title text-ink mb-5">{{ page.prerequisites.heading }}</h2>
+      <h2 class="font-heading font-extrabold text-3xl md:text-4xl leading-tight text-ink mb-5">{{ page.prerequisites.heading }}</h2>
       <p class="text-ink/70 leading-relaxed">
         {{ page.prerequisites.intro }}
       </p>
@@ -42,7 +44,7 @@ layout: page-nocta
 <section id="rappels" class="section-padding-small bg-ink text-offwhite">
   <div class="section-container">
     <div class="section-intro">
-      <h2 class="page-title mb-5">{{ page.reminders.heading }}</h2>
+      <h2 class="font-heading font-extrabold text-3xl md:text-4xl leading-tight mb-5">{{ page.reminders.heading }}</h2>
       <p class="strong text-accent leading-relaxed">
         {{ page.reminders.intro }}
       </p>
@@ -61,37 +63,40 @@ layout: page-nocta
 
 <section id="souscrire" class="section-padding-small bg-offwhite">
   <div class="section-container">
-    <div class="text-center max-w-2xl mx-auto mb-2">
-      <h2 class="page-title text-ink mb-5">{{ page.subscribe.heading }}</h2>
-      <p class="text-ink/70 leading-relaxed text-lg">
-        {{ page.subscribe.intro }}
-      </p>
-      {% if page.subscribe.note %}
-      <p class="text-ink/50 leading-relaxed text-sm mt-4">
-        {{ page.subscribe.note }}
-      </p>
-      {% endif %}
-    </div>
-    <div class="max-w-2xl mx-auto mb-6 text-lg">
-      <p>
-        <ul class="list-decimal">
-          <li>{{ page.subscribe.step1 }}</li>
-          <li>{{ page.subscribe.step2 }}</li>
-          <li>{{ page.subscribe.step3 }}</li>
-        </ul>
-      </p>
-      <a href="{{ '/assets/img/' | append: page.schema | relative_url }}">
+    <div class="card card-light max-w-3xl mx-auto mb-10 p-8 md:p-12">
+      <div class="text-center mb-10">
+        <h2 class="page-title text-ink mb-5">{{ page.subscribe.heading }}</h2>
+        <p class="text-ink/70 leading-relaxed text-lg">
+          {{ page.subscribe.intro }}
+        </p>
+        {% if page.subscribe.note %}
+        <p class="text-ink/50 leading-relaxed text-sm mt-4">
+          {{ page.subscribe.note }}
+        </p>
+        {% endif %}
+      </div>
+
+      <ol class="space-y-4 mb-10">
+        {% for step in page.subscribe.steps %}
+        <li class="flex items-start gap-4">
+          <span class="shrink-0 w-8 h-8 rounded-full bg-accent text-white font-bold text-sm flex items-center justify-center">{{ forloop.index }}</span>
+          <span class="text-ink/80 leading-relaxed pt-1">{{ step }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+
+      <a href="{{ '/assets/img/' | append: page.schema | relative_url }}" target="_blank"
+        class="group block rounded-lg overflow-hidden border border-ink/10 mb-8">
         <img src="{{ '/assets/img/' | append: page.schema | relative_url }}" alt="{{ page.organisation.diagram_alt }}"
           class="w-full group-hover:scale-105 transition-transform duration-300">
       </a>
-      <p class="text-center">
-        Merci ! <3
-      </p>
-    </div>
 
-    <div class="text-center mb-10">
-      <a href="{{ page.pdf_path | relative_url }}" target="_blank" class="btn-primary px-10 py-4 text-base">{{ page.subscribe.cta_label }}</a>
-      <a href="mailto:{{ site.email_coop }}" class="btn-outline px-10 py-4 text-base">{{ page.subscribe.cta_send }}</a>
+      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+        <a href="{{ page.pdf_path | relative_url }}" target="_blank" class="btn-primary px-10 py-4 text-base text-center">{{ page.subscribe.cta_label }}</a>
+        <a href="mailto:{{ site.email_coop }}" class="btn-outline px-10 py-4 text-base text-center">{{ page.subscribe.cta_send }}</a>
+      </div>
+
+      <p class="text-center text-ink/50 mt-8">{{ page.subscribe.thanks | default: "Merci ! <3" }}</p>
     </div>
   </div>
 </section>

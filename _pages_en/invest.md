@@ -38,9 +38,11 @@ subscribe:
   heading: "I'm ready!"
   intro: "Great! We've opened the subscription process!"
   note: "Note: the subscription process is currently only available in French. Feel free to <a href=\"/en/contact/\" class=\"underline hover:text-accent\">contact us</a> if you have any questions."
-  step1: "Download, fill and sign the subscription document (french only)"
-  step2: "Send it to <b>cooperative@ty.games</b>"
-  step3: "We will contact you shortly!"
+  steps:
+    - "Download, fill and sign the subscription document (french only)"
+    - "Send it to <b>cooperative@ty.games</b>"
+    - "We will contact you shortly!"
   cta_label: "Download subscription document"
   cta_send: "Send to cooperative@ty.games"
+  thanks: "Thank you! <3"
 ---

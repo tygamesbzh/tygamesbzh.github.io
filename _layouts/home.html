@@ -4,7 +4,9 @@ layout: page
 
 {% assign t = site.data.i18n[page.lang] %}
 
-<section class="bg-offwhite min-h-[90vh] flex items-center py-24 relative overflow-hidden">
+{% include subscription-tracker.html variant="home" %}
+
+<section class="bg-offwhite min-h-[90vh] flex items-center pb-24 {% if site.subscription.enabled %}pt-0 -mt-12{% else %}pt-24{% endif %} relative overflow-hidden">
   <div class="section-container grid md:grid-cols-2 gap-16 items-center w-full">
     <div>
       <!-- <p class="section-eyebrow text-accent mb-6 flex items-center gap-3">
