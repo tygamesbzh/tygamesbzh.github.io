@@ -27,6 +27,11 @@ layout: page
         </summary>
         <div class="valeurs-card-content pt-3 text-sm">
           <p>{{ item.answer }}</p>
+          {% if item.video %}
+          <div class="mt-4 aspect-video">
+            <iframe class="w-full h-full rounded-lg" src="https://www.youtube-nocookie.com/embed/{{ item.video }}" title="{{ item.question }}" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          {% endif %}
         </div>
       </details>
       {% endfor %}

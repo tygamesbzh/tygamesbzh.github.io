@@ -7,6 +7,10 @@ hero_h1_pre: Frequently asked
 hero_h1_em: questions
 hero_subtitle: "All the questions you've asked us about the cooperative."
 questions:
+  - id: replay-presentation
+    question: "Where can I watch the presentation replay?"
+    answer: "You can watch the full presentation right here:"
+    video: fjdh0StTRNk
   - id: resident-etranger-parts
     question: "I live abroad: can I subscribe to shares?"
     answer: "Yes, no problem! However, the tax rules in your country of residence aren't the same, so there probably won't be eligibility for the IR-PME tax reduction. And if interest is distributed on the shares, the tax rules that apply will be those of your country of residence."

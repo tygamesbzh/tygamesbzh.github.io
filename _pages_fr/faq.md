@@ -7,6 +7,10 @@ hero_h1_pre: Questions
 hero_h1_em: fréquentes
 hero_subtitle: "Toutes les questions que vous nous avez posées sur la coopérative."
 questions:
+  - id: replay-presentation
+    question: "Où puis-je revoir le replay de la présentation ?"
+    answer: "Vous pouvez revoir l'intégralité de la présentation juste ici :"
+    video: fjdh0StTRNk
   - id: resident-etranger-parts
     question: "Je réside à l'étranger, est-ce que je peux souscrire à des parts sociales ?"
     answer: "Oui aucun souci ! Par contre la fiscalité du pays de résidence n’est pas la même, donc il n’y aura probablement pas l’éligibilité à la réduction IR-PME. Et s'i 'il y a distribution des intérêts aux parts sociales, ce sera la fiscalité applicable dans son pays de résidence en fonction qui sera prise en compte."
