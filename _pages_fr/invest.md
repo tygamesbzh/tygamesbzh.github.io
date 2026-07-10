@@ -32,14 +32,16 @@ reminders:
       body: "Votre capital est exposé à un risque de perte partielle ou totale."
     - heading: "Capital bloqué"
       body: "L'argent investi sera potentiellement bloqué pendant plusieurs années et n'est donc pas disponible à court terme."
-    - heading: "Pas de profits sur les parts"
+    - heading: "Pas de plus-value sur les parts"
       body: "La coopérative empêche les plus-values sur les parts sociales. Vous récupérerez au mieux la même somme investie en quittant le sociétariat. En revanche, des dividendes sont possibles."
 subscribe:
   heading: "Je suis prêt·e !"
   intro: "Génial ! Comment faire :"
-  step1: "Téléchargez et complétez le bulletin de souscription anticipée de parts socials"
-  step2: "Envoyez-le nous à <b>cooperative@ty.games</b>"
-  step3: "On vous répondra rapidement !"
+  steps:
+    - "Téléchargez et complétez le bulletin de souscription anticipée de parts socials"
+    - "Envoyez-le nous à <b>cooperative@ty.games</b>"
+    - "On vous répondra rapidement !"
   cta_label: "Télécharger le bulletin de souscription"
   cta_send: "L'envoyer à cooperative@ty.games"
+  thanks: "Merci ! <3"
 ---

@@ -1,0 +1,76 @@
+{% comment %}
+  Temporary share-subscription goal tracker (toast style).
+  Usage: {% include subscription-tracker.html variant="home" %}
+         {% include subscription-tracker.html variant="invest" %}
+  Data lives in site.subscription (_config.yml); strings in i18n[lang].subscription.
+  Set subscription.enabled: false to hide everywhere.
+{% endcomment %}
+
+{% assign s = site.subscription %}
+{% if s.enabled %}
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.i18n[lang] %}
+
+{% assign acquired_pct = s.acquired | times: 100 | divided_by: s.goal %}
+{% if s.in_progress %}
+  {% assign progress_pct = s.in_progress | times: 100 | divided_by: s.goal %}
+{% else %}
+  {% assign progress_pct = acquired_pct %}
+{% endif %}
+
+{% if include.variant == "invest" %}
+<section class="bg-offwhite">
+  <div class="section-container pt-10">
+    <div class="card card-light p-6 md:p-8">
+      <div>
+        <div>
+          <p class="section-eyebrow text-accent mb-3">{{ t.subscription.badge }}</p>
+          <div class="flex flex-wrap items-baseline gap-x-8 gap-y-1 mb-4 text-sm md:text-base">
+            <p class="text-ink">
+              {{ t.subscription.current_label }} : <strong class="text-accent">{{ s.acquired }}</strong>
+            </p>
+            {% if s.in_progress %}
+            <p class="text-ink/60">
+              {{ t.subscription.in_progress_label }} : <strong>{{ s.in_progress }}</strong>
+            </p>
+            {% endif %}
+            <p class="text-ink/60">
+              {{ t.subscription.goal_label }} : <strong>{{ s.goal }}</strong> {{ t.subscription.shares_unit }}
+            </p>
+          </div>
+          <div class="relative h-3 w-full rounded-full bg-ink/10 overflow-hidden">
+            <div class="absolute inset-y-0 left-0 bg-accent/30 transition-all duration-500" style="width: {{ progress_pct }}%"></div>
+            <div class="absolute inset-y-0 left-0 bg-accent transition-all duration-500" style="width: {{ acquired_pct }}%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% else %}
+<section class="bg-offwhite pt-6 relative z-10">
+  <div class="section-container">
+    <div class="card card-light px-6 py-5">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+        <div class="flex-1">
+          <p class="section-eyebrow text-accent mb-2">{{ t.subscription.badge }}</p>
+          <div class="flex flex-wrap items-baseline gap-x-6 gap-y-1 mb-2.5 text-sm">
+            <p class="text-ink">
+              {{ t.subscription.current_label }} : <strong class="text-accent">{{ s.acquired }}</strong>
+            </p>
+            <p class="text-ink/60">
+              {{ t.subscription.goal_label }} : <strong>{{ s.goal }}</strong> {{ t.subscription.shares_unit }}
+            </p>
+          </div>
+          <div class="relative h-2.5 w-full rounded-full bg-ink/10 overflow-hidden">
+            <div class="absolute inset-y-0 left-0 bg-accent transition-all duration-500" style="width: {{ acquired_pct }}%"></div>
+          </div>
+        </div>
+        <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm whitespace-nowrap self-start sm:self-auto">{{ t.subscription.cta }} →</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endif %}
