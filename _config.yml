@@ -19,8 +19,8 @@ address:
 # Temporary subscription goal tracker
 subscription:
   enabled: true
-  goal: 500      
-  acquired: 80   
+  goal: 500
+  acquired: 82
   in_progress: 160
 
 social:
