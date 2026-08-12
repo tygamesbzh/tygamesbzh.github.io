@@ -60,7 +60,8 @@ subscription:
   current_label: "Actuel"
   goal_label: "Objectif"
   shares_unit: "parts sociales"
-  in_progress_label: "En cours d'acquisition"
+  in_progress_label: "Promesses"
+  pct_suffix: "&nbsp;%"
   cta: "Investir"
   cta_invest: "Souscrire"
 

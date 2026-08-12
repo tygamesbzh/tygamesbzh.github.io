@@ -61,6 +61,7 @@ subscription:
   goal_label: "Goal"
   shares_unit: "social shares"
   in_progress_label: "Currently being reached"
+  pct_suffix: "%"
   cta: "Invest"
   cta_invest: "Subscribe"
 

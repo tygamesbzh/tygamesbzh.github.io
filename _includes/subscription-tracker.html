@@ -28,10 +28,12 @@
           <div class="flex flex-wrap items-baseline gap-x-8 gap-y-1 mb-4 text-sm md:text-base">
             <p class="text-ink">
               {{ t.subscription.current_label }} : <strong class="text-accent">{{ s.acquired }}</strong>
+              <span class="text-ink/60">({{ acquired_pct }}{{ t.subscription.pct_suffix }})</span>
             </p>
             {% if s.in_progress %}
             <p class="text-ink/60">
               {{ t.subscription.in_progress_label }} : <strong>{{ s.in_progress }}</strong>
+              <span>({{ progress_pct }}{{ t.subscription.pct_suffix }})</span>
             </p>
             {% endif %}
             <p class="text-ink/60">
@@ -58,6 +60,7 @@
           <div class="flex flex-wrap items-baseline gap-x-6 gap-y-1 mb-2.5 text-sm">
             <p class="text-ink">
               {{ t.subscription.current_label }} : <strong class="text-accent">{{ s.acquired }}</strong>
+              <span class="text-ink/60">({{ acquired_pct }}{{ t.subscription.pct_suffix }})</span>
             </p>
             <p class="text-ink/60">
               {{ t.subscription.goal_label }} : <strong>{{ s.goal }}</strong> {{ t.subscription.shares_unit }}
