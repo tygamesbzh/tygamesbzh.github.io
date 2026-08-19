@@ -20,7 +20,7 @@ address:
 subscription:
   enabled: true
   goal: 500
-  acquired: 161
+  acquired: 164
   in_progress: 155
 
 social:
