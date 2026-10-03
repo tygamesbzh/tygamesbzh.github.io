@@ -1,265 +1,131 @@
 ---
 layout: privacy
 title: Privacy Policy and Terms of Use
-description: "TyGAMES Privacy Policy and Terms of Use."
+description: "How TyGAMES handles your personal data, and the terms of use of our services."
 permalink: /privacy-policy-and-terms-of-use/
 lang_alternate: /privacy/
 hero_h1: Privacy Policy and Terms of Use
 toc_heading: Contents
 toc:
-  - { id: introduction, label: Introduction }
-  - { id: collect,      label: "1) When does TyGAMES collect your Personal Information?" }
-  - { id: use,          label: "2) How does TyGAMES use your Personal Information?" }
-  - { id: retention,    label: "3) How long does TyGAMES keep your Personal Information?" }
-  - { id: sharing,      label: "4) How does TyGAMES share your Personal Information?" }
-  - { id: minors,       label: "5) TyGAMES’s special efforts to protect minors" }
-  - { id: cookies,      label: "6) Cookies" }
-  - { id: rights,       label: "7) What are your rights as a user?" }
-  - { id: amendments,   label: "8) Amendments to the Privacy Policy" }
-  - { id: contact-us,   label: "9) Contact us" }
-  - { id: terms,        label: Terms of Use }
+  - { id: who-we-are, label: "1) Who we are" }
+  - { id: data,       label: "2) What we collect and why" }
+  - { id: recipients, label: "3) Who receives your data" }
+  - { id: transfers,  label: "4) Transfers outside the EU" }
+  - { id: cookies,    label: "5) Cookies" }
+  - { id: children,   label: "6) Children" }
+  - { id: rights,     label: "7) Your rights" }
+  - { id: security,   label: "8) Security" }
+  - { id: changes,    label: "9) Changes to this policy" }
+  - { id: terms,      label: Terms of Use }
 ---
 
-The TyGAMES Privacy Policy aims to provide a clear explanation about the types of information that we collect and the way in which we use that information to offer users a superior gaming and social gaming experience. By agreeing to our Privacy Policy and our Terms of Use when creating an account and installing the game, you authorize us to collect, store, use and disclose your personal information as described in this Privacy Policy.
+*Last updated: October 3, 2026*
 
-## Introduction {#introduction}
+This Privacy Policy explains what personal data TyGAMES collects, why, how long we keep it and what your rights are under the General Data Protection Regulation (GDPR) and the French Data Protection Act (loi Informatique et Libertés). It applies to our website, ty.games, and to the games we develop and publish.
 
-TyGAMES develops and publishes mobile games and social network games for the Internet and handheld devices, hereinafter referred to as the “Service(s)”. Throughout this Privacy Policy, “TyGAMES” refers to TyGAMES SCIC SAS and affiliate companies, meaning subsidiaries, parent companies, joint ventures and any other business entities under joint control. We also refer to TyGAMES as “We”.
+We collect as little data as possible. Our games do not collect any personal data, and our website does not set any cookies of its own or use any analytics or advertising tools.
 
-If you have any questions about our Privacy Policy or the way in which we collect and use personal information, please contact us as described in the section entitled “[Contact us](#contact-us)”. If you play our games over a social network, such as Facebook, you must also read and accept the Privacy Policy and the Terms of Service for that particular social network or any other service concerned.
+## 1) Who we are {#who-we-are}
 
-TyGAMES agrees to protect and respect your privacy. This Privacy Policy explains how we use the information collected from or provided by you. This includes personal information (information that can be used either directly or in combination with other information to identify you) and non-personal information. Please read this Privacy Policy carefully to understand how we collect and use your information.
+The data controller is **{{ site.legal_name }}**, {{ site.address.street }}, {{ site.address.postal_code }} {{ site.address.city }}, {{ site.address.country }} (SIRET {{ site.siret }}, R.C.S. Rennes), referred to as “TyGAMES”, “we” or “us” in this policy.
 
-This Privacy Policy explains how TyGAMES respects your privacy when playing or using one of the following services:
+For any question about this policy or your personal data, write to [{{ site.email }}](mailto:{{ site.email }}) or to the postal address above.
 
-- Our websites, including ty.games and any other sub-domains of ty.games (hereinafter the “Website” or “Websites”).
-- All our online and mobile games, products and services, including apps for iOS, Android, BlackBerry and Windows Phone devices and any other platforms concerned.
-- All our products and services (including help desk services) that can be accessed through a web application, third-party platform or social network service (such as Facebook or any other social network).
+## 2) What we collect and why {#data}
 
-We will refer to the above as “Services” throughout this Privacy Policy. By using any one of our Services, you confirm that you have read, understood and accepted this Privacy Policy. If you do not agree with this Privacy Policy, please refrain from using our Services. If you have any questions, please write to us at [hello@ty.games](mailto:hello@ty.games).
+### Our games
 
-We collect information solely in the course of our activities and for the purpose of responding to your enquiries, in pursuance of the French Data Protection Act 1978. Personal information refers to any data that can be used to identify a person either directly or indirectly (“Personal Information”).
+Our games do not collect, store or send us any personal data. They have no player accounts, no advertising, no in-app purchases, and no analytics or crash reporting.
 
-By creating an account, you authorize TyGAMES to collect and use your Personal Information in accordance with this Privacy Policy. If you do not agree with this Privacy Policy, please refrain from using our online games or any games with online functionality, our Websites and any TyGAMES online products and services (hereinafter referred to collectively as the “Services”).
+When you buy or play one of our games on a store or platform (such as Steam, GOG, Humble, the App Store, Google Play, Nintendo eShop or PlayStation Store), that platform handles your account, your payment and features such as achievements, leaderboards or cloud saves, under its own privacy policy. We do not receive your payment details.
 
-## 1) When does TyGAMES collect your Personal Information? {#collect}
+### Newsletter
 
-TyGAMES is likely to collect and store your Personal Information during specific procedures, including but not limited to when you:
+If you subscribe to our newsletter, we process your email address, and any other information you choose to give Substack (such as your name), to send you news about TyGAMES and our games.
 
-1. Navigate or play a Service.
-2. Create a User Account.
-3. Pay for an online Service.
-4. Watch an ad on the Services.
-5. Create user-generated content.
-6. Sign up for the newsletter.
-7. Contact TyGAMES.
-8. Take part in a competition.
-9. Interact with other users in a chat room or forum.
+- **Legal basis:** your consent. You can withdraw it at any time with the unsubscribe link included in every email.
+- **Retention:** for as long as you are subscribed.
+- **Providers:** the newsletter is hosted by Substack. The sign-up form on our website sends your email address to Substack through Supascribe (substackapi.com), a third-party service.
 
-### Use of TyGAMES Websites
+### Emails you send us
 
-#### Navigation on TyGAMES Websites
+When you write to us (for example at hello@ty.games or pitch@ty.games), we process your email address, your name and the content of your message, including any files you send us, such as a game pitch, to answer you and follow up on your request.
 
-**Login information.** Whenever you log into a Service, TyGAMES may passively collect information including but not limited to your IP address and your computer’s MAC address, your console ID, the date and time of login, and your browser information.
+- **Legal basis:** our legitimate interest in answering the messages we receive or, when you contact us about a possible agreement (for example publishing your game), the steps taken at your request before entering into a contract.
+- **Retention:** for as long as needed to handle your request, and no longer than 3 years after our last exchange, unless a contract is signed.
 
-#### Signing up for one of the Services
+### Joining the cooperative
 
-**Creating a User Account.** To play our games and/or access certain Services, you must first create a User Account. When you create your User Account, you will be prompted to provide the following information: login (user name) and password, email address, date of birth and country of residence. If you fail to provide this information, you will be unable to create a User Account.
+If you subscribe to shares in the cooperative, we process the information on your subscription form: your name or company name, legal form, postal address, legal representative (for a company), email address, phone number, the number of shares and amount subscribed, the membership category you request and your signature, as well as any documents you send us to support that request.
 
-#### Signing up for newsletters
+- **Purposes:** managing your subscription and your membership, keeping the register of members, inviting you to general meetings and organising votes, and meeting our accounting and legal obligations.
+- **Legal basis:** the performance of your subscription and our legal obligations.
+- **Retention:** for as long as you are a member, then for the periods required by law (for example, 10 years for accounting records).
 
-When you create your User Account, you can authorize TyGAMES to send you newsletters featuring details of new products, services and special offers relating to the Services. You can also authorize TyGAMES to disclose your Personal Information to companies and organizations offering products and services that might interest you.
+### Visiting our website
 
-#### Correspondence with customer support
+Our website is hosted by GitHub Pages, a service of GitHub, Inc. When you visit it, GitHub logs your IP address for security purposes, as described in the [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). We do not have access to these logs, and we do not use any analytics or tracking tools.
 
-If you contact our customer support team for assistance, we will collect and store your contact details (generally your name and email address), information relating to your game or activity on the Service, and your user name. We will also keep a record of all the details of any correspondence between us.
+Some pages embed YouTube videos in privacy-enhanced mode. The video player is loaded from YouTube, which receives your IP address and may set cookies when you play a video (see [Cookies](#cookies)).
 
-#### Push notifications and local notifications
+## 3) Who receives your data {#recipients}
 
-With your consent, we may send push notifications to your mobile device to provide you with game updates or other related notifications. You can manage your push notification settings via the relevant game’s “Options” > “Parameters” > “Settings” or “Preferences” menu. If the push notification options are not available in the actual Service, you can change the settings in your device’s settings menu for the game in question.
+Your data is only accessible to the TyGAMES team. We do not sell or rent your data, and we do not share it with anyone for their own marketing.
 
-#### Contacting TyGAMES
+We rely on the following service providers:
 
-For the purpose of responding to any enquiries that you might send to TyGAMES’s Customer Service, confirming your account-related information and transactions, and providing you with Service-related information (such as if you lost your password or if changes are made to the Terms of Service), TyGAMES may use your last name, first name, email address and date of birth.
+- **Substack, Inc.** hosts our newsletter ([privacy policy](https://substack.com/privacy)).
+- **Supascribe** (substackapi.com) passes newsletter sign-ups from our website to Substack.
+- **GitHub, Inc.** hosts our website ([privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)).
+- **Google (YouTube)** provides the embedded video player ([privacy policy](https://policies.google.com/privacy)).
+- Our email provider, and our accounting and banking providers where needed to manage the cooperative.
 
-#### Participation in competitions, surveys and questionnaires organized by TyGAMES
+We may also disclose personal data when required by law, a court decision or a public authority.
 
-TyGAMES will regularly ask you to take part in surveys or questionnaires, as well as competitions organized online. When taking part, you will be asked to supply your last name, first name, email address, date of birth, postal address and country of residence. When entering a competition, your Personal Information will only be used as part of the competition to inform you of special offers for a specific product and notify you of any new products and services. When taking part in surveys or questionnaires, TyGAMES will make your Personal Information anonymous to generate statistics for internal purposes.
+## 4) Transfers outside the EU {#transfers}
 
-#### Interacting in chat rooms and forums
+Some of these providers, including Substack, GitHub and Google, are based in the United States. Where personal data is transferred outside the European Union, the transfer relies on the safeguards provided for by the GDPR, such as the EU–US Data Privacy Framework or the European Commission’s standard contractual clauses, as described in each provider’s privacy policy.
 
-When taking part in or interacting with other users in a TyGAMES chat room or forum, we will collect the content of your posts, the date and time of your activity, your online ID and your IP address.
+## 5) Cookies {#cookies}
 
-### Use of TyGAMES games
+A cookie is a small file that a website stores in your browser. Our website does not set any cookies of its own.
 
-#### Creation of user-generated content
+The only third-party cookies come from the embedded YouTube videos:
 
-Some Services provide a toolbox and content for creating and/or sharing your own original content. User-generated content is likely to be collected by TyGAMES and may be qualified as Personal Information when you include Personal Information belonging to you or another person (for example, your name or picture). Under no circumstances will TyGAMES be liable for the prejudicial consequences arising from the disclosure of such user-generated content.
+| Domain(s) | Purpose | Cookie policy |
+|-----------|---------|---------------|
+| youtube-nocookie.com, youtube.com (Google) | Playback of the YouTube videos embedded on the website (privacy-enhanced mode). | [How Google uses cookies](https://policies.google.com/technologies/cookies) |
 
-#### Collection of game data when using the Services
+You can block or delete cookies at any time in your browser’s settings.
 
-When you use the Services, TyGAMES reserves the right to collect, gather and save some of your game data, including the level achieved, your awards and your game time, for the purpose of enhancing its Services, improving their quality and adapting them to your centers of interest in an effort to provide a superior gaming experience.
+## 6) Children {#children}
 
-### ONLINE PAYMENTS
+Our games do not collect any personal data, including from children. Under French law, children under 15 need the consent of a parent or guardian to subscribe to our newsletter. If you believe we hold personal data about a child without such consent, contact us and we will delete it.
 
-Some Services may give you the option of making purchases either on a TyGAMES Website or directly in a TyGAMES game.
+## 7) Your rights {#rights}
 
-In such cases, you agree that TyGAMES may contract external service providers to collect your Personal Information to effectively provide such services as processing credit card payments, delivering products and awarding prizes or free products as part of special offers.
+You have the right to:
 
-To pay for your purchase, you must provide your last name, first name, postal address, email address, country of residence and payment details, meaning your card number, the card holder’s name, the expiry date and the security code in order to process your payment.
+- access the personal data we hold about you;
+- have it corrected if it is inaccurate or incomplete;
+- have it deleted;
+- restrict its processing;
+- object to its processing;
+- receive it in a portable format;
+- withdraw your consent at any time, where processing is based on consent;
+- give instructions about what happens to your data after your death.
 
-We will keep a record of all your payments and purchases made with TyGAMES. The details of all your transactions will be stored either by TyGAMES or the contracted external provider. Such details are kept on record for internal purposes as well as for auditing, accounting, conformity and legal purposes.
+To exercise these rights, write to [{{ site.email }}](mailto:{{ site.email }}) or to our postal address. We will answer within one month. We may ask you to prove your identity if we have reasonable doubts about it.
 
-You may be asked to provide the name of your cell phone carrier, your cell phone model and a valid cell phone number in order to send the purchasing instructions directly to your cell phone.
+If you think your rights are not respected, you can lodge a complaint with the French data protection authority: CNIL, 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, France ([www.cnil.fr](https://www.cnil.fr)).
 
-## 2) How does TyGAMES use your Personal Information? {#use}
+## 8) Security {#security}
 
-To protect your Personal Information, TyGAMES has set up a series of technological and organizational security measures to guarantee the security, integrity and confidentiality of your Personal Information. However, no method of sending data over the Internet or storing data can guarantee 100% security. TyGAMES is therefore unable to guarantee the complete security of your Personal Information.
+We only use reputable providers and limit access to your data to the people who need it. However, no method of transmitting or storing data is completely secure.
 
-If your Accounts and Personal Information are password-protected, it is your responsibility to keep your password safe. Do not disclose your password to anyone. If you share your computer, do not forget to log out before leaving a Service.
+## 9) Changes to this policy {#changes}
 
-TyGAMES uses your Personal Information to answer specific enquiries, respond to purchase orders and send you order confirmations and other information relating to your account. TyGAMES also uses your Personal Information to operate and improve its Services. This information is used solely by TyGAMES with the aim of adapting the Services to meet users’ requirements.
-
-If users are found to be blatantly misusing the Services, TyGAMES reserves the right to block specific User Accounts, specific IP addresses and specific console IDs and any type of device provided by the licensed hardware vendors. The IP address and console ID may be used to identify you with the aim of enforcing TyGAMES’s Terms of Service.
-
-We may use your date of birth or age to screen access to our forums according to their official age restrictions. TyGAMES cannot monitor every chat room and therefore makes no such warranty. However, TyGAMES reserves the right at its sole discretion to delete any content in your posts without prior notice. All such data collected may be used by TyGAMES to enforce its Terms of Service, uphold the law and protect its rights and those of its subsidiaries and other users, as well as for the security of its employees and users. This information may be sent to any law enforcement or government officials.
-
-If you opted to receive emails from TyGAMES when creating your User Account, you will receive emails relating to TyGAMES’s products and special offers. We will use the Personal Information that you provided during registration. You can opt out of this TyGAMES service at any time.
-
-TyGAMES may display ads on the pages of its Websites. Such ads mainly concern TyGAMES’s Services. We may compile information about the sponsored links that you or other people using your computer have clicked via cookies to offer you ads that TyGAMES believes correspond to your centers of interest.
-
-Services may contain links to websites other than TyGAMES, such as YouTube, Facebook and other social networking sites. If you click on a link to a third-party website, you understand and agree to leave the Services governed by our policies and that TyGAMES has no control over such third-party websites. We cannot warrant that a third-party site implements the same security and privacy practices as TyGAMES’s own Websites. TyGAMES disclaims all liability for the way in which your Personal Information could be used by these websites. We would advise you to check the privacy policies of all other service providers used.
-
-## 3) How long does TyGAMES keep your Personal Information? {#retention}
-
-TyGAMES will keep your Personal Information for no longer than is strictly necessary to process your information and allow your use of the Service. Except where otherwise stipulated by law and legislation, TyGAMES will keep your Personal Information for no longer than is strictly necessary in accordance with the uses described in this Privacy Policy.
-
-## 4) How does TyGAMES share your Personal Information? {#sharing}
-
-TyGAMES agrees not to disclose your Personal Information to any third parties without your prior express consent.
-
-### Sharing your data with other TyGAMES companies and subsidiaries
-
-Personal Information may be sent to other TyGAMES companies for the purpose of operating the Services. Your Personal Information may be sent to TyGAMES subsidiaries.
-
-Your information will be collected and used by the teams working for TyGAMES.
-
-### Sharing your Personal Information with third-party companies
-
-When navigating on TyGAMES Websites or using TyGAMES games, external service providers may collect your Personal Information on behalf of TyGAMES. These third parties are contracted by TyGAMES to effectively provide such services as processing credit card payments, delivering products and awarding prizes or free products as part of special offers, and other services provided as part of TyGAMES’s Services. Except where a third party asks you to accept its own Privacy Policy and Terms of Service, these third parties will only share your Personal Information with TyGAMES.
-
-TyGAMES will never share Personal Information with external companies for marketing and/or commercial purposes without having first obtained your authorization or the consent of a parent or guardian in case of users under the age of 13 (thirteen).
-
-### Offer walls
-
-TyGAMES games and their purchase pages feature an “offer wall” hosted by an offer wall provider. The offer wall allows third-party advertisers to give users virtual money in return for interacting with an ad or carry out a marketing campaign that includes opening an account with one of the advertisers. Such offers do not come from TyGAMES. These offers are presented according to certain technical information, such as the geographic area or anonymous demographic information. If you click on an ad, you will leave the site hosted by TyGAMES or its partner social networking site. To correctly credit the User Account and avoid any fraud, a unique identifier (sometimes your user name) will be shared with the offer wall provider.
-
-### Sharing with authorities
-
-TyGAMES may need to disclose Personal Information to law enforcement and government officials when required to identify, question and prosecute any individual likely to violate the rights of TyGAMES, any user or third party. Finally, TyGAMES may be legally required and forced to disclose Personal Information.
-
-Your information and all the content of your posts (including but not limited to chat, voice calls, IP addresses and your Personal Information) may be viewed and monitored in accordance with the requirements of the Service and may be disclosed:
-
-- When we have a good-faith belief that disclosure is required in pursuance of legal process (for example, a court order, search warrant or subpoena).
-- To meet any applicable law or regulation.
-- When we believe that the Service is being used to commit a criminal offence (including the exchange of information with other companies for the purpose of preventing fraud or the risk of insolvency).
-- When we have a good-faith belief that there is an emergency representing a threat to your health and/or safety or to the health and safety of another person or the public in general.
-- To protect TyGAMES’s rights and property
-
-### Sharing in case of a merger
-
-Third parties may have access to your Personal Information for the purpose of negotiations aimed at transferring all or part of TyGAMES’s activities. For this sole purpose, TyGAMES may allow your Personal Information to be transferred, including data identifying minors.
-
-If TyGAMES’s business activities are transferred, such as through a merger, acquisition by another company or the sale of all or part of its products or assets, your Personal Information could potentially be transferred. In case of a major change to our privacy practices following a business transfer, we will send you notice thereof prior to transferring your Personal Information.
-
-## 5) TyGAMES’s special efforts to protect minors {#minors}
-
-Our Websites and games are not intended for minors under the age of 13 and we will not intentionally collect their Personal Information. Minors under the age of 13 must not use our Websites or our games. If we learn that we have collected Personal Information from minors under the age of 13, we will take reasonable measures to promptly delete such information from our files.
-
-We know that we have a special obligation to protect children’s Personal Information. In case of children less than 13 wishing to use the Services, prior written permission or any other verifiable consent must be received from their parent or legal guardian. In some countries, prior written permission or any other verifiable consent may also be required for children under the age of majority.
-
-TyGAMES uses its best efforts to protect minors and especially ensure their safe navigation on its Services and games. We would advise parents or legal guardians to be present when minors are using the Internet.
-
-### Chat rooms and forums for minors
-
-Consent from parents or legal guardians applies exclusively to the TyGAMES Websites for which such consent has been granted. In any case, TyGAMES reserves the right to restrict minors’ access to all or part of a TyGAMES Website.
-
-TyGAMES only shares Personal Information concerning minors under the age of 13 when prior consent has been received from a parent or legal guardian.
-
-## 6) Cookies {#cookies}
-
-Whenever used in this Cookies policy, the terms used with initial capital letters, shall have the meanings ascribed to it in the Privacy Policy, without distinction as to whether they are used in the singular or plural.
-
-TyGAMES attaches great importance to privacy and takes its responsibilities regarding the processing of Personal Information very seriously.
-
-This policy provides information about how TyGAMES uses “cookies” or similar technologies on its Site (as this term is defined in the Legal mentions) and all of its Services.
-
-These cookies help TyGAMES to understand how the User and/or Visitor interacts with its Services and to improve the experience and use of certain features. In particular, cookies are used to improve the navigation quality of our Site and show ads that match the User’s and/or Visitor’s centers of interest on TyGAMES’s Site pages or games.
-
-This policy also provides information on how third parties may use these technologies in connection with the Services.
-
-### 6.1. About cookies
-
-This cookie management policy applies to any User and/or Visitor visiting the Site and/or using any of the Services.
-
-Except for the cookies which are administrated by third parties, TyGAMES is responsible for processing Users’ personal information, which Users accept.
-
-### 6.2. What is a “cookie”?
-
-A “cookie” is a piece of information, usually small and identified by a name, which may be transmitted to the browser by a website to which the User or Visitor connects. The web browser will store it for a certain period of time, and send it back to the web server each time the User or Visitor reconnects. Cookies may have many uses: they can be used, for example, to memorize the client identifier, navigation for statistical or advertising purposes, etc.
-
-As detailed below, the use of cookies may involve the collection and use of the User’s or Visitor’s Personal Information, such as their IP address of other online mobile identifiers. For more information on the collection and use of such Personal Information, the User and/or the Visitor may consult the Privacy Policy and Terms of Use.
-
-The cookies used on the Site are the following:
-
-Internal cookies necessary for the Site to function:
-
-| COOKIE’S NAME | PURPOSE | STORAGE TIME |
-|---------------|---------|--------------|
-| None          | The Site does not set any internal cookies. | – |
-
-Third-party cookies intended to improve interactivity of the Site:
-
-| DOMAIN(S) | PURPOSE | LINKS TO THE PARTNER’S COOKIE POLICY |
-|-----------|---------|--------------------------------------|
-| youtube-nocookie.com, youtube.com (Google) | Playback of the YouTube videos embedded on the Site (privacy-enhanced mode). | [How Google uses cookies](https://policies.google.com/technologies/cookies) |
-
-### 6.3. How to refuse the use of cookies?
-
-The User or Visitor may, at any time, be informed and configure his cookies to accept or refuse them.
-
-The User or Visitor may also prevent the browser from accepting certain cookies, have the browser ask for his/her consent before a new cookie is placed in his/her browser, or block cookies altogether by selecting the relevant settings in the browser’s privacy preferences menu.
-
-### 6.4. Amendments
-
-Any amendment to this cookie policy will be posted on this page and should be consulted regularly.
-
-### 6.5. Contact
-
-For any questions, comments, complaints or requests regarding this cookie policy, or the processing of his/her Personal Information, the User or Visitor may contact TyGAMES at the following address: [hello@ty.games](mailto:hello@ty.games).
-
-In the event of a dispute regarding the processing of his/her Personal Information, the User or Visitor may lodge a complaint with the French data protection authority (CNIL), 3 place de Fontenoy – TSA 80715 – 75334 PARIS CEDEX 07.
-
-## 7) What are your rights as a user? {#rights}
-
-In pursuance of the French Data Protection Act 1978, users have the right to access and amend the Personal Information that they provided when creating their account on the TyGAMES Website or purchasing Services and prevent said information from being used. As such, users may request that any inaccurate, incomplete, ambiguous or outdated Personal Information be amended, completed, clarified, updated or deleted. To exercise any one of these rights, you must contact TyGAMES at the following address: TyGAMES, 3A rue de Paris, 35510 Cesson-Sevigne, France, or by sending an email to: [hello@ty.games](mailto:hello@ty.games)
-
-## 8) Amendments to the Privacy Policy {#amendments}
-
-TyGAMES reserves the right to amend this Privacy Policy at any time. You are therefore advised to regularly consult this Policy.
-
-By using the Services after any amendments have been made to the Policy, you indicate your acceptance of such amendments. If you do not agree with any substantial amendments made to this Privacy Policy, you must refrain from using the Services.
-
-If we decide to make major changes to our Privacy Policy, we may send notice thereof to you and other users using the email address in our files. We may also place a note in our games and TyGAMES’s other Websites instead of sending an email. We would advise you to regularly visit the ty.games Website and this Privacy Policy.
-
-## 9) Contact us {#contact-us}
-
-If you have any questions or if you wish to delete your User Account, please use the contact form available at the following address: [http://ty.games](https://ty.games) For any enquiries, comments or problems concerning our Privacy Policy and/or privacy practices, send an email to [hello@ty.games](mailto:hello@ty.games).
-
-Address:<br>
-3A rue de Paris<br>
-35510 CESSON-SEVIGNE<br>
-France.
+We may update this policy, for example when our services change. The date of the last update is shown at the top of this page.
 
 ---
 
@@ -449,38 +315,7 @@ TyGAMES reserves the right to restrict the storage capacity available to Users f
 
 ## 6. Personal Information
 
-**6.1.** In pursuance of France’s Data Protection Act 1978, as amended, TyGAMES hereby informs Users that it protects the confidentiality, integrity and security of any information that they might be required to provide in using the Services or Site.
-
-Any personal information that identifies the User directly, such as their last name, first name, postal address, email address and telephone number, or indirectly, according to applicable legislation, will be deemed confidential and treated as such.
-
-When Users create an Account, TyGAMES is responsible for processing their personal information, which Users accept.
-
-As required by the foregoing act, TyGAMES is duly registered with France’s data protection authority (CNIL) to process personal information, under registration number 1584940 v 0. TyGAMES updates its registration with CNIL as necessary.
-
-The data collected come from people providing their information as part of their desire to access or use the Services and become a User.
-
-Data may be used to manage the operations carried out over the Site, particularly access to and use of the Services.
-
-TyGAMES keeps Users’ personal information on file for the duration required to satisfy the aims of this Section and for the purpose of defending its contractual and/or tortious liability. Upon expiration of this duration, only anonymous statistical data are retained and will not be exploited in any manner whatsoever.
-
-Subject to providing evidence of their identity, Users have the right to access, amend, correct and delete their personal information either via their Account or by writing to TyGAMES at the following email address: [hello@ty.games](mailto:hello@ty.games), or the following postal address: TyGAMES 3A rue de Paris, Cesson-Sevigne, France.
-
-**6.2.** TyGAMES uses cookies to collect browsing information for statistical purposes. Users must agree to the use of cookies for any free or premium subscription.
-
-TyGAMES also reserves the right to collect certain types of information relating to the User’s computer (IP address, ISP, hardware, software configuration, etc.) and the Services (log and history of all data exchanged, log and history of all logins, etc.).
-
-TyGAMES may use this information for any purposes whatsoever, especially for improving Users’ experience of the Services and ensuring Users’ compliance with these Terms.
-
-TyGAMES may use all the information available on its servers to carry out any types of checks for the purpose of preventing and sanctioning violations of these Terms.
-
-**6.3.** TyGAMES generally agrees to never disclose Users’ personal information, except where consent has specifically been obtained from the Users or in exceptional circumstances as described below.
-
-TyGAMES has listed the following cases where Users’ personal information may be subject to disclosure:
-
-- It may be necessary − by law, legal process, litigation and/or requests from public and governmental authorities within or outside the User’s country of residence − for TyGAMES to disclose the aforementioned personal information.
-- TyGAMES may also disclose such information if disclosure is necessary for purposes of national security, law enforcement or other issues of public importance.
-- TyGAMES may also disclose Users’ personal information if disclosure is reasonably necessary to enforce these Terms or protect its operations or Users.
-- In the event of a reorganisation, TyGAMES may transfer any and all personal information collected to the relevant third party.
+TyGAMES processes Users’ personal data as described in the [Privacy Policy](#who-we-are) above.
 
 ## 7. Hypertext Links
 
