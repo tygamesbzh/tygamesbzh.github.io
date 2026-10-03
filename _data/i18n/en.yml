@@ -13,7 +13,7 @@ urls:
   submit: /en/pitch
   join: /en/invest
   legal: /legal
-  privacy: /privacy
+  privacy: /privacy-policy-and-terms-of-use/
 
 nav:
   home: Home

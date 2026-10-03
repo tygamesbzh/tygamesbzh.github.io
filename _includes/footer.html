@@ -56,7 +56,7 @@
       <div>
         <h4 class="font-heading font-semibold text-xs uppercase tracking-widest text-muted/40 mb-4">{{ t.footer.legal_heading }}</h4>
         <ul class="space-y-2">
-          <li><span class="text-sm text-muted/40">SIRET 931 717 242</span></li>
+          <li><span class="text-sm text-muted/40">SIRET {{ site.siret }}</span></li>
           <li><span class="text-sm text-muted/40">R.C.S. Rennes</span></li>
           <li><a href="{{ t.urls.legal | relative_url }}" class="footer-link">{{ t.footer.legal_notice }}</a></li>
           <li><a href="{{ t.urls.privacy | relative_url }}" class="footer-link">{{ t.footer.privacy }}</a></li>

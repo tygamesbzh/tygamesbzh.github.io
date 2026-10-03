@@ -3,6 +3,7 @@ layout: privacy
 title: Politique de confidentialité
 description: "Politique de confidentialité et conditions d'utilisation de TyGAMES."
 permalink: /privacy/
+lang_alternate: /privacy-policy-and-terms-of-use/
 hero_h1: Politique de confidentialité
 toc_heading: Sommaire
 toc:
