@@ -1143,6 +1143,10 @@ ul.distrib-card-body {
   z-index: 50;
 }
 
+.order-first {
+  order: -9999;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1231,10 +1235,6 @@ ul.distrib-card-body {
 
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.mt-32 {
-  margin-top: 8rem;
 }
 
 .mt-4 {
@@ -1435,6 +1435,10 @@ ul.distrib-card-body {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
 
 .flex-1 {
@@ -1907,10 +1911,6 @@ ul.distrib-card-body {
   padding-left: 1.25rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -2327,8 +2327,21 @@ ul.distrib-card-body {
 }
 
 @media (min-width: 768px) {
+  .md\:order-last {
+    order: 9999;
+  }
+
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .md\:mt-32 {
+    margin-top: 8rem;
   }
 
   .md\:flex {
@@ -2341,6 +2354,10 @@ ul.distrib-card-body {
 
   .md\:h-\[100px\] {
     height: 100px;
+  }
+
+  .md\:max-w-none {
+    max-width: none;
   }
 
   .md\:scroll-mt-\[116px\] {
@@ -2361,6 +2378,14 @@ ul.distrib-card-body {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
   }
 
   .md\:gap-20 {
@@ -2391,6 +2416,14 @@ ul.distrib-card-body {
   .md\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .md\:text-left {
+    text-align: left;
   }
 
   .md\:text-2xl {

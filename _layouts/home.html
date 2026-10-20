@@ -4,9 +4,9 @@ layout: page
 
 {% assign t = site.data.i18n[page.lang] %}
 
-<section class="bg-offwhite min-h-[90vh] flex items-center pb-24 pt-0 relative overflow-hidden">
-  <div class="section-container grid md:grid-cols-2 gap-16 items-center w-full">
-    <div>
+<section class="bg-offwhite min-h-[90vh] flex items-center pb-24 pt-8 md:pt-0 relative overflow-hidden">
+  <div class="section-container grid md:grid-cols-2 gap-8 md:gap-16 items-center w-full">
+    <div class="text-center md:text-left">
       <!-- <p class="section-eyebrow text-accent mb-6 flex items-center gap-3">
         <span class="block w-7 h-px bg-accent"></span>
         {{ page.tagline }}
@@ -14,16 +14,16 @@ layout: page
       <h1 class="font-heading font-extrabold leading-tight mb-6 text-ink" style="font-size: clamp(2.8rem, 6vw, 5rem)">
         {{ page.hero_h1_pre }} <br><em class="not-italic text-accent">{{ page.hero_h1_em }}</em>
       </h1>
-      <p class="text-lg text-ink leading-relaxed mb-10 max-w-md">
+      <p class="text-lg text-ink leading-relaxed mb-10 max-w-md mx-auto md:mx-0">
         {{ page.hero_body }}
       </p>
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap justify-center md:justify-start gap-4">
         <a href="{{ t.urls.games | relative_url }}" class="btn-primary">{{ page.hero_cta_games }}</a>
         <a href="{{ t.urls.cooperative_fonctionnement | relative_url }}" class="btn-outline">{{ page.hero_cta_coop }}</a>
       </div>
     </div>
 
-    <div class="hidden mt-32 md:flex aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
+    <div class="flex order-first md:order-last w-full max-w-xs mx-auto md:max-w-none md:mx-0 md:mt-32 aspect-[4/3] bg-white/5 rounded-2xl border border-white/10 items-center justify-center">
       <img src="{{ '/assets/img/presentation.png' | relative_url }}" alt="TyGAMES">
     </div>
   </div>
