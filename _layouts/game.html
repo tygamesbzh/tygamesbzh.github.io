@@ -76,7 +76,7 @@ layout: default
         {% if page.screenshots %}
           <div class="grid grid-cols-2 gap-2">
             {% for ss in page.screenshots %}
-              <a href="{{ '/assets/img/games/' | append: ss | relative_url }}" target="_blank" rel="noopener" class="block aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-accent transition-colors">
+              <a href="{{ '/assets/img/games/' | append: ss | relative_url }}" target="_blank" rel="noopener" data-lightbox-index="{{ forloop.index0 }}" class="block aspect-video rounded-lg overflow-hidden border border-white/10 hover:border-accent transition-colors">
                 <img src="{{ '/assets/img/games/' | append: ss | relative_url }}" alt="{{ page.game }} screenshot {{ forloop.index }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
               </a>
             {% endfor %}
@@ -93,6 +93,83 @@ layout: default
   </div>
 </article>
 
+{% if page.screenshots %}
+<dialog id="lightbox" class="bg-transparent p-0 max-w-none max-h-none overflow-visible backdrop:bg-ink/90" aria-label="{{ page.game }}">
+  <img id="lightbox-img" src="" alt="" class="block max-w-[92vw] max-h-[85vh] rounded-lg">
+  <button type="button" data-lightbox-close class="fixed top-4 right-4 w-11 h-11 rounded-full bg-white/10 text-offwhite text-2xl leading-none hover:bg-accent transition-colors" aria-label="{{ t.game.close }}">&times;</button>
+  {% if page.screenshots.size > 1 %}
+  <button type="button" data-lightbox-prev class="fixed left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 text-offwhite text-3xl leading-none hover:bg-accent transition-colors" aria-label="{{ t.game.previous }}">&lsaquo;</button>
+  <button type="button" data-lightbox-next class="fixed right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 text-offwhite text-3xl leading-none hover:bg-accent transition-colors" aria-label="{{ t.game.next }}">&rsaquo;</button>
+  {% endif %}
+</dialog>
+
+<script>
+  // Open screenshots in an in-page lightbox; links still open the image directly without JS.
+  (function () {
+    var dialog = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    var links = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox-index]'));
+    if (!dialog || !dialog.showModal || !links.length) return;
+    var current = 0;
+    var closeTimer;
+    var FADE_MS = 200; // keep in sync with the #lightbox transition below
+
+    function show(i) {
+      current = (i + links.length) % links.length;
+      var thumb = links[current].querySelector('img');
+      img.src = links[current].href;
+      img.alt = thumb ? thumb.alt : '';
+    }
+
+    function open(i) {
+      clearTimeout(closeTimer);
+      show(i);
+      if (!dialog.open) dialog.showModal();
+      document.documentElement.style.overflow = 'hidden';
+      void dialog.offsetWidth; // commit opacity: 0 so the fade-in transition runs
+      dialog.classList.add('is-open');
+    }
+
+    function close() {
+      if (!dialog.open) return;
+      dialog.classList.remove('is-open');
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { dialog.close(); }, FADE_MS);
+    }
+
+    links.forEach(function (link, i) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        open(i);
+      });
+    });
+
+    // Esc: fade out instead of closing instantly.
+    dialog.addEventListener('cancel', function (e) {
+      e.preventDefault();
+      close();
+    });
+
+    dialog.addEventListener('close', function () {
+      dialog.classList.remove('is-open');
+      document.documentElement.style.overflow = '';
+    });
+
+    // Backdrop clicks target the dialog itself.
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog || e.target.hasAttribute('data-lightbox-close')) close();
+      else if (e.target.hasAttribute('data-lightbox-prev')) show(current - 1);
+      else if (e.target.hasAttribute('data-lightbox-next')) show(current + 1);
+    });
+
+    dialog.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+  })();
+</script>
+{% endif %}
+
 <style>
 .game-text { max-width: 42rem; color: #0d0d12; line-height: 1.625; }
 .game-text > * + * { margin-top: 1rem; }
@@ -103,4 +180,7 @@ layout: default
 .game-text strong { color: #0d0d12; }
 .game-text a { color: #EC8B0E; }
 .game-text a:hover { color: #ED6B0E; }
+#lightbox, #lightbox::backdrop { opacity: 0; transition: opacity 200ms ease; }
+#lightbox.is-open, #lightbox.is-open::backdrop { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { #lightbox, #lightbox::backdrop { transition: none; } }
 </style>

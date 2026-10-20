@@ -44,6 +44,9 @@ footer:
 
 game:
   back: Retour au catalogue
+  close: Fermer
+  previous: Image précédente
+  next: Image suivante
 
 cta:
   devs_heading: "Vous développez un jeu ?"
