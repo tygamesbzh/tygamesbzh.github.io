@@ -56,7 +56,7 @@ publishing:
   intro_post: "."
   intro_secondary: "Applications are reviewed by the Cooperative Council and management, once per quarter."
   budget_eyebrow: "Budget per game"
-  budget_amount: "< €15,000"
+  budget_amount: "~€15,000"
   budget_note: "Our budgets are still very modest and can't cover full production."
   offer:
     heading: "With this budget, depending on your needs:"

@@ -44,6 +44,8 @@ footer:
 
 game:
   back: Retour au catalogue
+
+lightbox:
   close: Fermer
   previous: Image précédente
   next: Image suivante

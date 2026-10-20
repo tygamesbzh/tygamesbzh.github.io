@@ -8,7 +8,7 @@ hero_h1_em: fréquentes
 hero_subtitle: "Toutes les questions que vous nous avez posées sur la coopérative."
 questions:
   - id: replay-presentation
-    question: "Où puis-je revoir le replay de la présentation ?"
+    question: "Où puis-je revoir le replay de la présentation de juillet 2026 ?"
     answer: "Vous pouvez revoir l'intégralité de la présentation juste ici :"
     video: fjdh0StTRNk
   - id: resident-etranger-parts

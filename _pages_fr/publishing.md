@@ -56,7 +56,7 @@ publishing:
   intro_post: "."
   intro_secondary: "Les candidatures sont étudiées par le Conseil Coopératif et la gérance, une fois par trimestre."
   budget_eyebrow: "Enveloppe par jeu"
-  budget_amount: "< 15 000 €"
+  budget_amount: "~15 000 €"
   budget_note: "Nos budgets sont encore très modestes, ils ne peuvent pas couvrir une production complète."
   offer:
     heading: "Avec cette enveloppe et selon vos besoins :"
