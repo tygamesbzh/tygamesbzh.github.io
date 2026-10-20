@@ -33,7 +33,7 @@ reminders:
     - heading: "Capital bloqué"
       body: "L'argent investi sera potentiellement bloqué pendant plusieurs années et n'est donc pas disponible à court terme."
     - heading: "Pas de plus-value sur les parts"
-      body: "La coopérative empêche les plus-values sur les parts sociales. Vous récupérerez au mieux la même somme investie en quittant le sociétariat. En revanche, des dividendes sont possibles."
+      body: "La coopérative limite fortement les plus-values sur les parts sociales. Vous récupérerez au mieux la même somme investie en quittant le sociétariat. En revanche, des dividendes sont possibles."
 subscribe:
   heading: "Je suis prêt·e !"
   intro: "Génial ! Comment faire :"
