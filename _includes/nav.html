@@ -3,12 +3,12 @@
 {% assign switcher_url = page.lang_alternate | default: t.nav.lang_switch_url %}
 
 <header class="fixed top-0 left-0 right-0 z-50 h-[72px] md:h-[100px] bg-ink">
-  <nav class="relative z-10 section-container h-full flex items-center justify-between">
-    <a href="{{ t.urls.home | relative_url }}" class="flex items-center">
-      <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-12 md:h-[64px] w-auto">
+  <nav class="relative z-10 section-container md:px-4 lg:px-6 xl:px-16 h-full flex items-center justify-between gap-3">
+    <a href="{{ t.urls.home | relative_url }}" class="flex items-center shrink-0">
+      <img src="{{ '/assets/img/logo_white.png' | relative_url }}" alt="TyGAMES" class="h-10 xl:h-[64px] w-auto max-w-none object-contain">
     </a>
 
-    <ul class="hidden md:flex items-center gap-8">
+    <ul class="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-8 whitespace-nowrap">
       <li><a href="{{ t.urls.home | relative_url }}" class="nav-link">{{ t.nav.home }}</a></li>
       <li><a href="{{ t.urls.games | relative_url }}" class="nav-link">{{ t.nav.games }}</a></li>
       <li><a href="{{ t.urls.publishing | relative_url }}" class="nav-link">{{ t.nav.publishing }}</a></li>
@@ -31,9 +31,11 @@
       <li><a href="{{ t.urls.contact | relative_url }}" class="nav-link">{{ t.nav.contact }}</a></li>
     </ul>
 
-    <div class="hidden md:flex items-center gap-3">
-      <a href="{{ t.urls.submit | relative_url }}" class="btn-outline text-sm py-2 px-4">{{ t.nav.submit_game }}</a>
-      <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm py-2 px-4">{{ t.nav.join }}</a>
+    <div class="hidden md:flex items-center gap-2 xl:gap-3 whitespace-nowrap">
+      <div class="flex flex-col lg:flex-row gap-1 lg:gap-2 xl:gap-3">
+        <a href="{{ t.urls.submit | relative_url }}" class="btn-outline text-sm text-center py-1 lg:py-2 px-3 xl:px-4">{{ t.nav.submit_game }}</a>
+        <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm text-center py-1 lg:py-2 px-3 xl:px-4">{{ t.nav.join }}</a>
+      </div>
       <a href="{{ switcher_url | relative_url }}" class="text-sm text-offwhite hover:text-accent border border-white/20 rounded px-2.5 py-1.5 transition-colors" aria-label="Switch language">{{ t.nav.lang_switch_label }}</a>
     </div>
 
