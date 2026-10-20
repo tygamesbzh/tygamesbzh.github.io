@@ -8,8 +8,8 @@ hero_h1_em: values
 hero_subtitle: "These values are our pillars and our direction"
 section_nav:
   - { id: respect,      label: Respect }
-  - { id: inclusivite,  label: Inclusivity }
   - { id: transparence, label: Transparency }
+  - { id: inclusivite,  label: Inclusivity }
   - { id: no-ia,        label: "No gen AI" }
 values:
   - id: respect
@@ -22,7 +22,9 @@ values:
       - title: "Ownership stays with the creators"
         body: "Works always remain the property of their developers."
       - title: "Fair terms"
-        body: "Publishing and distribution terms are fair and the same for everyone. The contract is non-binding."
+        body: "Publishing and distribution terms are fair. They are the same for everyone."
+      - title: "Flexible contract end"
+        body: "If there is no outstanding debt, you can take back distribution quickly."
       - title: "Profits reinvested"
         body: "Profits are reinvested as much as possible across all projects, by collective decision."
   - id: transparence

@@ -52,7 +52,7 @@ cta:
   devs_button: "Submit my game →"
   coop_eyebrow: "The cooperative"
   coop_heading: "Join us!"
-  coop_body: "Professionals, creators, players: every member counts.<br />Find out how we work and how to become a member."
+  coop_body: "Professionals, creators, players:<br />every member counts.<br />Find out how we work and how to become a member."
   coop_button: "Join us →"
 
 subscription:
@@ -60,7 +60,7 @@ subscription:
   current_label: "Current"
   goal_label: "Goal"
   shares_unit: "social shares"
-  in_progress_label: "Currently being reached"
+  in_progress_label: "Pledges"
   pct_suffix: "%"
   cta: "Invest"
   cta_invest: "Subscribe"

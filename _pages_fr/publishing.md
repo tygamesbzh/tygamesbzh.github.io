@@ -51,7 +51,7 @@ distribution:
 publishing:
   section_id: edition
   heading: "Éditeur"
-  intro_pre: "L'édition est une offre incluant la distribution, ainsi que qu'un financement modeste. Principalement en services, créations et portages. Nous ne finançons pas, pour l'instant, la production. Prenez connaissance de notre offre, puis"
+  intro_pre: "L'édition est une offre incluant la distribution, ainsi qu'un financement modeste. Principalement en services, créations et portages. Nous ne finançons pas, pour l'instant, la production. Prenez connaissance de notre offre, puis"
   intro_link: "soumettez votre projet"
   intro_post: "."
   intro_secondary: "Les candidatures sont étudiées par le Conseil Coopératif et la gérance, une fois par trimestre."

@@ -17,6 +17,8 @@
 {% else %}
   {% assign progress_pct = acquired_pct %}
 {% endif %}
+{% comment %}Pledges stack on top of acquired shares in the invest variant bar.{% endcomment %}
+{% assign pledged_bar_pct = s.acquired | plus: s.in_progress | times: 100 | divided_by: s.goal | at_most: 100 %}
 
 {% if include.variant == "invest" %}
 <section class="bg-offwhite">
@@ -41,7 +43,7 @@
             </p>
           </div>
           <div class="relative h-3 w-full rounded-full bg-ink/10 overflow-hidden">
-            <div class="absolute inset-y-0 left-0 bg-accent/30 transition-all duration-500" style="width: {{ progress_pct }}%"></div>
+            <div class="absolute inset-y-0 left-0 bg-accent/30 transition-all duration-500" style="width: {{ pledged_bar_pct }}%"></div>
             <div class="absolute inset-y-0 left-0 bg-accent transition-all duration-500" style="width: {{ acquired_pct }}%"></div>
           </div>
         </div>

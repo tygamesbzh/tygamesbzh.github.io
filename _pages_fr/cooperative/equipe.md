@@ -7,7 +7,7 @@ hero_h1_pre: Notre
 hero_h1_em: équipe
 hero_subtitle: "Composition de la direction, du conseil coopératif et nos principaux partenaires."
 team_categories:
-  direction: L'éxecutif
+  direction: L'exécutif
   partenaires: Partenaires
   conseil: Conseil Coopératif
 ---

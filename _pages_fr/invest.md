@@ -38,9 +38,10 @@ subscribe:
   heading: "Je suis prêt·e !"
   intro: "Génial ! Comment faire :"
   steps:
-    - "Téléchargez et complétez le bulletin de souscription anticipée de parts socials"
+    - "Téléchargez et complétez le bulletin de souscription anticipée de parts sociales"
     - "Envoyez-le nous à <b>cooperative@ty.games</b>"
     - "On vous répondra rapidement !"
+  diagram_alt: "Schéma de souscription"
   cta_label: "Télécharger le bulletin de souscription"
   cta_send: "L'envoyer à cooperative@ty.games"
   thanks: "Merci ! <3"

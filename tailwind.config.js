@@ -5,6 +5,8 @@ module.exports = {
     './_includes/**/*.html',
     './_games/**/*.{md,html}',
     './_posts/**/*.{md,html}',
+    './_pages_fr/**/*.md',
+    './_pages_en/**/*.md',
     './**/*.html',
     '!./node_modules/**',
     '!./_site/**',

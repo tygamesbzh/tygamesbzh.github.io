@@ -34,7 +34,7 @@ distribution:
         - "One-off deals (boxed, bundle, game pass…)"
     - heading: "Minimal revshare"
       bullets:
-        - "Without invest, we take the minimum and it's the same for everyone"
+        - "Without significant investment, we take the minimum and it's the same for everyone"
         - "10% Steam / PC"
         - "20% mobile"
         - "30% consoles"
@@ -51,7 +51,7 @@ distribution:
 publishing:
   section_id: publishing
   heading: "Publisher"
-  intro_pre: "Publishing is a forward step, which include distribution and adding modestly fund services, original creations and ports. We cannot fund, for now, production. Read our offer, then"
+  intro_pre: "Publishing is an offer that includes distribution, along with modest funding, mainly in services, creative work and ports. For now, we don't fund production. Read our offer, then"
   intro_link: "submit your project"
   intro_post: "."
   intro_secondary: "Applications are reviewed by the Cooperative Council and management, once per quarter."
@@ -80,7 +80,8 @@ porting:
   heading: "Console ports"
   paragraphs:
     - "We do Unity and Godot ports in-house, with strong technical expertise and prior experience on each console."
-    - "We own devkits and testkits. You can retrieve the source code at the end of the port."
+    - "We own devkits and testkits."
+    - "You can retrieve the source code at the end of the port."
   badges:
     - "Nintendo Switch"
     - "PlayStation 5"

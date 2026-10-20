@@ -86,8 +86,10 @@ layout: page
         <h3 class="distrib-card-title text-ink">{{ page.publishing.return.heading }}</h3>
         <ul class="space-y-2 text-sm text-ink/70">
           {% for item in page.publishing.return.items %}
-          <li class="checklist-item"><span class="checklist-check">→</span>{{ item.text }}</li>
-          {% if item.aside %}<span class="ml-4 text-ink/40">{{ item.aside }}</span>{% endif %}
+          <li>
+            <div class="checklist-item"><span class="checklist-check">→</span>{{ item.text }}</div>
+            {% if item.aside %}<span class="ml-4 text-ink/40">{{ item.aside }}</span>{% endif %}
+          </li>
           {% endfor %}
         </ul>
       </div>

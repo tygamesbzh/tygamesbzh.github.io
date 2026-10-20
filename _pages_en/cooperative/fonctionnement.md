@@ -53,8 +53,9 @@ organisation:
 colleges:
   heading: "Voting colleges"
   intro_paragraphs:
-    - "The membership is organised into <strong>colleges</strong>, one per category of member. In our SCIC: <strong>1 person = 1 vote</strong>, weighted by college."
-    - "Holding a lot of capital does not grant more power. Our colleges are designed to favour those who contribute through <strong>their work</strong> and/or <strong>their games</strong>."
+    - "The membership is organised into <strong>colleges</strong>, one per category of member."
+    - "In our SCIC: <strong>1 person = 1 vote</strong>, weighted by college. Holding a lot of capital does not grant more power."
+    - "Our colleges are designed to favour those who contribute through <strong>their work</strong> and/or <strong>their games</strong>."
   headers:
     college: College
     votes: Votes

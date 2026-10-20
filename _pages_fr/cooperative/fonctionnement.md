@@ -45,7 +45,7 @@ organisation:
         - "L'ensemble des personnes ayant souscrit à des parts sociales, ayant donc investi de l'argent dans TyGAMES."
         - "Les sociétaires ont le pouvoir et le devoir de :"
       bullets:
-        - "Désigner la Présidence et les Directeur.ice.s généraux à l'issue des mandats"
+        - "Désigner la Présidence et les Directeur·ice·s Général·e·s à l'issue des mandats"
         - "Désigner les membres du Conseil Coopératif"
         - "Participer aux Assemblées Générales (AG) pour définir les budgets, la direction de la société, le fonctionnement."
       outro_paragraphs:
@@ -63,7 +63,7 @@ colleges:
     profile: Profil
     condition: Condition
   rows:
-    - name: Éxécutif
+    - name: Exécutif
       votes: "30 %"
       min_shares: "10"
       profile: "Associé·e·s, gestionnaires, salarié·e·s qui s'impliquent pour la société et garantissent la vision. <br /> Inclut la présidence et la direction générale."
@@ -81,7 +81,7 @@ colleges:
     - name: Communauté
       votes: "15 %"
       min_shares: "1"
-      profile: "Joueur·euse·s, créateur·ice·s de contenu, professionnel.le.s ou toute personne intéressé·e par les jeux vidéo."
+      profile: "Joueur·euse·s, créateur·ice·s de contenu, professionnel·le·s ou toute personne intéressé·e par les jeux vidéo."
       condition: "-"
     - name: "Mentors & volontaires"
       votes: "15 %"

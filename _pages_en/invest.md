@@ -7,7 +7,7 @@ pdf_path: /assets/bulletin.pdf
 schema: invest_en.png
 hero_h1_pre: "Join the"
 hero_h1_em: "cooperative"
-hero_subtitle: "Invest and purchase social shares"
+hero_subtitle: "Invest and purchase social shares. Take part in the cooperative's decisions and support a unique initiative in the French video game industry."
 prerequisites:
   heading: "Prerequisites"
   intro: "Before joining the membership, make sure you have read and understood the documents below."
@@ -29,19 +29,20 @@ reminders:
   intro: "Investing in a cooperative is not a traditional financial investment."
   cards:
     - heading: "Only invest what you can afford to lose"
-      body: "Like any investment, your capital is exposed to the risk of partial or total loss."
+      body: "Your capital is exposed to the risk of partial or total loss."
     - heading: "Locked capital"
-      body: "The money invested will be locked for several years."
-    - heading: "No profit on shares"
-      body: "The cooperative does not generate profits on social shares. You will recover the same amount invested when leaving the membership."
+      body: "The money invested may be locked for several years and is therefore not available in the short term."
+    - heading: "No capital gains on shares"
+      body: "The cooperative prevents capital gains on social shares. At best, you will recover the same amount invested when leaving the membership. Dividends are possible, however."
 subscribe:
   heading: "I'm ready!"
-  intro: "Great! We've opened the subscription process!"
+  intro: "Great! Here's how:"
   note: "Note: the subscription process is currently only available in French. Feel free to <a href=\"/en/contact/\" class=\"underline hover:text-accent\">contact us</a> if you have any questions."
   steps:
     - "Download, fill and sign the subscription document (french only)"
     - "Send it to <b>cooperative@ty.games</b>"
     - "We will contact you shortly!"
+  diagram_alt: "Subscription diagram"
   cta_label: "Download subscription document"
   cta_send: "Send to cooperative@ty.games"
   thanks: "Thank you! <3"

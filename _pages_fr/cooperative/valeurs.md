@@ -5,11 +5,11 @@ description: "Nos valeurs"
 lang_alternate: /en/cooperative/valeurs/
 hero_h1_pre: Nos
 hero_h1_em: valeurs
-hero_subtitle: "Ces valeurs sont nos pilliers et notre direction"
+hero_subtitle: "Ces valeurs sont nos piliers et notre direction"
 section_nav:
   - { id: respect,      label: Respect }
-  - { id: inclusivite,  label: Inclusivité }
   - { id: transparence, label: Transparence }
+  - { id: inclusivite,  label: Inclusivité }
   - { id: no-ia,        label: "No IA gen" }
 values:
   - id: respect

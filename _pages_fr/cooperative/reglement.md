@@ -1,10 +1,10 @@
 ---
 layout: pdf-viewer
-title: Réglement Intérieur
-description: "Notre réglement intérieur"
+title: Règlement Intérieur
+description: "Notre règlement intérieur"
 lang_alternate: /en/cooperative/reglement/
-hero_h1: Réglement Intérieur
+hero_h1: Règlement Intérieur
 download_label: "Télécharger le PDF"
 pdf_path: /assets/reglement.pdf
-pdf_title: "Réglement Intérieur TyGAMES"
+pdf_title: "Règlement Intérieur TyGAMES"
 ---

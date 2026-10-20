@@ -81,6 +81,6 @@ questions:
     question: "How are decisions concerning studios made?"
     answer: "The studio remains the decision-maker on everything concerning their productions and their games. We discuss and give advice, but in the end we don't make the final decision (e.g. presence on a platform, pricing, etc.)."
   - id: salarie-parts-individuel
-    question: "I'm already an employee at a studio :  can I buy shares as an individual?"
+    question: "I'm already an employee at a studio: can I buy shares as an individual?"
     answer: "Yes, no problem at all!"
 ---
