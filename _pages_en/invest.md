@@ -33,7 +33,7 @@ reminders:
     - heading: "Locked capital"
       body: "The money invested may be locked for several years and is therefore not available in the short term."
     - heading: "No capital gains on shares"
-      body: "The cooperative prevents capital gains on social shares. At best, you will recover the same amount invested when leaving the membership. Dividends are possible, however."
+      body: "The cooperative strongly limits capital gains on social shares. At best, you will recover the same amount invested when leaving the membership. Dividends are possible, however."
 subscribe:
   heading: "I'm ready!"
   intro: "Great! Here's how:"
