@@ -2,6 +2,7 @@ urls:
   home: /
   games: /games/
   publishing: /publishing/
+  erp: /erp/
   cooperative: /cooperative/fonctionnement/
   cooperative_fonctionnement: /cooperative/fonctionnement/
   cooperative_equipe: /cooperative/equipe/
@@ -19,6 +20,7 @@ nav:
   home: Accueil
   games: Nos jeux
   publishing: Édition/Distribution
+  erp: ERP
   cooperative: La Coopérative
   cooperative_fonctionnement: Fonctionnement
   cooperative_equipe: L'équipe
