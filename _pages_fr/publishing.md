@@ -10,40 +10,45 @@ section_nav:
   - { id: distribution, label: Distribution }
   - { id: edition,      label: Édition }
   - { id: portage,      label: Portage }
-  - { id: erp,          label: ERP }
 distribution:
   heading: "Distributeur de jeux vidéo"
   intro: "Nous prenons en charge la partie administrative et commerciale pour que les studios se concentrent sur la création."
   cards:
     - heading: "Accès aux plateformes"
+      icon: store
       bullets:
         - "Mise en vente sur les principales plateformes de vente en ligne de jeux vidéo."
       footer: "Steam, Epic, Humble, GOG, Apple Store, Play Store, Nintendo eShop, Xbox, PlayStation Store, etc."
     - heading: "Simplification administrative"
+      icon: file-invoice
       bullets:
-        - "Enregistrement fiscal auprès des stores"
         - "Agrégation devises étrangères"
         - "Paiements en €"
+        - "Enregistrement fiscal auprès des stores"
         - "Calcul et paiement des revshares entre ayants droits"
         - "Gestion des remboursements et paliers évolutifs"
         - "Déclaration URSSAF droits d'auteur (précomptés ou non)"
     - heading: "Force du catalogue"
+      icon: layer-group
       bullets:
         - "Contacts privilégiés au sein des stores"
         - "Mises en avant sur les plateformes"
         - "Deals ponctuels (boîte, bundle, game pass…)"
     - heading: "Revshare minimal"
+      icon: percent
       bullets:
         - "Sans investissement important, nous prenons le minimum et c'est le même pour tout le monde"
         - "10% Steam / PC"
         - "20% mobile"
         - "30% consoles"
     - heading: "Nouvelles opportunités"
+      icon: rocket
       bullets:
         - "Présence mutualisée sur les salons"
         - "Distribution vers la Chine"
         - "Accès aux nouvelles plateformes (Genba, nuuvem…)"
     - heading: "Communauté"
+      icon: users
       bullets:
         - "Rejoindre un Discord"
         - "Annuaire de freelances talentueux"
@@ -86,16 +91,4 @@ porting:
     - "Nintendo Switch"
     - "PlayStation 5"
     - "Xbox Series"
-erp:
-  heading: "ERP"
-  intro: "Le logiciel interne de TyGAMES, conçu pour centraliser et automatiser toute la gestion de la distribution et des royalties."
-  screenshot_alt: "ERPirate - capture"
-  items:
-    - "Gestion des données studios (nom, adresse, IBAN…)"
-    - "Unification des données de ventes de tous les stores en un seul format"
-    - "Accès des studios à leurs données de ventes via une interface web dédiée"
-    - "Génération de rapports PDF / appels à factures à la demande"
-    - "Calcul automatisé des royalties et répartition entre ayants droits"
-    - "Suivi de la recoupe et gestion des dettes contractualisées"
-    - "Régulations correctives"
 ---

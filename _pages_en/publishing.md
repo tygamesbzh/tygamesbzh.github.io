@@ -10,16 +10,17 @@ section_nav:
   - { id: distribution, label: Distribution }
   - { id: publishing,   label: Publishing }
   - { id: porting,      label: Porting }
-  - { id: erp,          label: ERP }
 distribution:
   heading: "Video game distributor"
   intro: "We handle the administrative and commercial side so studios can focus on creation."
   cards:
     - heading: "Platform access"
+      icon: store
       bullets:
         - "Release on the major online video game stores."
       footer: "Steam, Epic, Humble, GOG, Apple Store, Play Store, Nintendo eShop, Xbox, PlayStation Store, etc."
     - heading: "Administrative simplification"
+      icon: file-invoice
       bullets:
         - "Tax registration with stores"
         - "Foreign currency aggregation"
@@ -28,22 +29,26 @@ distribution:
         - "Refund handling and tiered scaling"
         - "URSSAF royalties declaration (withheld or not)"
     - heading: "Catalogue strength"
+      icon: layer-group
       bullets:
         - "Direct contacts within the stores"
         - "Featuring on platforms"
         - "One-off deals (boxed, bundle, game pass…)"
     - heading: "Minimal revshare"
+      icon: percent
       bullets:
         - "Without significant investment, we take the minimum and it's the same for everyone"
         - "10% Steam / PC"
         - "20% mobile"
         - "30% consoles"
     - heading: "New opportunities"
+      icon: rocket
       bullets:
         - "Shared presence at trade shows"
         - "Distribution to China"
         - "Access to new platforms (Genba, nuuvem…)"
     - heading: "Community"
+      icon: users
       bullets:
         - "Join a Discord"
         - "Directory of skilled freelancers"
@@ -86,16 +91,4 @@ porting:
     - "Nintendo Switch"
     - "PlayStation 5"
     - "Xbox Series"
-erp:
-  heading: "ERP"
-  intro: "TyGAMES' in-house software, built to centralise and automate distribution and royalties management."
-  screenshot_alt: "ERPirate screenshot"
-  items:
-    - "Studio data management (name, address, IBAN…)"
-    - "Sales data unified across every store into a single format"
-    - "Studio access to their sales data via a dedicated web interface"
-    - "On-demand PDF reports / invoice requests"
-    - "Automated royalty calculation and split between rights holders"
-    - "Recoupment tracking and contractualised debt management"
-    - "Corrective adjustments"
 ---

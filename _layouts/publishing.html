@@ -34,10 +34,13 @@ layout: page
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
       {% for card in page.distribution.cards %}
-      <div class="card">
-        <h3 class="distrib-card-title">{{ card.heading }}</h3>
+      <div class="card p-5">
+        <h3 class="distrib-card-title flex items-center gap-2.5">
+          {% if card.icon %}{% include fa-icon.html icon=card.icon class="w-5 h-5 shrink-0" %}{% endif %}
+          {{ card.heading }}
+        </h3>
         <ul class="distrib-card-body space-y-1.5 mt-1">
           {% for bullet in card.bullets %}
           <li>{{ bullet }}</li>
@@ -75,20 +78,20 @@ layout: page
     <div class="grid md:grid-cols-2 gap-6 mb-16">
       <div class="card card-light">
         <h3 class="distrib-card-title text-ink">{{ page.publishing.offer.heading }}</h3>
-        <ul class="space-y-2 text-sm text-ink/70">
+        <ul class="list-disc list-outside pl-5 space-y-2 text-sm text-ink/70">
           {% for item in page.publishing.offer.items %}
-          <li class="checklist-item"><span class="checklist-check">✓</span>{{ item }}</li>
+          <li>{{ item }}</li>
           {% endfor %}
         </ul>
       </div>
 
       <div class="card card-light">
         <h3 class="distrib-card-title text-ink">{{ page.publishing.return.heading }}</h3>
-        <ul class="space-y-2 text-sm text-ink/70">
+        <ul class="list-disc list-outside pl-5 space-y-2 text-sm text-ink/70">
           {% for item in page.publishing.return.items %}
           <li>
-            <div class="checklist-item"><span class="checklist-check">→</span>{{ item.text }}</div>
-            {% if item.aside %}<span class="ml-4 text-ink/40">{{ item.aside }}</span>{% endif %}
+            {{ item.text }}
+            {% if item.aside %}<span class="block text-ink/40">{{ item.aside }}</span>{% endif %}
           </li>
           {% endfor %}
         </ul>
@@ -121,33 +124,3 @@ layout: page
     </div>
   </div>
 </section>
-
-<section id="erp" class="section-padding bg-offwhite text-ink">
-  <div class="section-container">
-    <div class="section-intro">
-      <h2 class="section-title mb-5">{{ page.erp.heading }}</h2>
-      <p class="leading-relaxed">{{ page.erp.intro }}</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-16 items-start text-ink/70">
-      <ul class="space-y-4">
-        {% for item in page.erp.items %}
-        <li class="checklist-item">
-          <span class="checklist-check">✓</span>
-          <span class="text-sm leading-relaxed">{{ item }}</span>
-        </li>
-        {% endfor %}
-      </ul>
-
-      <div class="grid grid-cols-2 gap-3">
-        {% for n in (1..4) %}
-        <a href="{{ '/assets/img/erp/erp' | append: n | append: '.png' | relative_url }}" target="_blank" rel="noopener" data-lightbox class="rounded-xl overflow-hidden bg-white/5 border border-white/10 hover:border-accent transition-colors">
-          <img src="{{ '/assets/img/erp/erp' | append: n | append: '.png' | relative_url }}" alt="{{ page.erp.screenshot_alt }} {{ n }}" class="w-full">
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-{% include lightbox.html label=page.erp.heading %}
