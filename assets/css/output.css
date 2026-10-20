@@ -1157,10 +1157,6 @@ ul.distrib-card-body {
   margin-bottom: 0.25rem;
 }
 
-.-mt-12 {
-  margin-top: -3rem;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1724,10 +1720,6 @@ ul.distrib-card-body {
   background-color: rgb(236 139 14 / var(--tw-bg-opacity, 1));
 }
 
-.bg-accent\/10 {
-  background-color: rgb(236 139 14 / 0.1);
-}
-
 .bg-accent\/30 {
   background-color: rgb(236 139 14 / 0.3);
 }
@@ -1824,11 +1816,6 @@ ul.distrib-card-body {
   padding-right: 0.625rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1916,10 +1903,6 @@ ul.distrib-card-body {
 
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
 }
 
 .pt-3 {

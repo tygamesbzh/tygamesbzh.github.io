@@ -46,11 +46,9 @@ game:
   back: Back to catalogue
 
 cta:
-  devs_eyebrow: "Developers, studios, creators"
   devs_heading: "Developing a game?"
   devs_body: "Submit your project to the cooperative.<br />We review every submission carefully."
   devs_button: "Submit my game →"
-  coop_eyebrow: "The cooperative"
   coop_heading: "Join us!"
   coop_body: "Professionals, creators, players:<br />every member counts.<br />Find out how we work and how to become a member."
   coop_button: "Join us →"
@@ -67,7 +65,6 @@ subscription:
 
 newsletter:
   heading: "Follow our news"
-  tags: "New games,Co-op life,Member offers,News"
   block_title_pre: "The "
   block_title_em: "Newsletter"
   block_body: "New releases, co-op behind-the-scenes, member offers. Once a month, on average."
