@@ -11,8 +11,8 @@ hero_cta_games: "Voir nos jeux"
 hero_cta_coop: "La coopérative →"
 stats:
   games_label: "Jeux publiés"
+  members_label: "Sociétaires"
   extras:
-    - { value: "10",  suffix: "+", label: "Équipes et studios" }
     - { value: "7",   suffix: "+", label: "Plateformes" }
     - { value: "100", suffix: "%", label: "Beurre salé" }
 catalog:

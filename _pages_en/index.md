@@ -11,8 +11,8 @@ hero_cta_games: "See our games"
 hero_cta_coop: "The cooperative →"
 stats:
   games_label: "Games published"
+  members_label: "Members"
   extras:
-    - { value: "10",  suffix: "+", label: "Teams and studios" }
     - { value: "7",   suffix: "+", label: "Platforms" }
     - { value: "100", suffix: "%", label: "Salted butter" }
 catalog:

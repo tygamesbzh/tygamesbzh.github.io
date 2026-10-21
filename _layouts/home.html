@@ -36,6 +36,10 @@ layout: page
         <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.games | where_exp: "g", "g.disabled != true" | size }}<span class="text-accent">+</span></div>
         <div class="text-md text-offwhite/80 tracking-wider">{{ page.stats.games_label }}</div>
       </div>
+      <div>
+        <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ site.members }}<span class="text-accent">+</span></div>
+        <div class="text-md text-offwhite/80 tracking-wider">{{ page.stats.members_label }}</div>
+      </div>
       {% for stat in page.stats.extras %}
       <div>
         <div class="font-heading font-extrabold text-4xl text-offwhite mb-1">{{ stat.value }}<span class="text-accent">{{ stat.suffix }}</span></div>
