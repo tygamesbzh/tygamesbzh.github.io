@@ -77,8 +77,8 @@ publishing:
     items:
       - { text: "Your project is followed by a member-mentor" }
       - { text: "Expenses are tracked on a debt slate" }
-      - { text: "This debt is repaid first", aside: "(80% TyGAMES, 20% dev)" }
-      - { text: "Once the debt is cleared, the revshare flips in favour of the dev", aside: "(30% TyGAMES, 70% dev)" }
+      - { text: "This debt is repaid first", aside: "(80% TyGAMES / 20% dev)" }
+      - { text: "Once the debt has been repaid 1.5 times, the revshare flips in favour of the dev", aside: "(10% TyGAMES / 90% dev)" }
       - { text: "The contract cannot be terminated before repayment" }
 porting:
   section_id: porting

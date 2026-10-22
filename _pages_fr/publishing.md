@@ -77,8 +77,8 @@ publishing:
     items:
       - { text: "Votre projet est suivi par un sociétaire mentor" }
       - { text: "Les dépenses s'inscrivent sur une ardoise de dettes" }
-      - { text: "Ces dettes sont remboursées en priorité", aside: "(80% TyGAMES, 20% dev)" }
-      - { text: "Une fois la dette remboursée, le revshare bascule en faveur du dev", aside: "(30% TyGAMES, 70% dev)" }
+      - { text: "Ces dettes sont remboursées en priorité", aside: "(80% TyGAMES / 20% dev)" }
+      - { text: "Une fois la dette remboursée 1.5 fois, le revshare bascule en faveur du dev", aside: "(10% TyGAMES / 90% dev)" }
       - { text: "Le contrat ne peut pas être rompu avant remboursement" }
 porting:
   section_id: portage
