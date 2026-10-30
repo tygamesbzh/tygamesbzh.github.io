@@ -4,7 +4,7 @@ layout: page-nocta
 
 {% assign t = site.data.i18n[page.lang] %}
 
-<section class="section-hero">
+<section class="section-hero pb-4 md:pb-4">
   <div class="section-title-container">
     <h1 class="section-title">
       {{ page.hero_h1_pre }} <em class="not-italic text-accent">{{ page.hero_h1_em }}</em>
@@ -16,50 +16,6 @@ layout: page-nocta
 </section>
 
 {% include subscription-tracker.html variant="home" %}
-
-<section id="prerequis" class="section-padding-small bg-offwhite">
-  <div class="section-container">
-    <div class="section-intro">
-      <h2 class="font-heading font-extrabold text-3xl md:text-4xl leading-tight text-ink mb-5">{{ page.prerequisites.heading }}</h2>
-      <p class="text-ink/70 leading-relaxed">
-        {{ page.prerequisites.intro }}
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      {% for card in page.prerequisites.cards %}
-      <div class="card card-light flex flex-col gap-4 py-8 px-6">
-        <div>
-          <h3 class="font-heading font-bold text-xl text-ink mb-2">{{ card.heading }}</h3>
-          <p class="text-ink/70 text-sm leading-relaxed">{{ card.body }}</p>
-        </div>
-        <a href="{{ t.urls[card.link_url_key] | relative_url }}"
-          class="btn-outline text-sm py-2 px-4 self-start">{{ card.link_label }} →</a>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section id="rappels" class="section-padding-small bg-ink text-offwhite">
-  <div class="section-container">
-    <div class="section-intro">
-      <h2 class="font-heading font-extrabold text-3xl md:text-4xl leading-tight mb-5">{{ page.reminders.heading }}</h2>
-      <p class="strong text-accent leading-relaxed">
-        {{ page.reminders.intro }}
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      {% for card in page.reminders.cards %}
-      <div class="card py-8 px-6">
-        <h3 class="font-heading font-bold text-lg text-offwhite mb-3">{{ card.heading }}</h3>
-        <p class="text-muted/60 text-sm leading-relaxed">{{ card.body }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
 
 {% assign f = page.subscribe.form %}
 <section id="souscrire" class="section-padding-small bg-offwhite">
@@ -80,11 +36,66 @@ layout: page-nocta
       <form id="invest-form" class="space-y-4" novalidate>
         <p class="text-ink/50 text-sm">{{ f.required_note }}</p>
 
-        {% include invest-approval.html approval=f.preamble number=1 id="if-preamble" open=true advance=true %}
+        {% assign p = f.prerequisites %}
+        <details class="form-section" open>
+          <summary class="form-summary">
+            <span class="flex items-center gap-3"><span class="form-step">1</span>{{ p.heading }}</span>
+          </summary>
+          <div class="form-section-body">
+            <p class="text-ink/70 leading-relaxed">{{ p.intro }}</p>
+            <ul class="space-y-3">
+              {% for doc in p.documents %}
+              <li class="text-ink/70 text-sm leading-relaxed">
+                <a href="{{ t.urls[doc.url_key] | relative_url }}" target="_blank" rel="noopener"
+                  class="font-semibold text-base text-ink underline hover:text-accent">{{ doc.label }} ↗</a>
+                <span class="block">{{ doc.body }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            <div>
+              <label class="form-choice items-center font-semibold">
+                <input id="if-read-docs" type="checkbox" role="switch" name="approval" value="{{ p.heading }}" required
+                  aria-describedby="if-read-docs-error" class="form-toggle" data-advance>
+                {{ p.read_label }}
+              </label>
+              <p id="if-read-docs-error" class="form-error" hidden>{{ p.read_error }}</p>
+            </div>
+          </div>
+        </details>
+
+        {% assign r = f.risks %}
+        <details class="form-section">
+          <summary class="form-summary">
+            <span class="flex items-center gap-3"><span class="form-step">2</span>{{ r.heading }}</span>
+          </summary>
+          <div class="form-section-body">
+            <div class="border-l-4 border-accent bg-accent/5 rounded-r-lg p-5 space-y-4">
+              <p class="font-semibold text-accent-dark">{{ r.intro }}</p>
+              <ul class="space-y-3">
+                {% for risk in r.items %}
+                <li class="text-ink/70 text-sm leading-relaxed">
+                  <span class="block font-semibold text-base text-ink">{{ risk.heading }}</span>
+                  {{ risk.body }}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div>
+              <label class="form-choice items-center font-semibold">
+                <input id="if-risks" type="checkbox" role="switch" name="approval" value="{{ r.heading }}" required
+                  aria-describedby="if-risks-error" class="form-toggle" data-advance>
+                {{ r.label }}
+              </label>
+              <p id="if-risks-error" class="form-error" hidden>{{ r.error }}</p>
+            </div>
+          </div>
+        </details>
+
+        {% include invest-approval.html approval=f.preamble number=3 id="if-preamble" advance=true %}
 
         <details class="form-section">
           <summary class="form-summary">
-            <span class="flex items-center gap-3"><span class="form-step">2</span>{{ f.identity.heading }}</span>
+            <span class="flex items-center gap-3"><span class="form-step">4</span>{{ f.identity.heading }}</span>
           </summary>
           <div class="form-section-body">
             <div>
@@ -170,7 +181,7 @@ layout: page-nocta
 
         <details class="form-section">
           <summary class="form-summary">
-            <span class="flex items-center gap-3"><span class="form-step">3</span>{{ f.commitment.heading }}</span>
+            <span class="flex items-center gap-3"><span class="form-step">5</span>{{ f.commitment.heading }}</span>
           </summary>
           <div class="form-section-body">
             <p class="text-ink/70">{{ f.commitment.intro }}</p>
@@ -193,14 +204,14 @@ layout: page-nocta
         </details>
 
         {% for approval in f.approvals %}
-        {% assign number = forloop.index | plus: 3 %}
+        {% assign number = forloop.index | plus: 5 %}
         {% assign approval_id = "if-approval-" | append: forloop.index %}
         {% include invest-approval.html approval=approval number=number id=approval_id %}
         {% endfor %}
 
         <details class="form-section">
           <summary class="form-summary">
-            <span class="flex items-center gap-3"><span class="form-step">{{ f.approvals | size | plus: 4 }}</span>{{ f.college.heading }}</span>
+            <span class="flex items-center gap-3"><span class="form-step">{{ f.approvals | size | plus: 6 }}</span>{{ f.college.heading }}</span>
           </summary>
           <div class="form-section-body">
             <p class="text-ink/70">{{ f.college.intro }}</p>
@@ -224,7 +235,7 @@ layout: page-nocta
 
         <details class="form-section">
           <summary class="form-summary">
-            <span class="flex items-center gap-3"><span class="form-step">{{ f.approvals | size | plus: 5 }}</span>{{ f.sign.heading }}</span>
+            <span class="flex items-center gap-3"><span class="form-step">{{ f.approvals | size | plus: 7 }}</span>{{ f.sign.heading }}</span>
           </summary>
           <div class="form-section-body">
             <div class="grid sm:grid-cols-2 gap-5">

@@ -6,32 +6,6 @@ lang_alternate: /invest/
 hero_h1_pre: "Join the"
 hero_h1_em: "cooperative"
 hero_subtitle: "Invest and purchase social shares. Take part in the cooperative's decisions and support a unique initiative in the French video game industry."
-prerequisites:
-  heading: "Prerequisites"
-  intro: "Before joining the membership, make sure you have read and understood the documents below."
-  cards:
-    - heading: "How it works"
-      body: "Learn about the internal organisation, voting colleges, and the role of members."
-      link_label: "Read"
-      link_url_key: cooperative_fonctionnement
-    - heading: "Bylaws"
-      body: "The bylaws define the legal framework of the cooperative, which you must accept."
-      link_label: "Read"
-      link_url_key: cooperative_statuts
-    - heading: "Internal Rules"
-      body: "The internal rules add an additional legal framework. You will need to approve them during your subscription."
-      link_label: "Read"
-      link_url_key: cooperative_reglement
-reminders:
-  heading: "Important reminders"
-  intro: "Investing in a cooperative is not a traditional financial investment."
-  cards:
-    - heading: "Only invest what you can afford to lose"
-      body: "Your capital is exposed to the risk of partial or total loss."
-    - heading: "Locked capital"
-      body: "The money invested may be locked for several years and is therefore not available in the short term."
-    - heading: "No capital gains on shares"
-      body: "The cooperative strongly limits capital gains on social shares. At best, you will recover the same amount invested when leaving the membership. Dividends are possible, however."
 subscribe:
   heading: "I'm ready!"
   intro: "Great! Fill in the form below and we will get back to you shortly."
@@ -39,6 +13,33 @@ subscribe:
   thanks: "Thank you! <3"
   form:
     required_note: "All fields are required."
+    prerequisites:
+      heading: "Prerequisites"
+      intro: "Before joining the membership, make sure you have read and understood the documents below."
+      documents:
+        - label: "How it works"
+          body: "Learn about the internal organisation, voting colleges, and the role of members."
+          url_key: cooperative_fonctionnement
+        - label: "Bylaws"
+          body: "The bylaws define the legal framework of the cooperative, which you must accept."
+          url_key: cooperative_statuts
+        - label: "Internal Rules"
+          body: "The internal rules add an additional legal framework. You will need to approve them during your subscription."
+          url_key: cooperative_reglement
+      read_label: "Yes, I have read these documents"
+      read_error: "You must have read these documents to continue."
+    risks:
+      heading: "Important reminders"
+      intro: "Investing in a cooperative is not a traditional financial investment."
+      items:
+        - heading: "Only invest what you can afford to lose"
+          body: "Your capital is exposed to the risk of partial or total loss."
+        - heading: "Locked capital"
+          body: "The money invested may be locked for several years and is therefore not available in the short term."
+        - heading: "No capital gains on shares"
+          body: "The cooperative strongly limits capital gains on social shares. At best, you will recover the same amount invested when leaving the membership. Dividends are possible, however."
+      label: "Yes, I understand the risks"
+      error: "You must confirm you understand the risks to continue."
     preamble:
       heading: "Preamble"
       intro: "It is first stated that TyGAMES is in the process of converting into a Société Coopérative d’Intérêt Collectif (SCIC, a multi-stakeholder cooperative) in the form of an SAS, expected to take effect on 1 January 2027, subject to the approval of the partners and the adoption of the new articles of association."

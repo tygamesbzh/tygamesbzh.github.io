@@ -6,38 +6,39 @@ lang_alternate: /en/invest/
 hero_h1_pre: "Rejoindre la"
 hero_h1_em: "coopérative"
 hero_subtitle: "Investissez et achetez des parts sociales. Prenez part aux décisions de la coopérative et soutenez une initiative unique dans le jeu vidéo français."
-prerequisites:
-  heading: "Pré-requis"
-  intro: "Avant de rejoindre le sociétariat, assurez-vous d'avoir lu et compris les documents ci-dessous."
-  cards:
-    - heading: "Fonctionnement"
-      body: "Prenez connaissance de l'organisation interne, des collèges de vote et du rôle des sociétaires."
-      link_label: "Lire"
-      link_url_key: cooperative_fonctionnement
-    - heading: "Statuts"
-      body: "Les statuts définissent le fonctionnement légal de la coopérative que vous devez accepter."
-      link_label: "Lire"
-      link_url_key: cooperative_statuts
-    - heading: "Règlement Intérieur"
-      body: "Le règlement intérieur ajoute un cadre légal supplémentaire. Vous devrez l'approuver lors de votre souscription."
-      link_label: "Lire"
-      link_url_key: cooperative_reglement
-reminders:
-  heading: "Rappels importants"
-  intro: "Investir dans une coopérative n'est pas un placement financier classique"
-  cards:
-    - heading: "N'investissez que ce que vous pouvez perdre"
-      body: "Votre capital est exposé à un risque de perte partielle ou totale."
-    - heading: "Capital bloqué"
-      body: "L'argent investi sera potentiellement bloqué pendant plusieurs années et n'est donc pas disponible à court terme."
-    - heading: "Pas de plus-value sur les parts"
-      body: "La coopérative limite fortement les plus-values sur les parts sociales. Vous récupérerez au mieux la même somme investie en quittant le sociétariat. En revanche, des dividendes sont possibles."
 subscribe:
   heading: "Je suis prêt·e !"
   intro: "Génial ! Remplissez le formulaire ci-dessous, on vous répondra rapidement."
   thanks: "Merci ! <3"
   form:
     required_note: "Tous les champs sont obligatoires."
+    prerequisites:
+      heading: "Pré-requis"
+      intro: "Avant de rejoindre le sociétariat, assurez-vous d'avoir lu et compris les documents ci-dessous."
+      documents:
+        - label: "Fonctionnement"
+          body: "Prenez connaissance de l'organisation interne, des collèges de vote et du rôle des sociétaires."
+          url_key: cooperative_fonctionnement
+        - label: "Statuts"
+          body: "Les statuts définissent le fonctionnement légal de la coopérative que vous devez accepter."
+          url_key: cooperative_statuts
+        - label: "Règlement Intérieur"
+          body: "Le règlement intérieur ajoute un cadre légal supplémentaire. Vous devrez l'approuver lors de votre souscription."
+          url_key: cooperative_reglement
+      read_label: "Oui, j'ai lu ces documents"
+      read_error: "Vous devez avoir lu ces documents pour continuer."
+    risks:
+      heading: "Rappels importants"
+      intro: "Investir dans une coopérative n'est pas un placement financier classique."
+      items:
+        - heading: "N'investissez que ce que vous pouvez perdre"
+          body: "Votre capital est exposé à un risque de perte partielle ou totale."
+        - heading: "Capital bloqué"
+          body: "L'argent investi sera potentiellement bloqué pendant plusieurs années et n'est donc pas disponible à court terme."
+        - heading: "Pas de plus-value sur les parts"
+          body: "La coopérative limite fortement les plus-values sur les parts sociales. Vous récupérerez au mieux la même somme investie en quittant le sociétariat. En revanche, des dividendes sont possibles."
+      label: "Oui, je comprends les risques"
+      error: "Vous devez confirmer avoir compris les risques pour continuer."
     preamble:
       heading: "Préambule"
       intro: "Il est préalablement exposé que la société TyGAMES est en cours de passage en Société Coopérative d’Intérêt Collectif (SCIC) sous forme de SAS, avec prise d’effet prévue au 1er janvier 2027, sous réserve de l’approbation des associés et de l’adoption des nouveaux statuts."
