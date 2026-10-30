@@ -26,6 +26,7 @@ module.exports = {
       },
       fontFamily: {
         heading: ['system-ui', 'ui-sans-serif', 'sans-serif'],
+        signature: ['"Dancing Script"', 'cursive'],
       },
       maxWidth: {
         site: '1200px',

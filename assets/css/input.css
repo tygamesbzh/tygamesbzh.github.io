@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/dancing-script-latin.woff2") format("woff2");
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -146,6 +154,60 @@
 
   .form-label {
     @apply block text-sm font-medium text-muted mb-2;
+  }
+
+  .form-input-light {
+    @apply w-full bg-white border border-ink/20 rounded px-4 py-3 text-ink placeholder-ink/40 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors;
+  }
+
+  .form-input-light[readonly] {
+    @apply bg-ink/5 text-ink/70;
+  }
+
+  /* Read-only value aligned with .form-input-light */
+  .form-static {
+    @apply block py-3 border border-transparent font-semibold text-ink;
+  }
+
+  .form-signature {
+    @apply font-signature text-3xl py-2;
+  }
+
+  .form-error {
+    @apply text-sm text-red-600 mt-1;
+  }
+
+  .form-label-light {
+    @apply block text-sm font-semibold text-ink/80 mb-2;
+  }
+
+  /* Accordion sections (details/summary) */
+  .form-section {
+    @apply border border-ink/10 rounded-lg bg-white/60;
+  }
+
+  .form-summary {
+    @apply flex items-center p-5 font-heading font-bold text-lg md:text-xl text-ink cursor-pointer select-none list-none;
+  }
+
+  .form-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .form-section-body {
+    @apply space-y-5 px-5 pb-6;
+  }
+
+  .form-step {
+    @apply shrink-0 w-8 h-8 rounded-full bg-accent text-white font-bold text-sm flex items-center justify-center;
+  }
+
+  .form-choice {
+    @apply flex items-start gap-3 text-ink/80 cursor-pointer;
+  }
+
+  .form-check {
+    @apply w-4 h-4 mt-1 shrink-0 accent-accent cursor-pointer disabled:cursor-not-allowed;
   }
 
   /* Checklists */

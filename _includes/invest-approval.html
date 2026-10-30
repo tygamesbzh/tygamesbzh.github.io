@@ -1,0 +1,37 @@
+{% comment %}
+  Invest form accordion section: a text to read and a required "read and approved" box.
+  Usage: {% include invest-approval.html approval=approval number=4 id="if-approval-1" %}
+  Params: approval (heading, intro, items, paragraphs), number, id,
+          open (section starts expanded), advance (checking the box opens the next section).
+{% endcomment %}
+
+{% assign f = page.subscribe.form %}
+<details class="form-section"{% if include.open %} open{% endif %}>
+  <summary class="form-summary">
+    <span class="flex items-center gap-3"><span class="form-step">{{ include.number }}</span>{{ include.approval.heading }}</span>
+  </summary>
+  <div class="form-section-body">
+    <div class="space-y-3 text-ink/70 leading-relaxed">
+      <p>{{ include.approval.intro }}</p>
+      {% if include.approval.items %}
+      <ul class="space-y-1 pl-4">
+        {% for item in include.approval.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% for paragraph in include.approval.paragraphs %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+    <div>
+      <label class="form-choice font-semibold">
+        <input id="{{ include.id }}" type="checkbox" name="approval" value="{{ include.approval.heading }}" required
+          aria-describedby="{{ include.id }}-error" class="form-check"{% if include.advance %} data-advance{% endif %}>
+        {{ f.approve_label }}
+      </label>
+      <p id="{{ include.id }}-error" class="form-error" hidden>{{ f.approve_error }}</p>
+    </div>
+  </div>
+</details>

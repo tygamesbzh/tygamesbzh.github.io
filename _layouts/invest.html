@@ -61,42 +61,485 @@ layout: page-nocta
   </div>
 </section>
 
+{% assign f = page.subscribe.form %}
 <section id="souscrire" class="section-padding-small bg-offwhite">
   <div class="section-container">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="page-title text-ink mb-5">{{ page.subscribe.heading }}</h2>
+      <p class="text-ink/70 leading-relaxed text-lg">
+        {{ page.subscribe.intro }}
+      </p>
+      {% if page.subscribe.note %}
+      <p class="text-ink/50 leading-relaxed text-sm mt-4">
+        {{ page.subscribe.note }}
+      </p>
+      {% endif %}
+    </div>
+
     <div class="card card-light max-w-3xl mx-auto mb-10 p-8 md:p-12">
-      <div class="text-center mb-10">
-        <h2 class="page-title text-ink mb-5">{{ page.subscribe.heading }}</h2>
-        <p class="text-ink/70 leading-relaxed text-lg">
-          {{ page.subscribe.intro }}
-        </p>
-        {% if page.subscribe.note %}
-        <p class="text-ink/50 leading-relaxed text-sm mt-4">
-          {{ page.subscribe.note }}
-        </p>
-        {% endif %}
-      </div>
+      <form id="invest-form" class="space-y-4" novalidate>
+        <p class="text-ink/50 text-sm">{{ f.required_note }}</p>
 
-      <ol class="space-y-4 mb-10">
-        {% for step in page.subscribe.steps %}
-        <li class="flex items-start gap-4">
-          <span class="shrink-0 w-8 h-8 rounded-full bg-accent text-white font-bold text-sm flex items-center justify-center">{{ forloop.index }}</span>
-          <span class="text-ink/80 leading-relaxed pt-1">{{ step }}</span>
-        </li>
+        {% include invest-approval.html approval=f.preamble number=1 id="if-preamble" open=true advance=true %}
+
+        <details class="form-section">
+          <summary class="form-summary">
+            <span class="flex items-center gap-3"><span class="form-step">2</span>{{ f.identity.heading }}</span>
+          </summary>
+          <div class="form-section-body">
+            <div>
+              <span class="form-label-light">{{ f.identity.type_label }}</span>
+              <div class="flex flex-wrap gap-x-8 gap-y-2">
+                <label class="form-choice">
+                  <input type="radio" name="type" value="person" class="form-check">
+                  {{ f.identity.type_person }}
+                </label>
+                <label class="form-choice">
+                  <input type="radio" name="type" value="company" class="form-check">
+                  {{ f.identity.type_company }}
+                </label>
+              </div>
+              <p id="if-type-error" class="form-error" hidden>{{ f.identity.type_error }}</p>
+            </div>
+
+            <div data-after-type class="space-y-5" hidden>
+              <div>
+                <label for="if-name" class="form-label-light">{{ f.identity.name }}</label>
+                <input id="if-name" name="name" type="text" required autocomplete="name" class="form-input-light">
+              </div>
+
+              <div data-company-only hidden>
+                <label for="if-legal-form" class="form-label-light">{{ f.identity.legal_form }}</label>
+                <input id="if-legal-form" name="legal_form" type="text" placeholder="{{ f.identity.legal_form_placeholder }}" class="form-input-light">
+              </div>
+
+              <div>
+                <label for="if-street" class="form-label-light">{{ f.identity.street }}</label>
+                <input id="if-street" name="street" type="text" required autocomplete="street-address" class="form-input-light">
+              </div>
+
+              <div class="grid sm:grid-cols-3 gap-5">
+                <div>
+                  <label for="if-postal-code" class="form-label-light">{{ f.identity.postal_code }}</label>
+                  <input id="if-postal-code" name="postal_code" type="text" required autocomplete="postal-code" aria-describedby="if-postal-code-error" class="form-input-light">
+                  <p id="if-postal-code-error" class="form-error" hidden>{{ f.identity.postal_code_error }}</p>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="if-city" class="form-label-light">{{ f.identity.city }}</label>
+                  <input id="if-city" name="city" type="text" required autocomplete="address-level2" class="form-input-light">
+                </div>
+              </div>
+
+              <div>
+                <label for="if-country" class="form-label-light">{{ f.identity.country }}</label>
+                <input id="if-country" name="country" type="text" required autocomplete="country-name" value="{{ f.identity.country_default }}" class="form-input-light">
+              </div>
+
+              <div data-company-only hidden>
+                <label for="if-representative" class="form-label-light">{{ f.identity.representative }}</label>
+                <input id="if-representative" name="representative" type="text" class="form-input-light">
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="if-email" class="form-label-light">{{ f.identity.email }}</label>
+                  <input id="if-email" name="email" type="email" required autocomplete="email" aria-describedby="if-email-error" class="form-input-light">
+                  <p id="if-email-error" class="form-error" hidden>{{ f.identity.email_error }}</p>
+                </div>
+                <div>
+                  <label for="if-phone" class="form-label-light">{{ f.identity.phone }}</label>
+                  <input id="if-phone" name="phone" type="tel" required autocomplete="tel" aria-describedby="if-phone-error" class="form-input-light">
+                  <p id="if-phone-error" class="form-error" hidden>{{ f.identity.phone_error }}</p>
+                </div>
+              </div>
+
+              <div class="border-t border-ink/10 pt-5 space-y-5">
+                <p class="text-ink/70 leading-relaxed">{{ f.identity.declaration.text }}</p>
+                <div>
+                  <label class="form-choice font-semibold">
+                    <input id="if-declaration" type="checkbox" name="approval" value="{{ f.identity.declaration.name }}" required
+                      aria-describedby="if-declaration-error" class="form-check">
+                    {{ f.approve_label }}
+                  </label>
+                  <p id="if-declaration-error" class="form-error" hidden>{{ f.approve_error }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="form-section">
+          <summary class="form-summary">
+            <span class="flex items-center gap-3"><span class="form-step">3</span>{{ f.commitment.heading }}</span>
+          </summary>
+          <div class="form-section-body">
+            <p class="text-ink/70">{{ f.commitment.intro }}</p>
+
+            <div class="flex items-end gap-5">
+              <div class="w-24 shrink-0">
+                <label for="if-shares" class="form-label-light whitespace-nowrap">{{ f.commitment.shares }}</label>
+                <input id="if-shares" name="shares" type="number" min="1" max="9999" step="1" required inputmode="numeric" class="form-input-light">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="form-label-light">{{ f.commitment.unit_price }}</span>
+                <p class="form-static">{{ site.subscription.share_price }} €</p>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="form-label-light">{{ f.commitment.amount }}</span>
+                <output id="if-amount" for="if-shares" class="form-static text-accent">0 €</output>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        {% for approval in f.approvals %}
+        {% assign number = forloop.index | plus: 3 %}
+        {% assign approval_id = "if-approval-" | append: forloop.index %}
+        {% include invest-approval.html approval=approval number=number id=approval_id %}
         {% endfor %}
-      </ol>
 
-      <a href="{{ '/assets/img/' | append: page.schema | relative_url }}" target="_blank"
-        class="group block rounded-lg overflow-hidden border border-ink/10 mb-8">
-        <img src="{{ '/assets/img/' | append: page.schema | relative_url }}" alt="{{ page.subscribe.diagram_alt }}"
-          class="w-full group-hover:scale-105 transition-transform duration-300">
-      </a>
+        <details class="form-section">
+          <summary class="form-summary">
+            <span class="flex items-center gap-3"><span class="form-step">{{ f.approvals | size | plus: 4 }}</span>{{ f.college.heading }}</span>
+          </summary>
+          <div class="form-section-body">
+            <p class="text-ink/70">{{ f.college.intro }}</p>
 
-      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-        <a href="{{ page.pdf_path | relative_url }}" target="_blank" class="btn-primary px-10 py-4 text-base text-center">{{ page.subscribe.cta_label }}</a>
-        <a href="mailto:{{ site.email_coop }}" class="btn-outline px-10 py-4 text-base text-center">{{ page.subscribe.cta_send }}</a>
+            <div id="if-colleges" class="space-y-3">
+              {% for option in f.college.options %}
+              <label class="form-choice" data-min-shares="{{ option.min_shares }}">
+                <input type="radio" name="college" value="{{ option.label }}" class="form-check">
+                <span class="flex-1 flex flex-wrap items-baseline justify-between gap-x-4">
+                  {{ option.label }}
+                  <span class="text-xs text-ink/60 whitespace-nowrap" data-min-info hidden>
+                    {% if option.min_shares == 1 %}{{ f.college.min_share }}{% else %}{{ f.college.min_shares | replace: "%n", option.min_shares }}{% endif %}
+                  </span>
+                </span>
+              </label>
+              {% endfor %}
+            </div>
+            <p id="if-colleges-error" class="text-sm text-red-600" hidden>{{ f.college.error }}</p>
+          </div>
+        </details>
+
+        <details class="form-section">
+          <summary class="form-summary">
+            <span class="flex items-center gap-3"><span class="form-step">{{ f.approvals | size | plus: 5 }}</span>{{ f.sign.heading }}</span>
+          </summary>
+          <div class="form-section-body">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <span class="form-label-light">{{ f.sign.place }}</span>
+                <p id="if-sign-place" class="form-static"></p>
+              </div>
+              <div>
+                <span class="form-label-light">{{ f.sign.date }}</span>
+                <p id="if-sign-date" class="form-static"></p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <span class="form-label-light">{{ f.sign.signature }}</span>
+              <div>
+                <label class="form-choice font-semibold">
+                  <input id="if-good-for" type="checkbox" name="good_for" required aria-describedby="if-good-for-error" class="form-check">
+                  <span id="if-good-for-text"></span>
+                </label>
+                <p id="if-good-for-error" class="form-error" hidden>{{ f.sign.good_for_error }}</p>
+              </div>
+              <input id="if-signature" type="text" readonly tabindex="-1" aria-label="{{ f.sign.signature }}" class="form-input-light form-signature">
+            </div>
+          </div>
+        </details>
+
+        <div class="text-center pt-6" data-after-type hidden>
+          <button type="submit" id="if-submit" class="btn-primary px-10 py-4 text-base">{{ f.submit }}</button>
+          <p id="if-msg" class="text-sm mt-4" aria-live="polite" hidden></p>
+        </div>
+      </form>
+
+      <div id="invest-form-success" class="text-center" hidden>
+        <p class="text-ink/80 text-lg leading-relaxed mb-4">{{ f.success }}</p>
+        <p class="text-ink/50">{{ page.subscribe.thanks | default: "Merci ! <3" }}</p>
       </div>
-
-      <p class="text-center text-ink/50 mt-8">{{ page.subscribe.thanks | default: "Merci ! <3" }}</p>
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  var form = document.getElementById('invest-form');
+  if (!form) return;
+  var endpoint = {{ site.subscription.form_endpoint | default: "" | jsonify }};
+  var sharePrice = {{ site.subscription.share_price | default: 0 }};
+  var locale = {{ page.lang | default: 'fr' | jsonify }};
+  var t = {
+    subject: {{ f.subject | jsonify }},
+    error: {{ f.error | jsonify }},
+    mailto: {{ f.mailto_notice | jsonify }},
+    typePerson: {{ f.identity.type_person | jsonify }},
+    typeCompany: {{ f.identity.type_company | jsonify }},
+    type: {{ f.identity.type_label | jsonify }},
+    name: {{ f.identity.name | jsonify }},
+    legalForm: {{ f.identity.legal_form | jsonify }},
+    street: {{ f.identity.street | jsonify }},
+    postalCode: {{ f.identity.postal_code | jsonify }},
+    city: {{ f.identity.city | jsonify }},
+    country: {{ f.identity.country | jsonify }},
+    representative: {{ f.identity.representative | jsonify }},
+    email: {{ f.identity.email | jsonify }},
+    phone: {{ f.identity.phone | jsonify }},
+    shares: {{ f.commitment.shares | jsonify }},
+    unitPrice: {{ f.commitment.unit_price | jsonify }},
+    amount: {{ f.commitment.amount | jsonify }},
+    approved: {{ f.approve_label | jsonify }},
+    college: {{ f.college.heading | jsonify }},
+    place: {{ f.sign.place | jsonify }},
+    date: {{ f.sign.date | jsonify }},
+    signature: {{ f.sign.signature | jsonify }},
+    mention: {{ f.sign.mention | jsonify }},
+    goodFor: {{ f.sign.good_for | jsonify }},
+    goodForOne: {{ f.sign.good_for_one | jsonify }}
+  };
+  var btn = document.getElementById('if-submit');
+  var msg = document.getElementById('if-msg');
+  var shares = document.getElementById('if-shares');
+  var amount = document.getElementById('if-amount');
+  var collegeBox = document.getElementById('if-colleges');
+  var collegeError = document.getElementById('if-colleges-error');
+  var approvals = form.querySelectorAll('input[name=approval]');
+  var requiredBoxes = form.querySelectorAll('input[type=checkbox][required]');
+  var typeError = document.getElementById('if-type-error');
+  var sections = form.querySelectorAll('details.form-section');
+  var afterType = form.querySelectorAll('[data-after-type]');
+  var companyOnly = form.querySelectorAll('[data-company-only]');
+  var originalLabel = btn.textContent.trim();
+
+  function isCompany() {
+    return form.elements.type.value === 'company';
+  }
+
+  function syncType() {
+    if (form.elements.type.value) typeError.hidden = true;
+    afterType.forEach(function (el) {
+      el.hidden = !form.elements.type.value;
+    });
+    companyOnly.forEach(function (el) {
+      el.hidden = !isCompany();
+      el.querySelector('input').required = isCompany();
+    });
+  }
+
+  function selectedCollege() {
+    var checked = collegeBox.querySelector('input:checked');
+    return checked ? checked.value : '';
+  }
+
+  // A category can only be picked with at least its minimum number of shares.
+  function syncColleges() {
+    var n = parseInt(shares.value, 10) || 0;
+    collegeBox.querySelectorAll('[data-min-shares]').forEach(function (choice) {
+      var input = choice.querySelector('input');
+      var eligible = n >= parseInt(choice.dataset.minShares, 10);
+      input.disabled = !eligible;
+      if (!eligible) input.checked = false;
+      choice.classList.toggle('opacity-50', !eligible);
+      choice.classList.toggle('cursor-not-allowed', !eligible);
+      choice.querySelector('[data-min-info]').hidden = eligible;
+    });
+  }
+
+  // Format checks on top of the browser's required/type validation.
+  var formats = {
+    email: function (v) { return /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v); },
+    phone: function (v) { return /^\+?\d{8,15}$/.test(v.replace(/[\s.()-]/g, '')); },
+    postal_code: function (v) {
+      return /^france$/i.test(form.elements.country.value.trim())
+        ? /^\d{5}$/.test(v)
+        : /^[a-z0-9][a-z0-9 -]{1,9}$/i.test(v);
+    }
+  };
+
+  function markInvalid(el) {
+    var format = formats[el.name];
+    if (format) el.setCustomValidity(el.value && !format(el.value.trim()) ? 'format' : '');
+    el.classList.toggle('border-red-400', !el.validity.valid);
+    var error = document.getElementById(el.id + '-error');
+    if (error) error.hidden = !el.validity.customError;
+  }
+
+  Array.prototype.forEach.call(form.elements.type, function (r) { r.addEventListener('change', syncType); });
+  syncType();
+
+  function totalAmount() {
+    var n = parseInt(shares.value, 10);
+    return n > 0 ? n * sharePrice : 0;
+  }
+
+  shares.addEventListener('input', function () {
+    amount.value = totalAmount().toLocaleString(locale) + ' €';
+    syncColleges();
+  });
+  syncColleges();
+
+  // Signature section: mirrors the city, today's date, the shares and the signer's name.
+  var today = new Date().toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+
+  function signer() {
+    return (isCompany() ? form.elements.representative : form.elements.name).value.trim();
+  }
+
+  function goodForText() {
+    var n = parseInt(shares.value, 10) || 0;
+    return (n === 1 ? t.goodForOne : t.goodFor).replace('%n', n);
+  }
+
+  function syncSignature() {
+    document.getElementById('if-sign-place').textContent = form.elements.city.value.trim();
+    document.getElementById('if-sign-date').textContent = today;
+    document.getElementById('if-good-for-text').textContent = goodForText();
+    document.getElementById('if-signature').value = signer();
+  }
+
+  form.addEventListener('input', syncSignature);
+  form.addEventListener('change', syncSignature);
+  syncSignature();
+
+  form.querySelectorAll('input, textarea').forEach(function (el) {
+    el.addEventListener('blur', function () { if (el.value) markInvalid(el); });
+    el.addEventListener('input', function () { if (el.classList.contains('border-red-400')) markInvalid(el); });
+  });
+  form.elements.country.addEventListener('input', function () {
+    if (form.elements.postal_code.value) markInvalid(form.elements.postal_code);
+  });
+  requiredBoxes.forEach(function (box) {
+    box.addEventListener('change', function () {
+      if (!box.checked) return;
+      document.getElementById(box.id + '-error').hidden = true;
+      var section = box.closest('details');
+      var allChecked = !section.querySelector('input[type=checkbox][required]:not(:checked)');
+      if (box.hasAttribute('data-advance') && allChecked) {
+        var next = sections[Array.prototype.indexOf.call(sections, section) + 1];
+        section.open = false;
+        next.open = true;
+        next.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    });
+  });
+  collegeBox.addEventListener('change', function () {
+    if (selectedCollege()) collegeError.hidden = true;
+  });
+
+  // Highlights what is missing in a section and returns the offending inputs.
+  function checkSection(section) {
+    var missing = [];
+    if (section.contains(typeError) && !form.elements.type.value) {
+      typeError.hidden = false;
+      missing.push(form.elements.type[0]);
+    }
+    section.querySelectorAll('input:not([type=radio]):not([type=checkbox]), textarea').forEach(function (el) {
+      if (el.closest('[hidden]')) return;
+      if (el.type !== 'number') el.value = el.value.trim();
+      markInvalid(el);
+      if (!el.validity.valid) missing.push(el);
+    });
+    section.querySelectorAll('input[type=checkbox][required]').forEach(function (box) {
+      if (box.closest('[hidden]')) return;
+      document.getElementById(box.id + '-error').hidden = box.checked;
+      if (!box.checked) missing.push(box);
+    });
+    if (section.contains(collegeBox) && !selectedCollege()) {
+      collegeError.hidden = false;
+      missing.push(collegeBox.querySelector('input:enabled') || shares);
+    }
+    return missing;
+  }
+
+  // Highlights what is missing in the sections before `count` and focuses the first
+  // missing input. Closed sections after the first incomplete one stay locked.
+  function revealMissing(count) {
+    var missing = [];
+    for (var i = 0; i < count; i++) {
+      if (missing.length && !sections[i].open) continue;
+      var sectionMissing = checkSection(sections[i]);
+      if (sectionMissing.length) sections[i].open = true;
+      missing = missing.concat(sectionMissing);
+    }
+    if (missing.length) missing[0].focus();
+    return missing.length > 0;
+  }
+
+  // A section only opens once every previous section is complete.
+  sections.forEach(function (section, i) {
+    section.querySelector('summary').addEventListener('click', function (e) {
+      if (!section.open && revealMissing(i)) e.preventDefault();
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (revealMissing(sections.length)) return;
+    var college = selectedCollege();
+
+    var data = {};
+    data[t.type] = isCompany() ? t.typeCompany : t.typePerson;
+    data[t.name] = form.elements.name.value;
+    if (isCompany()) data[t.legalForm] = form.elements.legal_form.value;
+    data[t.street] = form.elements.street.value;
+    data[t.postalCode] = form.elements.postal_code.value;
+    data[t.city] = form.elements.city.value;
+    data[t.country] = form.elements.country.value;
+    if (isCompany()) data[t.representative] = form.elements.representative.value;
+    data[t.email] = form.elements.email.value;
+    data[t.phone] = form.elements.phone.value;
+    data[t.shares] = shares.value;
+    data[t.unitPrice] = sharePrice + ' €';
+    data[t.amount] = totalAmount() + ' €';
+    approvals.forEach(function (box) { data[box.value] = t.approved; });
+    data[t.college] = college;
+    data[t.place] = form.elements.city.value;
+    data[t.date] = today;
+    data[t.signature] = signer();
+    data[t.mention] = goodForText();
+
+    if (!endpoint) {
+      var body = Object.keys(data).map(function (k) { return k + ' : ' + data[k]; }).join('\n');
+      window.location.href = 'mailto:{{ site.email_coop }}'
+        + '?subject=' + encodeURIComponent(t.subject + ' - ' + data[t.name])
+        + '&body=' + encodeURIComponent(body);
+      msg.textContent = t.mailto;
+      msg.className = 'text-sm mt-4 text-ink/60';
+      msg.hidden = false;
+      return;
+    }
+
+    data._subject = t.subject + ' - ' + data[t.name];
+    data._replyto = data[t.email];
+    btn.disabled = true;
+    btn.style.pointerEvents = 'none';
+    btn.textContent = '…';
+    msg.hidden = true;
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      form.hidden = true;
+      document.getElementById('invest-form-success').hidden = false;
+    })
+    .catch(function (err) {
+      console.error('[invest] failed:', err);
+      msg.innerHTML = t.error;
+      msg.className = 'text-sm mt-4 text-red-600';
+      msg.hidden = false;
+    })
+    .finally(function () {
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+      btn.style.pointerEvents = '';
+    });
+  });
+})();
+</script>
