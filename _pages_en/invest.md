@@ -39,7 +39,6 @@ subscribe:
   thanks: "Thank you! <3"
   form:
     required_note: "All fields are required."
-    subject: "Share subscription"
     preamble:
       heading: "Preamble"
       intro: "It is first stated that TyGAMES is in the process of converting into a Société Coopérative d’Intérêt Collectif (SCIC, a multi-stakeholder cooperative) in the form of an SAS, expected to take effect on 1 January 2027, subject to the approval of the partners and the adoption of the new articles of association."
@@ -117,8 +116,10 @@ subscribe:
       good_for: "“Approved for a subscription commitment of %n shares as of the date of the conversion into a SCIC SAS”"
       good_for_one: "“Approved for a subscription commitment of %n share as of the date of the conversion into a SCIC SAS”"
       good_for_error: "Tick this statement to sign."
-    submit: "Send my subscription request"
-    success: "Your subscription request has been sent. We will get back to you shortly!"
-    error: "Sending failed. Please try again or write to us at <b>cooperative@ty.games</b>."
-    mailto_notice: "Your email app opens with the pre-filled request: you just have to send it!"
+    submit: "Generate my subscription form"
+    success: "Your pre-filled subscription form has just been downloaded. Email it to us at <b>cooperative@ty.games</b> as an attachment and we will get back to you shortly!"
+    error: "The form could not be generated. Please try again or write to us at <b>cooperative@ty.games</b>."
+    mail_subject: "Subscription form"
+    send_label: "Write to cooperative@ty.games"
+    download_again: "Download again"
 ---

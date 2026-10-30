@@ -24,8 +24,6 @@ subscription:
   in_progress: 350
   # Price of one share in euros, used by the invest form to compute the total amount.
   share_price: 100
-  # Form backend (e.g. https://formspree.io/f/xxxx). Empty: the invest form opens a pre-filled email instead.
-  form_endpoint:
 
 members: 55
 

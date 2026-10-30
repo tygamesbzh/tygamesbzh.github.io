@@ -38,7 +38,6 @@ subscribe:
   thanks: "Merci ! <3"
   form:
     required_note: "Tous les champs sont obligatoires."
-    subject: "Souscription de parts sociales"
     preamble:
       heading: "Préambule"
       intro: "Il est préalablement exposé que la société TyGAMES est en cours de passage en Société Coopérative d’Intérêt Collectif (SCIC) sous forme de SAS, avec prise d’effet prévue au 1er janvier 2027, sous réserve de l’approbation des associés et de l’adoption des nouveaux statuts."
@@ -116,8 +115,10 @@ subscribe:
       good_for: "« Bon pour engagement de souscription de %n parts sociales à la date du passage en SCIC SAS »"
       good_for_one: "« Bon pour engagement de souscription de %n part sociale à la date du passage en SCIC SAS »"
       good_for_error: "Cochez cette mention pour signer."
-    submit: "Envoyer ma demande de souscription"
-    success: "Votre demande de souscription a bien été envoyée. On revient vers vous rapidement !"
-    error: "L'envoi a échoué. Réessayez ou écrivez-nous à <b>cooperative@ty.games</b>."
-    mailto_notice: "Votre messagerie s'ouvre avec la demande pré-remplie : il ne reste plus qu'à l'envoyer !"
+    submit: "Générer mon bulletin de souscription"
+    success: "Votre bulletin de souscription pré-rempli vient d’être téléchargé. Envoyez-le-nous à <b>cooperative@ty.games</b> en pièce jointe et on revient vers vous rapidement !"
+    error: "La génération du bulletin a échoué. Réessayez ou écrivez-nous à <b>cooperative@ty.games</b>."
+    mail_subject: "Bulletin de souscription"
+    send_label: "Écrire à cooperative@ty.games"
+    download_again: "Télécharger à nouveau"
 ---

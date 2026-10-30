@@ -259,47 +259,34 @@ layout: page-nocta
       </form>
 
       <div id="invest-form-success" class="text-center" hidden>
-        <p class="text-ink/80 text-lg leading-relaxed mb-4">{{ f.success }}</p>
+        <p class="text-ink/80 text-lg leading-relaxed mb-6">{{ f.success }}</p>
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-8">
+          <a href="mailto:{{ site.email_coop }}?subject={{ f.mail_subject | uri_escape }}" class="btn-primary px-10 py-4 text-base text-center">{{ f.send_label }}</a>
+          <button type="button" id="if-download-again" class="btn-outline px-10 py-4 text-base">{{ f.download_again }}</button>
+        </div>
         <p class="text-ink/50">{{ page.subscribe.thanks | default: "Merci ! <3" }}</p>
       </div>
     </div>
   </div>
 </section>
 
+<script src="{{ '/assets/js/bulletin.js' | relative_url }}"></script>
 <script>
 (function () {
   var form = document.getElementById('invest-form');
   if (!form) return;
-  var endpoint = {{ site.subscription.form_endpoint | default: "" | jsonify }};
   var sharePrice = {{ site.subscription.share_price | default: 0 }};
   var locale = {{ page.lang | default: 'fr' | jsonify }};
   var t = {
-    subject: {{ f.subject | jsonify }},
     error: {{ f.error | jsonify }},
-    mailto: {{ f.mailto_notice | jsonify }},
-    typePerson: {{ f.identity.type_person | jsonify }},
-    typeCompany: {{ f.identity.type_company | jsonify }},
-    type: {{ f.identity.type_label | jsonify }},
-    name: {{ f.identity.name | jsonify }},
-    legalForm: {{ f.identity.legal_form | jsonify }},
-    street: {{ f.identity.street | jsonify }},
-    postalCode: {{ f.identity.postal_code | jsonify }},
-    city: {{ f.identity.city | jsonify }},
-    country: {{ f.identity.country | jsonify }},
-    representative: {{ f.identity.representative | jsonify }},
-    email: {{ f.identity.email | jsonify }},
-    phone: {{ f.identity.phone | jsonify }},
-    shares: {{ f.commitment.shares | jsonify }},
-    unitPrice: {{ f.commitment.unit_price | jsonify }},
-    amount: {{ f.commitment.amount | jsonify }},
-    approved: {{ f.approve_label | jsonify }},
-    college: {{ f.college.heading | jsonify }},
-    place: {{ f.sign.place | jsonify }},
-    date: {{ f.sign.date | jsonify }},
-    signature: {{ f.sign.signature | jsonify }},
-    mention: {{ f.sign.mention | jsonify }},
     goodFor: {{ f.sign.good_for | jsonify }},
     goodForOne: {{ f.sign.good_for_one | jsonify }}
+  };
+  var bulletinUrls = {
+    template: {{ '/assets/bulletin.pdf' | relative_url | jsonify }},
+    signatureFont: {{ '/assets/fonts/dancing-script.ttf' | relative_url | jsonify }},
+    pdfLib: {{ '/assets/js/lib/pdf-lib-1.17.1.min.js' | relative_url | jsonify }},
+    fontkit: {{ '/assets/js/lib/fontkit-1.1.1.umd.min.js' | relative_url | jsonify }}
   };
   var btn = document.getElementById('if-submit');
   var msg = document.getElementById('if-msg');
@@ -307,13 +294,11 @@ layout: page-nocta
   var amount = document.getElementById('if-amount');
   var collegeBox = document.getElementById('if-colleges');
   var collegeError = document.getElementById('if-colleges-error');
-  var approvals = form.querySelectorAll('input[name=approval]');
   var requiredBoxes = form.querySelectorAll('input[type=checkbox][required]');
   var typeError = document.getElementById('if-type-error');
   var sections = form.querySelectorAll('details.form-section');
   var afterType = form.querySelectorAll('[data-after-type]');
   var companyOnly = form.querySelectorAll('[data-company-only]');
-  var originalLabel = btn.textContent.trim();
 
   function isCompany() {
     return form.elements.type.value === 'company';
@@ -476,70 +461,65 @@ layout: page-nocta
     });
   });
 
+  function bulletinValues() {
+    var radios = Array.prototype.slice.call(collegeBox.querySelectorAll('input'));
+    var el = form.elements;
+    return {
+      name: el.name.value,
+      legalForm: isCompany() ? el.legal_form.value : '',
+      address: el.street.value + ', ' + el.postal_code.value + ' ' + el.city.value + ', ' + el.country.value,
+      representative: isCompany() ? el.representative.value : '',
+      email: el.email.value,
+      phone: el.phone.value,
+      shares: parseInt(shares.value, 10),
+      amount: totalAmount(),
+      college: radios.indexOf(collegeBox.querySelector('input:checked')),
+      place: el.city.value,
+      signer: signer()
+    };
+  }
+
+  function bulletinFilename(name) {
+    var slug = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
+    return 'Bulletin-souscription-TyGAMES' + (slug ? '-' + slug : '') + '.pdf';
+  }
+
+  // The bulletin is generated in the browser and downloaded: it never leaves the visitor's device.
+  var lastValues = null;
+
+  function downloadBulletin(values, button) {
+    var label = button.textContent;
+    button.disabled = true;
+    button.style.pointerEvents = 'none';
+    button.textContent = '…';
+    msg.hidden = true;
+    return TyBulletin.download(bulletinUrls, values, bulletinFilename(values.name))
+      .then(function () {
+        form.hidden = true;
+        document.getElementById('invest-form-success').hidden = false;
+      })
+      .catch(function (err) {
+        console.error('[invest] bulletin failed:', err);
+        msg.innerHTML = t.error;
+        msg.className = 'text-sm mt-4 text-red-600';
+        msg.hidden = false;
+      })
+      .finally(function () {
+        button.disabled = false;
+        button.textContent = label;
+        button.style.pointerEvents = '';
+      });
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (revealMissing(sections.length)) return;
-    var college = selectedCollege();
+    lastValues = bulletinValues();
+    downloadBulletin(lastValues, btn);
+  });
 
-    var data = {};
-    data[t.type] = isCompany() ? t.typeCompany : t.typePerson;
-    data[t.name] = form.elements.name.value;
-    if (isCompany()) data[t.legalForm] = form.elements.legal_form.value;
-    data[t.street] = form.elements.street.value;
-    data[t.postalCode] = form.elements.postal_code.value;
-    data[t.city] = form.elements.city.value;
-    data[t.country] = form.elements.country.value;
-    if (isCompany()) data[t.representative] = form.elements.representative.value;
-    data[t.email] = form.elements.email.value;
-    data[t.phone] = form.elements.phone.value;
-    data[t.shares] = shares.value;
-    data[t.unitPrice] = sharePrice + ' €';
-    data[t.amount] = totalAmount() + ' €';
-    approvals.forEach(function (box) { data[box.value] = t.approved; });
-    data[t.college] = college;
-    data[t.place] = form.elements.city.value;
-    data[t.date] = today;
-    data[t.signature] = signer();
-    data[t.mention] = goodForText();
-
-    if (!endpoint) {
-      var body = Object.keys(data).map(function (k) { return k + ' : ' + data[k]; }).join('\n');
-      window.location.href = 'mailto:{{ site.email_coop }}'
-        + '?subject=' + encodeURIComponent(t.subject + ' - ' + data[t.name])
-        + '&body=' + encodeURIComponent(body);
-      msg.textContent = t.mailto;
-      msg.className = 'text-sm mt-4 text-ink/60';
-      msg.hidden = false;
-      return;
-    }
-
-    data._subject = t.subject + ' - ' + data[t.name];
-    data._replyto = data[t.email];
-    btn.disabled = true;
-    btn.style.pointerEvents = 'none';
-    btn.textContent = '…';
-    msg.hidden = true;
-    fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    })
-    .then(function (r) {
-      if (!r.ok) throw new Error(r.status);
-      form.hidden = true;
-      document.getElementById('invest-form-success').hidden = false;
-    })
-    .catch(function (err) {
-      console.error('[invest] failed:', err);
-      msg.innerHTML = t.error;
-      msg.className = 'text-sm mt-4 text-red-600';
-      msg.hidden = false;
-    })
-    .finally(function () {
-      btn.disabled = false;
-      btn.textContent = originalLabel;
-      btn.style.pointerEvents = '';
-    });
+  document.getElementById('if-download-again').addEventListener('click', function (e) {
+    if (lastValues) downloadBulletin(lastValues, e.currentTarget);
   });
 })();
 </script>
