@@ -50,10 +50,10 @@ values:
   - id: no-ia
     number: "04"
     heading: "Non à l'IA générative"
-    intro: "Notre position sur l'IA générative est simple et ferme. Nous considérons qu'elle précarise les artistes, aseptise la créativité et consomme des ressources déraisonnables."
+    intro: "Notre position sur l'IA générative : nous considérons qu'elle précarise les artistes, aseptise la créativité et consomme des ressources déraisonnables."
     bullets:
-      - title: "Visuels, sons, textes, traductions = refus net"
-        body: "Aucun jeu ayant des éléments visuels ou sonores générés par IA ne sera accepté ou conservé dans le catalogue."
+      - title: "Par conséquence : visuels, sons, textes, traductions = refus net"
+        body: "Nous ne publierons et ne conserverons pas des jeux qui utiliseraient de tels éléments. Nous voulons que les artistes, techniciens, traducteurs et autres métiers du jeu vidéo puissent continuer d'en vivre, et nous ferons en sorte qu'ils soient payés du mieux que nous pouvons."
       - title: "Code source : discutable"
         body: "L'utilisation d'outils IA pour le développement est tolérée, car omniprésente dans le métier et les IDEs. <strong>MAIS</strong> le développeur doit être en maîtrise technique totale du code et du projet. Et le financement de TyGAMES ne pourra absolument pas servir à payer des abonnements/tokens."
 ---

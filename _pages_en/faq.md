@@ -61,7 +61,7 @@ questions:
     answer: "To be discussed when the case arises; the idea is to stay flexible on this rule, as long as a game is at least in development. If that game doesn't come out after a certain amount of time, the Cooperative Council can assign the member to another college."
   - id: position-ia-generative
     question: "What is your position on LLMs and generative AI?"
-    answer: "We're against the use of generative AI in artistic fields: visuals (2D, 3D) and audio (sound, music, voice). Using this technology in that context will result in our refusal to publish and distribute. For code, given how pervasive these tools are, we expect the developer to use them in moderation and to retain complete mastery of their code at every point in production."
+    answer: "We're against the use of generative AI in artistic fields: visuals (2D, 3D) and audio (sound, music, voice). We want to pay human artists and technicians, as much as it is possible for us. Using this technology in that context will result in our refusal to publish and distribute. For code, given how pervasive these tools are, we expect the developer to use them in moderation and to retain complete mastery of their code at every point in production."
   - id: quand-pitcher-projet
     question: "At what point should we present/pitch a project to you?"
     answer: "Whenever you want! :) We'll give you feedback as much as we can, but the sooner we know about your project, the better we can organize ourselves or point you in the right direction."
