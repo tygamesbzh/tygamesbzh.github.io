@@ -20,12 +20,11 @@ address:
 subscription:
   enabled: true
   goal: 350
-  acquired: 334
+  acquired: 330
   in_progress: 350
-  # Price of one share in euros, used by the invest form to compute the total amount.
   share_price: 100
 
-members: 55
+members: 56
 
 social:
   bluesky: https://bsky.app/profile/ty.games
