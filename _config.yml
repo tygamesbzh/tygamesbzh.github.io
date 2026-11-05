@@ -20,7 +20,7 @@ address:
 subscription:
   enabled: true
   goal: 350
-  acquired: 331
+  acquired: 327
   in_progress: 350
   share_price: 100
 
