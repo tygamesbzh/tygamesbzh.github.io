@@ -20,11 +20,11 @@ address:
 subscription:
   enabled: true
   goal: 350
-  acquired: 327
+  acquired: 356
   in_progress: 350
   share_price: 100
 
-members: 57
+members: 64
 
 social:
   bluesky: https://bsky.app/profile/ty.games
