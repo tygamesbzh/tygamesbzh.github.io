@@ -19,9 +19,15 @@
 {% endif %}
 {% comment %}Pledges stack on top of acquired shares in the invest variant bar.{% endcomment %}
 {% assign pledged_bar_pct = s.acquired | plus: s.in_progress | times: 100 | divided_by: s.goal | at_most: 100 %}
+{% comment %}Past 100%, the surplus renders as a rainbow bar that spills out of the card on purpose.{% endcomment %}
+{% assign fill_pct = acquired_pct | at_most: 100 %}
+{% assign overflow_pct = acquired_pct | minus: 100 %}
+{% capture overflow_bar %}{% if overflow_pct > 0 %}
+            <div class="tracker-overflow" style="--over: {{ overflow_pct }}%" aria-hidden="true"></div>
+{% endif %}{% endcapture %}
 
 {% if include.variant == "invest" %}
-<section class="bg-offwhite">
+<section class="bg-offwhite overflow-x-clip">
   <div class="section-container pt-10">
     <div class="card card-light p-6 md:p-8">
       <div>
@@ -42,9 +48,12 @@
               {{ t.subscription.goal_label }} : <strong>{{ s.goal }}</strong> {{ t.subscription.shares_unit }}
             </p>
           </div>
-          <div class="relative h-3 w-full rounded-full bg-ink/10 overflow-hidden">
-            <div class="absolute inset-y-0 left-0 bg-accent/30 transition-all duration-500" style="width: {{ pledged_bar_pct }}%"></div>
-            <div class="absolute inset-y-0 left-0 bg-accent transition-all duration-500" style="width: {{ acquired_pct }}%"></div>
+          <div class="relative">
+            <div class="relative h-3 w-full rounded-full bg-ink/10 overflow-hidden">
+              <div class="absolute inset-y-0 left-0 bg-accent/30 transition-all duration-500" style="width: {{ pledged_bar_pct }}%"></div>
+              <div class="absolute inset-y-0 left-0 bg-accent transition-all duration-500" style="width: {{ fill_pct }}%"></div>
+            </div>
+            {{ overflow_bar }}
           </div>
         </div>
       </div>
@@ -53,13 +62,14 @@
 </section>
 
 {% else %}
-<section class="bg-offwhite pt-6 relative z-10">
+<section class="bg-offwhite pt-6 relative z-10 overflow-x-clip">
   <div class="section-container">
     <div class="card card-light px-6 py-5">
-      <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-        <div class="flex-1">
+      {% comment %}Bar sits on its own full-width row so the over-goal surplus can shoot out of the card.{% endcomment %}
+      <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] sm:items-center gap-x-6 gap-y-4">
+        <div class="order-1">
           <p class="section-eyebrow text-accent mb-2">{{ t.subscription.badge }}</p>
-          <div class="flex flex-wrap items-baseline gap-x-6 gap-y-1 mb-2.5 text-sm">
+          <div class="flex flex-wrap items-baseline gap-x-6 gap-y-1 text-sm">
             <p class="text-ink">
               {{ t.subscription.current_label }} : <strong class="text-accent">{{ s.acquired }}</strong>
               <span class="text-ink/60">({{ acquired_pct }}{{ t.subscription.pct_suffix }})</span>
@@ -68,11 +78,14 @@
               {{ t.subscription.goal_label }} : <strong>{{ s.goal }}</strong> {{ t.subscription.shares_unit }}
             </p>
           </div>
-          <div class="relative h-2.5 w-full rounded-full bg-ink/10 overflow-hidden">
-            <div class="absolute inset-y-0 left-0 bg-accent transition-all duration-500" style="width: {{ acquired_pct }}%"></div>
-          </div>
         </div>
-        <a href="{{ t.urls.join | relative_url }}" class="btn-primary text-sm whitespace-nowrap self-start sm:self-auto">{{ t.subscription.cta }} →</a>
+        <a href="{{ t.urls.join | relative_url }}" class="btn-primary order-3 sm:order-2 text-sm whitespace-nowrap justify-self-start sm:justify-self-auto sm:self-start">{{ t.subscription.cta }} →</a>
+        <div class="relative order-2 sm:order-3 sm:col-span-2">
+          <div class="relative h-2.5 w-full rounded-full bg-ink/10 overflow-hidden">
+            <div class="absolute inset-y-0 left-0 bg-accent transition-all duration-500" style="width: {{ fill_pct }}%"></div>
+          </div>
+          {{ overflow_bar }}
+        </div>
       </div>
     </div>
   </div>

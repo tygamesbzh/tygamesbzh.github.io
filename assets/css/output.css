@@ -1293,6 +1293,36 @@ ul.distrib-card-body {
   color: rgb(200 197 186 / 0.6);
 }
 
+/* Subscription tracker: surplus past 100% — spills out of the card on purpose */
+
+.tracker-overflow {
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  left: calc(100% - 0.5rem);
+  /* Exactly the surplus past the track end (+0.5rem tucked under the 100% fill) */
+  width: calc(var(--over, 0%) + 0.5rem);
+  background: linear-gradient(90deg, #ff004c, #ff8a00, #ffe600, #2bff88, #00c8ff, #7a5cff, #ff00d4, #ff004c);
+  background-size: 200% 100%;
+  box-shadow: 0 0 10px rgba(255, 0, 212, 0.55), 0 0 24px rgba(0, 200, 255, 0.45), 0 0 40px rgba(255, 230, 0, 0.3);
+  animation: tracker-rainbow 1.2s linear infinite;
+}
+
+/* Moving candy stripes */
+
+.tracker-overflow::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  border-radius: inherit;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+  animation: tracker-stripes 0.5s linear infinite;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -1374,6 +1404,18 @@ ul.distrib-card-body {
   z-index: 50;
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
 .order-first {
   order: -9999;
 }
@@ -1414,10 +1456,6 @@ ul.distrib-card-body {
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.mb-2\.5 {
-  margin-bottom: 0.625rem;
 }
 
 .mb-3 {
@@ -1849,6 +1887,10 @@ ul.distrib-card-body {
   row-gap: 0.5rem;
 }
 
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1911,6 +1953,10 @@ ul.distrib-card-body {
   align-self: flex-start;
 }
 
+.justify-self-start {
+  justify-self: start;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1921,6 +1967,10 @@ ul.distrib-card-body {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.overflow-x-clip {
+  overflow-x: clip;
 }
 
 .whitespace-nowrap {
@@ -2222,6 +2272,10 @@ ul.distrib-card-body {
   padding-bottom: 6rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -2248,10 +2302,6 @@ ul.distrib-card-body {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -2545,6 +2595,29 @@ ul.distrib-card-body {
   src: url("../fonts/dancing-script-latin.woff2") format("woff2");
 }
 
+@keyframes tracker-rainbow {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes tracker-stripes {
+  from {
+    background-position: 1rem 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tracker-overflow,
+  .tracker-overflow::before {
+    animation: none;
+  }
+}
+
 .backdrop\:bg-ink\/90::backdrop {
   background-color: rgb(13 13 18 / 0.9);
 }
@@ -2653,6 +2726,14 @@ ul.distrib-card-body {
 }
 
 @media (min-width: 640px) {
+  .sm\:order-2 {
+    order: 2;
+  }
+
+  .sm\:order-3 {
+    order: 3;
+  }
+
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -2673,6 +2754,10 @@ ul.distrib-card-body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-\[1fr_auto\] {
+    grid-template-columns: 1fr auto;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -2681,12 +2766,12 @@ ul.distrib-card-body {
     align-items: center;
   }
 
-  .sm\:gap-6 {
-    gap: 1.5rem;
+  .sm\:self-start {
+    align-self: flex-start;
   }
 
-  .sm\:self-auto {
-    align-self: auto;
+  .sm\:justify-self-auto {
+    justify-self: auto;
   }
 }
 
@@ -2792,12 +2877,12 @@ ul.distrib-card-body {
     padding-bottom: 8rem;
   }
 
-  .md\:pt-0 {
-    padding-top: 0px;
-  }
-
   .md\:pb-4 {
     padding-bottom: 1rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-left {
