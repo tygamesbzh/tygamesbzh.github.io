@@ -1307,20 +1307,7 @@ ul.distrib-card-body {
   width: calc(var(--over, 0%) + 0.5rem);
   background: linear-gradient(90deg, #ff004c, #ff8a00, #ffe600, #2bff88, #00c8ff, #7a5cff, #ff00d4, #ff004c);
   background-size: 200% 100%;
-  box-shadow: 0 0 10px rgba(255, 0, 212, 0.55), 0 0 24px rgba(0, 200, 255, 0.45), 0 0 40px rgba(255, 230, 0, 0.3);
-  animation: tracker-rainbow 1.2s linear infinite;
-}
-
-/* Moving candy stripes */
-
-.tracker-overflow::before {
-  content: "";
-  position: absolute;
-  inset: 0px;
-  border-radius: inherit;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
-  background-size: 1rem 1rem;
-  animation: tracker-stripes 0.5s linear infinite;
+  animation: tracker-rainbow 2s linear infinite;
 }
 
 .invisible {
@@ -2601,19 +2588,8 @@ ul.distrib-card-body {
   }
 }
 
-@keyframes tracker-stripes {
-  from {
-    background-position: 1rem 0;
-  }
-
-  to {
-    background-position: 0 0;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .tracker-overflow,
-  .tracker-overflow::before {
+  .tracker-overflow {
     animation: none;
   }
 }

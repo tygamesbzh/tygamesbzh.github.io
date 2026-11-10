@@ -302,6 +302,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tracker-overflow,
+  .tracker-overflow {
+    animation: none;
   }
 }
