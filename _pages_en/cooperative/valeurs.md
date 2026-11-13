@@ -1,7 +1,7 @@
 ---
 layout: valeurs
 title: Our values
-description: "The values that drive the cooperative."
+description: "Our values"
 lang_alternate: /cooperative/valeurs/
 hero_h1_pre: Our
 hero_h1_em: values
@@ -10,7 +10,7 @@ section_nav:
   - { id: respect,      label: Respect }
   - { id: transparence, label: Transparency }
   - { id: inclusivite,  label: Inclusivity }
-  - { id: no-ia,        label: "No gen AI" }
+  - { id: ia-gen,        label: "Gen AI" }
 values:
   - id: respect
     number: "01"
@@ -47,13 +47,19 @@ values:
         body: "Enabling minorities and people who face discrimination to access publishing and distribution services for their games."
       - title: "Committed works"
         body: "We support and champion works with a message, a cause, or lived experience behind them."
-  - id: no-ia
+  - id: ia-gen
     number: "04"
-    heading: "No to generative AI"
-    intro: "Our position on generative AI is simple and firm. We believe it undermines artists, sanitises creativity, and consumes unreasonable resources."
+    heading: "Our stance on gen AI"
+    intro: "We believe it undermines artists, sanitises creativity, and has a negative environmental impact."
     bullets:
-      - title: "Visuals, audio, text, translations = hard no"
-        body: "No game containing AI-generated visual or audio elements will be accepted or retained in the catalogue."
+      - title: "As a result: visuals, audio, text, translations = hard no"
+        body: "We will not publish or keep games that use such elements. We want artists, technicians, translators and everyone else working in video games to keep making a living from their craft, and we will make sure they are paid as well as we possibly can. And generated assets can always be replaced."
       - title: "Source code: open to discussion"
-        body: "Using AI tools for development is tolerated, as they are ubiquitous in the profession and in IDEs. <strong>BUT</strong> the developer must have full technical mastery of the code and the project. And TyGAMES funding must not be used to pay for subscriptions or tokens."
+        body: "Using AI tools for development may potentially be tolerated <strong>BUT</strong> the developer must have full technical mastery of the code and the project. The developer also commits to providing all the information the cooperative needs to make an informed decision on the matter. Finally, TyGAMES funding can under no circumstances be used to pay for subscriptions or tokens."
+      - title: "Intellectual property"
+        body: "Models are trained on data they do not own. The legal framework around this training and around generated output is still unclear, or even non-existent. As a publisher, we have a duty to protect the cooperative, its projects and its members."
+      - title: "Disclosure and transparency"
+        body: "Any potential use of AI in a project published or distributed by TyGAMES must be clearly described and listed when the project is submitted, and kept up to date throughout the game's production and operation. These uses will be transparently disclosed on the platforms where the game is distributed. They will be strictly regulated in our distribution and publishing contracts. Any breach of these rules or concealment may lead to sanctions, up to and including removal of the project from the TyGAMES catalogue, financial consequences, and will engage the developer's liability."
+      - title: "An evolving stance"
+        body: "This stance currently reflects the thinking of the company's founders and may evolve democratically over the life of the cooperative."
 ---

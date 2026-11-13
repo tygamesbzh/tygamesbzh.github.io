@@ -10,7 +10,7 @@ section_nav:
   - { id: respect,      label: Respect }
   - { id: transparence, label: Transparence }
   - { id: inclusivite,  label: Inclusivité }
-  - { id: no-ia,        label: "No IA gen" }
+  - { id: ia-gen,        label: "IA gen" }
 values:
   - id: respect
     number: "01"
@@ -47,13 +47,19 @@ values:
         body: "Permettre aux minorités et aux personnes victimes de discrimination d'accéder à un service d'édition et de distribution pour leurs jeux."
       - title: "Créations engagées"
         body: "Nous soutenons et défendons les créations engagées, porteuses de messages ou de vécu."
-  - id: no-ia
+  - id: ia-gen
     number: "04"
-    heading: "Non à l'IA générative"
-    intro: "Notre position sur l'IA générative : nous considérons qu'elle précarise les artistes, aseptise la créativité et consomme des ressources déraisonnables."
+    heading: "Notre position sur l'IA générative"
+    intro: "Nous considérons qu'elle précarise les artistes, aseptise la créativité et a un impact environnemental négatif."
     bullets:
-      - title: "Par conséquence : visuels, sons, textes, traductions = refus net"
-        body: "Nous ne publierons et ne conserverons pas des jeux qui utiliseraient de tels éléments. Nous voulons que les artistes, techniciens, traducteurs et autres métiers du jeu vidéo puissent continuer d'en vivre, et nous ferons en sorte qu'ils soient payés du mieux que nous pouvons."
-      - title: "Code source : discutable"
-        body: "L'utilisation d'outils IA pour le développement est tolérée, car omniprésente dans le métier et les IDEs. <strong>MAIS</strong> le développeur doit être en maîtrise technique totale du code et du projet. Et le financement de TyGAMES ne pourra absolument pas servir à payer des abonnements/tokens."
+      - title: "Par conséquent : visuels, sons, textes, traductions = refus net"
+        body: "Nous ne publierons et ne conserverons pas des jeux qui utiliseraient de tels éléments. Nous voulons que les artistes, techniciens, traducteurs et autres métiers du jeu vidéo puissent continuer d'en vivre, et nous ferons en sorte qu'ils soient payés du mieux que nous pouvons. Et des assets générées peuvent toujours être remplacées."
+      - title: "Code source : ouvert à la discussion"
+        body: "L'utilisation d'outils IA pour le développement est potentiellement tolérée <strong>MAIS</strong> le développeur doit être en maîtrise technique totale du code et du projet. Ce dernier s'engage aussi à fournir tous les éléments qui permettront à la coopérative de prendre une décision éclairée sur le sujet. Enfin, le financement de TyGAMES ne pourra absolument pas servir à payer des abonnements/tokens."
+      - title: "Propriété intellectuelle"
+        body: "Les modèles sont entrainés sur des données qui ne leur appartiennent pas. Le cadre juridique qui entoure cet entrainement et le résultat de la génération sont encore flous, voire inexistants. En tant qu'éditeur, nous nous devons de protéger la coopérative, ses projets et ses sociétaires."
+      - title: "Déclaration et transparence"
+        body: "Les potentiels usages de l'IA dans un projet édité ou distribué par TyGAMES devront être clairement présentés et listés lors de sa soumission et mis à jour pendant la production et l'exploitation du jeu. Ils seront présentés avec transparence sur les plateformes où il sera distribué. Ils seront fortement encadrés dans nos contrats de distribution et d'édition. Un manquement à ces règles ou une dissimulation pourra faire l'objet de sanctions pouvant aller jusqu'au retrait du projet du catalogue de TyGAMES, des conséquences financières et engagera la responsabilité du développeur."
+      - title: "Une position qui évolue"
+        body: "Cette position est aujourd'hui le fruit d'une réflexion par les fondateurs de la société et pourra évoluer par voie démocratique pendant la vie de la coopérative."
 ---
